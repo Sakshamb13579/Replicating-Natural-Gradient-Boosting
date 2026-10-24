@@ -85,7 +85,8 @@ Homoscedastic selected identical stages under validation squared error and valid
 In the controlled experiment, the scale at each stage was the root mean square (RMS) of the validation residuals, so ranking stages by validation NLL gave the same order as ranking them by squared error.
 After refitting, the released script instead sets the predictive standard deviation to the refitted model's predictive variance multiplied by the RMS of the residuals on those same validation rows.
 By then those rows are part of the refit training set, and multiplying a variance by an RMS does not estimate a residual standard deviation.
-Both the rows used and the arithmetic therefore depart from the original paper, which sets this comparator's variance to the variance of the training residuals.
+The released implementation therefore differs from the original paper in both the residuals used and the scale calculation.
+The original paper sets this comparator's variance to the variance of the training residuals.
 Together they offer a checkable explanation for the released-code Yacht Homoscedastic NLL of $13.2821$ against the published $2.02$ (Table~\ref{tab:replication-results}), although this work does not separate how much each departure contributes.
 The new-data experiments use a different scale rule, introduced in Section~\ref{sec:new-data}.
 
@@ -97,4 +98,4 @@ Homoscedastic still selected the cap under NLL selection (Table~\ref{tab:replica
 \textbf{Replication outcome.}
 The released-code run reproduced the direction of Natural's advantage on Yacht and the published ordering of mean NLL on Kin8nm, but not Yacht's absolute NLL values.
 In the controlled selector experiment, NLL selection brought Yacht Natural and Ordinary close to the published means, although Natural remains above its published value (Table~\ref{tab:replication-results}).
-The Homoscedastic mismatch is not explained by stage selection; its scale calculation remains a separate unresolved discrepancy.
+NLL-based stage selection did not resolve the Homoscedastic mismatch, and this study did not isolate the contribution of its scale-estimation procedure.

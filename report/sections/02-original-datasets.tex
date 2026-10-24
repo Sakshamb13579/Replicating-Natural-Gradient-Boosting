@@ -9,7 +9,7 @@ The paper's regression benchmark covers Boston, Concrete, Energy, Kin8nm, Naval,
 This replication tests the paper's ablation claim: that natural gradients improve on ordinary gradients and on a constant scale.
 It uses two datasets on which the published results point in opposite directions.
 On Yacht Hydrodynamics, a small set of measurements, NGBoost has lower mean NLL than both alternatives.
-On Kin8nm, a larger simulated set, ordinary-gradient boosting has the lowest published NLL, though within NGBoost's standard-error range.
+On Kin8nm, a larger simulated set, ordinary-gradient boosting has the lowest published mean NLL, although its standard-error range overlaps NGBoost's.
 Kin8nm was chosen over Wine because its file comes with the released code and its 8{,}192 rows are clearly identified; the paper does not say exactly how its Wine data were built.
 Boston is also unsuitable for new work because of the ethical problem discussed in Section~\ref{sec:ethics}.
 

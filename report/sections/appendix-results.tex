@@ -163,7 +163,8 @@ sha256  9e939664e74b400b618d0e700a0794a2
 \end{verbatim}
 \end{minipage}
 \endgroup
-Ollama~0.9.6 \cite{ollama2025} served sequential CPU requests with a 2{,}048-token context, 4 threads and at most 160 output tokens.
+\par\smallskip
+\noindent Ollama~0.9.6 \cite{ollama2025} served sequential CPU requests with a 2{,}048-token context, 4 threads and at most 160 output tokens.
 The ChatML prefix used non-reasoning mode, and JSON schemas constrained the verdict format; outputs are discrete labels rather than calibrated label probabilities.
 The three-case development smoke test exposed order sensitivity; its prompt was retained unchanged for evaluation rather than retuned against evaluation results.
 Raw prompts, responses, the frozen code and model configuration are preserved with checksums.
