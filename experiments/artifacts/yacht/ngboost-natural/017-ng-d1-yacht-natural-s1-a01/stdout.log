@@ -1,0 +1,22 @@
+== Dataset=yacht X.shape=(308, 6) MLE/Normal
+[1/20] BestIter=2026 RMSE: Val=0.6012 Test=0.5265 NLL: Test=0.3802
+[2/20] BestIter=1874 RMSE: Val=0.8551 Test=0.4582 NLL: Test=1.0279
+[3/20] BestIter=300 RMSE: Val=0.6468 Test=0.4597 NLL: Test=0.9825
+[4/20] BestIter=3542 RMSE: Val=0.9412 Test=0.4022 NLL: Test=2.4691
+[5/20] BestIter=3381 RMSE: Val=0.6850 Test=0.6426 NLL: Test=3.7299
+[6/20] BestIter=4000 RMSE: Val=0.5282 Test=0.5184 NLL: Test=0.5415
+[7/20] BestIter=4000 RMSE: Val=0.9247 Test=0.2301 NLL: Test=-0.3016
+[8/20] BestIter=4000 RMSE: Val=0.7256 Test=0.7452 NLL: Test=14.4738
+[9/20] BestIter=4000 RMSE: Val=1.0236 Test=0.4638 NLL: Test=1.6498
+[10/20] BestIter=4000 RMSE: Val=0.6913 Test=0.4233 NLL: Test=0.4876
+[11/20] BestIter=4000 RMSE: Val=0.3161 Test=0.4529 NLL: Test=1.6889
+[12/20] BestIter=3261 RMSE: Val=0.4068 Test=0.7490 NLL: Test=2.6688
+[13/20] BestIter=3998 RMSE: Val=0.6525 Test=0.7049 NLL: Test=2.5894
+[14/20] BestIter=4000 RMSE: Val=0.5209 Test=0.5792 NLL: Test=3.0650
+[15/20] BestIter=4000 RMSE: Val=0.7233 Test=0.9413 NLL: Test=3.7422
+[16/20] BestIter=722 RMSE: Val=0.4968 Test=0.6546 NLL: Test=0.9081
+[17/20] BestIter=2593 RMSE: Val=0.6079 Test=0.3958 NLL: Test=0.8106
+[18/20] BestIter=3654 RMSE: Val=0.4245 Test=0.5722 NLL: Test=2.8933
+[19/20] BestIter=4000 RMSE: Val=0.2896 Test=0.4747 NLL: Test=1.8959
+[20/20] BestIter=2569 RMSE: Val=1.3242 Test=0.8038 NLL: Test=11.2668
+== RMSE GBM=0.0000 +/- 0.0000, NGB=0.5599 +/- 0.1648, NLL NGB=2.8485 +/ 3.5581

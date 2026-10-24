@@ -1,0 +1,25 @@
+{
+  "dataset": "yacht",
+  "dataset_slug": "yacht-original-selector-sensitivity-v1",
+  "variant": "natural",
+  "distribution": "Normal",
+  "score": "MLE",
+  "base_learner": "default_tree_learner",
+  "natural_gradient": true,
+  "learning_rate": 0.01,
+  "minibatch_frac": 1.0,
+  "n_estimators_cap": 2000,
+  "full_protocol_n_estimators": 2000,
+  "full_protocol_folds": 20,
+  "folds_run": 20,
+  "selectors": {
+    "rmse": "argmin validation MSE + 1",
+    "nll": "argmin validation NLL + 1"
+  },
+  "homoscedastic_validation_scale": "per-stage validation residual RMS",
+  "homoscedastic_post_refit_scale": "NormalFixedVar forecast.var multiplied by post-refit frozen-validation residual RMS, separately per selected stage",
+  "stage_seed_base": 20000,
+  "refit_seed_base": 30000,
+  "reportable": true,
+  "non_reportable_reasons": []
+}

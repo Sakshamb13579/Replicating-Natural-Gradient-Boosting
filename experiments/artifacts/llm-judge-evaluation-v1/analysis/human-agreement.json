@@ -1,0 +1,218 @@
+{
+  "human_reference_status": "complete",
+  "n_raters": 1,
+  "n_items": 30,
+  "n_criterion_verdicts_per_rater": 90,
+  "raters": {
+    "anonymous-human-01": {
+      "sheet": "ratings-anonymous-human-01.csv",
+      "sheet_sha256": "2c40ee04f28786b7041204e9bb7d7f52ce76de6b0fcb76b021501179a7328a1e",
+      "pass_counts_by_construction_intent": {
+        "faithful_description": {
+          "n": 15,
+          "clarity": 15,
+          "interval_consistency": 15,
+          "evidence_support": 15
+        },
+        "interval_interpretation": {
+          "n": 5,
+          "clarity": 5,
+          "interval_consistency": 0,
+          "evidence_support": 0
+        },
+        "unsupported_cause": {
+          "n": 5,
+          "clarity": 5,
+          "interval_consistency": 5,
+          "evidence_support": 0
+        },
+        "obscuring_jargon": {
+          "n": 5,
+          "clarity": 2,
+          "interval_consistency": 5,
+          "evidence_support": 0
+        }
+      }
+    }
+  },
+  "judge_versus_human": {
+    "anonymous-human-01": {
+      "clarity": {
+        "n": 30,
+        "accuracy": 0.9,
+        "cohen_kappa": 0.0,
+        "reference_majority_baseline_accuracy": 0.9,
+        "confusion": {
+          "reference_0_predicted_0": 0,
+          "reference_0_predicted_1": 3,
+          "reference_1_predicted_0": 0,
+          "reference_1_predicted_1": 27
+        }
+      },
+      "interval_consistency": {
+        "n": 30,
+        "accuracy": 0.8666666666666667,
+        "cohen_kappa": 0.6363636363636364,
+        "reference_majority_baseline_accuracy": 0.8333333333333334,
+        "confusion": {
+          "reference_0_predicted_0": 5,
+          "reference_0_predicted_1": 0,
+          "reference_1_predicted_0": 4,
+          "reference_1_predicted_1": 21
+        }
+      },
+      "evidence_support": {
+        "n": 30,
+        "accuracy": 0.9333333333333333,
+        "cohen_kappa": 0.8666666666666667,
+        "reference_majority_baseline_accuracy": 0.5,
+        "confusion": {
+          "reference_0_predicted_0": 15,
+          "reference_0_predicted_1": 0,
+          "reference_1_predicted_0": 2,
+          "reference_1_predicted_1": 13
+        }
+      },
+      "pooled": {
+        "n": 90,
+        "accuracy": 0.9,
+        "cohen_kappa": 0.7479775980087119,
+        "reference_majority_baseline_accuracy": 0.7444444444444445,
+        "confusion": {
+          "reference_0_predicted_0": 20,
+          "reference_0_predicted_1": 3,
+          "reference_1_predicted_0": 6,
+          "reference_1_predicted_1": 61
+        }
+      },
+      "disagreements": [
+        {
+          "item_id": "75cd8eb88551",
+          "construction_intent": "unsupported_cause",
+          "stratum": "real-estate",
+          "criteria": [
+            "interval_consistency"
+          ],
+          "human": {
+            "clarity": true,
+            "interval_consistency": true,
+            "evidence_support": false
+          },
+          "judge": {
+            "clarity": true,
+            "interval_consistency": false,
+            "evidence_support": false
+          },
+          "rater_note": "Correct numbers, right interval type with units \u2014 but the width cause is invented; the packet supplies no training-neighbour counts or sample-variation statistics."
+        },
+        {
+          "item_id": "85672ac90936",
+          "construction_intent": "obscuring_jargon",
+          "stratum": "synthetic-B",
+          "criteria": [
+            "clarity",
+            "interval_consistency"
+          ],
+          "human": {
+            "clarity": false,
+            "interval_consistency": true,
+            "evidence_support": false
+          },
+          "judge": {
+            "clarity": true,
+            "interval_consistency": false,
+            "evidence_support": false
+          },
+          "rater_note": "numbers right, jargon invented."
+        },
+        {
+          "item_id": "90319537a775",
+          "construction_intent": "faithful_description",
+          "stratum": "real-estate",
+          "criteria": [
+            "evidence_support"
+          ],
+          "human": {
+            "clarity": true,
+            "interval_consistency": true,
+            "evidence_support": true
+          },
+          "judge": {
+            "clarity": true,
+            "interval_consistency": true,
+            "evidence_support": false
+          },
+          "rater_note": "numbers match, no invented claims."
+        },
+        {
+          "item_id": "b1d5468a8547",
+          "construction_intent": "obscuring_jargon",
+          "stratum": "airfoil",
+          "criteria": [
+            "clarity",
+            "interval_consistency"
+          ],
+          "human": {
+            "clarity": false,
+            "interval_consistency": true,
+            "evidence_support": false
+          },
+          "judge": {
+            "clarity": true,
+            "interval_consistency": false,
+            "evidence_support": false
+          },
+          "rater_note": "numbers right, jargon sentence invented."
+        },
+        {
+          "item_id": "c9e45ed53ce7",
+          "construction_intent": "obscuring_jargon",
+          "stratum": "real-estate",
+          "criteria": [
+            "clarity",
+            "interval_consistency"
+          ],
+          "human": {
+            "clarity": false,
+            "interval_consistency": true,
+            "evidence_support": false
+          },
+          "judge": {
+            "clarity": true,
+            "interval_consistency": false,
+            "evidence_support": false
+          },
+          "rater_note": "numbers/units still right, but the \"interquantilic spreadification via nominalisation\" jargon is invented and unsupported."
+        },
+        {
+          "item_id": "fcdc49267cf8",
+          "construction_intent": "faithful_description",
+          "stratum": "real-estate",
+          "criteria": [
+            "evidence_support"
+          ],
+          "human": {
+            "clarity": true,
+            "interval_consistency": true,
+            "evidence_support": true
+          },
+          "judge": {
+            "clarity": true,
+            "interval_consistency": true,
+            "evidence_support": false
+          },
+          "rater_note": "Numbers and units match, interval correctly labeled for one future outcome, and the \"no established cause\" wording only reports what the packet doesn't supply, without inventing anything."
+        }
+      ]
+    }
+  },
+  "human_versus_human": {},
+  "analysis_code_sha256": "acb31565cc14dba2ccbef9c1ec4bdb52e2f55437b76bb4344bb89946ba70e48b",
+  "interpretation": [
+    "Human ratings are the reference; judge verdicts are the predictions compared against them",
+    "Construction intent is an authored design category and is never used as a reference label",
+    "The 30 items instantiate five explanation templates, so the items are not independent",
+    "A single rater cannot separate judge error from one rater's idiosyncrasy",
+    "No human-versus-human agreement is available with one sheet"
+  ]
+}

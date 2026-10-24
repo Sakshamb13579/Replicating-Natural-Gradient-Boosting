@@ -1,0 +1,27 @@
+{
+  "handoff": "030-NG-P5",
+  "dataset": "heteroscedastic-v1",
+  "variant": "homoscedastic",
+  "model": "NGBRegressor",
+  "natural_gradient": true,
+  "distn": "NormalFixedVar",
+  "score": "MLE",
+  "base": "default_tree_learner",
+  "n_estimators_cap": 2000,
+  "learning_rate": 0.01,
+  "minibatch_frac": 1.0,
+  "stage_selector": "validation_NLL_with_held_out_residual_RMS_scale",
+  "sigma_protocol": "leakage-free: retain stage-model val RMS sigma; do not re-estimate after full fit",
+  "regimes": ["A", "B", "C"],
+  "split": "frozen 60/20/20 per regime (007-NG-CD1)",
+  "features": ["x1", "x2"],
+  "stage_model_seed_base": 20000,
+  "full_model_seed_base": 30000,
+  "venv": ".RnD/work/ngboost/.venv (existing; unchanged)",
+  "threads": 1,
+  "packages_modified": false,
+  "three_way_references": [
+    "028-ng-p5-heteroscedastic-natural-s0-a01",
+    "029-ng-p5-heteroscedastic-ordinary-s0-a01"
+  ]
+}

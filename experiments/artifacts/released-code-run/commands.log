@@ -1,0 +1,51 @@
+START=2026-08-22T20:12:25+05:30
+UNMODIFIED_END=2026-08-22T20:12:29+05:30
+REPAIRED_START=2026-08-22T20:12:54+05:30
+REPAIRED_END=2026-08-22T20:14:22+05:30
+
+# unmodified (source/ngboost)
+python -m examples.experiments.regression_exp --dataset=yacht --score=MLE --natural --n-splits=2
+
+# repaired (work/ngboost/repair-worktree, import-only patch)
+python -m examples.experiments.regression_exp --dataset=yacht --score=MLE --natural --n-splits=2
+
+# Phase 1A — homoscedastic 2-split
+cd /mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree
+python -m examples.experiments.regression_exp --dataset=yacht --score=MLE --distn=NormalFixedVar --natural --n-splits=2
+
+# Phase 1A — ordinary 2-split
+python -m examples.experiments.regression_exp --dataset=yacht --score=MLE --n-splits=2
+
+# Phase 1A — natural 20-split
+python -m examples.experiments.regression_exp --dataset=yacht --score=MLE --natural --n-splits=20
+
+# NG-1B — homoscedastic 20-split
+python -m examples.experiments.regression_exp --dataset=yacht --score=MLE --distn=NormalFixedVar --natural --n-splits=20
+
+# NG-1B — ordinary 20-split
+python -m examples.experiments.regression_exp --dataset=yacht --score=MLE --n-splits=20
+PHASE1_HOMOSK_START=2026-08-22T20:21:57+05:30
+PHASE1_HOMOSK_END=2026-08-22T20:23:06+05:30
+PHASE1_ORDINARY_START=2026-08-22T20:23:09+05:30
+PHASE1_ORDINARY_END=2026-08-22T20:24:31+05:30
+PHASE1_NATURAL20_START=2026-08-22T20:24:34+05:30
+PHASE1_NATURAL20_END=2026-08-22T20:38:58+05:30
+NG1B_HOMOSK20_START=2026-08-22T20:57:49+05:30
+NG1B_HOMOSK20_END=2026-08-22T21:08:47+05:30
+NG1B_ORDINARY20_START=2026-08-22T21:08:55+05:30
+NG1B_ORDINARY20_END=2026-08-22T21:22:04+05:30
+
+# NG-1C — Kin8nm natural 5-split
+python -m examples.experiments.regression_exp --dataset=kin8nm --score=MLE --natural --n-splits=5
+
+# NG-1C — Kin8nm homoscedastic 5-split
+python -m examples.experiments.regression_exp --dataset=kin8nm --score=MLE --distn=NormalFixedVar --natural --n-splits=5
+
+# NG-1C — Kin8nm ordinary 5-split
+python -m examples.experiments.regression_exp --dataset=kin8nm --score=MLE --n-splits=5
+NG1C_NATURAL5_START=2026-08-22T21:50:53+05:30
+NG1C_NATURAL5_END=2026-08-22T22:07:49+05:30
+NG1C_HOMOSK5_START=2026-08-22T22:07:56+05:30
+NG1C_HOMOSK5_END=2026-08-22T22:17:50+05:30
+NG1C_ORDINARY5_START=2026-08-22T22:17:57+05:30
+NG1C_ORDINARY5_END=2026-08-22T22:34:52+05:30

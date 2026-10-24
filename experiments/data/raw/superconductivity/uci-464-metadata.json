@@ -1,0 +1,124 @@
+{
+  "retrieval": {
+    "timestamp_utc": "2026-08-23T14:54:44Z",
+    "endpoints": {
+      "dataset_record": "https://archive.ics.uci.edu/api/trpc/donated_datasets.findById?batch=1&input=%7B%220%22%3A%7B%22json%22%3A464%7D%7D",
+      "citation": "https://archive.ics.uci.edu/api/trpc/citation.findByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A464%7D%7D",
+      "variables_table": "https://archive.ics.uci.edu/api/trpc/variables.findTableByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A464%7D%7D",
+      "descriptive_fields": "https://archive.ics.uci.edu/api/trpc/descriptive.findTupleByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A464%7D%7D",
+      "files_table": "https://archive.ics.uci.edu/api/trpc/files.findTableByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A464%7D%7D"
+    },
+    "dataset_page_canonical": "https://archive.ics.uci.edu/dataset/464/superconductivty+data",
+    "dataset_page_common_alias": "https://archive.ics.uci.edu/dataset/464/superconductivity+data",
+    "slug_note": "UCI slug is misspelled superconductivty+data; both page URLs resolve."
+  },
+  "dataset": {
+    "id": 464,
+    "name": "Superconductivty Data",
+    "doi": "10.24432/C53P47",
+    "slug": "superconductivty+data",
+    "abstract": "Two file s contain data on 21263 superconductors and their relevant features.",
+    "area": "Physics and Chemistry",
+    "task": "Regression",
+    "types": "Multivariate",
+    "num_instances": 21263,
+    "num_features": 81,
+    "feature_types": "Real",
+    "year_created": 2018,
+    "date_donated": "2018-10-12T00:00:00.000Z",
+    "download_href": "/static/public/464/superconductivty+data.zip",
+    "has_missing_values": false
+  },
+  "licence": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx": "CC-BY-4.0",
+    "legalcode_url": "https://creativecommons.org/licenses/by/4.0/legalcode"
+  },
+  "citation": {
+    "APA": "Hamidieh, K. (2018). Superconductivty Data [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C53P47.",
+    "MLA": "Hamidieh, Kam. \"Superconductivty Data.\" UCI Machine Learning Repository, 2018, https://doi.org/10.24432/C53P47.",
+    "Chicago": "Hamidieh, Kam. 2018. Superconductivty Data. UCI Machine Learning Repository. https://doi.org/10.24432/C53P47.",
+    "Vancouver": "Hamidieh K. Superconductivty Data [dataset]. 2018. UCI Machine Learning Repository. Available from: https://doi.org/10.24432/C53P47.",
+    "IEEE": "K. Hamidieh. \"Superconductivty Data,\" UCI Machine Learning Repository, 2018. [Online]. Available: https://doi.org/10.24432/C53P47.",
+    "BibTeX": "@misc{superconductivty_data_464,\n  author       = {Hamidieh, Kam},\n  title        = {{Superconductivty Data}},\n  year         = {2018},\n  howpublished = {UCI Machine Learning Repository},\n  note         = {{DOI}: https://doi.org/10.24432/C53P47}\n}"
+  },
+  "variables": {
+    "headers": [
+      "Variable Name",
+      "Role",
+      "Type",
+      "Description",
+      "Units",
+      "Missing Values"
+    ],
+    "rows": [
+      [
+        "number_of_elements",
+        "Feature",
+        "Integer",
+        "",
+        "",
+        "no"
+      ],
+      [
+        "mean_atomic_mass",
+        "Feature",
+        "Continuous",
+        "",
+        "",
+        "no"
+      ],
+      [
+        "wtd_mean_atomic_mass",
+        "Feature",
+        "Continuous",
+        "",
+        "",
+        "no"
+      ],
+      [
+        "gmean_atomic_mass",
+        "Feature",
+        "Continuous",
+        "",
+        "",
+        "no"
+      ],
+      [
+        "wtd_gmean_atomic_mass",
+        "Feature",
+        "Continuous",
+        "",
+        "",
+        "no"
+      ]
+    ],
+    "total_variables_listed": 82
+  },
+  "descriptive_fields": [
+    [
+      "Additional Information",
+      "There are two files: (1) train.csv contains 81 features extracted from 21263 superconductors along with the critical temperature in the 82nd column, (2) unique_m.csv contains the chemical formula broken up for all the 21263 superconductors from the train.csv file.  The last two columns have the critical temperature and chemical formula.  The original data comes from http://supercon.nims.go.jp/index_en.html which is public.  The goal here is to predict the critical temperature based on the features extracted."
+    ],
+    [
+      "Has Missing Values?",
+      "No"
+    ]
+  ],
+  "files_table": {
+    "headers": [
+      "File",
+      "Size"
+    ],
+    "data": [
+      [
+        "train.csv",
+        "22.8 MB"
+      ],
+      [
+        "unique_m.csv",
+        "4.1 MB"
+      ]
+    ]
+  }
+}

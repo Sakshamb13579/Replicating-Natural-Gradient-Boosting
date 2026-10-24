@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "manifest_kind": "original_data_selector_sensitivity_v1",
+  "dataset": "yacht",
+  "dataset_name": "Yacht Hydrodynamics",
+  "dataset_slug": "yacht-original-selector-sensitivity-v1",
+  "source": {
+    "preserved_raw_path": "/mnt/hdd1/Projects/Research/Saksham/shared/proposed_work/03_ngboost/data/original/yacht_hydrodynamics.data",
+    "raw_sha256": "00dfecc0fc01ddd4c90b558a3ac11b246df8ebcfea130724223475a9a67f0ea1",
+    "official_loader": "pandas.read_csv(header=None, delim_whitespace=True)",
+    "official_loaded_shape": [
+      308,
+      7
+    ],
+    "official_target_rule": "final column",
+    "official_feature_rule": "all columns preceding final column"
+  },
+  "processed": {
+    "csv_path": "data/processed/yacht-original-selector-sensitivity-v1/yacht-original-selector-sensitivity-v1.csv",
+    "csv_sha256": "21f5959c0ab6f2060b3a52d8af3ba0deb6448d6405fdbee019acb2d81216a437",
+    "columns": [
+      "row_id",
+      "longitudinal_position",
+      "prismatic_coefficient",
+      "length_displacement_ratio",
+      "beam_draught_ratio",
+      "length_beam_ratio",
+      "froude_number",
+      "residuary_resistance"
+    ],
+    "id_column": "row_id",
+    "feature_columns": [
+      "longitudinal_position",
+      "prismatic_coefficient",
+      "length_displacement_ratio",
+      "beam_draught_ratio",
+      "length_beam_ratio",
+      "froude_number"
+    ],
+    "target_column": "residuary_resistance",
+    "n_rows": 308,
+    "n_features": 6,
+    "scaling": false,
+    "imputation": false,
+    "feature_transformation": false
+  },
+  "splits": {
+    "path": "data/processed/yacht-original-selector-sensitivity-v1/split-indices.json",
+    "sha256": "522fa98a0a33ba5d27ecd3ad1633f87060a451dd260b2229d76084bb0f192015",
+    "n_folds": 20,
+    "outer_seed": 1,
+    "inner_seed_base": 10000,
+    "fold_hashes": [
+      {
+        "fold_index": 0,
+        "outer_train_hash": "28ae6833927cbe4e4389cb162bba813805c5c31e2c67ff4b13afa53e2dde6d5c",
+        "outer_test_hash": "a3e767ebd8498e04598a490ef730a306916791bb08d281f7c1665e069bf768b6",
+        "inner_train_hash": "a1d11509761d49fa130e640abcb16374b6e4f2b4f0b06643b827fdb4ab6aa339",
+        "inner_val_hash": "528956d3a0ac4eb3e20c5532bcd55557d80a7e746cd738228b9e93f422791da9"
+      },
+      {
+        "fold_index": 1,
+        "outer_train_hash": "e7bc843a4be291a81b9313e47545d7841b98ce840898de9964970a0cc4650823",
+        "outer_test_hash": "0d8f97e29d782b32a15324cdb62a48d2ba4e8728df22217e5cb763f891937ff3",
+        "inner_train_hash": "a950f6c54824c71e8e95ae7944428ff38aac209abf1136834238c70bcd1d5925",
+        "inner_val_hash": "fbc0fd361fd167f66fabb6439bf60aa580d40a32479eba34011529d39aee5af2"
+      },
+      {
+        "fold_index": 2,
+        "outer_train_hash": "281a1a24d3961a2a38e92551abaaadd3d32266ab3019d5b73441d3afd72fb710",
+        "outer_test_hash": "f3a552be857effcb163a21fc75e74c325554d3749554c1a7ea900a06c5e8b648",
+        "inner_train_hash": "3b41cfb20483fa6514db29070bd2dc742d23174f44d20ab14f437dbc34a625fc",
+        "inner_val_hash": "17d661c728bb7937d16a73612077971fc72d225679b7da05e9fba416a939fe24"
+      },
+      {
+        "fold_index": 3,
+        "outer_train_hash": "7ec4a5ec219739a02e5b62b4b3175374cdf5cc30d7b9ac6679192dff7b473ecb",
+        "outer_test_hash": "af56b2ffaa29fde8465a47ad1dc1fe49ecc0b49cb4ab8deaa4dc465b15a7c44d",
+        "inner_train_hash": "0d8547210534b142c9c99c1d93ace97e08836a4626b1825bb746c90ab9027485",
+        "inner_val_hash": "8a8cee9a0cbe2ad21228991e177370f5f60c9eeb6ac284b52df487a370a5bae3"
+      },
+      {
+        "fold_index": 4,
+        "outer_train_hash": "af1c13361cfc7f43ea47ac8b13be45a1bbda602e4016b6d453f96ae6bdc7dcc2",
+        "outer_test_hash": "1b9b96cc3d3b5e84cf6ba453ca63bb83d31d6730fa629c890812ddce60443115",
+        "inner_train_hash": "b0b7974340124bc6894d0ea4349fa650d82e0a55e343529020ebb2558d9809cc",
+        "inner_val_hash": "4372b1e4413ed2239cd5d59dbb780a57e07b7279ad92c634f6315e65d4379e2b"
+      },
+      {
+        "fold_index": 5,
+        "outer_train_hash": "4d0c4514f7bdfc878a81a9ef1a80071a6791beb9888e04d1de6db2b47fa2696e",
+        "outer_test_hash": "ead7af501dd1e913df7207262ca7b3479b5ecabe4b0ea5c08aeb39bb53f8f2d2",
+        "inner_train_hash": "81a77ae251b6188386a0ff5e08a29359a813712209d016bcbe26cade12feece6",
+        "inner_val_hash": "f1e02b3c30b079c0f3de64d77da4eeefc8b3524d7800423add0dafe0a5fcf794"
+      },
+      {
+        "fold_index": 6,
+        "outer_train_hash": "64cf7e7d8024aeef0601762c5b7c853a04a59ce600e8b4eeb4402ae7286b4b0e",
+        "outer_test_hash": "9969d26b488350b4ba917153df965564bf7c02ad0a3cb1072d0e194447f5777c",
+        "inner_train_hash": "8d1d4b85790bb5f744a5fac3d816fab2a394a6ba92b63d977aa7eeeb56ceddca",
+        "inner_val_hash": "48cc6f8ef56d05990ba804f506cff782c625b78263ca1ef9c3ab42e57ae2fad6"
+      },
+      {
+        "fold_index": 7,
+        "outer_train_hash": "c725bf815bf9e43cebf7cde34219a91be799abcea9d2daaf278b59421212bd53",
+        "outer_test_hash": "75f6197324f5bbfc8e964e7e355265a9a17646faf0b3f23db3411b0476630c26",
+        "inner_train_hash": "53bd863c62837df74a101d452fa0102537058615ffc4fd51941d47eefe09ea92",
+        "inner_val_hash": "aeea9d77b502e6f0d97eeb9b2d1b96127865eff5c7ea7c2a0e308fb4ad7b7a7a"
+      },
+      {
+        "fold_index": 8,
+        "outer_train_hash": "8027b28f8bae8d734cd0f04104217ddba508926dc7ccb189aac551eeb046f942",
+        "outer_test_hash": "ab361d752d92f8ce2281f30b2f2b7e3be6e08160fa8ee700d711208064c2cfe3",
+        "inner_train_hash": "3685ac108e2f785f2d30ed916df7d720ccf9fa939be307ebfc1d94e505bf1e51",
+        "inner_val_hash": "d33e7e86325db4ab9f169ecafa2c806dbc28b8349c0ac39ab8401887cdfe0fcd"
+      },
+      {
+        "fold_index": 9,
+        "outer_train_hash": "8b219c455039eca381b0f6aed78ce09ed81e8678aa86827070d699729e4a8602",
+        "outer_test_hash": "f353b5935aaa1b52db0a5380688242d190f39e68878c5c16580ba2818f0f9a9c",
+        "inner_train_hash": "aeed3afbc6edfba6074a4ff6750f1749e321258229350ce7537707a7b57f26e4",
+        "inner_val_hash": "b0d0886bcdce218c99b8637f75e55e0bab41e3a117ab567d46daf953a9d5c548"
+      },
+      {
+        "fold_index": 10,
+        "outer_train_hash": "6c2a23bcdaae7879e7b1231f771aefadcde52850b44202b7ef35a91a66a36e50",
+        "outer_test_hash": "40cd098749ad70e0bd2e63fa3785a697d0d9f88fa39ecc3654c0027d6b040d50",
+        "inner_train_hash": "b870b4d044ecdb748a804a6c85ee7dcc58ee9414f4d2309b2a5202c83004c313",
+        "inner_val_hash": "f1cd40d8ee4c310c989e357957b2e7eb78ee6b3578bb35b8f58942fd5c9f5a73"
+      },
+      {
+        "fold_index": 11,
+        "outer_train_hash": "a54d577b7e97a83d03aca6ea2904d04c84cb9b5dd660d2d1b40aafa5d133073a",
+        "outer_test_hash": "12ef03894cf278bddef6643639084960e87c72c11f87ad4a03b5a2570635fb10",
+        "inner_train_hash": "2da8b45a78ebf1e53b074ecc64dce7b09011cfc091f79fb42e1f237fdc266e7e",
+        "inner_val_hash": "9e236a8ce20f55987ee160f7ee6b2769c0c4743fca31e62b0a1a7cff3371d8e0"
+      },
+      {
+        "fold_index": 12,
+        "outer_train_hash": "8d5cfa0c3c8225386a5d53bc43ec979a47e8472370c5c6fbc91d9d42e94c9062",
+        "outer_test_hash": "005a933eb27159233dea24559283e5e4e77def6e3d9827bef5b46c547e672868",
+        "inner_train_hash": "853e87d188a5658ed7c395eef767be7e437d5f5fc9d7719a0e13d924008ad3e1",
+        "inner_val_hash": "cc074e0da8544bab5736b370bfa2afe2c88d3dd2b2ec052e51b160c2dc46a04f"
+      },
+      {
+        "fold_index": 13,
+        "outer_train_hash": "2f6e500aaafa8a4d373a0cf6296129fda537dedb0088edcd7e9212402eed3f50",
+        "outer_test_hash": "879d7f1a77e2ff8bd54f8e1ea69a1c77d23b494465b5fda1cc346729f0ca693a",
+        "inner_train_hash": "a2b10ae4972e9308cbd5d8c72c6e97b4f41c5f1462c7e5fdac547d59e77e6557",
+        "inner_val_hash": "ae76c5afffb06d1a40d00a2eb51220267b18f3664bb223d3d38b8c18d14e705f"
+      },
+      {
+        "fold_index": 14,
+        "outer_train_hash": "79389727fd2332f4d20bfa22e5a0519e38841c11c039b0964919347d4fec30da",
+        "outer_test_hash": "e392834ae6aadad34b03cd1ce48da815270084640fc410566b9f5dfdee43e848",
+        "inner_train_hash": "86e38b8f1ed4e25314f7538843cd653dceb115c77bdf37ce4703a2926a10c4bf",
+        "inner_val_hash": "f62156dd7e811850826b99a5ec309c8e48755566cf7a739c5c29f2e95c176a56"
+      },
+      {
+        "fold_index": 15,
+        "outer_train_hash": "257f65236ed2dd3fd5a56ebc8ae546b8d127fa09bc271b7ce216cf655561d2de",
+        "outer_test_hash": "e900d6d41bd788e9de4576318f3cf6a27f54e64511d26e594229ddcf0c5f6531",
+        "inner_train_hash": "bf3900e95ece14600e17a8679324b815191f6dafc73e2230ec42e4d21e85b5a5",
+        "inner_val_hash": "ef49b1782114cf955e82570b9ea44cd0a53aad51efd233ca273fbd644bfed8e1"
+      },
+      {
+        "fold_index": 16,
+        "outer_train_hash": "532b0365826287958f3cf6f77be0e91a597d96ea69d8ff43830672d9e1c3b682",
+        "outer_test_hash": "bae9961315345a2b3183043deb0b567361d8c86f5ba852a594345b04c7444884",
+        "inner_train_hash": "735cffc172f7ca9df85bc9b9d7c03c4c8304a1413a139b2f431272580bf71480",
+        "inner_val_hash": "592fc162fbee46a30bfa6d1ad172180c5c189a6aecee048d371746cc3cab8468"
+      },
+      {
+        "fold_index": 17,
+        "outer_train_hash": "fe753eb1554c3632c93d5f802d211c9870735717a629de1af598c8a7adc8a83f",
+        "outer_test_hash": "cb335455f7e4b38f54635e593deaa230246d9a2f51e7b9f47b95fbbef9af9c62",
+        "inner_train_hash": "07f13f4819c289c25f4c4a1f8b834a5c99afa1564af955ef80f744f7101f366e",
+        "inner_val_hash": "ecd7ebadc3f92dc6410bbefbb38296bc94b6e48d1e19e2275b234726f16b5a6a"
+      },
+      {
+        "fold_index": 18,
+        "outer_train_hash": "a6b717ec5a0eb24d3d1e30e306a1224ceae76bb83a786a1e4c090cc2c17cbfbe",
+        "outer_test_hash": "8a46d210fbe3f55ecdc71c51ee9936551ab7b893408deaa4a905428208a1b208",
+        "inner_train_hash": "4bc1ddfa1aec124eef546ba78e7cce838988da9c8472d0e665b9fbcb83ff1916",
+        "inner_val_hash": "c13155121377b21dbefc93d3af01ec453974a85f8c41fcb99240d7d6eb68dc92"
+      },
+      {
+        "fold_index": 19,
+        "outer_train_hash": "3a4739d21d7b8461a6f88f3b00441404e4e734113ea1bd17f7ea3ad8819b28a3",
+        "outer_test_hash": "410b0f8cf723b4b52ad1cc2201d3be6177e93870e202d61abd82c66119b88432",
+        "inner_train_hash": "7ce9d6b9b3603d02d21bf1684b0b2c5c3062d49f87a29c9b7c62f9e0e59cdddd",
+        "inner_val_hash": "e6e98c5a6759ad4d9024d1f892eeb0e730dd5a91274122794f420d225205e55c"
+      }
+    ]
+  },
+  "protocol": "reports/original-selector-sensitivity-protocol-v1.md",
+  "upstream_commit": "672034041fc05d9d4b7a80c1e6163ea102579752",
+  "immutability": "Preparation refuses to replace any non-identical existing CSV, split manifest, or dataset manifest."
+}

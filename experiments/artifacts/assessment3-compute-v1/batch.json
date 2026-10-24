@@ -1,0 +1,594 @@
+{
+  "status": "frozen",
+  "protocol_sha256": "5bc5d3ca64e46cae4bb635f0230d3e5f045830228625ec67d8496802eef26b6d",
+  "datasets": [
+    {
+      "dataset": "superconductivity-full",
+      "manifest_sha256": "71eb2cf75b67fee8c8ed388007b35aacfa1301ffa340b6f14d84c82067e5b390",
+      "folds": 5,
+      "rows": 21263
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "manifest_sha256": "afb1f0288cac15df44b9a9650e505fff0248be418e6cb1f0532a4c428eca7d1b",
+      "folds": 5,
+      "rows": 1503
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "manifest_sha256": "2d1ba4e08dcaee59476d080b0327a7c4d4f66041d860d5a88c502530d7cd05bb",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r01-B",
+      "manifest_sha256": "6f60aaf7986595e23c7cb3bc765161e3b12fe719e8782ddcdc069bb365d62f47",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r01-C",
+      "manifest_sha256": "d090e9002c36faf19b033a9d5cc8300f639cc20c88ab3f4d4193fea880bc7007",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r02-A",
+      "manifest_sha256": "107cd16966fff1fabc37622b2481dccc67d6aa10dab99290a6f009be6be6ced7",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r02-B",
+      "manifest_sha256": "60882e0631472dc70ae4f9731e3bfab21c36015585d8b627bd10fa69ac5f7f95",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r02-C",
+      "manifest_sha256": "b8ad849ac62d2283ff2eb829e2da389846dbd25084457a8decdbbddcecaad63d",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r03-A",
+      "manifest_sha256": "7471cd3221b2b66217b7594d283727c86de39852e327c1ac1a94800b040e1bbf",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r03-B",
+      "manifest_sha256": "523379e9ff7b988854ecefa8e67201eab7a3f6856e28a81b8d415d63f794bd87",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r03-C",
+      "manifest_sha256": "e270cb85ae73be56a2f91514d30702c7156b7e097b233ead3c04757bc3171120",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r04-A",
+      "manifest_sha256": "ac1cd1ba7193e2368ba35d44893b22949aa3c66d0ee63ec76d1e0b9cd00bc8a3",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r04-B",
+      "manifest_sha256": "115b46dbdb1b9f9283cc051cf1e98574cb068268934dcc5ab83f427c050dee91",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r04-C",
+      "manifest_sha256": "aaf9958635457cc713effc788c8a556758bf6f37be62bbca89c0a4f353c88f61",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r05-A",
+      "manifest_sha256": "dece1fdf34ed06336275dc23287f47e694ec5b0b7e1a0f5fcc9ddfe2e8296820",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r05-B",
+      "manifest_sha256": "d02394434d68d7da6470ea68cdd9cc8e12312961e0c5f6d0cdbd74917e7e84b4",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r05-C",
+      "manifest_sha256": "a028c0fd0c20a77c4f5194f4de79217632d7a3958c1ed62b8d85691d6b9a5046",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r06-A",
+      "manifest_sha256": "67d04583ca30c25ea5e2bfffb53ac68d322425a0ff0541830cb63e6d705f7e4b",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r06-B",
+      "manifest_sha256": "dfb3c3f621b9966a5ddeccedd631111529a0e3f213469bd8b41e760c81097af8",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r06-C",
+      "manifest_sha256": "3df6fdff0c05e01d1f84388f4ab312aacbc172006d6dde730c1ae37f3442e136",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r07-A",
+      "manifest_sha256": "91fba9b1fd2a4098b573019a0c74bfcec6a294a346e3562e6170c0be42d4ec81",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r07-B",
+      "manifest_sha256": "a02f55ab48b98ea729677bd814ccfc206355dc1242ab18ba673dc44e3c28f31b",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r07-C",
+      "manifest_sha256": "f2be2af20891fd9f357a1c015358efb11f12411049bcedeb57c210e403445c82",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r08-A",
+      "manifest_sha256": "589270fd32d0f71b651edc8650644bb103c9335fa8f53697f66d469f2f8e946f",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r08-B",
+      "manifest_sha256": "e4f01b2ec97d691c6869ee1093c8fa628b05c62483dfed62b17281b1e2a0efdc",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r08-C",
+      "manifest_sha256": "9238e584dbaac2d52907a9b5e251c5257a983c1307352499d50e94b2a75dcab8",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r09-A",
+      "manifest_sha256": "a3ef4179f369d8ca79934cea8dc73bb169fb942096d895fcdf4a7326f15c15d0",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r09-B",
+      "manifest_sha256": "35aaa5e21830ae5cabea170b52fa19d45004c9122e440e0121e96dcf68749910",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r09-C",
+      "manifest_sha256": "f77a252dfb4b870886e0b2526a715f05f90166080af9c16ef8df0e26510e05bb",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r10-A",
+      "manifest_sha256": "c6d1fbf5efedb40a6f474cb47a19d5476a36dca2acca0ad52feb35bc63f1d94a",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r10-B",
+      "manifest_sha256": "be75151c7fc1e63324fb17d65f168f9751a32c7bc074ddaf039804bf5b44a571",
+      "folds": 1,
+      "rows": 4000
+    },
+    {
+      "dataset": "synthetic-r10-C",
+      "manifest_sha256": "adaaf3545a6c7ced488bc4fa0163eff1256e9346abb508942df8bf0f2106dcf8",
+      "folds": 1,
+      "rows": 4000
+    }
+  ],
+  "tasks": [
+    {
+      "dataset": "superconductivity-full",
+      "variant": "natural"
+    },
+    {
+      "dataset": "superconductivity-full",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "superconductivity-full",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "variant": "natural"
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r01-B",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r01-B",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r01-B",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r01-C",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r01-C",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r01-C",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r02-A",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r02-A",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r02-A",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r02-B",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r02-B",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r02-B",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r02-C",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r02-C",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r02-C",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r03-A",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r03-A",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r03-A",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r03-B",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r03-B",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r03-B",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r03-C",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r03-C",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r03-C",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r04-A",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r04-A",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r04-A",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r04-B",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r04-B",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r04-B",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r04-C",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r04-C",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r04-C",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r05-A",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r05-A",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r05-A",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r05-B",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r05-B",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r05-B",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r05-C",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r05-C",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r05-C",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r06-A",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r06-A",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r06-A",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r06-B",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r06-B",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r06-B",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r06-C",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r06-C",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r06-C",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r07-A",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r07-A",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r07-A",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r07-B",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r07-B",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r07-B",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r07-C",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r07-C",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r07-C",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r08-A",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r08-A",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r08-A",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r08-B",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r08-B",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r08-B",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r08-C",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r08-C",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r08-C",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r09-A",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r09-A",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r09-A",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r09-B",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r09-B",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r09-B",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r09-C",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r09-C",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r09-C",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r10-A",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r10-A",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r10-A",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r10-B",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r10-B",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r10-B",
+      "variant": "homoscedastic"
+    },
+    {
+      "dataset": "synthetic-r10-C",
+      "variant": "natural"
+    },
+    {
+      "dataset": "synthetic-r10-C",
+      "variant": "ordinary"
+    },
+    {
+      "dataset": "synthetic-r10-C",
+      "variant": "homoscedastic"
+    }
+  ],
+  "source_sha256": {
+    "src/prepare_assessment3_compute.py": "6fc403ba00574d982110d3d224619a9ceb97b85e8a9f8d41f606f7fd71b4890c",
+    "src/generate_heteroscedastic_v1.py": "2ac6fe06d86ce368eb9e27287fa601814fcd494ffc8a3398fa9efd5b2302c126",
+    "src/prepare_external_datasets_v1.py": "11cb2d72dcbf8ad596232a9f004bee61af400906bb1b288ae4024a89214a664d",
+    "src/run_external_ngboost.py": "76ce0c41a0cda0deb0bad5212da50a8c09da2dc84b141eb488bb270ec890a54f",
+    "src/run_assessment3_compute.py": "1e0e43f6f7cdc2ff80428e333c77f5c209cd1102dd5f9aa0025a629897700edf",
+    "src/aggregate_assessment3_compute.py": "a14cae83b5408d3ed74f8aed8235fd23a84411dacccce755a82913365c1cf126"
+  },
+  "total_tasks": 96,
+  "total_variant_fold_evaluations": 120
+}

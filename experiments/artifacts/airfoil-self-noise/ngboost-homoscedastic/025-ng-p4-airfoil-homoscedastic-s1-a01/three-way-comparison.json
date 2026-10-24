@@ -1,0 +1,378 @@
+{
+  "label": "final_airfoil_three_way_natural_ordinary_homoscedastic",
+  "scope": "airfoil-self-noise-v1 five frozen folds only; not paper-wide claim",
+  "split_hashes_identical_across_variants": true,
+  "artifacts": {
+    "natural": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/airfoil-self-noise/ngboost-natural/023-ng-p4-airfoil-natural-s1-a01/metrics.json",
+    "ordinary": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/airfoil-self-noise/ngboost-ordinary/024-ng-p4-airfoil-ordinary-s1-a01/metrics.json",
+    "homoscedastic": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/airfoil-self-noise/ngboost-homoscedastic/025-ng-p4-airfoil-homoscedastic-s1-a01/metrics.json"
+  },
+  "per_fold": [
+    {
+      "fold_index": 0,
+      "nll": {
+        "natural": 2.223051422009998,
+        "ordinary": 2.7811037817446262,
+        "homoscedastic": 2.0708035338098587
+      },
+      "rmse": {
+        "natural": 2.299804642173594,
+        "ordinary": 5.189226278325352,
+        "homoscedastic": 1.8869914815317863
+      },
+      "nll_rank_1_best": [
+        "homoscedastic",
+        "natural",
+        "ordinary"
+      ],
+      "rmse_rank_1_best": [
+        "homoscedastic",
+        "natural",
+        "ordinary"
+      ],
+      "best_iter": {
+        "natural": 2000,
+        "ordinary": 2000,
+        "homoscedastic": 2000
+      },
+      "cap_hit": {
+        "natural": true,
+        "ordinary": true,
+        "homoscedastic": true
+      },
+      "coverage_95": {
+        "natural": 0.8733333333333333,
+        "ordinary": 0.9333333333333333,
+        "homoscedastic": 0.9333333333333333
+      },
+      "mean_width_95": {
+        "natural": 7.03960897503247,
+        "ordinary": 15.459325863221409,
+        "homoscedastic": 6.530743840191776
+      },
+      "deltas_vs_natural": {
+        "ordinary_minus_natural_nll": 0.5580523597346283,
+        "homoscedastic_minus_natural_nll": -0.15224788820013924,
+        "ordinary_minus_natural_rmse": 2.889421636151758,
+        "homoscedastic_minus_natural_rmse": -0.4128131606418075
+      }
+    },
+    {
+      "fold_index": 1,
+      "nll": {
+        "natural": 2.174082301118028,
+        "ordinary": 2.5705298260678635,
+        "homoscedastic": 2.264618884830261
+      },
+      "rmse": {
+        "natural": 2.309457880170487,
+        "ordinary": 4.506892506119026,
+        "homoscedastic": 1.982546839417014
+      },
+      "nll_rank_1_best": [
+        "natural",
+        "homoscedastic",
+        "ordinary"
+      ],
+      "rmse_rank_1_best": [
+        "homoscedastic",
+        "natural",
+        "ordinary"
+      ],
+      "best_iter": {
+        "natural": 1995,
+        "ordinary": 2000,
+        "homoscedastic": 1955
+      },
+      "cap_hit": {
+        "natural": false,
+        "ordinary": true,
+        "homoscedastic": false
+      },
+      "coverage_95": {
+        "natural": 0.9,
+        "ordinary": 0.9533333333333334,
+        "homoscedastic": 0.8866666666666667
+      },
+      "mean_width_95": {
+        "natural": 6.642299837941173,
+        "ordinary": 13.200687146604784,
+        "homoscedastic": 5.452810275777875
+      },
+      "deltas_vs_natural": {
+        "ordinary_minus_natural_nll": 0.3964475249498354,
+        "homoscedastic_minus_natural_nll": 0.09053658371223294,
+        "ordinary_minus_natural_rmse": 2.1974346259485396,
+        "homoscedastic_minus_natural_rmse": -0.32691104075347277
+      }
+    },
+    {
+      "fold_index": 2,
+      "nll": {
+        "natural": 2.1449148479547975,
+        "ordinary": 2.643631117021158,
+        "homoscedastic": 2.150985439071142
+      },
+      "rmse": {
+        "natural": 2.2361269617889166,
+        "ordinary": 5.0258911441411,
+        "homoscedastic": 1.92428564525684
+      },
+      "nll_rank_1_best": [
+        "natural",
+        "homoscedastic",
+        "ordinary"
+      ],
+      "rmse_rank_1_best": [
+        "homoscedastic",
+        "natural",
+        "ordinary"
+      ],
+      "best_iter": {
+        "natural": 2000,
+        "ordinary": 2000,
+        "homoscedastic": 2000
+      },
+      "cap_hit": {
+        "natural": true,
+        "ordinary": true,
+        "homoscedastic": true
+      },
+      "coverage_95": {
+        "natural": 0.9266666666666666,
+        "ordinary": 0.9666666666666667,
+        "homoscedastic": 0.8866666666666667
+      },
+      "mean_width_95": {
+        "natural": 6.88990501801418,
+        "ordinary": 15.547681159264773,
+        "homoscedastic": 5.84659206762535
+      },
+      "deltas_vs_natural": {
+        "ordinary_minus_natural_nll": 0.4987162690663607,
+        "homoscedastic_minus_natural_nll": 0.006070591116344559,
+        "ordinary_minus_natural_rmse": 2.789764182352183,
+        "homoscedastic_minus_natural_rmse": -0.3118413165320766
+      }
+    },
+    {
+      "fold_index": 3,
+      "nll": {
+        "natural": 2.1883687399792717,
+        "ordinary": 3.351479840553381,
+        "homoscedastic": 2.2139144642846946
+      },
+      "rmse": {
+        "natural": 2.202265346338314,
+        "ordinary": 5.217049032242265,
+        "homoscedastic": 2.040524884447072
+      },
+      "nll_rank_1_best": [
+        "natural",
+        "homoscedastic",
+        "ordinary"
+      ],
+      "rmse_rank_1_best": [
+        "homoscedastic",
+        "natural",
+        "ordinary"
+      ],
+      "best_iter": {
+        "natural": 2000,
+        "ordinary": 2000,
+        "homoscedastic": 2000
+      },
+      "cap_hit": {
+        "natural": true,
+        "ordinary": true,
+        "homoscedastic": true
+      },
+      "coverage_95": {
+        "natural": 0.9266666666666666,
+        "ordinary": 0.9666666666666667,
+        "homoscedastic": 0.9266666666666666
+      },
+      "mean_width_95": {
+        "natural": 6.517666234779877,
+        "ordinary": 15.783501167648046,
+        "homoscedastic": 6.160613168429772
+      },
+      "deltas_vs_natural": {
+        "ordinary_minus_natural_nll": 1.1631111005741093,
+        "homoscedastic_minus_natural_nll": 0.0255457243054229,
+        "ordinary_minus_natural_rmse": 3.014783685903951,
+        "homoscedastic_minus_natural_rmse": -0.16174046189124214
+      }
+    },
+    {
+      "fold_index": 4,
+      "nll": {
+        "natural": 2.3597730009619156,
+        "ordinary": 2.8125781822060913,
+        "homoscedastic": 2.5317888852812236
+      },
+      "rmse": {
+        "natural": 2.8944969849958193,
+        "ordinary": 5.084018610959656,
+        "homoscedastic": 2.529039718337078
+      },
+      "nll_rank_1_best": [
+        "natural",
+        "homoscedastic",
+        "ordinary"
+      ],
+      "rmse_rank_1_best": [
+        "homoscedastic",
+        "natural",
+        "ordinary"
+      ],
+      "best_iter": {
+        "natural": 2000,
+        "ordinary": 2000,
+        "homoscedastic": 1981
+      },
+      "cap_hit": {
+        "natural": true,
+        "ordinary": true,
+        "homoscedastic": false
+      },
+      "coverage_95": {
+        "natural": 0.88,
+        "ordinary": 0.9266666666666666,
+        "homoscedastic": 0.8866666666666667
+      },
+      "mean_width_95": {
+        "natural": 7.406483574662616,
+        "ordinary": 15.114852511518523,
+        "homoscedastic": 6.8043626123728504
+      },
+      "deltas_vs_natural": {
+        "ordinary_minus_natural_nll": 0.4528051812441758,
+        "homoscedastic_minus_natural_nll": 0.17201588431930803,
+        "ordinary_minus_natural_rmse": 2.1895216259638364,
+        "homoscedastic_minus_natural_rmse": -0.36545726665874145
+      }
+    }
+  ],
+  "win_counts_by_fold_best": {
+    "nll": {
+      "natural": 4,
+      "ordinary": 0,
+      "homoscedastic": 1
+    },
+    "rmse": {
+      "natural": 0,
+      "ordinary": 0,
+      "homoscedastic": 5
+    }
+  },
+  "mean_deltas_vs_natural": {
+    "ordinary_minus_natural_nll": {
+      "mean": 0.6138264871138219,
+      "median": 0.4987162690663607,
+      "sample_sd": 0.31275236861753736,
+      "se": 0.13986711127057708,
+      "n": 5
+    },
+    "homoscedastic_minus_natural_nll": {
+      "mean": 0.02838417905063384,
+      "median": 0.0255457243054229,
+      "sample_sd": 0.1200280018524179,
+      "se": 0.05367815426909542,
+      "n": 5
+    },
+    "ordinary_minus_natural_rmse": {
+      "mean": 2.6161851512640535,
+      "median": 2.789764182352183,
+      "sample_sd": 0.39403756635566617,
+      "se": 0.17621895681197072,
+      "n": 5
+    },
+    "homoscedastic_minus_natural_rmse": {
+      "mean": -0.3157526492954681,
+      "median": -0.32691104075347277,
+      "sample_sd": 0.09453948109519214,
+      "se": 0.042279341257281174,
+      "n": 5
+    }
+  },
+  "aggregate_by_variant": {
+    "natural": {
+      "test_nll": {
+        "mean": 2.218038062404802,
+        "median": 2.1883687399792717,
+        "pop_sd": 0.07519748495436672,
+        "sample_sd": 0.08407334404749083,
+        "se": 0.03759874247718336,
+        "n": 5
+      },
+      "test_rmse": {
+        "mean": 2.388430363093426,
+        "median": 2.299804642173594,
+        "pop_sd": 0.25614384114541083,
+        "sample_sd": 0.28637752040952313,
+        "se": 0.12807192057270542,
+        "n": 5
+      },
+      "coverage_95_fold_mean": 0.9013333333333333,
+      "mean_width_95_fold_mean": 6.899192728086064,
+      "cap_hits": 4,
+      "wall_sec": 226.85150534199784
+    },
+    "ordinary": {
+      "test_nll": {
+        "mean": 2.831864549518624,
+        "median": 2.7811037817446262,
+        "pop_sd": 0.27447270646718896,
+        "sample_sd": 0.3068698148144903,
+        "se": 0.13723635323359448,
+        "n": 5
+      },
+      "test_rmse": {
+        "mean": 5.00461551435748,
+        "median": 5.084018610959656,
+        "pop_sd": 0.2583388591738945,
+        "sample_sd": 0.28883162517128663,
+        "se": 0.12916942958694724,
+        "n": 5
+      },
+      "coverage_95_fold_mean": 0.9493333333333334,
+      "mean_width_95_fold_mean": 15.021209569651509,
+      "cap_hits": 5,
+      "wall_sec": 232.90852859900042
+    },
+    "homoscedastic": {
+      "test_nll": {
+        "mean": 2.246422241455436,
+        "median": 2.2139144642846946,
+        "pop_sd": 0.1566985057615602,
+        "sample_sd": 0.17519425542774553,
+        "se": 0.0783492528807801,
+        "n": 5
+      },
+      "test_rmse": {
+        "mean": 2.072677713797958,
+        "median": 1.982546839417014,
+        "pop_sd": 0.23406120609704759,
+        "sample_sd": 0.26168838386429333,
+        "se": 0.11703060304852379,
+        "n": 5
+      },
+      "coverage_95_fold_mean": 0.9040000000000001,
+      "mean_width_95_fold_mean": 6.159024392879525,
+      "cap_hits": 3,
+      "wall_sec": 196.6813408520029
+    }
+  },
+  "rank_by_mean_nll_best_first": [
+    "natural",
+    "homoscedastic",
+    "ordinary"
+  ],
+  "rank_by_mean_rmse_best_first": [
+    "homoscedastic",
+    "natural",
+    "ordinary"
+  ],
+  "coverage_width_note": "Nominal coverage can be achieved with wider predictive intervals; compare mean_width_95 alongside coverage_95. Do not treat coverage alone as calibration success."
+}

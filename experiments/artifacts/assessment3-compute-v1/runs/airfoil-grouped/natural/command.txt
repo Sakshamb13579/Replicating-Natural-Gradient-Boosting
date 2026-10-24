@@ -1,0 +1,1 @@
+/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/.venv/bin/python /mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/src/run_assessment3_compute.py task --batch /mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/assessment3-compute-v1 --dataset airfoil-grouped --variant natural

@@ -1,0 +1,51 @@
+{
+  "test_nll": 3.4835635091326185,
+  "test_rmse": 12.173081777781713,
+  "coverage": {
+    "50": 0.4374412041392286,
+    "80": 0.7742238946378175,
+    "95": 0.9350893697083725
+  },
+  "mean_width": {
+    "50": 11.904782835866841,
+    "80": 22.619458748392212,
+    "95": 34.593476913898954
+  },
+  "pred_scale_min": 0.906877331827939,
+  "pred_scale_max": 24.02080654159256,
+  "pred_scale_mean": 8.825028721641797,
+  "dataset": "superconductivity-full",
+  "variant": "natural",
+  "fold_index": 2,
+  "seeds": {
+    "stage_model": 20002,
+    "full_model": 30002
+  },
+  "best_iter": 2000,
+  "cap_hit": true,
+  "actual_validation_stages": 2000,
+  "actual_refit_stages": 2000,
+  "val_nll_at_best": 3.4669646933837117,
+  "fixed_sigma_from_stage_val": null,
+  "sigma_reestimated_after_refit": null,
+  "split_hashes": {
+    "outer_train_hash": "a28624d609028e49eeb4b9650a21ecfbc3b54ea0c031e9d27705e47aeea2a231",
+    "outer_test_hash": "b68fdbe22acf8ba9a2d4f947f2ad725958e0cefcd5901dd049448fc7ce867247",
+    "inner_train_hash": "deb08441cf14dc13fbabe7d2b8fce8102264f8cd6ad540cb47906649deaf1b93",
+    "inner_val_hash": "01a0484e62067f531e53e97eb9929d8c59eefa99b0b72739f19923b705050547"
+  },
+  "sample_counts": {
+    "outer_train": 19137,
+    "outer_test": 2126,
+    "inner_train": 15309,
+    "inner_val": 3828
+  },
+  "timing_sec": {
+    "stage_fit": 1211.9694973269943,
+    "refit": 1446.4053540870082,
+    "wall": 2669.0594369739993
+  },
+  "reportable": true,
+  "replicate": null,
+  "regime": null
+}

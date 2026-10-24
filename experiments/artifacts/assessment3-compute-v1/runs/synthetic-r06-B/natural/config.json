@@ -1,0 +1,14 @@
+{
+  "dataset": "synthetic-r06-B",
+  "variant": "natural",
+  "features": [
+    "x1",
+    "x2"
+  ],
+  "target": "y",
+  "n_estimators": 2000,
+  "stage_selector": "validation_NLL",
+  "learning_rate": 0.01,
+  "reportable": true,
+  "manifest_sha256": "dfb3c3f621b9966a5ddeccedd631111529a0e3f213469bd8b41e760c81097af8"
+}

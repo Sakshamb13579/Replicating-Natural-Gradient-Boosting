@@ -1,0 +1,4223 @@
+{
+  "status": "complete",
+  "missing_tasks": [],
+  "validated_variant_fold_evaluations": 120,
+  "dataset_variant_summaries": [
+    {
+      "dataset": "superconductivity-full",
+      "variant": "natural",
+      "nll": {
+        "n": 5,
+        "mean": 3.5157617348010826,
+        "sample_sd": 0.058523014209105356,
+        "se": 0.026172287603949133,
+        "min": 3.4591887889001973,
+        "max": 3.604028599540051
+      },
+      "rmse": {
+        "n": 5,
+        "mean": 11.558459968439283,
+        "sample_sd": 0.36662428458019974,
+        "se": 0.1639593645047109,
+        "min": 11.227814478347465,
+        "max": 12.173081777781713
+      },
+      "cap_hits": 3
+    },
+    {
+      "dataset": "superconductivity-full",
+      "variant": "ordinary",
+      "nll": {
+        "n": 5,
+        "mean": 4.710811092720398,
+        "sample_sd": 0.009100974612893109,
+        "se": 0.004070079579185765,
+        "min": 4.697424208708483,
+        "max": 4.720117245766757
+      },
+      "rmse": {
+        "n": 5,
+        "mean": 33.85808287988398,
+        "sample_sd": 0.4633083500075426,
+        "se": 0.2071977930320261,
+        "min": 33.49654952911178,
+        "max": 34.547465363309705
+      },
+      "cap_hits": 4
+    },
+    {
+      "dataset": "superconductivity-full",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 5,
+        "mean": 3.797393343990767,
+        "sample_sd": 0.03275018458659358,
+        "se": 0.014646327802257818,
+        "min": 3.775891031881523,
+        "max": 3.8536681463419633
+      },
+      "rmse": {
+        "n": 5,
+        "mean": 10.762412726957264,
+        "sample_sd": 0.3708962616408683,
+        "se": 0.16586985072590585,
+        "min": 10.514010255815716,
+        "max": 11.391293561610713
+      },
+      "cap_hits": 5
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "variant": "natural",
+      "nll": {
+        "n": 5,
+        "mean": 2.5452906146483487,
+        "sample_sd": 0.07424270391689805,
+        "se": 0.033202346558314784,
+        "min": 2.4907556939318374,
+        "max": 2.6759495563828004
+      },
+      "rmse": {
+        "n": 5,
+        "mean": 3.4409635741935864,
+        "sample_sd": 0.3507063292938976,
+        "se": 0.15684063848811616,
+        "min": 3.1733034791291925,
+        "max": 4.0556794835136385
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "variant": "ordinary",
+      "nll": {
+        "n": 5,
+        "mean": 3.158560351298903,
+        "sample_sd": 0.19256278230105595,
+        "se": 0.08611669423233088,
+        "min": 2.832790396166329,
+        "max": 3.305980027184698
+      },
+      "rmse": {
+        "n": 5,
+        "mean": 5.928333802615883,
+        "sample_sd": 0.8591134449078176,
+        "se": 0.38420721263958013,
+        "min": 4.890358179025605,
+        "max": 7.029413587582619
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 5,
+        "mean": 2.4558562878958483,
+        "sample_sd": 0.17425459644805769,
+        "se": 0.07792902460993008,
+        "min": 2.230129964495207,
+        "max": 2.6898936728259195
+      },
+      "rmse": {
+        "n": 5,
+        "mean": 2.719076503522699,
+        "sample_sd": 0.5490412468506481,
+        "se": 0.2455387100818583,
+        "min": 2.1532911742074785,
+        "max": 3.4939017609860112
+      },
+      "cap_hits": 1
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.8340278729267232,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8340278729267232,
+        "max": 0.8340278729267232
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6658731339949626,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6658731339949626,
+        "max": 0.6658731339949626
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.8650086385355393,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8650086385355393,
+        "max": 0.8650086385355393
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6815949443780517,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6815949443780517,
+        "max": 0.6815949443780517
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.01197961911694,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.01197961911694,
+        "max": 1.01197961911694
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6656506290304148,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6656506290304148,
+        "max": 0.6656506290304148
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r01-B",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.9570190333231787,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9570190333231787,
+        "max": 0.9570190333231787
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6222956196388065,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6222956196388065,
+        "max": 0.6222956196388065
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r01-B",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.0046413126940945,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0046413126940945,
+        "max": 1.0046413126940945
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6330214507002764,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6330214507002764,
+        "max": 0.6330214507002764
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r01-B",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 0.9383273206120424,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9383273206120424,
+        "max": 0.9383273206120424
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6183921028708145,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6183921028708145,
+        "max": 0.6183921028708145
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r01-C",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 1.4913426427386633,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4913426427386633,
+        "max": 1.4913426427386633
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3112634701592105,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3112634701592105,
+        "max": 1.3112634701592105
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r01-C",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.535575258804757,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.535575258804757,
+        "max": 1.535575258804757
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3456598682198964,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3456598682198964,
+        "max": 1.3456598682198964
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r01-C",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.6890537008927626,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.6890537008927626,
+        "max": 1.6890537008927626
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.310113646194889,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.310113646194889,
+        "max": 1.310113646194889
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r02-A",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.8761994841214731,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8761994841214731,
+        "max": 0.8761994841214731
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.73368483432206,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.73368483432206,
+        "max": 0.73368483432206
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r02-A",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.8989262857100259,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8989262857100259,
+        "max": 0.8989262857100259
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.7452500300100101,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.7452500300100101,
+        "max": 0.7452500300100101
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r02-A",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.1100382121406382,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.1100382121406382,
+        "max": 1.1100382121406382
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.7329660133225905,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.7329660133225905,
+        "max": 0.7329660133225905
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r02-B",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.9734773439082105,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9734773439082105,
+        "max": 0.9734773439082105
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6370150834501898,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6370150834501898,
+        "max": 0.6370150834501898
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r02-B",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.0162217602606924,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0162217602606924,
+        "max": 1.0162217602606924
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6588974597566674,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6588974597566674,
+        "max": 0.6588974597566674
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r02-B",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 0.9771014300577824,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9771014300577824,
+        "max": 0.9771014300577824
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6410375166380621,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6410375166380621,
+        "max": 0.6410375166380621
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r02-C",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 1.5392936171069203,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.5392936171069203,
+        "max": 1.5392936171069203
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.450739516658818,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.450739516658818,
+        "max": 1.450739516658818
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r02-C",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.5625014384068094,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.5625014384068094,
+        "max": 1.5625014384068094
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.4760429677819011,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4760429677819011,
+        "max": 1.4760429677819011
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r02-C",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.7911048608324007,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.7911048608324007,
+        "max": 1.7911048608324007
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.4488618391259132,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4488618391259132,
+        "max": 1.4488618391259132
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r03-A",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.8133035122794516,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8133035122794516,
+        "max": 0.8133035122794516
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6736380441043676,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6736380441043676,
+        "max": 0.6736380441043676
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r03-A",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.847263599622768,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.847263599622768,
+        "max": 0.847263599622768
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6906933848984903,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6906933848984903,
+        "max": 0.6906933848984903
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r03-A",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.0236147607917778,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0236147607917778,
+        "max": 1.0236147607917778
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.673353546098832,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.673353546098832,
+        "max": 0.673353546098832
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r03-B",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.9121116063086206,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9121116063086206,
+        "max": 0.9121116063086206
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.5985364004963422,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.5985364004963422,
+        "max": 0.5985364004963422
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r03-B",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.9603983532381984,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9603983532381984,
+        "max": 0.9603983532381984
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6212735545498471,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6212735545498471,
+        "max": 0.6212735545498471
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r03-B",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 0.9034388500944595,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9034388500944595,
+        "max": 0.9034388500944595
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.59720205307151,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.59720205307151,
+        "max": 0.59720205307151
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r03-C",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 1.477588496091454,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.477588496091454,
+        "max": 1.477588496091454
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.335880239859094,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.335880239859094,
+        "max": 1.335880239859094
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r03-C",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.4905406709486226,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4905406709486226,
+        "max": 1.4905406709486226
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3767091634094157,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3767091634094157,
+        "max": 1.3767091634094157
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r03-C",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.713005313152497,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.713005313152497,
+        "max": 1.713005313152497
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.341702696613497,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.341702696613497,
+        "max": 1.341702696613497
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r04-A",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.8331711850566634,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8331711850566634,
+        "max": 0.8331711850566634
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.673578534133781,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.673578534133781,
+        "max": 0.673578534133781
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r04-A",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.8922008849876332,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8922008849876332,
+        "max": 0.8922008849876332
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.7027030705227537,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.7027030705227537,
+        "max": 0.7027030705227537
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r04-A",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.028279693539132,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.028279693539132,
+        "max": 1.028279693539132
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6760683422344527,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6760683422344527,
+        "max": 0.6760683422344527
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r04-B",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.9378622626931022,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9378622626931022,
+        "max": 0.9378622626931022
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6124445997519233,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6124445997519233,
+        "max": 0.6124445997519233
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r04-B",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.984630201866819,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.984630201866819,
+        "max": 0.984630201866819
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6228825885882256,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6228825885882256,
+        "max": 0.6228825885882256
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r04-B",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 0.9275359755225359,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9275359755225359,
+        "max": 0.9275359755225359
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6111330279347843,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6111330279347843,
+        "max": 0.6111330279347843
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r04-C",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 1.4855155407235672,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4855155407235672,
+        "max": 1.4855155407235672
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3340721427772355,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3340721427772355,
+        "max": 1.3340721427772355
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r04-C",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.5324448670875441,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.5324448670875441,
+        "max": 1.5324448670875441
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3998838103344828,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3998838103344828,
+        "max": 1.3998838103344828
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r04-C",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.710335385031243,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.710335385031243,
+        "max": 1.710335385031243
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3372513715749654,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3372513715749654,
+        "max": 1.3372513715749654
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r05-A",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.824883626024885,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.824883626024885,
+        "max": 0.824883626024885
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6906184426129738,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6906184426129738,
+        "max": 0.6906184426129738
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r05-A",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.8373205284588022,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8373205284588022,
+        "max": 0.8373205284588022
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.7038839280428726,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.7038839280428726,
+        "max": 0.7038839280428726
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r05-A",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.0504847739231122,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0504847739231122,
+        "max": 1.0504847739231122
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6912199095056267,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6912199095056267,
+        "max": 0.6912199095056267
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r05-B",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.9531859673301389,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9531859673301389,
+        "max": 0.9531859673301389
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6256394051456139,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6256394051456139,
+        "max": 0.6256394051456139
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r05-B",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.9957800013329421,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9957800013329421,
+        "max": 0.9957800013329421
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6473019685637076,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6473019685637076,
+        "max": 0.6473019685637076
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r05-B",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 0.9427296451707832,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9427296451707832,
+        "max": 0.9427296451707832
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6211150744073533,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6211150744073533,
+        "max": 0.6211150744073533
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r05-C",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 1.4706033125390794,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4706033125390794,
+        "max": 1.4706033125390794
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3663213231287876,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3663213231287876,
+        "max": 1.3663213231287876
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r05-C",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.5132268813977765,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.5132268813977765,
+        "max": 1.5132268813977765
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.4296195028726086,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4296195028726086,
+        "max": 1.4296195028726086
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r05-C",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.7319548010416417,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.7319548010416417,
+        "max": 1.7319548010416417
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3661800121079466,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3661800121079466,
+        "max": 1.3661800121079466
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r06-A",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.7616945160693414,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.7616945160693414,
+        "max": 0.7616945160693414
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6515837860681442,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6515837860681442,
+        "max": 0.6515837860681442
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r06-A",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.791154951750449,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.791154951750449,
+        "max": 0.791154951750449
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6790946662990424,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6790946662990424,
+        "max": 0.6790946662990424
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r06-A",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.0030944707358918,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0030944707358918,
+        "max": 1.0030944707358918
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6514300615213535,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6514300615213535,
+        "max": 0.6514300615213535
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r06-B",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.9181985114345262,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9181985114345262,
+        "max": 0.9181985114345262
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6022528333468343,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6022528333468343,
+        "max": 0.6022528333468343
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r06-B",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.9463623724499617,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9463623724499617,
+        "max": 0.9463623724499617
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6127863349244643,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6127863349244643,
+        "max": 0.6127863349244643
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r06-B",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 0.9104923768736503,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9104923768736503,
+        "max": 0.9104923768736503
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.5987177065165188,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.5987177065165188,
+        "max": 0.5987177065165188
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r06-C",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 1.4341958185368433,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4341958185368433,
+        "max": 1.4341958185368433
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.2952064830932635,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.2952064830932635,
+        "max": 1.2952064830932635
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r06-C",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.4638037141493407,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4638037141493407,
+        "max": 1.4638037141493407
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3499153355003175,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3499153355003175,
+        "max": 1.3499153355003175
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r06-C",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.6907443569608085,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.6907443569608085,
+        "max": 1.6907443569608085
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.2957424489302112,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.2957424489302112,
+        "max": 1.2957424489302112
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r07-A",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.8722307711932382,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8722307711932382,
+        "max": 0.8722307711932382
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.7017794141928063,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.7017794141928063,
+        "max": 0.7017794141928063
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r07-A",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.9170637229222399,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9170637229222399,
+        "max": 0.9170637229222399
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.7323404024780152,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.7323404024780152,
+        "max": 0.7323404024780152
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r07-A",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.0654710183618037,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0654710183618037,
+        "max": 1.0654710183618037
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.7008739154824295,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.7008739154824295,
+        "max": 0.7008739154824295
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r07-B",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.989998090081541,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.989998090081541,
+        "max": 0.989998090081541
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6420215054059092,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6420215054059092,
+        "max": 0.6420215054059092
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r07-B",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.0447523760035926,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0447523760035926,
+        "max": 1.0447523760035926
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6565474184464754,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6565474184464754,
+        "max": 0.6565474184464754
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r07-B",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 0.9752956230861005,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9752956230861005,
+        "max": 0.9752956230861005
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6408053037559122,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6408053037559122,
+        "max": 0.6408053037559122
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r07-C",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 1.5387341255026195,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.5387341255026195,
+        "max": 1.5387341255026195
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3939847032815302,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3939847032815302,
+        "max": 1.3939847032815302
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r07-C",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.552620045602572,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.552620045602572,
+        "max": 1.552620045602572
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.418861922505518,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.418861922505518,
+        "max": 1.418861922505518
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r07-C",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.7508753401659236,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.7508753401659236,
+        "max": 1.7508753401659236
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3914382487886072,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3914382487886072,
+        "max": 1.3914382487886072
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r08-A",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.8377773074619871,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8377773074619871,
+        "max": 0.8377773074619871
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6925821296530668,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6925821296530668,
+        "max": 0.6925821296530668
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r08-A",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.8746651667037991,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8746651667037991,
+        "max": 0.8746651667037991
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.7034457328494474,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.7034457328494474,
+        "max": 0.7034457328494474
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r08-A",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.0507672788658968,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0507672788658968,
+        "max": 1.0507672788658968
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6919026436857529,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6919026436857529,
+        "max": 0.6919026436857529
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r08-B",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.9487247690955116,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9487247690955116,
+        "max": 0.9487247690955116
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6234346893409148,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6234346893409148,
+        "max": 0.6234346893409148
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r08-B",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.0077234189141135,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0077234189141135,
+        "max": 1.0077234189141135
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6527676753734304,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6527676753734304,
+        "max": 0.6527676753734304
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r08-B",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 0.9446987955612375,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9446987955612375,
+        "max": 0.9446987955612375
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6217197207981762,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6217197207981762,
+        "max": 0.6217197207981762
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r08-C",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 1.5118344999996964,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.5118344999996964,
+        "max": 1.5118344999996964
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.373603014743786,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.373603014743786,
+        "max": 1.373603014743786
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r08-C",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.5394017429947455,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.5394017429947455,
+        "max": 1.5394017429947455
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.406616788778722,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.406616788778722,
+        "max": 1.406616788778722
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r08-C",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.7378882942694183,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.7378882942694183,
+        "max": 1.7378882942694183
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.375242363848005,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.375242363848005,
+        "max": 1.375242363848005
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r09-A",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.8052167258694941,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8052167258694941,
+        "max": 0.8052167258694941
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6747101334666907,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6747101334666907,
+        "max": 0.6747101334666907
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r09-A",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.8391056642045066,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8391056642045066,
+        "max": 0.8391056642045066
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.7163718662848615,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.7163718662848615,
+        "max": 0.7163718662848615
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r09-A",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.0260147351597093,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0260147351597093,
+        "max": 1.0260147351597093
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6743583190908155,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6743583190908155,
+        "max": 0.6743583190908155
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r09-B",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.9364235172188947,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9364235172188947,
+        "max": 0.9364235172188947
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6120219766978512,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6120219766978512,
+        "max": 0.6120219766978512
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r09-B",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.9925686330061617,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9925686330061617,
+        "max": 0.9925686330061617
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6378020883214056,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6378020883214056,
+        "max": 0.6378020883214056
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r09-B",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 0.9274080703348797,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9274080703348797,
+        "max": 0.9274080703348797
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6116564007554239,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6116564007554239,
+        "max": 0.6116564007554239
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r09-C",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 1.4684502086020093,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4684502086020093,
+        "max": 1.4684502086020093
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.336043515778602,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.336043515778602,
+        "max": 1.336043515778602
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r09-C",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.4994745383533523,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4994745383533523,
+        "max": 1.4994745383533523
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.38063691043976,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.38063691043976,
+        "max": 1.38063691043976
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r09-C",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.7095351362160311,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.7095351362160311,
+        "max": 1.7095351362160311
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3360965392970412,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3360965392970412,
+        "max": 1.3360965392970412
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r10-A",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.790654296395553,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.790654296395553,
+        "max": 0.790654296395553
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.662014154382258,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.662014154382258,
+        "max": 0.662014154382258
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r10-A",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.8004551553631107,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.8004551553631107,
+        "max": 0.8004551553631107
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6734378765045823,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6734378765045823,
+        "max": 0.6734378765045823
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r10-A",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.0093803142736155,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.0093803142736155,
+        "max": 1.0093803142736155
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6636356162583606,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6636356162583606,
+        "max": 0.6636356162583606
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r10-B",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 0.9286366319152285,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9286366319152285,
+        "max": 0.9286366319152285
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6050864229369279,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6050864229369279,
+        "max": 0.6050864229369279
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r10-B",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 0.9624526046705045,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9624526046705045,
+        "max": 0.9624526046705045
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6131786527155704,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6131786527155704,
+        "max": 0.6131786527155704
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r10-B",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 0.9171015798891132,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.9171015798891132,
+        "max": 0.9171015798891132
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 0.6053776290260396,
+        "sample_sd": null,
+        "se": null,
+        "min": 0.6053776290260396,
+        "max": 0.6053776290260396
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r10-C",
+      "variant": "natural",
+      "nll": {
+        "n": 1,
+        "mean": 1.4588508925263377,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.4588508925263377,
+        "max": 1.4588508925263377
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3153341484850023,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3153341484850023,
+        "max": 1.3153341484850023
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r10-C",
+      "variant": "ordinary",
+      "nll": {
+        "n": 1,
+        "mean": 1.474071656536795,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.474071656536795,
+        "max": 1.474071656536795
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3517801352365737,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3517801352365737,
+        "max": 1.3517801352365737
+      },
+      "cap_hits": 0
+    },
+    {
+      "dataset": "synthetic-r10-C",
+      "variant": "homoscedastic",
+      "nll": {
+        "n": 1,
+        "mean": 1.695254245476036,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.695254245476036,
+        "max": 1.695254245476036
+      },
+      "rmse": {
+        "n": 1,
+        "mean": 1.3177811996382318,
+        "sample_sd": null,
+        "se": null,
+        "min": 1.3177811996382318,
+        "max": 1.3177811996382318
+      },
+      "cap_hits": 0
+    }
+  ],
+  "paired_nll_differences": [
+    {
+      "dataset": "airfoil-grouped",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 5,
+      "mean": -0.613269736650554,
+      "sample_sd": 0.18222997905163724,
+      "se": 0.0814957241395647,
+      "min": -0.7850982882691837,
+      "max": -0.34203470223449184,
+      "first_wins": 5,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 5,
+      "mean": 0.0894343267525004,
+      "sample_sd": 0.1184205209006556,
+      "se": 0.0529592669329601,
+      "min": -0.02579707189427838,
+      "max": 0.2606257294366303,
+      "first_wins": 2,
+      "ties": 0,
+      "second_wins": 3
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 5,
+      "mean": 0.7027040634030544,
+      "sample_sd": 0.1539231904543281,
+      "se": 0.06883654343390487,
+      "min": 0.5222734060534528,
+      "max": 0.9273755847097944,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 5
+    },
+    {
+      "dataset": "superconductivity-full",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 5,
+      "mean": -1.195049357919316,
+      "sample_sd": 0.05099040328646884,
+      "se": 0.0228036015897346,
+      "min": -1.2382354198082859,
+      "max": -1.114461958921475,
+      "first_wins": 5,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "superconductivity-full",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 5,
+      "mean": -0.2816316091896848,
+      "sample_sd": 0.06948226809898805,
+      "se": 0.031073414940040473,
+      "min": -0.37010463720934483,
+      "max": -0.19483269627654076,
+      "first_wins": 5,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "superconductivity-full",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 5,
+      "mean": 0.9134177487296313,
+      "sample_sd": 0.033913028581830394,
+      "se": 0.01516636744637321,
+      "min": 0.8554987683681317,
+      "max": 0.9419061616315241,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 5
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.03098076560881613,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.03098076560881613,
+      "max": -0.03098076560881613,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.1779517461902167,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.1779517461902167,
+      "max": -0.1779517461902167,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.14697098058140057,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.14697098058140057,
+      "max": -0.14697098058140057,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r01-B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.04762227937091579,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.04762227937091579,
+      "max": -0.04762227937091579,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r01-B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.018691712711136343,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.018691712711136343,
+      "max": 0.018691712711136343,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r01-B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.06631399208205213,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.06631399208205213,
+      "max": 0.06631399208205213,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r01-C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.044232616066093744,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.044232616066093744,
+      "max": -0.044232616066093744,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r01-C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.19771105815409928,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.19771105815409928,
+      "max": -0.19771105815409928,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r01-C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.15347844208800554,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.15347844208800554,
+      "max": -0.15347844208800554,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r02-A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.02272680158855278,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.02272680158855278,
+      "max": -0.02272680158855278,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r02-A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.23383872801916517,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.23383872801916517,
+      "max": -0.23383872801916517,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r02-A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.21111192643061238,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.21111192643061238,
+      "max": -0.21111192643061238,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r02-B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.04274441635248194,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.04274441635248194,
+      "max": -0.04274441635248194,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r02-B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.0036240861495718812,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.0036240861495718812,
+      "max": -0.0036240861495718812,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r02-B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.03912033020291006,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.03912033020291006,
+      "max": 0.03912033020291006,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r02-C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.023207821299889186,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.023207821299889186,
+      "max": -0.023207821299889186,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r02-C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.25181124372548047,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.25181124372548047,
+      "max": -0.25181124372548047,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r02-C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.22860342242559129,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.22860342242559129,
+      "max": -0.22860342242559129,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r03-A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.03396008734331635,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.03396008734331635,
+      "max": -0.03396008734331635,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r03-A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.2103112485123262,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.2103112485123262,
+      "max": -0.2103112485123262,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r03-A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.17635116116900984,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.17635116116900984,
+      "max": -0.17635116116900984,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r03-B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.048286746929577795,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.048286746929577795,
+      "max": -0.048286746929577795,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r03-B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.008672756214161192,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.008672756214161192,
+      "max": 0.008672756214161192,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r03-B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.05695950314373899,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.05695950314373899,
+      "max": 0.05695950314373899,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r03-C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.012952174857168597,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.012952174857168597,
+      "max": -0.012952174857168597,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r03-C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.2354168170610429,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.2354168170610429,
+      "max": -0.2354168170610429,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r03-C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.2224646422038743,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.2224646422038743,
+      "max": -0.2224646422038743,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r04-A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.05902969993096974,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.05902969993096974,
+      "max": -0.05902969993096974,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r04-A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.19510850848246863,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.19510850848246863,
+      "max": -0.19510850848246863,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r04-A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.1360788085514989,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.1360788085514989,
+      "max": -0.1360788085514989,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r04-B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.0467679391737168,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.0467679391737168,
+      "max": -0.0467679391737168,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r04-B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.010326287170566384,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.010326287170566384,
+      "max": 0.010326287170566384,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r04-B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.05709422634428318,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.05709422634428318,
+      "max": 0.05709422634428318,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r04-C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.04692932636397695,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.04692932636397695,
+      "max": -0.04692932636397695,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r04-C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.22481984430767588,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.22481984430767588,
+      "max": -0.22481984430767588,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r04-C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.17789051794369892,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.17789051794369892,
+      "max": -0.17789051794369892,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r05-A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.012436902433917263,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.012436902433917263,
+      "max": -0.012436902433917263,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r05-A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.22560114789822727,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.22560114789822727,
+      "max": -0.22560114789822727,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r05-A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.21316424546431,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.21316424546431,
+      "max": -0.21316424546431,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r05-B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.04259403400280315,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.04259403400280315,
+      "max": -0.04259403400280315,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r05-B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.010456322159355769,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.010456322159355769,
+      "max": 0.010456322159355769,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r05-B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.05305035616215892,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.05305035616215892,
+      "max": 0.05305035616215892,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r05-C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.042623568858697114,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.042623568858697114,
+      "max": -0.042623568858697114,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r05-C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.2613514885025623,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.2613514885025623,
+      "max": -0.2613514885025623,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r05-C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.21872791964386518,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.21872791964386518,
+      "max": -0.21872791964386518,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r06-A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.029460435681107677,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.029460435681107677,
+      "max": -0.029460435681107677,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r06-A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.2413999546665504,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.2413999546665504,
+      "max": -0.2413999546665504,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r06-A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.21193951898544272,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.21193951898544272,
+      "max": -0.21193951898544272,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r06-B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.028163861015435443,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.028163861015435443,
+      "max": -0.028163861015435443,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r06-B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.007706134560875988,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.007706134560875988,
+      "max": 0.007706134560875988,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r06-B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.03586999557631143,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.03586999557631143,
+      "max": 0.03586999557631143,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r06-C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.029607895612497437,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.029607895612497437,
+      "max": -0.029607895612497437,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r06-C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.2565485384239652,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.2565485384239652,
+      "max": -0.2565485384239652,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r06-C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.22694064281146775,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.22694064281146775,
+      "max": -0.22694064281146775,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r07-A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.0448329517290017,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.0448329517290017,
+      "max": -0.0448329517290017,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r07-A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.19324024716856547,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.19324024716856547,
+      "max": -0.19324024716856547,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r07-A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.14840729543956377,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.14840729543956377,
+      "max": -0.14840729543956377,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r07-B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.05475428592205156,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.05475428592205156,
+      "max": -0.05475428592205156,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r07-B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.014702466995440533,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.014702466995440533,
+      "max": 0.014702466995440533,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r07-B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.06945675291749209,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.06945675291749209,
+      "max": 0.06945675291749209,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r07-C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.013885920099952598,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.013885920099952598,
+      "max": -0.013885920099952598,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r07-C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.21214121466330416,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.21214121466330416,
+      "max": -0.21214121466330416,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r07-C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.19825529456335156,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.19825529456335156,
+      "max": -0.19825529456335156,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r08-A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.03688785924181204,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.03688785924181204,
+      "max": -0.03688785924181204,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r08-A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.21298997140390974,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.21298997140390974,
+      "max": -0.21298997140390974,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r08-A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.1761021121620977,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.1761021121620977,
+      "max": -0.1761021121620977,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r08-B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.05899864981860192,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.05899864981860192,
+      "max": -0.05899864981860192,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r08-B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.004025973534274141,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.004025973534274141,
+      "max": 0.004025973534274141,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r08-B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.06302462335287606,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.06302462335287606,
+      "max": 0.06302462335287606,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r08-C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.02756724299504909,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.02756724299504909,
+      "max": -0.02756724299504909,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r08-C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.22605379426972183,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.22605379426972183,
+      "max": -0.22605379426972183,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r08-C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.19848655127467274,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.19848655127467274,
+      "max": -0.19848655127467274,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r09-A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.0338889383350125,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.0338889383350125,
+      "max": -0.0338889383350125,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r09-A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.2207980092902152,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.2207980092902152,
+      "max": -0.2207980092902152,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r09-A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.1869090709552027,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.1869090709552027,
+      "max": -0.1869090709552027,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r09-B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.056145115787267,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.056145115787267,
+      "max": -0.056145115787267,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r09-B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.00901544688401501,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.00901544688401501,
+      "max": 0.00901544688401501,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r09-B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.06516056267128201,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.06516056267128201,
+      "max": 0.06516056267128201,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r09-C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.03102432975134306,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.03102432975134306,
+      "max": -0.03102432975134306,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r09-C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.2410849276140219,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.2410849276140219,
+      "max": -0.2410849276140219,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r09-C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.21006059786267883,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.21006059786267883,
+      "max": -0.21006059786267883,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r10-A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.00980085896755778,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.00980085896755778,
+      "max": -0.00980085896755778,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r10-A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.21872601787806256,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.21872601787806256,
+      "max": -0.21872601787806256,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r10-A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.20892515891050478,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.20892515891050478,
+      "max": -0.20892515891050478,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r10-B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.033815972755276036,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.033815972755276036,
+      "max": -0.033815972755276036,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r10-B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.011535052026115267,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.011535052026115267,
+      "max": 0.011535052026115267,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r10-B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": 0.0453510247813913,
+      "sample_sd": null,
+      "se": null,
+      "min": 0.0453510247813913,
+      "max": 0.0453510247813913,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 1
+    },
+    {
+      "dataset": "synthetic-r10-C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.015220764010457355,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.015220764010457355,
+      "max": -0.015220764010457355,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r10-C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.23640335294969828,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.23640335294969828,
+      "max": -0.23640335294969828,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "dataset": "synthetic-r10-C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 1,
+      "mean": -0.22118258893924092,
+      "sample_sd": null,
+      "se": null,
+      "min": -0.22118258893924092,
+      "max": -0.22118258893924092,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 0
+    }
+  ],
+  "synthetic_seed_summaries": [
+    {
+      "regime": "A",
+      "variant": "homoscedastic",
+      "replicates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "nll": {
+        "n": 10,
+        "mean": 1.0379124876908516,
+        "sample_sd": 0.032356634056865806,
+        "se": 0.01023206610362701,
+        "min": 1.0030944707358918,
+        "max": 1.1100382121406382
+      },
+      "rmse": {
+        "n": 10,
+        "mean": 0.6821458996230629,
+        "sample_sd": 0.023199688915120108,
+        "se": 0.00733638579791403,
+        "min": 0.6514300615213535,
+        "max": 0.7329660133225905
+      },
+      "scale_mae": {
+        "n": 10,
+        "mean": 0.2587930323644252,
+        "sample_sd": 0.008045272378497658,
+        "se": 0.0025441385112492864,
+        "min": 0.2495340793867289,
+        "max": 0.2769084077590769
+      },
+      "pearson": null,
+      "coverage_50": {
+        "n": 10,
+        "mean": 0.6054999999999999,
+        "sample_sd": 0.017913759454055937,
+        "se": 0.005664828133119118,
+        "min": 0.575,
+        "max": 0.63875
+      },
+      "coverage_80": {
+        "n": 10,
+        "mean": 0.8247499999999999,
+        "sample_sd": 0.017126976771553514,
+        "se": 0.005416025603090643,
+        "min": 0.80375,
+        "max": 0.86875
+      },
+      "coverage_95": {
+        "n": 10,
+        "mean": 0.934375,
+        "sample_sd": 0.009722718241315024,
+        "se": 0.0030745934690622092,
+        "min": 0.92125,
+        "max": 0.95875
+      }
+    },
+    {
+      "regime": "A",
+      "variant": "natural",
+      "replicates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "nll": {
+        "n": 10,
+        "mean": 0.824915929739881,
+        "sample_sd": 0.034767487269825426,
+        "se": 0.010994444829355746,
+        "min": 0.7616945160693414,
+        "max": 0.8761994841214731
+      },
+      "rmse": {
+        "n": 10,
+        "mean": 0.6820062606931111,
+        "sample_sd": 0.023634831649197007,
+        "se": 0.007473990012609627,
+        "min": 0.6515837860681442,
+        "max": 0.73368483432206
+      },
+      "scale_mae": {
+        "n": 10,
+        "mean": 0.06334386921610909,
+        "sample_sd": 0.006672400004169553,
+        "se": 0.0021099981472892776,
+        "min": 0.0532554684941954,
+        "max": 0.0739785527650621
+      },
+      "pearson": {
+        "n": 10,
+        "mean": 0.9673442759603924,
+        "sample_sd": 0.007300114715615436,
+        "se": 0.0023084989681857134,
+        "min": 0.9522476933793136,
+        "max": 0.9752517421510561
+      },
+      "coverage_50": {
+        "n": 10,
+        "mean": 0.492625,
+        "sample_sd": 0.020845413164530938,
+        "se": 0.006591898436717602,
+        "min": 0.45,
+        "max": 0.52125
+      },
+      "coverage_80": {
+        "n": 10,
+        "mean": 0.782125,
+        "sample_sd": 0.01605167436749199,
+        "se": 0.005075985126061732,
+        "min": 0.76,
+        "max": 0.82
+      },
+      "coverage_95": {
+        "n": 10,
+        "mean": 0.9346249999999999,
+        "sample_sd": 0.00994865289596758,
+        "se": 0.003146040280168773,
+        "min": 0.92125,
+        "max": 0.955
+      }
+    },
+    {
+      "regime": "A",
+      "variant": "ordinary",
+      "replicates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "nll": {
+        "n": 10,
+        "mean": 0.8563164598258874,
+        "sample_sd": 0.04124623466020825,
+        "se": 0.013043204643203923,
+        "min": 0.791154951750449,
+        "max": 0.9170637229222399
+      },
+      "rmse": {
+        "n": 10,
+        "mean": 0.7028815902268126,
+        "sample_sd": 0.0232872696091315,
+        "se": 0.007364081245127457,
+        "min": 0.6734378765045823,
+        "max": 0.7452500300100101
+      },
+      "scale_mae": {
+        "n": 10,
+        "mean": 0.0887888676834872,
+        "sample_sd": 0.00554799034478523,
+        "se": 0.0017544285926144195,
+        "min": 0.08091601192493644,
+        "max": 0.0975368031843272
+      },
+      "pearson": {
+        "n": 10,
+        "mean": 0.9055677493861676,
+        "sample_sd": 0.0170694698900412,
+        "se": 0.005397840330419409,
+        "min": 0.8765542775072689,
+        "max": 0.9325433739270355
+      },
+      "coverage_50": {
+        "n": 10,
+        "mean": 0.47124999999999995,
+        "sample_sd": 0.008228507357554796,
+        "se": 0.002602082499332667,
+        "min": 0.45625,
+        "max": 0.48375
+      },
+      "coverage_80": {
+        "n": 10,
+        "mean": 0.7585,
+        "sample_sd": 0.012744824657701494,
+        "se": 0.0040302674297812546,
+        "min": 0.74375,
+        "max": 0.785
+      },
+      "coverage_95": {
+        "n": 10,
+        "mean": 0.92425,
+        "sample_sd": 0.009075302260041315,
+        "se": 0.0028698625596204255,
+        "min": 0.91,
+        "max": 0.9375
+      }
+    },
+    {
+      "regime": "B",
+      "variant": "homoscedastic",
+      "replicates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "nll": {
+        "n": 10,
+        "mean": 0.9364129667202585,
+        "sample_sd": 0.024881095657616942,
+        "se": 0.007868093295859453,
+        "min": 0.9034388500944595,
+        "max": 0.9771014300577824
+      },
+      "rmse": {
+        "n": 10,
+        "mean": 0.6167156535774596,
+        "sample_sd": 0.015308275159049034,
+        "se": 0.004840901655117131,
+        "min": 0.59720205307151,
+        "max": 0.6410375166380621
+      },
+      "scale_mae": {
+        "n": 10,
+        "mean": 0.012132386555687037,
+        "sample_sd": 0.012036108590419651,
+        "se": 0.0038061517310844784,
+        "min": 0.0004969504424976456,
+        "max": 0.04133613974786887
+      },
+      "pearson": null,
+      "coverage_50": {
+        "n": 10,
+        "mean": 0.49912499999999993,
+        "sample_sd": 0.021578747904155846,
+        "se": 0.006823799243171727,
+        "min": 0.455,
+        "max": 0.53875
+      },
+      "coverage_80": {
+        "n": 10,
+        "mean": 0.7918749999999999,
+        "sample_sd": 0.014663470295639823,
+        "se": 0.004636996453644443,
+        "min": 0.77,
+        "max": 0.82625
+      },
+      "coverage_95": {
+        "n": 10,
+        "mean": 0.9481249999999999,
+        "sample_sd": 0.01014221787053173,
+        "se": 0.0032072508996543003,
+        "min": 0.935,
+        "max": 0.96875
+      }
+    },
+    {
+      "regime": "B",
+      "variant": "natural",
+      "replicates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "nll": {
+        "n": 10,
+        "mean": 0.9455637733308953,
+        "sample_sd": 0.024152707108668944,
+        "se": 0.007637756612233381,
+        "min": 0.9121116063086206,
+        "max": 0.989998090081541
+      },
+      "rmse": {
+        "n": 10,
+        "mean": 0.6180748536211313,
+        "sample_sd": 0.014549010915419087,
+        "se": 0.004600801219537568,
+        "min": 0.5985364004963422,
+        "max": 0.6420215054059092
+      },
+      "scale_mae": {
+        "n": 10,
+        "mean": 0.04271314982682437,
+        "sample_sd": 0.004084452969432965,
+        "se": 0.0012916174379246266,
+        "min": 0.03435010937818635,
+        "max": 0.04894200314332318
+      },
+      "pearson": null,
+      "coverage_50": {
+        "n": 10,
+        "mean": 0.4968749999999999,
+        "sample_sd": 0.018154908274195275,
+        "se": 0.005741086085789378,
+        "min": 0.46625,
+        "max": 0.5325
+      },
+      "coverage_80": {
+        "n": 10,
+        "mean": 0.78975,
+        "sample_sd": 0.013854401627080256,
+        "se": 0.004381146476031634,
+        "min": 0.76375,
+        "max": 0.8175
+      },
+      "coverage_95": {
+        "n": 10,
+        "mean": 0.9432499999999999,
+        "sample_sd": 0.0053424401416082195,
+        "se": 0.0016894279110594465,
+        "min": 0.93375,
+        "max": 0.95125
+      }
+    },
+    {
+      "regime": "B",
+      "variant": "ordinary",
+      "replicates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "nll": {
+        "n": 10,
+        "mean": 0.9915531034437081,
+        "sample_sd": 0.02943537128300833,
+        "se": 0.009308281702701909,
+        "min": 0.9463623724499617,
+        "max": 1.0447523760035926
+      },
+      "rmse": {
+        "n": 10,
+        "mean": 0.635645919194007,
+        "sample_sd": 0.017685109432958954,
+        "se": 0.005592522647747917,
+        "min": 0.6127863349244643,
+        "max": 0.6588974597566674
+      },
+      "scale_mae": {
+        "n": 10,
+        "mean": 0.08895398521838818,
+        "sample_sd": 0.007913110852212626,
+        "se": 0.002502345367038795,
+        "min": 0.07856813424763946,
+        "max": 0.10207094584932883
+      },
+      "pearson": null,
+      "coverage_50": {
+        "n": 10,
+        "mean": 0.47387500000000005,
+        "sample_sd": 0.011417731093931629,
+        "se": 0.003610603596814986,
+        "min": 0.4575,
+        "max": 0.49
+      },
+      "coverage_80": {
+        "n": 10,
+        "mean": 0.762625,
+        "sample_sd": 0.015505935243569724,
+        "se": 0.0049034072620758075,
+        "min": 0.7375,
+        "max": 0.78125
+      },
+      "coverage_95": {
+        "n": 10,
+        "mean": 0.924,
+        "sample_sd": 0.006061032181989402,
+        "se": 0.0019166666666666692,
+        "min": 0.91375,
+        "max": 0.9325
+      }
+    },
+    {
+      "regime": "C",
+      "variant": "homoscedastic",
+      "replicates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "nll": {
+        "n": 10,
+        "mean": 1.7219751434038764,
+        "sample_sd": 0.03181691816759304,
+        "se": 0.010061392953678493,
+        "min": 1.6890537008927626,
+        "max": 1.7911048608324007
+      },
+      "rmse": {
+        "n": 10,
+        "mean": 1.3520410366119309,
+        "sample_sd": 0.045148688023752374,
+        "se": 0.014277268752342379,
+        "min": 1.2957424489302112,
+        "max": 1.4488618391259132
+      },
+      "scale_mae": {
+        "n": 10,
+        "mean": 0.5157485909153696,
+        "sample_sd": 0.015724627172498732,
+        "se": 0.00497256372220694,
+        "min": 0.49572834137052096,
+        "max": 0.5509004078072344
+      },
+      "pearson": null,
+      "coverage_50": {
+        "n": 10,
+        "mean": 0.6098750000000001,
+        "sample_sd": 0.01689890282434532,
+        "se": 0.005343902288278354,
+        "min": 0.58125,
+        "max": 0.635
+      },
+      "coverage_80": {
+        "n": 10,
+        "mean": 0.8261249999999999,
+        "sample_sd": 0.01589297975697307,
+        "se": 0.005025801483898421,
+        "min": 0.81125,
+        "max": 0.86875
+      },
+      "coverage_95": {
+        "n": 10,
+        "mean": 0.9357500000000002,
+        "sample_sd": 0.008940389004710888,
+        "se": 0.002827199242281225,
+        "min": 0.925,
+        "max": 0.95875
+      }
+    },
+    {
+      "regime": "C",
+      "variant": "natural",
+      "replicates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "nll": {
+        "n": 10,
+        "mean": 1.487640915436719,
+        "sample_sd": 0.03387382686642385,
+        "se": 0.01071184459641036,
+        "min": 1.4341958185368433,
+        "max": 1.5392936171069203
+      },
+      "rmse": {
+        "n": 10,
+        "mean": 1.351244855796533,
+        "sample_sd": 0.046240329665163823,
+        "se": 0.014622476149896875,
+        "min": 1.2952064830932635,
+        "max": 1.450739516658818
+      },
+      "scale_mae": {
+        "n": 10,
+        "mean": 0.10716609141971993,
+        "sample_sd": 0.00958581555792944,
+        "se": 0.0030313010393334754,
+        "min": 0.08825955758323914,
+        "max": 0.11733673602055184
+      },
+      "pearson": {
+        "n": 10,
+        "mean": 0.9757050959508703,
+        "sample_sd": 0.004633457930561205,
+        "se": 0.0014652280503143708,
+        "min": 0.9668605719873471,
+        "max": 0.9823125521652503
+      },
+      "coverage_50": {
+        "n": 10,
+        "mean": 0.49312500000000004,
+        "sample_sd": 0.014096024853364392,
+        "se": 0.004457554449097247,
+        "min": 0.45875,
+        "max": 0.50625
+      },
+      "coverage_80": {
+        "n": 10,
+        "mean": 0.7853749999999999,
+        "sample_sd": 0.012638812576082186,
+        "se": 0.003996743466039986,
+        "min": 0.76625,
+        "max": 0.81375
+      },
+      "coverage_95": {
+        "n": 10,
+        "mean": 0.937125,
+        "sample_sd": 0.008208439085613176,
+        "se": 0.0025957363545287505,
+        "min": 0.92375,
+        "max": 0.94875
+      }
+    },
+    {
+      "regime": "C",
+      "variant": "ordinary",
+      "replicates": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "nll": {
+        "n": 10,
+        "mean": 1.5163660814282316,
+        "sample_sd": 0.03352401144626451,
+        "se": 0.01060122324757513,
+        "min": 1.4638037141493407,
+        "max": 1.5625014384068094
+      },
+      "rmse": {
+        "n": 10,
+        "mean": 1.3935726405079196,
+        "sample_sd": 0.041298610573366486,
+        "se": 0.013059767361215046,
+        "min": 1.3456598682198964,
+        "max": 1.4760429677819011
+      },
+      "scale_mae": {
+        "n": 10,
+        "mean": 0.13578496989634886,
+        "sample_sd": 0.007282474031881721,
+        "se": 0.002302920494177591,
+        "min": 0.12707141261772467,
+        "max": 0.14827305190641413
+      },
+      "pearson": {
+        "n": 10,
+        "mean": 0.9451740297725202,
+        "sample_sd": 0.006261162758584948,
+        "se": 0.00197995351181514,
+        "min": 0.9340953764824433,
+        "max": 0.9547530755394807
+      },
+      "coverage_50": {
+        "n": 10,
+        "mean": 0.47512499999999996,
+        "sample_sd": 0.013404109030028389,
+        "se": 0.004238751454012001,
+        "min": 0.4625,
+        "max": 0.4975
+      },
+      "coverage_80": {
+        "n": 10,
+        "mean": 0.767125,
+        "sample_sd": 0.013163633616900771,
+        "se": 0.0041627064513366785,
+        "min": 0.74625,
+        "max": 0.78875
+      },
+      "coverage_95": {
+        "n": 10,
+        "mean": 0.9272499999999999,
+        "sample_sd": 0.00879551653463917,
+        "se": 0.0027813865447131043,
+        "min": 0.915,
+        "max": 0.93875
+      }
+    }
+  ],
+  "synthetic_paired_nll_differences": [
+    {
+      "regime": "A",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 10,
+      "mean": -0.03140053008600639,
+      "sample_sd": 0.014499019003077249,
+      "se": 0.004584992388778799,
+      "min": -0.05902969993096974,
+      "max": -0.00980085896755778,
+      "first_wins": 10,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "regime": "A",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 10,
+      "mean": -0.21299655795097072,
+      "sample_sd": 0.019548679781954282,
+      "se": 0.0061818353360259285,
+      "min": -0.2413999546665504,
+      "max": -0.1779517461902167,
+      "first_wins": 10,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "regime": "A",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 10,
+      "mean": -0.18159602786496432,
+      "sample_sd": 0.029802074432516673,
+      "se": 0.00942424342046227,
+      "min": -0.21316424546431,
+      "max": -0.1360788085514989,
+      "first_wins": 10,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "regime": "B",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 10,
+      "mean": -0.04598933011281274,
+      "sample_sd": 0.009693945363945746,
+      "se": 0.003065494686329846,
+      "min": -0.05899864981860192,
+      "max": -0.028163861015435443,
+      "first_wins": 10,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "regime": "B",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 10,
+      "mean": 0.009150806610636875,
+      "sample_sd": 0.005985318191733212,
+      "se": 0.0018927238006717334,
+      "min": -0.0036240861495718812,
+      "max": 0.018691712711136343,
+      "first_wins": 1,
+      "ties": 0,
+      "second_wins": 9
+    },
+    {
+      "regime": "B",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 10,
+      "mean": 0.05514013672344962,
+      "sample_sd": 0.01167946728722514,
+      "se": 0.0036933718485059443,
+      "min": 0.03586999557631143,
+      "max": 0.06945675291749209,
+      "first_wins": 0,
+      "ties": 0,
+      "second_wins": 10
+    },
+    {
+      "regime": "C",
+      "first": "natural",
+      "second": "ordinary",
+      "difference": "first_minus_second",
+      "n": 10,
+      "mean": -0.028725165991512515,
+      "sample_sd": 0.012711519925952559,
+      "se": 0.004019735548862499,
+      "min": -0.04692932636397695,
+      "max": -0.012952174857168597,
+      "first_wins": 10,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "regime": "C",
+      "first": "natural",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 10,
+      "mean": -0.2343342279671572,
+      "sample_sd": 0.01992417499779921,
+      "se": 0.006300577349282581,
+      "min": -0.2613514885025623,
+      "max": -0.19771105815409928,
+      "first_wins": 10,
+      "ties": 0,
+      "second_wins": 0
+    },
+    {
+      "regime": "C",
+      "first": "ordinary",
+      "second": "homoscedastic",
+      "difference": "first_minus_second",
+      "n": 10,
+      "mean": -0.2056090619756447,
+      "sample_sd": 0.024251162963192886,
+      "se": 0.007668891087160765,
+      "min": -0.22860342242559129,
+      "max": -0.15347844208800554,
+      "first_wins": 10,
+      "ties": 0,
+      "second_wins": 0
+    }
+  ],
+  "interpretation": [
+    "Fold summary SE is descriptive, not an iid inferential SE for overlapping holdouts",
+    "Synthetic SE uses fresh independent data/split replicates, paired within replicate",
+    "Do not pair row-split Airfoil with grouped Airfoil folds or pool subset/full Superconductivity",
+    "v1 synthetic seed is historical reference and not included here"
+  ]
+}

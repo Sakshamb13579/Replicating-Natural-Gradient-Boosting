@@ -1,0 +1,7 @@
+{
+  "fold": 1,
+  "shared_pred_max_iter_matches_staged": true,
+  "cap2000_uses_prefix_of_4000_model": true,
+  "prefix_spot_checks_ok": true,
+  "note": "In-run verification incorrectly called .mean() on staged prediction arrays; corrected post-hoc check confirms shared trajectory."
+}

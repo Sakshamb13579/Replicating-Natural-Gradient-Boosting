@@ -1,0 +1,142 @@
+{
+  "dataset": "synthetic-r03-B",
+  "variant": "homoscedastic",
+  "reportable": true,
+  "per_fold": [
+    {
+      "test_nll": 0.9034388500944595,
+      "test_rmse": 0.59720205307151,
+      "coverage": {
+        "50": 0.50875,
+        "80": 0.79875,
+        "95": 0.95375
+      },
+      "mean_width": {
+        "50": 0.8058582529307355,
+        "80": 1.531155818676546,
+        "95": 2.341700747757022
+      },
+      "pred_scale_min": 0.5973836167980785,
+      "pred_scale_max": 0.5973836167980785,
+      "pred_scale_mean": 0.5973836167980784,
+      "oracle_nll": 0.8831083363643043,
+      "scale_mae": 0.0026163832019214794,
+      "scale_correlation": {
+        "pearson": null,
+        "spearman": null
+      },
+      "abs_x1_bins": [
+        {
+          "bin": 1,
+          "lo": 0.0,
+          "hi": 0.5,
+          "n": 200,
+          "mean_abs_x1": 0.25971966075029534,
+          "mean_true_sigma": 0.5999999999999999,
+          "mean_pred_scale": 0.5973836167980784,
+          "coverage": {
+            "50": 0.53,
+            "80": 0.81,
+            "95": 0.96
+          },
+          "mean_width": {
+            "50": 0.8058582529307355,
+            "80": 1.531155818676546,
+            "95": 2.341700747757022
+          }
+        },
+        {
+          "bin": 2,
+          "lo": 0.5,
+          "hi": 1.0,
+          "n": 200,
+          "mean_abs_x1": 0.7540726753480087,
+          "mean_true_sigma": 0.5999999999999999,
+          "mean_pred_scale": 0.5973836167980784,
+          "coverage": {
+            "50": 0.455,
+            "80": 0.78,
+            "95": 0.965
+          },
+          "mean_width": {
+            "50": 0.8058582529307355,
+            "80": 1.531155818676546,
+            "95": 2.341700747757022
+          }
+        },
+        {
+          "bin": 3,
+          "lo": 1.0,
+          "hi": 1.5,
+          "n": 192,
+          "mean_abs_x1": 1.262806199214674,
+          "mean_true_sigma": 0.5999999999999999,
+          "mean_pred_scale": 0.5973836167980784,
+          "coverage": {
+            "50": 0.5416666666666666,
+            "80": 0.8385416666666666,
+            "95": 0.9583333333333334
+          },
+          "mean_width": {
+            "50": 0.8058582529307357,
+            "80": 1.531155818676546,
+            "95": 2.3417007477570215
+          }
+        },
+        {
+          "bin": 4,
+          "lo": 1.5,
+          "hi": 2.0,
+          "n": 208,
+          "mean_abs_x1": 1.745072882593625,
+          "mean_true_sigma": 0.5999999999999999,
+          "mean_pred_scale": 0.5973836167980784,
+          "coverage": {
+            "50": 0.5096153846153846,
+            "80": 0.7692307692307693,
+            "95": 0.9326923076923077
+          },
+          "mean_width": {
+            "50": 0.8058582529307354,
+            "80": 1.5311558186765457,
+            "95": 2.3417007477570215
+          }
+        }
+      ],
+      "dataset": "synthetic-r03-B",
+      "variant": "homoscedastic",
+      "fold_index": 0,
+      "seeds": {
+        "stage_model": 20300,
+        "full_model": 30300
+      },
+      "best_iter": 355,
+      "cap_hit": false,
+      "actual_validation_stages": 2000,
+      "actual_refit_stages": 2000,
+      "val_nll_at_best": 0.9037427354538695,
+      "fixed_sigma_from_stage_val": 0.5973836167980785,
+      "sigma_reestimated_after_refit": false,
+      "split_hashes": {
+        "outer_train_hash": "6043f4deb0388d3d64ca606923d9330c0b88684b2a98daa9c65cc34c229cfb4f",
+        "outer_test_hash": "65c46e51e803e78481c487f61a5cc9cdc1bae256f1e49c98c4ea47152410eb9a",
+        "inner_train_hash": "a5202d9f9d19461250ee90210475bbd006b9b6a1c4b43400f79b5a3b29bf6fa9",
+        "inner_val_hash": "e19e8f2ac3dc077993ca61dfad4b8fa1476639e3393b3bc2b91b5243dd08be47"
+      },
+      "sample_counts": {
+        "outer_train": 3200,
+        "outer_test": 800,
+        "inner_train": 2400,
+        "inner_val": 800
+      },
+      "timing_sec": {
+        "stage_fit": 32.924647165928036,
+        "refit": 29.07288258592598,
+        "wall": 66.05343139101751
+      },
+      "reportable": true,
+      "replicate": 3,
+      "regime": "B"
+    }
+  ]
+}

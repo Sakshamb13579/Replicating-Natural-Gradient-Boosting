@@ -1,0 +1,21 @@
+{
+  "handoff": "017-NG-D1",
+  "dataset": "yacht",
+  "model": "ngboost-natural",
+  "command_args": {
+    "dataset": "yacht",
+    "score": "MLE",
+    "natural": true,
+    "n_splits": 20,
+    "n_est": 4000
+  },
+  "defaults_preserved_from_prior_run": {
+    "distn": "Normal",
+    "lr": 0.01,
+    "base": "tree",
+    "minibatch_frac": 1.0,
+    "random_seed_script": 1,
+    "stage_selection": "argmin validation RMSE over staged predictions"
+  },
+  "only_research_change_from_cap2000_run": "n_estimators 2000 -> 4000"
+}

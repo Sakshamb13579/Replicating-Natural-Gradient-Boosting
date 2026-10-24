@@ -1,0 +1,169 @@
+\section{Additional New-data Results}
+\label{app:new-results-details}
+
+\textbf{Aggregation and interval width.}
+All public-data summaries average the saved fold or repetition metrics without weighting by fold size.
+For Parkinsons, each fold metric averages recordings, so patients with more recordings contribute more within their fold.
+Table~\ref{tab:new-widths} supplements the main results with mean prediction-interval widths.
+Repeated row holdouts share observations, so their spread describes variation across partitions rather than independent-sample uncertainty.
+The two Airfoil settings and the Superconductivity pilot and full-data runs are not paired comparisons.
+The 5{,}000-row pilot is not pooled with the full-data experiment because they evaluate different training and test samples.
+On full Superconductivity, the stage cap is selected in 3 of 5 Natural fits, 4 of 5 Ordinary fits and all 5 Homoscedastic fits, giving 12 of 15 overall.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Setting & Natural & Ordinary & Homosc. \\
+\midrule
+Airfoil, rows & 7.67 & 16.74 & 8.47 \\
+Airfoil, conditions & 11.30 & 18.70 & 11.89 \\
+Forest Fires & 5.35 & 5.38 & 5.36 \\
+Parkinsons, subjects & 30.31 & 30.32 & 32.69 \\
+Real Estate & 29.74 & 47.48 & 31.84 \\
+Superconductivity, full & 34.55 & 115.79 & 43.47 \\
+\bottomrule
+\end{tabular}
+\caption{Mean nominal 95\% prediction-interval widths, in each dataset's target units, including the transformed Forest Fires scale.}
+\label{tab:new-widths}
+\end{table}
+
+\textbf{Synthetic dispersion and aggregate coverage.}
+The 10 fresh synthetic replicates use independent base data and split draws, with regimes paired within each replicate.
+Table~\ref{tab:synthetic-additional} reports sample standard deviations of replicate NLL and complements the main scale-recovery results with RMSE, coverage and width.
+The mean oracle NLL references are 0.7477 in A, 0.9137 in B and 1.4408 in C.
+They evaluate the true conditional mean and scale on the same finite test outcomes as each fitted model.
+The earlier single-draw synthetic experiment is excluded from these summaries.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Regime & Variant & NLL SD & RMSE & $C_{95}$ & Width \\
+\midrule
+A & Natural & 0.0348 & 0.6820 & 0.935 & 2.271 \\
+& Ordinary & 0.0412 & 0.7029 & 0.924 & 2.302 \\
+& Homosc. & 0.0324 & 0.6821 & 0.934 & 2.672 \\
+\midrule
+B & Natural & 0.0242 & 0.6181 & 0.943 & 2.392 \\
+& Ordinary & 0.0294 & 0.6356 & 0.924 & 2.347 \\
+& Homosc. & 0.0249 & 0.6167 & 0.948 & 2.391 \\
+\midrule
+C & Natural & 0.0339 & 1.3512 & 0.937 & 4.503 \\
+& Ordinary & 0.0335 & 1.3936 & 0.927 & 4.592 \\
+& Homosc. & 0.0318 & 1.3520 & 0.936 & 5.304 \\
+\bottomrule
+\end{tabular}
+\caption{Additional synthetic results over 10 replicates per regime.
+Except for NLL SD, entries are means of test metrics; coverage and width concern nominal 95\% prediction intervals.}
+\label{tab:synthetic-additional}
+\end{table}
+
+\textbf{Paired synthetic comparisons.}
+Table~\ref{tab:synthetic-paired-counts} counts strict NLL wins on the shared test outcomes within each replicate.
+Natural beats Ordinary in all 10 replicates of every regime and Homoscedastic in every replicate of A and C.
+Homoscedastic beats Natural in 9 of 10 B replicates.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Comparison & A & B & C \\
+\midrule
+Natural beats Ordinary & 10/10 & 10/10 & 10/10 \\
+Natural beats Homosc. & 10/10 & 1/10 & 10/10 \\
+Homosc. beats Natural & 0/10 & 9/10 & 0/10 \\
+\bottomrule
+\end{tabular}
+\caption{Paired counts of lower test NLL across 10 replicates per regime.}
+\label{tab:synthetic-paired-counts}
+\end{table}
+
+\textbf{Pointwise disagreements.}
+Six explanations differ between the judge and annotator on at least one criterion.
+Table~\ref{tab:judge-disagreement-counts} gives the direction of each criterion's disagreements.
+Both evidence-support disagreements concern intended-faithful Real Estate descriptions.
+Three jargon explanations account for all clarity disagreements and three of the four interval disagreements: the annotator rejects clarity but accepts interval consistency, while the judge does the reverse.
+The annotator accepts clarity on two other jargon explanations, despite all five sharing the same final sentence.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+& Judge pass, & Judge fail, \\
+Criterion & annotator fail & annotator pass \\
+\midrule
+Clarity & 3 & 0 \\
+Interval consistency & 0 & 4 \\
+Evidence support & 0 & 2 \\
+\bottomrule
+\end{tabular}
+\caption{Directional disagreement counts out of 30 explanations per criterion.
+These are comparisons with the observed annotation, not adjudicated error counts.}
+\label{tab:judge-disagreement-counts}
+\end{table}
+
+\textbf{Pairwise order checks.}
+Table~\ref{tab:judge-order-counts} distinguishes answer-identity consistency across swaps from literal position choices.
+The five interval-misinterpretation edits all fail interval consistency individually but win the pairwise comparison when placed second.
+These contrasts were checked against the raw responses using the frozen verdict parser, not inferred from the edit categories alone.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Check & Count \\
+\midrule
+Same underlying verdict after swap & 4/15 \\
+Changed verdict after swap & 11/15 \\
+First position preferred & 4/30 \\
+Second position preferred & 20/30 \\
+Explicit tie & 6/30 \\
+Interval edit rejected individually & 5/5 \\
+Interval edit preferred when second & 5/5 \\
+\bottomrule
+\end{tabular}
+\caption{Pairwise consistency counts use 15 evidence cases; position counts use 30 displayed orders.
+The final two rows concern the same five interval-error explanations.}
+\label{tab:judge-order-counts}
+\end{table}
+
+\textbf{Annotation procedure.}
+One annotator labelled all 30 explanations on the three criteria, using the rubric text supplied to the judge.
+The annotation form contained an evidence packet, an explanation and fields for the three binary labels and a comment.
+Items were presented individually, and the annotator's responses were recorded in a single sheet.
+That sheet holds only an opaque item identifier, the evidence packet, the explanation, the three binary labels, an annotator identifier and a free-text note.
+It carries no construction intent, no case identifier and no judge output.
+Shuffling did not keep related items apart: 4 of the 15 explanation pairs are adjacent.
+All 90 labels and all 30 notes are complete, and the evidence and explanation fields are unchanged from the archived blank sheet.
+The completed sheet and its SHA-256 are preserved with the batch.
+
+\textbf{Judge reproducibility.}
+The judge weights are a third-party Q8\_0 quantisation of MiniCPM4.1-8B \cite{openbmb2025minicpm41}, identified by the Hugging Face repository, revision and file hash below.
+\begingroup
+\footnotesize
+% A minipage keeps the hash from splitting across the column break.
+\noindent\begin{minipage}{\columnwidth}
+\begin{verbatim}
+base    openbmb/MiniCPM4.1-8B
+gguf    mradermacher/MiniCPM4.1-8B-GGUF
+rev     7032ea8d4fc677dd3263c25d7c5343a8094c3151
+sha256  9e939664e74b400b618d0e700a0794a2
+        d58a889c487ec6c62983354b407bce7e
+\end{verbatim}
+\end{minipage}
+\endgroup
+Ollama~0.9.6 \cite{ollama2025} served sequential CPU requests with a 2{,}048-token context, 4 threads and at most 160 output tokens.
+The ChatML prefix used non-reasoning mode, and JSON schemas constrained the verdict format; outputs are discrete labels rather than calibrated label probabilities.
+The three-case development smoke test exposed order sensitivity; its prompt was retained unchanged for evaluation rather than retuned against evaluation results.
+Raw prompts, responses, the frozen code and model configuration are preserved with checksums.

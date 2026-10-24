@@ -1,0 +1,3 @@
+af3ad82818e623420284669c03d67acd5ed4c8ecf27b6ebdfa7c425496139bfb  human-agreement.json
+4ea1dfe2e73bec40459da74b0ad8914b4685720c3d1f88fb02cdc58365d3cc0c  human-agreement.md
+acb31565cc14dba2ccbef9c1ec4bdb52e2f55437b76bb4344bb89946ba70e48b  human-agreement-code.py

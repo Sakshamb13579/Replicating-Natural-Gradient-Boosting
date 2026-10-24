@@ -1,0 +1,30 @@
+\section{Conclusions and Reflections}
+\label{sec:conclusions}
+
+\textbf{Extent of replication.}
+Replication was partial (Section~\ref{sec:replication}).
+Once two missing import statements were added, the released-code run recovered Natural's advantage on Yacht and the published ordering on Kin8nm, but its Yacht NLL values were substantially higher than published.
+The controlled selector experiment showed that choosing stages by validation NLL rather than squared error brings Yacht Natural and Ordinary close to the published values, while the Homoscedastic discrepancy remains unresolved.
+
+\textbf{Generalisation to new data.}
+Generalisation was qualified.
+Natural had lower mean NLL than Ordinary in all six additional public-data settings, but Homoscedastic led on both Airfoil evaluations and Forest Fires showed little separation.
+On synthetic data, Natural estimated the noise scale more accurately and had the lowest NLL when the noise varied with the inputs, while Homoscedastic did both when the noise was constant.
+In the varying-noise regimes the two had nearly identical RMSE and overall coverage, so those measures alone would not have shown how differently they spread uncertainty across inputs.
+These conclusions are limited to the tested partitions, synthetic distributions and training budget.
+They rest on validation-NLL stage selection and the revised Homoscedastic scale rule rather than the released script's rules.
+
+\textbf{Methodological reflections.}
+The stage-selection rule, an implementation detail outside the learner, changed the reported results substantially; the fixed-scale calculation is a further candidate whose effect was not isolated.
+In constructing the new data, holding out whole subjects or conditions tested prediction for subjects and condition combinations absent from training, and known synthetic noise scales let predicted uncertainty be checked against the truth.
+In hindsight, regimes A and B should have had equal average noise variance, so that their comparison isolated noise structure.
+
+The judge experiment showed that an evaluator must itself be tested.
+It largely agreed with the annotator on individual explanations, yet when comparing two explanations it kept the same verdict in only 4 of 15 cases after their order was swapped, and it preferred interval misinterpretations it had rejected individually whenever they appeared second.
+Annotation also exposed design limits.
+The annotator's clarity labels differed across items sharing the same jargon sentence; because the rest of each text differs, this is not necessarily inconsistency, but a sharper definition of clarity would make such labels easier to interpret.
+A future explanation set should also use more than one phrasing per edit type, to test whether the findings extend beyond repeated templates.
+
+Overall, the experiments support NGBoost for probabilistic regression in the tested settings, provided its uncertainty is checked rather than taken on trust.
+Because an interval can be read as a guarantee and a fluent explanation can make a wrong interval statement persuasive, responsible use also requires calibration in the intended setting and human review of explanations before they inform decisions (Section~\ref{sec:ethics}).
+More broadly, the model, the data used to test it and the tools used to judge its explanations each need checking in their own right.

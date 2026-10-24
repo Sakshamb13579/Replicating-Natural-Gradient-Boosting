@@ -1,0 +1,14 @@
+{
+  "dataset": "synthetic-r06-C",
+  "variant": "ordinary",
+  "features": [
+    "x1",
+    "x2"
+  ],
+  "target": "y",
+  "n_estimators": 2000,
+  "stage_selector": "validation_NLL",
+  "learning_rate": 0.01,
+  "reportable": true,
+  "manifest_sha256": "3df6fdff0c05e01d1f84388f4ab312aacbc172006d6dde730c1ae37f3442e136"
+}

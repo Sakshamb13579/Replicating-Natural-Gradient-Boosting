@@ -1,0 +1,83 @@
+{
+  "handoff": "023-NG-P4",
+  "run_id": "023-ng-p4-airfoil-natural-s1-a01",
+  "dataset": "airfoil-self-noise-v1",
+  "variant": "natural",
+  "n_folds": 5,
+  "n_predictions": 750,
+  "aggregate_test_nll_mean": 2.218038062404802,
+  "aggregate_test_rmse_mean": 2.388430363093426,
+  "cap_hits": 4,
+  "data_verification": {
+    "csv_sha256": "705a2a7f0e55fcc9a87700038487b12ce768f4a2e1692433a2d752309028546e",
+    "splits_sha256": "128c5375b2659dff369e153e1b35f2163fbd1c87b72cc5a183def469ce014c14",
+    "manifest_status": "frozen",
+    "split_hashes_match_022": true
+  },
+  "timing_sec": {
+    "wall": 226.85150534199784,
+    "sum_fold_totals": 204.12993603399082
+  },
+  "files": [
+    {
+      "path": "checksums.txt",
+      "bytes": 1396,
+      "sha256": "4026cad5ca922706546a02789bee45a2c0c8298bdae99e289f9f9ec27cd42e2e"
+    },
+    {
+      "path": "command.txt",
+      "bytes": 406,
+      "sha256": "0452ac24945daeb7c4690774f991c9e20c7b7490251d599561b13f6ee9d8bc8f"
+    },
+    {
+      "path": "config.json",
+      "bytes": 556,
+      "sha256": "fe7bb4b04b821c047fe93972a1c2ce633d0b77b745bee43df165a27b4833c9c6"
+    },
+    {
+      "path": "environment.txt",
+      "bytes": 889,
+      "sha256": "4bfce2ba307fffd8bed52bd57622bb560e5acc1ac6008536a016073c87179cfc"
+    },
+    {
+      "path": "metrics.json",
+      "bytes": 11159,
+      "sha256": "d8b8c77b2093444ee10f18d4f8853f8c4a73b14820367086920b7545da668bb3"
+    },
+    {
+      "path": "predictions.csv",
+      "bytes": 127918,
+      "sha256": "351e91da6c70c121d20a10f0fc5ca4439aedf318aa3571f4028aadc9ffdbf685"
+    },
+    {
+      "path": "predictions.jsonl",
+      "bytes": 273271,
+      "sha256": "2800f4be1e5d40579159f173731ff59be3e3ae7fee427b8ec7dd63755a697ff2"
+    },
+    {
+      "path": "source-status-after.txt",
+      "bytes": 663,
+      "sha256": "795a99c541326a70b72da293b8acf50d6e202f524d6651132a4138d70150bce1"
+    },
+    {
+      "path": "source-status-before.txt",
+      "bytes": 663,
+      "sha256": "795a99c541326a70b72da293b8acf50d6e202f524d6651132a4138d70150bce1"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "stdout.log",
+      "bytes": 3119,
+      "sha256": "6eae0ef09f5392f7d6b0db090d6a0d9512e15fd1285f917c8451f4d31e7fcd1a"
+    },
+    {
+      "path": "timing.json",
+      "bytes": 104,
+      "sha256": "63a2c2e44e8954aaba3302717e47a369837078a2f3dec9ff97f75de3bcb462b2"
+    }
+  ]
+}

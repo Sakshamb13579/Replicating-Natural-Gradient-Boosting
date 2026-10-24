@@ -1,0 +1,15 @@
+2026-10-17T00:48:44.022787+00:00 airfoil-grouped ordinary fold=0 stage_fit start
+2026-10-17T00:49:13.615687+00:00 airfoil-grouped ordinary fold=0 refit start best=515
+2026-10-17T00:49:42.599160+00:00 airfoil-grouped ordinary fold=0 complete NLL=3.150900
+2026-10-17T00:49:42.604440+00:00 airfoil-grouped ordinary fold=1 stage_fit start
+2026-10-17T00:50:13.723656+00:00 airfoil-grouped ordinary fold=1 refit start best=1704
+2026-10-17T00:50:43.061733+00:00 airfoil-grouped ordinary fold=1 complete NLL=3.290964
+2026-10-17T00:50:43.068011+00:00 airfoil-grouped ordinary fold=2 stage_fit start
+2026-10-17T00:51:10.557441+00:00 airfoil-grouped ordinary fold=2 refit start best=437
+2026-10-17T00:51:39.989775+00:00 airfoil-grouped ordinary fold=2 complete NLL=3.212167
+2026-10-17T00:51:39.994443+00:00 airfoil-grouped ordinary fold=3 stage_fit start
+2026-10-17T00:52:08.437989+00:00 airfoil-grouped ordinary fold=3 refit start best=1321
+2026-10-17T00:52:39.443684+00:00 airfoil-grouped ordinary fold=3 complete NLL=3.305980
+2026-10-17T00:52:39.448915+00:00 airfoil-grouped ordinary fold=4 stage_fit start
+2026-10-17T00:53:08.255220+00:00 airfoil-grouped ordinary fold=4 refit start best=1075
+2026-10-17T00:53:35.244965+00:00 airfoil-grouped ordinary fold=4 complete NLL=2.832790

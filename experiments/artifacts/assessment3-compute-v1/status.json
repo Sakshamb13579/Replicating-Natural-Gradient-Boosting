@@ -1,0 +1,10 @@
+{
+  "state": "complete",
+  "updated_at": "2026-10-17T04:49:36.717554+00:00",
+  "supervisor_pid": 60233,
+  "workers": 4,
+  "pending_tasks": 0,
+  "completed_tasks": 96,
+  "failed_tasks": [],
+  "active": []
+}

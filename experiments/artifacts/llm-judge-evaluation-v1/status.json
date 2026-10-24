@@ -1,0 +1,20 @@
+{
+  "state": "complete",
+  "pid": 1071758,
+  "inference_status": "complete",
+  "human_reference_status": "pending",
+  "requests": 60,
+  "pointwise_explanations": 30,
+  "pairwise_cases": 15,
+  "order_consistent_cases": 4,
+  "timing": {
+    "completed_transport_requests": 60,
+    "total_request_wall_seconds": 4702.912214657525,
+    "prompt_tokens": 37969,
+    "generated_tokens": 3923,
+    "decode_tokens_per_second": 1.9682113727835866,
+    "total_model_load_seconds": 35.144336628
+  },
+  "validated_at": "2026-10-17T19:55:25.864995+00:00",
+  "updated_at": "2026-10-17T19:55:25.865198+00:00"
+}

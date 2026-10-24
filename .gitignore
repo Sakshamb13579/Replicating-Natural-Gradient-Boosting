@@ -1,0 +1,12 @@
+# Not redistributed (see README, "What is not included")
+*.gguf
+kin8nm*.csv
+experiments/data/processed/kin8nm-*/*.csv
+# Recreated by experiments/src/fetch_uci_data.py
+experiments/data/raw/*/*
+!experiments/data/raw/*/uci-*-metadata.json
+# Build and environment output
+report/build/
+.venv/
+__pycache__/
+*.pyc

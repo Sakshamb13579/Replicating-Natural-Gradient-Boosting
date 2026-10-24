@@ -1,0 +1,83 @@
+{
+  "status": "frozen",
+  "manifest_kind": "external_processed_split_freeze",
+  "schema_version": 1,
+  "dataset_name": "Real Estate Valuation",
+  "dataset_slug": "real-estate-valuation-v1",
+  "created_at": "2026-08-23T20:28:00+05:30",
+  "source": {
+    "raw_path": "data/raw/real-estate-valuation/Real estate valuation data set.xlsx",
+    "raw_sha256": "597d72fcc6c0539e6035a033ddb387db48fff3fb1f3c98fee31fe081c64a9059",
+    "audit_manifest": "data/manifests/real-estate-valuation-audit-v1.json",
+    "audit_recorded_sha256_verified": true,
+    "uci_id": 477,
+    "doi": "10.24432/C5J30W",
+    "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+  },
+  "processed": {
+    "csv_path": "data/processed/real-estate-valuation-v1/real-estate-valuation-v1.csv",
+    "csv_sha256": "a013833d25f66c18b05fe9eb1702eb75f6ac31759362637a7987686b1e680b4b",
+    "columns": [
+      "row_id",
+      "X1 transaction date",
+      "X2 house age",
+      "X3 distance to the nearest MRT station",
+      "X4 number of convenience stores",
+      "X5 latitude",
+      "X6 longitude",
+      "Y"
+    ],
+    "id_column": "row_id",
+    "evaluation_columns": [],
+    "feature_columns": [
+      "X1 transaction date",
+      "X2 house age",
+      "X3 distance to the nearest MRT station",
+      "X4 number of convenience stores",
+      "X5 latitude",
+      "X6 longitude"
+    ],
+    "target_column": "Y",
+    "n_rows": 414,
+    "n_features": 6
+  },
+  "splits": {
+    "path": "data/processed/real-estate-valuation-v1/split-indices.json",
+    "sha256": "38a5dc4b3e54bd99b7bd3861ed2c126eba18f37420afaf987d2917cbe4467454",
+    "n_folds": 20,
+    "outer_seed": 1,
+    "inner_seed_base": 10000,
+    "paired_for_variants": [
+      "natural",
+      "ordinary",
+      "homoscedastic"
+    ]
+  },
+  "split_policy": "20 repeated 90/10 row holdouts via sequential RandomState(1).choice; inner 80/20 rows with seed 10000+fold",
+  "preprocessing": {
+    "worksheet": "\u5de5\u4f5c\u88681",
+    "audit_sheet_label_note": "Audit calls the sole worksheet sheet1; workbook label is preserved here",
+    "dropped_columns": [
+      "No"
+    ],
+    "scaling": false,
+    "imputation": false
+  },
+  "limitations": [
+    "Small test sets make coverage high variance",
+    "Row splits mix time and repeated coordinates"
+  ],
+  "protocol": {
+    "stage_selector": "validation_NLL",
+    "n_estimators_cap": 2000,
+    "learning_rate": 0.01,
+    "score": "MLE",
+    "base_learner": "default_tree_learner"
+  },
+  "integrity": {
+    "raw_sha_match_audit": true,
+    "all_fold_checks_passed": true,
+    "processed_csv_sha256": "a013833d25f66c18b05fe9eb1702eb75f6ac31759362637a7987686b1e680b4b",
+    "split_indices_sha256": "38a5dc4b3e54bd99b7bd3861ed2c126eba18f37420afaf987d2917cbe4467454"
+  }
+}

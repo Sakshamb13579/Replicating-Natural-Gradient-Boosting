@@ -1,0 +1,15 @@
+/mnt/hdd1/Projects/Research/Saksham/.RnD/source/ngboost/examples/experiments/regression_exp.py:38: FutureWarning: The 'delim_whitespace' keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep='\s+'`` instead
+  "yacht": lambda: pd.read_csv(
+Traceback (most recent call last):
+  File "/home/ash/.pyenv/versions/3.10.0/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/ash/.pyenv/versions/3.10.0/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/hdd1/Projects/Research/Saksham/.RnD/source/ngboost/examples/experiments/regression_exp.py", line 115, in <module>
+    Dist=eval(args.distn),
+  File "<string>", line 1, in <module>
+NameError: name 'Normal' is not defined. Did you mean: 'format'?
+== Dataset=yacht X.shape=(308, 6) MLE/Normal
+Command exited with non-zero status 1
+ELAPSED_SEC=3.58
+EXIT_CODE=1

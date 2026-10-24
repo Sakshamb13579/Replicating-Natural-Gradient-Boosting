@@ -1,0 +1,42 @@
+\section{Ethical Considerations}
+\label{sec:ethics}
+
+Publication venues increasingly expect an ethics statement; \citet{benotti-blackburn-2022-ethics} classify such sections by whether they address research benefits, potential harms and affected vulnerable groups, and \citet{karamolegkou-etal-2025-ethical} catalogue the concerns raised across ACL papers.
+This section addresses all three, for the original work and for the new data.
+
+\textbf{Responsible use of uncertainty.}
+The original NGBoost work makes predictive uncertainty available alongside point estimates \cite{duan2020ngboost}, potentially supporting better-informed decisions.
+However, a predictive distribution can create misplaced confidence when its assumptions fail or its intervals are interpreted as guarantees.
+The Superconductivity results illustrate why coverage alone is insufficient: high coverage accompanied much wider intervals and worse point predictions (Section~\ref{sec:new-results}).
+In health or financial applications, misleading uncertainty could affect treatment or valuation decisions.
+Neither the original benchmark results nor this extension establishes suitability for such deployment; calibration and usefulness require assessment in the intended setting.
+
+\textbf{Benchmark data in the original work.}
+The original regression benchmark includes the Boston housing dataset (Section~\ref{sec:original-data}).
+That dataset carries a constructed variable derived from the proportion of Black residents in each town, built on an assumption that racial segregation raised house prices; the scikit-learn maintainers removed its loader for this reason \cite{sklearnboston}.
+The original paper reports an averaged benchmark result over that dataset without discussing how it was built.
+A paper published on this data today would be expected to state such provenance; the Boston data are not used in this project.
+
+\textbf{Licensing, ownership and attribution.}
+Open access supports replication without transferring ownership of reused material.
+NGBoost's Apache 2.0 licence requires distributed copies to retain relevant notices and the licence, and modified upstream files to identify changes \cite{ngboostrepo}.
+UCI lists the five additional public datasets (Section~\ref{sec:new-data}) under CC BY 4.0, which requires credit, a licence link and an indication of changes when the data or adaptations are redistributed \cite{creativecommons4}.
+Section~\ref{sec:new-data} identifies their creators and preparation steps.
+Yacht is likewise listed under CC BY 4.0, while no separate licence statement was located for Kin8nm, which reached this project through the NGBoost repository; it is therefore cited rather than redistributed.
+The judge uses a third-party quantisation of the Apache 2.0 MiniCPM4.1-8B release \cite{openbmb2025minicpm41}, referenced by repository and checksum rather than redistributed (Appendix~\ref{app:new-results-details}).
+The public repository released with this report (Section~\ref{sec:paper}) will separate upstream material from project-authored files and keep third-party terms on the upstream files rather than placing everything under one project licence.
+These practices follow three principles of the Australian Code for the Responsible Conduct of Research: fairness, which includes citing and crediting the work of others; transparency in reporting methods, data and findings; and accountability \cite{australiancode2018}.
+
+\textbf{Data sensitivity and generalisation.}
+Parkinsons contains health-related measurements, while Real Estate includes transaction locations.
+Permission to reuse data does not remove privacy considerations or establish consent for every downstream application.
+Parkinsons subject identifiers define disjoint partitions rather than predictors; this reduces evaluation leakage but does not itself establish privacy protection.
+Aggregate results do not demonstrate equal performance across demographic groups, populations or locations, and subgroup fairness was not evaluated.
+The synthetic experiments use no personal records, and because their generating distributions are known, the predicted uncertainty can be checked against the truth.
+Those outcomes are Normal given the inputs, with a specified mean and scale, so the synthetic results do not establish how the method would behave on real clinical or property data.
+
+\textbf{Transparent reporting and automated judgement.}
+Preserved outputs, fixed protocols, seeds and checksums make the reported comparisons open to scrutiny.
+Reporting the published results, the released-code run and the controlled selector experiment as separate evidence lines avoids implying stronger replication evidence than was obtained.
+The explanation judge rejected all five texts that misdescribe the prediction interval when scoring them individually, yet preferred those texts whenever they appeared second in a side-by-side comparison (Section~\ref{sec:new-results}).
+Its agreement scores therefore do not justify autonomous explanation selection, and anyone using it should keep human review of statistical interpretation and evidential support.

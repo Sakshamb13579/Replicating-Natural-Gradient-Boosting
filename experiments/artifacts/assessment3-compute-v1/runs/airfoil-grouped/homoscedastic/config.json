@@ -1,0 +1,17 @@
+{
+  "dataset": "airfoil-grouped",
+  "variant": "homoscedastic",
+  "features": [
+    "frequency_hz",
+    "angle_deg",
+    "chord_m",
+    "velocity_ms",
+    "suction_side_displacement_thickness_m"
+  ],
+  "target": "scaled_sound_pressure_db",
+  "n_estimators": 2000,
+  "stage_selector": "validation_NLL",
+  "learning_rate": 0.01,
+  "reportable": true,
+  "manifest_sha256": "afb1f0288cac15df44b9a9650e505fff0248be418e6cb1f0532a4c428eca7d1b"
+}

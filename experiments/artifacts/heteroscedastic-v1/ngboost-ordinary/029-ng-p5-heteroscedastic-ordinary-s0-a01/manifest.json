@@ -1,0 +1,146 @@
+{
+  "handoff": "029-NG-P5",
+  "artifact_dir": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/heteroscedastic-v1/ngboost-ordinary/029-ng-p5-heteroscedastic-ordinary-s0-a01",
+  "dataset": "heteroscedastic-v1",
+  "variant": "ordinary",
+  "stage_selector": "validation_NLL",
+  "natural_gradient": false,
+  "per_regime_summary": [
+    {
+      "regime": "A",
+      "best_iter": 577,
+      "cap_hit": false,
+      "test_nll": 0.8349481585061659,
+      "oracle_nll": 0.7310033212431992,
+      "test_rmse": 0.6955883549069568,
+      "scale_mae": 0.09110627942867813,
+      "coverage_95": 0.93,
+      "pearson": 0.897688249037189
+    },
+    {
+      "regime": "B",
+      "best_iter": 404,
+      "cap_hit": false,
+      "test_nll": 0.9433453037601562,
+      "oracle_nll": 0.8850018814567477,
+      "test_rmse": 0.6081849974302119,
+      "scale_mae": 0.09061995910786566,
+      "coverage_95": 0.93375,
+      "pearson": null
+    },
+    {
+      "regime": "C",
+      "best_iter": 383,
+      "cap_hit": false,
+      "test_nll": 1.5018898373178524,
+      "oracle_nll": 1.4241505018031444,
+      "test_rmse": 1.4080290293048183,
+      "scale_mae": 0.14047191276889223,
+      "coverage_95": 0.94875,
+      "pearson": 0.9377200355849731
+    }
+  ],
+  "paired_to_028": {
+    "ordinary_test_nll_mean": 1.0933944331947247,
+    "natural_test_nll_mean": 1.0573433449771488,
+    "delta_nll_mean_ordinary_minus_natural": 0.036051088217575966,
+    "ordinary_test_rmse_mean": 0.9039341272139957,
+    "natural_test_rmse_mean": 0.8775924502800224,
+    "delta_rmse_mean_ordinary_minus_natural": 0.026341676933973268,
+    "ordinary_wall_sec": 178.46709779500088,
+    "natural_wall_sec": 183.8409772590021,
+    "natural_wins_nll_regimes": 3,
+    "ordinary_wins_nll_regimes": 0
+  },
+  "aggregate": {
+    "test_nll_mean": 1.0933944331947247,
+    "test_rmse_mean": 0.9039341272139957,
+    "oracle_nll_mean": 1.0133852348343637,
+    "cap_hits": 0
+  },
+  "versions": {
+    "python": "3.10.0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.6.1",
+    "scipy": "1.15.3",
+    "ngboost": "0.5.11.dev0",
+    "ngboost_file": "/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree/ngboost/__init__.py"
+  },
+  "timing_sec": {
+    "wall": 178.46709779500088,
+    "sum_regime_totals": 168.51944650301448
+  },
+  "files": [
+    {
+      "path": "command.txt",
+      "bytes": 407,
+      "sha256": "3dc7ff06633e269e1f03d84c3ad3d7450e7a6abf71ecf45aee6fd16cbbcfcd8b"
+    },
+    {
+      "path": "config.json",
+      "bytes": 768,
+      "sha256": "2e666bf880681168f1c162ce4170dd24400b8ec00fef8f628e5e4ee2ad5cc02d"
+    },
+    {
+      "path": "environment.txt",
+      "bytes": 872,
+      "sha256": "3ae9d55a18b8f7c4f882accfdf16e63c716c1465cde194ccaf465d10476aa2ee"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 4299,
+      "sha256": "e8f1018b0ebe9cd8fd903494398387de69ccab23cd48458affc91e8eb0109c3c"
+    },
+    {
+      "path": "metrics.json",
+      "bytes": 9199,
+      "sha256": "869cfb737685f624a486418058a01a97cba57d297184714643222c044e8242f0"
+    },
+    {
+      "path": "paired-comparison-to-028.json",
+      "bytes": 6139,
+      "sha256": "c2ccbbcc83da9a36a0e05c1303dfb595778b317f2108342e7d8a71cebe8ed1a0"
+    },
+    {
+      "path": "predictions.csv",
+      "bytes": 635037,
+      "sha256": "839d411bf5efcb7a44efc16b6d6ae9ca9d44ac5b5c5e6c6acb4903bfbeae3267"
+    },
+    {
+      "path": "predictions.jsonl",
+      "bytes": 1222863,
+      "sha256": "e49ad74050d1da9831a0042ab5b22394af2da669e97da7f6408516bb56efc80c"
+    },
+    {
+      "path": "source-status-after.txt",
+      "bytes": 304,
+      "sha256": "4fd337c414a4f24bcc98506d2b45de75b24ce8d6592bc33e9b868b5e4a56028a"
+    },
+    {
+      "path": "source-status-before.txt",
+      "bytes": 304,
+      "sha256": "4fd337c414a4f24bcc98506d2b45de75b24ce8d6592bc33e9b868b5e4a56028a"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "stdout.log",
+      "bytes": 691,
+      "sha256": "65ac69f5f04db2e47de7e4c761370be380ab6075a10b54a18451e25b623545aa"
+    },
+    {
+      "path": "timing.json",
+      "bytes": 104,
+      "sha256": "e35a5c5b82dedc609f5dbff3a2ab1349fd49f4804eb6c492f2380cd917d351c9"
+    },
+    {
+      "path": "checksums.txt",
+      "bytes": 1495,
+      "sha256": "66f00f8b642f93960a2f3355da8e462f35bef299d75a2883e01720fe492a4e93"
+    }
+  ]
+}

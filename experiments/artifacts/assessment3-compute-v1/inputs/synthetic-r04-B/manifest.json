@@ -1,0 +1,45 @@
+{
+  "status": "frozen",
+  "dataset": "synthetic-r04-B",
+  "rows": 4000,
+  "features": [
+    "x1",
+    "x2"
+  ],
+  "target": "y",
+  "columns": [
+    "row_id",
+    "regime",
+    "split",
+    "x1",
+    "x2",
+    "true_mu",
+    "noise_z",
+    "true_sigma",
+    "y"
+  ],
+  "csv_sha256": "a6560af9362703f23670f62ddd402adb84fe330dde3e3e78f79157aef775853e",
+  "splits_sha256": "d16d295118bd4c645c8800d05c127e4e034b5e88ea4f7ef41ece358f3e796fe4",
+  "source": {
+    "generator_sha256": "2ac6fe06d86ce368eb9e27287fa601814fcd494ffc8a3398fa9efd5b2302c126",
+    "data_seed": 4,
+    "split_seed": 1004,
+    "rng": "PCG64",
+    "numpy": "2.2.6"
+  },
+  "replicate": 4,
+  "regime": "B",
+  "regime_index": 1,
+  "evaluation_only": [
+    "true_mu",
+    "true_sigma",
+    "noise_z",
+    "regime",
+    "split"
+  ],
+  "split_policy": "2400 train / 800 validation / 800 test; paired A/B/C inputs, noise, splits",
+  "limitations": [
+    "Known Gaussian synthetic law; does not establish real-data superiority",
+    "Fresh data and split per replicate; v1 excluded from replicate aggregate"
+  ]
+}

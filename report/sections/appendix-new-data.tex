@@ -1,0 +1,62 @@
+\section{New-data Provenance and Examples}
+\label{app:new-data-provenance}
+
+\textbf{Frozen preparation.}
+Public-data audits retain the UCI dataset records, source citations, downloaded-file hashes and column roles.
+Prepared public-data CSV files preserve source row order; the historical Superconductivity pilot selects a subset and sorts its sampled source indices before storage.
+The full-data experiment retains all source rows and is not pooled with that pilot.
+Forest Fires retains four exact duplicate rows and allows repeated spatial cells across row partitions.
+Real Estate row partitions mix transaction dates and may share locations, so they do not represent future-period or location-disjoint prediction.
+
+\textbf{Randomness and partitions.}
+Repeated public-data row holdouts use sequential permutations from NumPy's legacy random generator (\texttt{RandomState}), seeded with 1, with inner-split seed $10000+k$ for zero-based repetition or fold index $k$, counted separately in each experiment.
+Grouped Airfoil and Parkinsons use 5 shuffled partitions of sorted condition or subject identifiers with seed 1; inner validation holds out 20\% of outer-training groups with seed $10000+k$.
+All variants reuse the saved indices, with stage-model seed $20000+k$ and refit-model seed $30000+k$.
+For fresh synthetic replicate $r\in\{1,\ldots,10\}$, PCG64 generators use data seed $r$ and split seed $1000+r$.
+A single permutation assigns the training, validation and test labels, shared across regimes.
+Stage-model and refit-model seeds are $20000+100r$ and $30000+100r$, respectively.
+Each synthetic manifest records its generator hash, data seed, split seed and generator type.
+
+\textbf{Additional prepared-data snippets.}
+The following extracts show selected fields from the first prepared row of each dataset, without rounding.
+They are field projections rather than complete input records.
+Row and group identifiers are excluded from predictors; the prediction target is named explicitly in each extract.
+
+\begingroup
+\footnotesize
+% The later headings follow verbatim and are already flush; match them here.
+\noindent\textbf{Airfoil, row 0}
+\begin{verbatim}
+condition_id=23
+frequency_hz=800.0
+angle_deg=0.0
+chord_m=0.3048
+velocity_ms=71.3
+scaled_sound_pressure_db=126.201
+\end{verbatim}
+\textbf{Real Estate, row 0}
+\begin{verbatim}
+X1 transaction date=2012.9166667
+X2 house age=32.0
+X5 latitude=24.98298
+X6 longitude=121.54024
+Y=37.9
+\end{verbatim}
+\textbf{Parkinsons, row 0}
+\begin{verbatim}
+subject#=1
+age=72
+sex=0
+test_time=5.6431
+motor_UPDRS=28.199
+\end{verbatim}
+\textbf{Superconductivity, row 0}
+\begin{verbatim}
+number_of_elements=4
+mean_atomic_mass=88.9444675
+critical_temp=29.0
+\end{verbatim}
+\endgroup
+
+Airfoil's target is \texttt{scaled\_sound\_pressure\_db}; Real Estate's is \texttt{Y}; Parkinsons uses \texttt{motor\_UPDRS}; Superconductivity uses \texttt{critical\_temp}.
+Airfoil's displacement-thickness predictor and the unshown predictors in the other extracts remain model inputs.

@@ -1,0 +1,8 @@
+cd /mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree
+export PYTHONDONTWRITEBYTECODE=1
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
+/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/.venv/bin/python -m examples.experiments.regression_exp \
+  --dataset=yacht --score=MLE --natural --n-splits=20 --n-est=4000

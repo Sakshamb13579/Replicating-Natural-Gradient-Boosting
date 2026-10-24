@@ -1,0 +1,15 @@
+2026-10-17T00:43:24.112777+00:00 superconductivity-full natural fold=0 stage_fit start
+2026-10-17T01:09:35.891724+00:00 superconductivity-full natural fold=0 refit start best=2000
+2026-10-17T01:41:13.352106+00:00 superconductivity-full natural fold=0 complete NLL=3.487106
+2026-10-17T01:41:13.370142+00:00 superconductivity-full natural fold=1 stage_fit start
+2026-10-17T02:06:10.475080+00:00 superconductivity-full natural fold=1 refit start best=1514
+2026-10-17T02:37:22.880794+00:00 superconductivity-full natural fold=1 complete NLL=3.459189
+2026-10-17T02:37:22.897663+00:00 superconductivity-full natural fold=2 stage_fit start
+2026-10-17T02:57:43.071881+00:00 superconductivity-full natural fold=2 refit start best=2000
+2026-10-17T03:21:51.959981+00:00 superconductivity-full natural fold=2 complete NLL=3.483564
+2026-10-17T03:21:51.972660+00:00 superconductivity-full natural fold=3 stage_fit start
+2026-10-17T03:41:31.890091+00:00 superconductivity-full natural fold=3 refit start best=1998
+2026-10-17T04:05:41.499790+00:00 superconductivity-full natural fold=3 complete NLL=3.544922
+2026-10-17T04:05:41.710155+00:00 superconductivity-full natural fold=4 stage_fit start
+2026-10-17T04:25:23.017114+00:00 superconductivity-full natural fold=4 refit start best=2000
+2026-10-17T04:49:31.589186+00:00 superconductivity-full natural fold=4 complete NLL=3.604029

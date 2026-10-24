@@ -1,0 +1,64 @@
+\section{Replication Environment and Diagnostics}
+\label{app:replication-environment}
+
+\textbf{Recorded environments.}
+The historical environment record lists Python~3.10.0, NGBoost~0.5.11.dev0 installed in editable mode from commit \texttt{6720340}, NumPy~2.2.6, pandas~2.3.3, SciPy~1.15.3 and scikit-learn~1.6.1.
+It does not record a CPU model or numerical-library thread settings.
+The controlled selector experiment records the same package versions on Linux~6.8.0-139-generic, x86-64, with glibc~2.39.
+Before execution, \texttt{OMP\_NUM\_THREADS}, \texttt{OPENBLAS\_NUM\_THREADS}, \texttt{MKL\_NUM\_THREADS} and \texttt{NUMEXPR\_NUM\_THREADS} were each set to \texttt{1}.
+These restrictions support reproducibility within the recorded environment; they do not establish identical arithmetic across platforms.
+
+\textbf{Controlled split provenance.}
+For zero-based repetition index $k$, the controlled selector experiment uses inner-split seed $10000+k$, independently of model fitting, seeds stage-selection models with $20000+k$ and refit models with $30000+k$, and preserves the resulting indices.
+The separate Yacht Natural headroom diagnostic also freezes inner partitions with seed $10000+k$, seeds inner models with $20000+k$ and refit models with $30000+k$, and compares both caps on shared 4{,}000-stage fits.
+Its NLL means are diagnostic results, not substitutes for the controlled selector experiment's means.
+
+\textbf{Measures and dispersion.}
+For observations $y_i$, predictive densities $p_i$ and predicted means $\hat\mu_i$,
+\begin{align*}
+\mathrm{NLL} &= -\frac{1}{n}\sum_{i=1}^{n}\log p_i(y_i), \\
+\mathrm{RMSE} &= \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat\mu_i)^2}.
+\end{align*}
+As a worked value, a Normal prediction with $y=\mu=0$ and $\sigma=0.1$ has NLL $\log(0.1\sqrt{2\pi})\approx-1.384$.
+The original paper reports standard errors over its repetitions, whereas the released script prints population standard deviations.
+Table~\ref{tab:replication-results} therefore carries the published standard errors only; adding local spread would make that cross-protocol table too wide to read, and the per-repetition values are kept in the run records.
+
+\begin{table}[ht]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llrr@{}}
+\toprule
+& & \multicolumn{2}{c}{Selector} \\
+Dataset & Variant & RMSE & NLL \\
+\midrule
+Yacht & Natural & 9/20 & 0/20 \\
+& Ordinary & 20/20 & 0/20 \\
+& Homoscedastic & 7/20 & 7/20 \\
+\midrule
+Kin8nm & Natural & 2/5 & 0/5 \\
+& Ordinary & 2/5 & 2/5 \\
+& Homoscedastic & 1/5 & 1/5 \\
+\bottomrule
+\end{tabular}
+\caption{Repetitions selecting the 2{,}000-stage cap in the controlled selector experiment, out of all repetitions for that dataset.}
+\label{tab:replication-caps}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+Yacht Natural headroom diagnostic & Value \\
+\midrule
+Mean test NLL, cap 2{,}000 & 2.0351 \\
+Mean test NLL, cap 4{,}000 & 2.2029 \\
+Mean paired NLL change & $+0.1678$ \\
+Cap 4{,}000 wins / ties / losses & 2 / 5 / 13 \\
+\bottomrule
+\end{tabular}
+\caption{Separate controlled cap diagnostic over 20 Yacht Natural repetitions, using validation RMSE selection on shared 4{,}000-stage trajectories.
+Wins denote lower test NLL for the larger cap.}
+\label{tab:headroom}
+\end{table}

@@ -1,0 +1,47 @@
+{
+  "status": "non_reportable_timing_benchmark",
+  "created_at": "2026-09-26T08:08:32.934055+00:00",
+  "purpose": "Choose full-five-fold or deterministic-5000-row Superconductivity scope before freezing splits",
+  "raw_path": "data/raw/superconductivity/train.csv",
+  "raw_sha256": "4dfb6e3a1f6ffd969e5a5e42f093c4800d1e2a6c8b1e309f8fcd9f23d86952f3",
+  "table_shape": [
+    21263,
+    82
+  ],
+  "n_estimators_measured": 25,
+  "reportable_model_metrics_computed": false,
+  "results": [
+    {
+      "variant": "natural",
+      "inner_rows": 15309,
+      "outer_rows": 19137,
+      "inner_fit_seconds": 15.11023385100998,
+      "outer_refit_seconds": 18.986824132036418,
+      "measured_seconds": 34.0970579830464,
+      "projected_seconds_per_2000_stage_fold_linear": 2727.764638643712,
+      "projected_hours_for_5_folds_linear": 3.7885619981162666
+    },
+    {
+      "variant": "ordinary",
+      "inner_rows": 15309,
+      "outer_rows": 19137,
+      "inner_fit_seconds": 15.138809882919304,
+      "outer_refit_seconds": 19.011189460055903,
+      "measured_seconds": 34.14999934297521,
+      "projected_seconds_per_2000_stage_fold_linear": 2731.9999474380165,
+      "projected_hours_for_5_folds_linear": 3.79444437144169
+    },
+    {
+      "variant": "homoscedastic",
+      "inner_rows": 15309,
+      "outer_rows": 19137,
+      "inner_fit_seconds": 7.7843264599796385,
+      "outer_refit_seconds": 9.629053156008013,
+      "measured_seconds": 17.41337961598765,
+      "projected_seconds_per_2000_stage_fold_linear": 1393.070369279012,
+      "projected_hours_for_5_folds_linear": 1.9348199573319613
+    }
+  ],
+  "projected_total_hours_full_data_5_folds_3_variants_linear": 9.517826326889917,
+  "projection_caution": "Linear stage extrapolation from a short fit; use as a compute gate, not performance evidence."
+}

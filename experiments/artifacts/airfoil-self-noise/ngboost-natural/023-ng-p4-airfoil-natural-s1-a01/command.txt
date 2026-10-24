@@ -1,0 +1,5 @@
+cd /mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost
+export PYTHONDONTWRITEBYTECODE=1
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
+/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/.venv/bin/python src/run_airfoil_ngboost_variant.py --variant natural \
+  artifacts/airfoil-self-noise/ngboost-natural/023-ng-p4-airfoil-natural-s1-a01

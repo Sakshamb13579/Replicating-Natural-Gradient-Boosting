@@ -1,0 +1,14 @@
+{
+  "dataset": "synthetic-r05-A",
+  "variant": "natural",
+  "features": [
+    "x1",
+    "x2"
+  ],
+  "target": "y",
+  "n_estimators": 2000,
+  "stage_selector": "validation_NLL",
+  "learning_rate": 0.01,
+  "reportable": true,
+  "manifest_sha256": "dece1fdf34ed06336275dc23287f47e694ec5b0b7e1a0f5fcc9ddfe2e8296820"
+}

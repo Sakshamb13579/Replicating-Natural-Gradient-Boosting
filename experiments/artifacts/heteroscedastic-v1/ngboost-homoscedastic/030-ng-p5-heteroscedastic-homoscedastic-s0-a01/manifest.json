@@ -1,0 +1,157 @@
+{
+  "handoff": "030-NG-P5",
+  "artifact_dir": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/heteroscedastic-v1/ngboost-homoscedastic/030-ng-p5-heteroscedastic-homoscedastic-s0-a01",
+  "dataset": "heteroscedastic-v1",
+  "variant": "homoscedastic",
+  "distn": "NormalFixedVar",
+  "sigma_leakage_free": true,
+  "per_regime_summary": [
+    {
+      "regime": "A",
+      "best_iter": 285,
+      "fixed_sigma": 0.7085450830328573,
+      "test_nll": 1.0357330918630665,
+      "oracle_nll": 0.7310033212431992,
+      "test_rmse": 0.6805988788888144,
+      "scale_mae": 0.2604106740532776,
+      "coverage_95": 0.94875,
+      "pearson": null
+    },
+    {
+      "regime": "B",
+      "best_iter": 346,
+      "fixed_sigma": 0.6301178590109404,
+      "test_nll": 0.9038051521292823,
+      "oracle_nll": 0.8850018814567477,
+      "test_rmse": 0.5955963988634394,
+      "scale_mae": 0.03011785901094055,
+      "coverage_95": 0.965,
+      "pearson": null
+    },
+    {
+      "regime": "C",
+      "best_iter": 189,
+      "fixed_sigma": 1.4094178352133029,
+      "test_nll": 1.7238279367964622,
+      "oracle_nll": 1.4241505018031444,
+      "test_rmse": 1.3543803856105148,
+      "scale_mae": 0.5192101586275487,
+      "coverage_95": 0.9475,
+      "pearson": null
+    }
+  ],
+  "three_way": {
+    "nll_wins": {
+      "natural": 2,
+      "ordinary": 0,
+      "homoscedastic": 1
+    },
+    "rmse_wins": {
+      "natural": 1,
+      "ordinary": 0,
+      "homoscedastic": 2
+    },
+    "nll_rank_by_mean": [
+      "natural",
+      "ordinary",
+      "homoscedastic"
+    ],
+    "hypothesis_pass": {
+      "H1_regime_A": true,
+      "H2_width_monotonicity_A": true,
+      "H3_regime_B_control": true,
+      "H4_regime_C": true
+    }
+  },
+  "aggregate": {
+    "test_nll_mean": 1.221122060262937,
+    "test_rmse_mean": 0.8768585544542562,
+    "oracle_nll_mean": 1.0133852348343637,
+    "cap_hits": 0
+  },
+  "versions": {
+    "python": "3.10.0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.6.1",
+    "scipy": "1.15.3",
+    "ngboost": "0.5.11.dev0",
+    "ngboost_file": "/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree/ngboost/__init__.py"
+  },
+  "timing_sec": {
+    "wall": 140.76186698999663,
+    "sum_regime_totals": 133.2336102160043
+  },
+  "files": [
+    {
+      "path": "command.txt",
+      "bytes": 422,
+      "sha256": "e32145aaaad2bbed2c0e41913a132ac386aa5878387efebc1bec953b7935d738"
+    },
+    {
+      "path": "config.json",
+      "bytes": 897,
+      "sha256": "bcdafb51a4f09978a303b6861b84310abda046a7c8d14ed50d9ff34c4fdf3564"
+    },
+    {
+      "path": "environment.txt",
+      "bytes": 872,
+      "sha256": "3ae9d55a18b8f7c4f882accfdf16e63c716c1465cde194ccaf465d10476aa2ee"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 4257,
+      "sha256": "e7575c4508f914b622a31b381755688aae2d44e1d79886f19a0556e1d886de72"
+    },
+    {
+      "path": "metrics.json",
+      "bytes": 9885,
+      "sha256": "73e4fb19e56d4dff0e071f24831cdd9678ff118f81a6d28c7284ca450eca7210"
+    },
+    {
+      "path": "predictions.csv",
+      "bytes": 680345,
+      "sha256": "d80f956917a727f5f0245a3f3a784d714cf16502fe17a72eb15b262e478919be"
+    },
+    {
+      "path": "predictions.jsonl",
+      "bytes": 1342544,
+      "sha256": "d1b66eee2c131d5b71f4af5b29ca4cbe4359631039a0e7a825e464e4fa3db24b"
+    },
+    {
+      "path": "source-status-after.txt",
+      "bytes": 304,
+      "sha256": "4fd337c414a4f24bcc98506d2b45de75b24ce8d6592bc33e9b868b5e4a56028a"
+    },
+    {
+      "path": "source-status-before.txt",
+      "bytes": 304,
+      "sha256": "4fd337c414a4f24bcc98506d2b45de75b24ce8d6592bc33e9b868b5e4a56028a"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "stdout.log",
+      "bytes": 749,
+      "sha256": "4ff30dbeef495d938f69aa16b87e7dbed14dd33d2b024c50b290b5a4db6de129"
+    },
+    {
+      "path": "three-way-comparison.json",
+      "bytes": 14152,
+      "sha256": "e18c4030ef84be5efb8eed747c8621526d3655a8b0b8458db5fe1f8f95eb9f2d"
+    },
+    {
+      "path": "timing.json",
+      "bytes": 104,
+      "sha256": "29319f920acc7d06dae565e72f03f8aeae184ae6b11ab09f28e1fa6d74a4c05c"
+    },
+    {
+      "path": "checksums.txt",
+      "bytes": 1496,
+      "sha256": "40fe45c3197143eb7d5eb56b7bb7606689583e4144dbb2e2f441f1afcf6ddf5f"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+% Draft 3: applies REVIEW-SECTION-03.md, G1-G5 and B1-B15, plus the narrowed G3/G4.
+% Published, released-code and controlled-selector results are separate evidence lines.
+% Third person throughout. RMS is defined on first use. Table anchored once per paragraph.
+\section{Replication of Original Work}
+\label{sec:replication}
+
+\textbf{Implementation and environment.}
+The released-code runs used a CPU-only Python~3.10.0 environment with NGBoost~0.5.11.dev0 installed from commit \texttt{6720340} \cite{ngboostrepo}; Appendix~\ref{app:replication-environment} lists the recorded package versions.
+The unmodified script loaded the data, then failed with \texttt{NameError} at \texttt{Dist=eval(args.distn)}: it resolves distribution and score names by evaluating command-line strings, but imports none of them.
+The three missing names are the two-parameter Normal distribution (\texttt{Normal}), a fixed-scale Normal that boosts the mean only (\texttt{NormalFixedVar}), and the logarithmic scoring rule (\texttt{MLE}, an alias for \texttt{LogScore}).
+Two import statements supplied them in a separate repair worktree, without changing the model, split or selection logic, after which the Yacht and Kin8nm runs completed.\footref{fn:repo}
+
+The controlled experiments used the same package versions with single-threaded numerical libraries, removing variation from parallel arithmetic.
+The historical record lists package versions but no CPU model or thread settings, and these cannot be recovered.
+Appendix~\ref{app:replication-environment} records both environments.
+As a guide for rerunning the experiments, the released-code runs took about 40~minutes for Yacht and 45~minutes for Kin8nm across the three variants.
+
+\textbf{Experimental setup.}
+All variants used the default depth-three tree learner, logarithmic score, learning rate $0.01$, full batches and a cap of 2{,}000 boosting stages.
+Natural and Ordinary boosted both the mean and log scale of a Normal distribution, with natural gradients enabled and disabled respectively.
+Homoscedastic boosted only the mean with fixed scale during fitting, then adjusted its predictive scale after refitting, as examined below.
+The released script generated repeated random 90/10 row holdouts and reserved 20\% of each outer-training portion for validation.
+It chose the number of stages on that validation portion, refitted on the full outer-training portion, and predicted the test rows using the chosen number of stages.
+Yacht used 20 repetitions and Kin8nm used 5, compared with 20 for each in the original paper.
+
+\textbf{Three evidence lines.}
+This report distinguishes \emph{published} values from the ablation table of \citet{duan2020ngboost}, the historical \emph{released-code run} of the repaired script, and a separate \emph{controlled selector experiment} that applies both selectors to shared fitted trajectories (Table~\ref{tab:replication-results}).
+Only the two controlled columns form a within-experiment selector comparison; subtracting a released-code result from a controlled result would mix experiments.
+
+\textbf{Evaluation measures.}
+Test NLL is the mean negative log predictive density and scores the whole distribution \cite{gneiting2007strictly}; test RMSE is the root mean squared error of the predicted mean and scores only its centre \cite{hyndman2006another}.
+Lower is better for both, and NLL can be negative because a continuous density can exceed one.
+Appendix~\ref{app:replication-environment} gives both definitions, one worked NLL value, and the dispersion conventions of each evidence line.
+Repeated holdouts share rows, so their summaries should not be read as independent samples.
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+& & & & \multicolumn{2}{c}{Controlled, selected by} \\
+Dataset & Variant & Published & Released code & RMSE & NLL \\
+\midrule
+Yacht & Natural & $0.20\pm0.26$ & 2.1060 & 1.9556 & 0.4115 \\
+& Ordinary & $3.29\pm0.20$ & 11.5473 & 11.5617 & 3.5133 \\
+& Homoscedastic & $2.02\pm0.21$ & 13.2821 & 12.7399 & 12.7399 \\
+\midrule
+Kin8nm & Natural & $-0.49\pm0.02$ & $-0.4191$ & $-0.4186$ & $-0.4196$ \\
+& Ordinary & $-0.52\pm0.03$ & $-0.5078$ & $-0.5083$ & $-0.5075$ \\
+& Homoscedastic & $-0.37\pm0.05$ & $-0.3623$ & $-0.3685$ & $-0.3685$ \\
+\bottomrule
+\end{tabular}
+\caption{Every numeric result is a mean test NLL; RMSE and NLL in the last two headers name the validation \emph{selector}, not the reported metric.
+Published values are mean $\pm$ standard error over 20 repetitions from the ablation table (Table~2) of \citet{duan2020ngboost}.
+Both local experiments use 20 repetitions for Yacht and 5 for Kin8nm.
+Released code denotes the repaired historical run; the two controlled columns use shared trajectories in a separate experiment.}
+\label{tab:replication-results}
+\end{table*}
+
+\textbf{Released-code results.}
+Yacht recovered Natural's advantage: its mean test NLL was $2.1060$, although above the published $0.20$ (Table~\ref{tab:replication-results}).
+Natural beat Ordinary on 19 of 20 holdouts and Homoscedastic on 20 of 20; Ordinary beat Homoscedastic on only 12 of 20.
+The ranking by mean test NLL therefore reversed the published secondary ordering, with Ordinary ahead of Homoscedastic locally while the original paper places Homoscedastic ahead of Ordinary.
+That reversal rests on a nearly even fold split, which makes it the weakest of the three local comparisons.
+
+Kin8nm's released-code mean test NLL was lowest for Ordinary at $-0.5078$, followed by Natural at $-0.4191$ and Homoscedastic at $-0.3623$ (Table~\ref{tab:replication-results}).
+That ordering matches the original paper's, and it held on all five holdouts for both adjacent pairings.
+The published Natural and Ordinary standard-error ranges overlap, so the original paper's reporting criterion does not separate those two variants.
+
+\textbf{Investigating stage selection.}
+The original paper selects stages by validation log-likelihood, but the released script minimises validation squared error while computing and discarding a validation NLL sequence.
+Squared error and RMSE choose the same stage.
+To measure the selector's effect, the controlled experiment fixed the outer holdout, the inner 80/20 partition and the model seeds (Appendix~\ref{app:replication-environment}).
+Both selectors worked from the same fitted sequences, so the only thing that changed between the paired predictions was which stage was chosen.
+The released script draws its validation split without a fixed random seed and those indices were not saved, so the historical run cannot supply this paired comparison.
+
+For Yacht Natural, NLL selection reduced mean test NLL from $1.9556$ to $0.4115$ (Table~\ref{tab:replication-results}), winning on 17 of 20 repetitions.
+Mean test RMSE rose from $0.6131$ to $0.6241$, which shows the two measures rewarding different things.
+Ordinary changed from $11.5617$ to $3.5133$, approaching the published $3.29$.
+Kin8nm barely moved, with mean NLL changing by $-0.0010$ for Natural and $+0.0007$ for Ordinary.
+
+\textbf{Remaining discrepancies.}
+Homoscedastic selected identical stages under validation squared error and validation NLL.
+In the controlled experiment, the scale at each stage was the root mean square (RMS) of the validation residuals, so ranking stages by validation NLL gave the same order as ranking them by squared error.
+After refitting, the released script instead sets the predictive standard deviation to the refitted model's predictive variance multiplied by the RMS of the residuals on those same validation rows.
+By then those rows are part of the refit training set, and multiplying a variance by an RMS does not estimate a residual standard deviation.
+Both the rows used and the arithmetic therefore depart from the original paper, which sets this comparator's variance to the variance of the training residuals.
+Together they offer a checkable explanation for the released-code Yacht Homoscedastic NLL of $13.2821$ against the published $2.02$ (Table~\ref{tab:replication-results}), although this work does not separate how much each departure contributes.
+The new-data experiments use a different scale rule, introduced in Section~\ref{sec:new-data}.
+
+Under squared-error selection in the controlled experiment, stage selection often reached the 2{,}000-stage ceiling, on all 20 Yacht Ordinary repetitions and on 7 to 9 of 20 for the other Yacht variants; under NLL selection, Yacht Natural and Ordinary never reached it (Table~\ref{tab:replication-caps}).
+A separate diagnostic therefore tested whether a higher ceiling would help, comparing 2{,}000-stage and 4{,}000-stage limits for Yacht Natural under squared-error selection on shared 4{,}000-stage trajectories.
+Mean test NLL rose from $2.0351$ to $2.2029$: the larger limit won on 2 holdouts, tied on 5 and lost on 13, so extra headroom made probabilistic performance worse on most of them (Table~\ref{tab:headroom}).
+Homoscedastic still selected the cap under NLL selection (Table~\ref{tab:replication-caps}), so these fixed-budget results do not establish convergence.
+
+\textbf{Replication outcome.}
+The released-code run reproduced the direction of Natural's advantage on Yacht and the published ordering of mean NLL on Kin8nm, but not Yacht's absolute NLL values.
+In the controlled selector experiment, NLL selection brought Yacht Natural and Ordinary close to the published means, although Natural remains above its published value (Table~\ref{tab:replication-results}).
+The Homoscedastic mismatch is not explained by stage selection; its scale calculation remains a separate unresolved discrepancy.

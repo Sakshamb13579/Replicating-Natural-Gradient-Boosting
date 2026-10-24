@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "variants": [
+    "natural",
+    "ordinary",
+    "homoscedastic"
+  ],
+  "n_estimators": 2000,
+  "learning_rate": 0.01,
+  "stage_selector": "validation_NLL",
+  "homoscedastic_sigma": "RMS of inner-validation residuals at each stage; retain selected sigma after refit",
+  "refit": "Fit all 2000 stages on outer train; predict using selected prefix, matching existing runners",
+  "numerical_threads_per_process": 1,
+  "max_concurrent_processes": 4,
+  "synthetic_replicates": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "synthetic_model_seed_policy": "Same model seeds across A/B/C and variants within replicate; stage 20000+100*r, refit 30000+100*r",
+  "external_model_seed_policy": "stage 20000+fold, refit 30000+fold",
+  "synthetic_reporting": [
+    "Per regime: paired NLL differences, mean, sample SD, SE over 10 fresh replicates, and win/tie/loss counts",
+    "Scale MAE, Pearson/Spearman where nonconstant, marginal and conditional interval coverage and widths",
+    "Descriptive replicate support for original H1/H2/H4; H3 remains a constant-noise control with no required winner",
+    "Retain v1 hypotheses and results without rewriting or pooling; no new equivalence threshold"
+  ],
+  "aggregation": "Unweighted means of fold metrics; paired comparisons only within identical splits; no iid interpretation of overlapping holdouts"
+}

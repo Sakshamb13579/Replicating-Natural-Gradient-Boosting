@@ -1,0 +1,465 @@
+{
+  "label": "final_heteroscedastic_three_way_natural_ordinary_homoscedastic",
+  "handoff": "030-NG-P5",
+  "artifacts": {
+    "natural": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/heteroscedastic-v1/ngboost-natural/028-ng-p5-heteroscedastic-natural-s0-a01/metrics.json",
+    "ordinary": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/heteroscedastic-v1/ngboost-ordinary/029-ng-p5-heteroscedastic-ordinary-s0-a01/metrics.json",
+    "homoscedastic": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/heteroscedastic-v1/ngboost-homoscedastic/030-ng-p5-heteroscedastic-homoscedastic-s0-a01/metrics.json"
+  },
+  "protocol_notes": {
+    "shared": "frozen heteroscedastic-v1, features x1/x2, cap 2000, LR 0.01, MLE, seeds 20000+/30000+, validation-NLL selection",
+    "natural": "Normal, natural_gradient=True",
+    "ordinary": "Normal, natural_gradient=False",
+    "homoscedastic": "NormalFixedVar, natural_gradient=True, leakage-free held-out val RMS sigma retained for test"
+  },
+  "per_regime": [
+    {
+      "regime": "A",
+      "test_nll": {
+        "natural": 0.7891477909135705,
+        "ordinary": 0.8349481585061659,
+        "homoscedastic": 1.0357330918630665
+      },
+      "test_rmse": {
+        "natural": 0.6814598242895946,
+        "ordinary": 0.6955883549069568,
+        "homoscedastic": 0.6805988788888144
+      },
+      "oracle_nll": {
+        "natural": 0.7310033212431992,
+        "ordinary": 0.7310033212431992,
+        "homoscedastic": 0.7310033212431992
+      },
+      "oracle_gap_nll": {
+        "natural": 0.058144469670371235,
+        "ordinary": 0.10394483726296666,
+        "homoscedastic": 0.3047297706198673
+      },
+      "scale_mae": {
+        "natural": 0.06022652439375126,
+        "ordinary": 0.09110627942867813,
+        "homoscedastic": 0.2604106740532776
+      },
+      "pearson": {
+        "natural": 0.9691039670461623,
+        "ordinary": 0.897688249037189,
+        "homoscedastic": null
+      },
+      "spearman": {
+        "natural": 0.9702687278561933,
+        "ordinary": 0.9197452780642614,
+        "homoscedastic": null
+      },
+      "coverage": {
+        "natural": {
+          "50": 0.51,
+          "80": 0.8025,
+          "95": 0.9475
+        },
+        "ordinary": {
+          "50": 0.49375,
+          "80": 0.77625,
+          "95": 0.93
+        },
+        "homoscedastic": {
+          "50": 0.625,
+          "80": 0.84875,
+          "95": 0.94875
+        }
+      },
+      "mean_width": {
+        "natural": {
+          "50": 0.7853523878888656,
+          "80": 1.4921940354328203,
+          "95": 2.2821138423337444
+        },
+        "ordinary": {
+          "50": 0.8057897634597093,
+          "80": 1.531025686545122,
+          "95": 2.3415017278364187
+        },
+        "homoscedastic": {
+          "50": 0.9558127921149878,
+          "80": 1.8160741208393745,
+          "95": 2.7774456883346863
+        }
+      },
+      "best_iter": {
+        "natural": 377,
+        "ordinary": 577,
+        "homoscedastic": 285
+      },
+      "cap_hit": {
+        "natural": false,
+        "ordinary": false,
+        "homoscedastic": false
+      },
+      "runtime_sec": {
+        "natural": 58.26363483899331,
+        "ordinary": 55.852576664008666,
+        "homoscedastic": 44.72590968400618
+      },
+      "nll_rank_asc": [
+        "natural",
+        "ordinary",
+        "homoscedastic"
+      ],
+      "rmse_rank_asc": [
+        "homoscedastic",
+        "natural",
+        "ordinary"
+      ],
+      "nll_winner": "natural",
+      "rmse_winner": "homoscedastic",
+      "deltas": {
+        "ordinary_minus_natural_nll": 0.045800367592595426,
+        "homoscedastic_minus_natural_nll": 0.24658530094949604,
+        "homoscedastic_minus_ordinary_nll": 0.20078493335690062,
+        "ordinary_minus_natural_rmse": 0.01412853061736219,
+        "homoscedastic_minus_natural_rmse": -0.0008609454007801887,
+        "homoscedastic_minus_ordinary_rmse": -0.014989476018142378
+      },
+      "fixed_sigma": 0.7085450830328573
+    },
+    {
+      "regime": "B",
+      "test_nll": {
+        "natural": 0.9150193614960196,
+        "ordinary": 0.9433453037601562,
+        "homoscedastic": 0.9038051521292823
+      },
+      "test_rmse": {
+        "natural": 0.5973300776270232,
+        "ordinary": 0.6081849974302119,
+        "homoscedastic": 0.5955963988634394
+      },
+      "oracle_nll": {
+        "natural": 0.8850018814567477,
+        "ordinary": 0.8850018814567477,
+        "homoscedastic": 0.8850018814567477
+      },
+      "oracle_gap_nll": {
+        "natural": 0.03001748003927185,
+        "ordinary": 0.0583434223034085,
+        "homoscedastic": 0.01880327067253451
+      },
+      "scale_mae": {
+        "natural": 0.04634396729479629,
+        "ordinary": 0.09061995910786566,
+        "homoscedastic": 0.03011785901094055
+      },
+      "pearson": {
+        "natural": null,
+        "ordinary": null,
+        "homoscedastic": null
+      },
+      "spearman": {
+        "natural": null,
+        "ordinary": null,
+        "homoscedastic": null
+      },
+      "coverage": {
+        "natural": {
+          "50": 0.5275,
+          "80": 0.81125,
+          "95": 0.96
+        },
+        "ordinary": {
+          "50": 0.4825,
+          "80": 0.7825,
+          "95": 0.93375
+        },
+        "homoscedastic": {
+          "50": 0.52875,
+          "80": 0.82875,
+          "95": 0.965
+        }
+      },
+      "mean_width": {
+        "natural": {
+          "50": 0.8426216349187857,
+          "80": 1.6010073912583431,
+          "95": 2.4485295092400827
+        },
+        "ordinary": {
+          "50": 0.8085743200175046,
+          "80": 1.5363164308669632,
+          "95": 2.349593223021641
+        },
+        "homoscedastic": {
+          "50": 0.8500160746367581,
+          "80": 1.615057057386165,
+          "95": 2.470016619353862
+        }
+      },
+      "best_iter": {
+        "natural": 300,
+        "ordinary": 404,
+        "homoscedastic": 346
+      },
+      "cap_hit": {
+        "natural": false,
+        "ordinary": false,
+        "homoscedastic": false
+      },
+      "runtime_sec": {
+        "natural": 57.88250170500396,
+        "ordinary": 56.042842369002756,
+        "homoscedastic": 43.83216161299788
+      },
+      "nll_rank_asc": [
+        "homoscedastic",
+        "natural",
+        "ordinary"
+      ],
+      "rmse_rank_asc": [
+        "homoscedastic",
+        "natural",
+        "ordinary"
+      ],
+      "nll_winner": "homoscedastic",
+      "rmse_winner": "homoscedastic",
+      "deltas": {
+        "ordinary_minus_natural_nll": 0.02832594226413665,
+        "homoscedastic_minus_natural_nll": -0.011214209366737338,
+        "homoscedastic_minus_ordinary_nll": -0.03954015163087399,
+        "ordinary_minus_natural_rmse": 0.010854919803188756,
+        "homoscedastic_minus_natural_rmse": -0.001733678763583768,
+        "homoscedastic_minus_ordinary_rmse": -0.012588598566772524
+      },
+      "fixed_sigma": 0.6301178590109404
+    },
+    {
+      "regime": "C",
+      "test_nll": {
+        "natural": 1.4678628825218567,
+        "ordinary": 1.5018898373178524,
+        "homoscedastic": 1.7238279367964622
+      },
+      "test_rmse": {
+        "natural": 1.3539874489234491,
+        "ordinary": 1.4080290293048183,
+        "homoscedastic": 1.3543803856105148
+      },
+      "oracle_nll": {
+        "natural": 1.4241505018031444,
+        "ordinary": 1.4241505018031444,
+        "homoscedastic": 1.4241505018031444
+      },
+      "oracle_gap_nll": {
+        "natural": 0.04371238071871231,
+        "ordinary": 0.07773933551470802,
+        "homoscedastic": 0.2996774349933178
+      },
+      "scale_mae": {
+        "natural": 0.10855823526481456,
+        "ordinary": 0.14047191276889223,
+        "homoscedastic": 0.5192101586275487
+      },
+      "pearson": {
+        "natural": 0.9749288675510988,
+        "ordinary": 0.9377200355849731,
+        "homoscedastic": null
+      },
+      "spearman": {
+        "natural": 0.9791662177647116,
+        "ordinary": 0.9496533935729348,
+        "homoscedastic": null
+      },
+      "coverage": {
+        "natural": {
+          "50": 0.515,
+          "80": 0.81125,
+          "95": 0.94625
+        },
+        "ordinary": {
+          "50": 0.4725,
+          "80": 0.78375,
+          "95": 0.94875
+        },
+        "homoscedastic": {
+          "50": 0.6275,
+          "80": 0.84125,
+          "95": 0.9475
+        }
+      },
+      "mean_width": {
+        "natural": {
+          "50": 1.566836517275417,
+          "80": 2.977038259043992,
+          "95": 4.552987117490266
+        },
+        "ordinary": {
+          "50": 1.6365232878872633,
+          "80": 3.1094452970299598,
+          "95": 4.755486207444437
+        },
+        "homoscedastic": {
+          "50": 1.9012757671898453,
+          "80": 3.61248326644818,
+          "95": 5.5248163923729665
+        }
+      },
+      "best_iter": {
+        "natural": 300,
+        "ordinary": 383,
+        "homoscedastic": 189
+      },
+      "cap_hit": {
+        "natural": false,
+        "ordinary": false,
+        "homoscedastic": false
+      },
+      "runtime_sec": {
+        "natural": 58.17143214600219,
+        "ordinary": 56.62402747000306,
+        "homoscedastic": 44.675538919000246
+      },
+      "nll_rank_asc": [
+        "natural",
+        "ordinary",
+        "homoscedastic"
+      ],
+      "rmse_rank_asc": [
+        "natural",
+        "homoscedastic",
+        "ordinary"
+      ],
+      "nll_winner": "natural",
+      "rmse_winner": "natural",
+      "deltas": {
+        "ordinary_minus_natural_nll": 0.03402695479599571,
+        "homoscedastic_minus_natural_nll": 0.2559650542746055,
+        "homoscedastic_minus_ordinary_nll": 0.22193809947860976,
+        "ordinary_minus_natural_rmse": 0.05404158038136919,
+        "homoscedastic_minus_natural_rmse": 0.000392936687065637,
+        "homoscedastic_minus_ordinary_rmse": -0.053648643694303555
+      },
+      "fixed_sigma": 1.4094178352133029
+    }
+  ],
+  "win_counts": {
+    "test_nll": {
+      "natural": 2,
+      "ordinary": 0,
+      "homoscedastic": 1
+    },
+    "test_rmse": {
+      "natural": 1,
+      "ordinary": 0,
+      "homoscedastic": 2
+    }
+  },
+  "aggregate_means": {
+    "test_nll": {
+      "natural": 1.0573433449771488,
+      "ordinary": 1.0933944331947247,
+      "homoscedastic": 1.221122060262937
+    },
+    "test_rmse": {
+      "natural": 0.8775924502800224,
+      "ordinary": 0.9039341272139957,
+      "homoscedastic": 0.8768585544542562
+    },
+    "wall_sec": {
+      "natural": 183.8409772590021,
+      "ordinary": 178.46709779500088,
+      "homoscedastic": 140.76186698999663
+    }
+  },
+  "nll_rank_by_mean_asc": [
+    "natural",
+    "ordinary",
+    "homoscedastic"
+  ],
+  "rmse_rank_by_mean_asc": [
+    "homoscedastic",
+    "natural",
+    "ordinary"
+  ],
+  "hypotheses": {
+    "H1_regime_A": {
+      "statement": "Under regime A, natural and ordinary multiparameter NGBoost achieve lower test NLL than homoscedastic NormalFixedVar because sigma(x) varies with abs(x1).",
+      "natural_beats_homoscedastic_nll": true,
+      "ordinary_beats_homoscedastic_nll": true,
+      "pass": true,
+      "evidence": {
+        "natural_nll": 0.7891477909135705,
+        "ordinary_nll": 0.8349481585061659,
+        "homoscedastic_nll": 1.0357330918630665,
+        "natural_pearson": 0.9691039670461623,
+        "ordinary_pearson": 0.897688249037189
+      }
+    },
+    "H2_width_monotonicity_A": {
+      "statement": "Under regime A, predicted interval width increases with abs(x1) in the same direction as true_sigma (binned analysis).",
+      "natural_width95_bins_monotonic": true,
+      "ordinary_width95_bins_monotonic": true,
+      "homoscedastic_width_constant": true,
+      "pass": true,
+      "evidence": {
+        "natural_bin_width95": [
+          1.0534754591110045,
+          1.7848793278151862,
+          2.775723054243248,
+          3.514377528165538
+        ],
+        "ordinary_bin_width95": [
+          0.9923407214901467,
+          1.7284565440248962,
+          2.9044670049802574,
+          3.7407426408503754
+        ],
+        "homoscedastic_bin_width95": [
+          2.7774456883346863,
+          2.7774456883346863,
+          2.7774456883346863,
+          2.7774456883346863
+        ]
+      }
+    },
+    "H3_regime_B_control": {
+      "statement": "Under regime B (constant sigma), homoscedastic model is not required to lose decisively; regime B is a calibration control not a victory condition for natural gradient.",
+      "homoscedastic_wins_or_ties_nll": true,
+      "nll_winner": "homoscedastic",
+      "pass": true,
+      "outcome_note": "Homoscedastic achieves best test NLL on B",
+      "evidence": {
+        "natural_nll": 0.9150193614960196,
+        "ordinary_nll": 0.9433453037601562,
+        "homoscedastic_nll": 0.9038051521292823,
+        "homoscedastic_fixed_sigma": 0.6301178590109404,
+        "true_sigma": 0.6
+      }
+    },
+    "H4_regime_C": {
+      "statement": "Under regime C (doubled heteroscedastic), input-dependent models should still track widening sigma; magnitude differs from A by design.",
+      "natural_tracks_sigma": true,
+      "ordinary_tracks_sigma": true,
+      "natural_beats_homoscedastic_nll": true,
+      "ordinary_beats_homoscedastic_nll": true,
+      "pass": true,
+      "evidence": {
+        "natural_nll": 1.4678628825218567,
+        "ordinary_nll": 1.5018898373178524,
+        "homoscedastic_nll": 1.7238279367964622,
+        "natural_pearson": 0.9749288675510988,
+        "ordinary_pearson": 0.9377200355849731,
+        "natural_scale_mae": 0.10855823526481456,
+        "ordinary_scale_mae": 0.14047191276889223,
+        "homoscedastic_scale_mae": 0.5192101586275487
+      }
+    },
+    "non_requirement_natural_need_not_win_every_regime": {
+      "statement": "Natural gradient need not win every regime.",
+      "natural_wins_all_regimes_nll": false,
+      "satisfied": true,
+      "nll_winners_by_regime": {
+        "A": "natural",
+        "B": "homoscedastic",
+        "C": "natural"
+      }
+    }
+  },
+  "claim_boundary": "Final constructed heteroscedastic three-way on frozen regimes A/B/C only; not extrapolated to Airfoil or other NGBoost paper datasets."
+}

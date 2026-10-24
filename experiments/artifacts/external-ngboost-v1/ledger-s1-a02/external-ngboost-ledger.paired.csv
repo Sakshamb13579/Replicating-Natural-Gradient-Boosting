@@ -1,0 +1,16 @@
+dataset,variant_a,variant_b,n_folds,mean_fold_nll_delta,nll_a_wins,nll_ties,nll_b_wins,mean_fold_rmse_delta,rmse_a_wins,rmse_ties,rmse_b_wins
+airfoil-self-noise,natural,ordinary,5,-0.6994750987255733,5,0,0,-2.821648349682551,5,0,0
+airfoil-self-noise,natural,homoscedastic,5,0.09029949682670066,0,0,5,0.5188563823532741,0,0,5
+airfoil-self-noise,ordinary,homoscedastic,5,0.789774595552274,0,0,5,3.340504732035825,0,0,5
+forest-fires,natural,ordinary,20,-0.0040651515298984475,13,0,7,0.005783309156344174,10,0,10
+forest-fires,natural,homoscedastic,20,-0.00019139061001125502,9,0,11,-0.005207245073662381,12,0,8
+forest-fires,ordinary,homoscedastic,20,0.0038737609198871924,8,0,12,-0.010990554230006555,11,0,9
+parkinsons-telemonitoring,natural,ordinary,5,-0.018485018579991675,4,0,1,0.21425722137585268,3,0,2
+parkinsons-telemonitoring,natural,homoscedastic,5,-0.036127231337247157,2,0,3,-0.42820104189679764,2,0,3
+parkinsons-telemonitoring,ordinary,homoscedastic,5,-0.01764221275725548,3,0,2,-0.6424582632726503,3,0,2
+real-estate-valuation,natural,ordinary,20,-0.3926153364129335,19,0,1,-5.446673094873316,20,0,0
+real-estate-valuation,natural,homoscedastic,20,-0.14874748993382486,15,0,5,0.10416834291867971,9,0,11
+real-estate-valuation,ordinary,homoscedastic,20,0.2438678464791087,4,0,16,5.550841437791997,0,0,20
+superconductivity,natural,ordinary,5,-1.1446907902402548,5,0,0,-21.22655471287285,5,0,0
+superconductivity,natural,homoscedastic,5,-0.26430109104424415,5,0,0,1.2369203864253173,0,0,5
+superconductivity,ordinary,homoscedastic,5,0.8803896991960105,0,0,5,22.463475099298165,0,0,5

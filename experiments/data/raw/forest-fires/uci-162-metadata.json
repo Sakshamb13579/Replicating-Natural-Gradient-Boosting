@@ -1,0 +1,190 @@
+{
+  "retrieval": {
+    "timestamp_utc": "2026-08-23T15:05:12Z",
+    "endpoints": {
+      "dataset_record": "https://archive.ics.uci.edu/api/trpc/donated_datasets.findById?batch=1&input=%7B%220%22%3A%7B%22json%22%3A162%7D%7D",
+      "citation": "https://archive.ics.uci.edu/api/trpc/citation.findByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A162%7D%7D",
+      "variables_table": "https://archive.ics.uci.edu/api/trpc/variables.findTableByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A162%7D%7D",
+      "descriptive_fields": "https://archive.ics.uci.edu/api/trpc/descriptive.findTupleByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A162%7D%7D",
+      "files_table": "https://archive.ics.uci.edu/api/trpc/files.findTableByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A162%7D%7D"
+    },
+    "dataset_page": "https://archive.ics.uci.edu/dataset/162/forest+fires"
+  },
+  "dataset": {
+    "id": 162,
+    "name": "Forest Fires",
+    "doi": "10.24432/C5D88D",
+    "slug": "forest+fires",
+    "abstract": "This is a difficult regression task, where the aim is to predict the burned area of forest fires, in the northeast region of Portugal, by using meteorological and other data (see details at: http://www.dsi.uminho.pt/~pcortez/forestfires).",
+    "area": "Climate and Environment",
+    "task": "Regression",
+    "num_instances": 517,
+    "num_features": 12,
+    "year_created": 2007,
+    "date_donated": "2008-02-29T00:00:00.000Z",
+    "download_href": "/static/public/162/forest+fires.zip",
+    "has_missing_values": false
+  },
+  "licence": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx": "CC-BY-4.0",
+    "legalcode_url": "https://creativecommons.org/licenses/by/4.0/legalcode"
+  },
+  "citation": {
+    "APA": "Cortez, P. & Morais, A. (2007). Forest Fires [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5D88D.",
+    "MLA": "Cortez, Paulo and Anbal Morais. \"Forest Fires.\" UCI Machine Learning Repository, 2007, https://doi.org/10.24432/C5D88D.",
+    "Chicago": "Cortez, Paulo and Anbal Morais. 2007. Forest Fires. UCI Machine Learning Repository. https://doi.org/10.24432/C5D88D.",
+    "Vancouver": "Cortez P, Morais A. Forest Fires [dataset]. 2007. UCI Machine Learning Repository. Available from: https://doi.org/10.24432/C5D88D.",
+    "IEEE": "P. Cortez and A. Morais. \"Forest Fires,\" UCI Machine Learning Repository, 2007. [Online]. Available: https://doi.org/10.24432/C5D88D.",
+    "BibTeX": "@misc{forest_fires_162,\n  author       = {Cortez, Paulo and Morais, Anbal},\n  title        = {{Forest Fires}},\n  year         = {2007},\n  howpublished = {UCI Machine Learning Repository},\n  note         = {{DOI}: https://doi.org/10.24432/C5D88D}\n}"
+  },
+  "variables": {
+    "headers": [
+      "Variable Name",
+      "Role",
+      "Type",
+      "Description",
+      "Units",
+      "Missing Values"
+    ],
+    "rows": [
+      [
+        "X",
+        "Feature",
+        "Integer",
+        "x-axis spatial coordinate within the Montesinho park map: 1 to 9",
+        "",
+        "no"
+      ],
+      [
+        "Y",
+        "Feature",
+        "Integer",
+        "y-axis spatial coordinate within the Montesinho park map: 2 to 9",
+        "",
+        "no"
+      ],
+      [
+        "month",
+        "Feature",
+        "Categorical",
+        "month of the year: 'jan' to 'dec' ",
+        "",
+        "no"
+      ],
+      [
+        "day",
+        "Feature",
+        "Categorical",
+        "day of the week: 'mon' to 'sun'",
+        "",
+        "no"
+      ],
+      [
+        "FFMC",
+        "Feature",
+        "Continuous",
+        "FFMC index from the FWI system: 18.7 to 96.20",
+        "",
+        "no"
+      ],
+      [
+        "DMC",
+        "Feature",
+        "Integer",
+        "DMC index from the FWI system: 1.1 to 291.3 ",
+        "",
+        "no"
+      ],
+      [
+        "DC",
+        "Feature",
+        "Continuous",
+        "DC index from the FWI system: 7.9 to 860.6",
+        "",
+        "no"
+      ],
+      [
+        "ISI",
+        "Feature",
+        "Continuous",
+        "ISI index from the FWI system: 0.0 to 56.10",
+        "",
+        "no"
+      ],
+      [
+        "temp",
+        "Feature",
+        "Continuous",
+        "temperature: 2.2 to 33.30",
+        "Celsius degrees",
+        "no"
+      ],
+      [
+        "RH",
+        "Feature",
+        "Integer",
+        "relative humidity: 15.0 to 100",
+        "%",
+        "no"
+      ],
+      [
+        "wind",
+        "Feature",
+        "Continuous",
+        "wind speed: 0.40 to 9.40",
+        "km/h",
+        "no"
+      ],
+      [
+        "rain",
+        "Feature",
+        "Integer",
+        "outside rain: 0.0 to 6.4 ",
+        "mm/m2",
+        "no"
+      ],
+      [
+        "area",
+        "Target",
+        "Integer",
+        "the burned area of the forest: 0.00 to 1090.84 (this output variable is very skewed towards 0.0, thus it may make sense to model with the logarithm transform).",
+        "ha",
+        "no"
+      ]
+    ],
+    "total_variables_listed": 13
+  },
+  "descriptive_fields": [
+    [
+      "Additional Information",
+      "In [Cortez and Morais, 2007], the output 'area' was first transformed with a ln(x+1) function.\r\n   Then, several Data Mining methods were applied. After fitting the models, the outputs were\r\n   post-processed with the inverse of the ln(x+1) transform. Four different input setups were\r\n   used. The experiments were conducted using a 10-fold (cross-validation) x 30 runs. Two\r\n   regression metrics were measured: MAD and RMSE. A Gaussian support vector machine (SVM) fed\r\n   with only 4 direct weather conditions (temp, RH, wind and rain) obtained the best MAD value:\r\n   12.71 +- 0.01 (mean and confidence interval within 95% using a t-student distribution). The\r\n   best RMSE was attained by the naive mean predictor. An analysis to the regression error curve\r\n   (REC) shows that the SVM model predicts more examples within a lower admitted error. In effect,\r\n   the SVM model predicts better small fires, which are the majority. "
+    ],
+    [
+      "Has Missing Values?",
+      "No"
+    ]
+  ],
+  "files_table": {
+    "headers": [
+      "File",
+      "Size"
+    ],
+    "data": [
+      [
+        "forestfires.csv",
+        "24.9 KB"
+      ],
+      [
+        "forestfires.names",
+        "3.3 KB"
+      ]
+    ]
+  },
+  "donor_target_transform": {
+    "source": "forestfires.names Past Usage + Cortez & Morais (2007)",
+    "forward": "ln(area + 1)",
+    "inverse": "exp(y) - 1 on model outputs",
+    "note": "Donor fit models on log1p area then back-transformed predictions for MAD/RMSE on raw scale."
+  }
+}

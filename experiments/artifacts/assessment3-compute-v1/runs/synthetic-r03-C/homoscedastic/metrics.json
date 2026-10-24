@@ -1,0 +1,142 @@
+{
+  "dataset": "synthetic-r03-C",
+  "variant": "homoscedastic",
+  "reportable": true,
+  "per_fold": [
+    {
+      "test_nll": 1.713005313152497,
+      "test_rmse": 1.341702696613497,
+      "coverage": {
+        "50": 0.60875,
+        "80": 0.81875,
+        "95": 0.9325
+      },
+      "mean_width": {
+        "50": 1.789698639928294,
+        "80": 3.4004832440913675,
+        "95": 5.200590337243873
+      },
+      "pred_scale_min": 1.3267055870070736,
+      "pred_scale_max": 1.3267055870070736,
+      "pred_scale_mean": 1.3267055870070732,
+      "oracle_nll": 1.4338279518434967,
+      "scale_mae": 0.5112024787284608,
+      "scale_correlation": {
+        "pearson": null,
+        "spearman": null
+      },
+      "abs_x1_bins": [
+        {
+          "bin": 1,
+          "lo": 0.0,
+          "hi": 0.5,
+          "n": 200,
+          "mean_abs_x1": 0.25971966075029534,
+          "mean_true_sigma": 0.4597196607502953,
+          "mean_pred_scale": 1.3267055870070732,
+          "coverage": {
+            "50": 0.935,
+            "80": 1.0,
+            "95": 1.0
+          },
+          "mean_width": {
+            "50": 1.7896986399282937,
+            "80": 3.400483244091367,
+            "95": 5.200590337243873
+          }
+        },
+        {
+          "bin": 2,
+          "lo": 0.5,
+          "hi": 1.0,
+          "n": 200,
+          "mean_abs_x1": 0.7540726753480087,
+          "mean_true_sigma": 0.9540726753480087,
+          "mean_pred_scale": 1.3267055870070732,
+          "coverage": {
+            "50": 0.64,
+            "80": 0.905,
+            "95": 0.995
+          },
+          "mean_width": {
+            "50": 1.7896986399282937,
+            "80": 3.4004832440913675,
+            "95": 5.200590337243873
+          }
+        },
+        {
+          "bin": 3,
+          "lo": 1.0,
+          "hi": 1.5,
+          "n": 192,
+          "mean_abs_x1": 1.262806199214674,
+          "mean_true_sigma": 1.462806199214674,
+          "mean_pred_scale": 1.3267055870070734,
+          "coverage": {
+            "50": 0.484375,
+            "80": 0.78125,
+            "95": 0.9270833333333334
+          },
+          "mean_width": {
+            "50": 1.7896986399282937,
+            "80": 3.4004832440913666,
+            "95": 5.200590337243873
+          }
+        },
+        {
+          "bin": 4,
+          "lo": 1.5,
+          "hi": 2.0,
+          "n": 208,
+          "mean_abs_x1": 1.745072882593625,
+          "mean_true_sigma": 1.945072882593625,
+          "mean_pred_scale": 1.3267055870070732,
+          "coverage": {
+            "50": 0.3798076923076923,
+            "80": 0.5961538461538461,
+            "95": 0.8125
+          },
+          "mean_width": {
+            "50": 1.789698639928294,
+            "80": 3.400483244091367,
+            "95": 5.200590337243872
+          }
+        }
+      ],
+      "dataset": "synthetic-r03-C",
+      "variant": "homoscedastic",
+      "fold_index": 0,
+      "seeds": {
+        "stage_model": 20300,
+        "full_model": 30300
+      },
+      "best_iter": 179,
+      "cap_hit": false,
+      "actual_validation_stages": 2000,
+      "actual_refit_stages": 2000,
+      "val_nll_at_best": 1.701637400342595,
+      "fixed_sigma_from_stage_val": 1.3267055870070736,
+      "sigma_reestimated_after_refit": false,
+      "split_hashes": {
+        "outer_train_hash": "6043f4deb0388d3d64ca606923d9330c0b88684b2a98daa9c65cc34c229cfb4f",
+        "outer_test_hash": "65c46e51e803e78481c487f61a5cc9cdc1bae256f1e49c98c4ea47152410eb9a",
+        "inner_train_hash": "a5202d9f9d19461250ee90210475bbd006b9b6a1c4b43400f79b5a3b29bf6fa9",
+        "inner_val_hash": "e19e8f2ac3dc077993ca61dfad4b8fa1476639e3393b3bc2b91b5243dd08be47"
+      },
+      "sample_counts": {
+        "outer_train": 3200,
+        "outer_test": 800,
+        "inner_train": 2400,
+        "inner_val": 800
+      },
+      "timing_sec": {
+        "stage_fit": 29.029799023992382,
+        "refit": 37.87028867704794,
+        "wall": 71.59762011305429
+      },
+      "reportable": true,
+      "replicate": 3,
+      "regime": "C"
+    }
+  ]
+}

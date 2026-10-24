@@ -1,0 +1,142 @@
+{
+  "dataset": "synthetic-r03-A",
+  "variant": "ordinary",
+  "reportable": true,
+  "per_fold": [
+    {
+      "test_nll": 0.847263599622768,
+      "test_rmse": 0.6906933848984903,
+      "coverage": {
+        "50": 0.48375,
+        "80": 0.77375,
+        "95": 0.93
+      },
+      "mean_width": {
+        "50": 0.7933077331739665,
+        "80": 1.5073094396351894,
+        "95": 2.305230858179938
+      },
+      "pred_scale_min": 0.2005383761819215,
+      "pred_scale_max": 1.765216828643867,
+      "pred_scale_mean": 0.5880799025806864,
+      "oracle_nll": 0.7406807712835513,
+      "scale_mae": 0.08867842903045137,
+      "scale_correlation": {
+        "pearson": 0.912700141098822,
+        "spearman": 0.9411552059450052
+      },
+      "abs_x1_bins": [
+        {
+          "bin": 1,
+          "lo": 0.0,
+          "hi": 0.5,
+          "n": 200,
+          "mean_abs_x1": 0.25971966075029534,
+          "mean_true_sigma": 0.22985983037514765,
+          "mean_pred_scale": 0.25424160555652947,
+          "coverage": {
+            "50": 0.53,
+            "80": 0.84,
+            "95": 0.945
+          },
+          "mean_width": {
+            "50": 0.34296671404254864,
+            "80": 0.6516474552550862,
+            "95": 0.9966087805248728
+          }
+        },
+        {
+          "bin": 2,
+          "lo": 0.5,
+          "hi": 1.0,
+          "n": 200,
+          "mean_abs_x1": 0.7540726753480087,
+          "mean_true_sigma": 0.47703633767400433,
+          "mean_pred_scale": 0.45776974350152877,
+          "coverage": {
+            "50": 0.43,
+            "80": 0.725,
+            "95": 0.93
+          },
+          "mean_width": {
+            "50": 0.617521999883341,
+            "80": 1.1733110628866685,
+            "95": 1.79442442095027
+          }
+        },
+        {
+          "bin": 3,
+          "lo": 1.0,
+          "hi": 1.5,
+          "n": 192,
+          "mean_abs_x1": 1.262806199214674,
+          "mean_true_sigma": 0.731403099607337,
+          "mean_pred_scale": 0.7041308344875814,
+          "coverage": {
+            "50": 0.515625,
+            "80": 0.78125,
+            "95": 0.9479166666666666
+          },
+          "mean_width": {
+            "50": 0.9498580613177747,
+            "80": 1.804759946571572,
+            "95": 2.7601421519995877
+          }
+        },
+        {
+          "bin": 4,
+          "lo": 1.5,
+          "hi": 2.0,
+          "n": 208,
+          "mean_abs_x1": 1.745072882593625,
+          "mean_true_sigma": 0.9725364412968125,
+          "mean_pred_scale": 0.9272525578428936,
+          "coverage": {
+            "50": 0.46153846153846156,
+            "80": 0.75,
+            "95": 0.8990384615384616
+          },
+          "mean_width": {
+            "50": 1.250844692216262,
+            "80": 2.376643934317591,
+            "95": 3.63476323588943
+          }
+        }
+      ],
+      "dataset": "synthetic-r03-A",
+      "variant": "ordinary",
+      "fold_index": 0,
+      "seeds": {
+        "stage_model": 20300,
+        "full_model": 30300
+      },
+      "best_iter": 700,
+      "cap_hit": false,
+      "actual_validation_stages": 2000,
+      "actual_refit_stages": 2000,
+      "val_nll_at_best": 0.8722900917449014,
+      "fixed_sigma_from_stage_val": null,
+      "sigma_reestimated_after_refit": null,
+      "split_hashes": {
+        "outer_train_hash": "6043f4deb0388d3d64ca606923d9330c0b88684b2a98daa9c65cc34c229cfb4f",
+        "outer_test_hash": "65c46e51e803e78481c487f61a5cc9cdc1bae256f1e49c98c4ea47152410eb9a",
+        "inner_train_hash": "a5202d9f9d19461250ee90210475bbd006b9b6a1c4b43400f79b5a3b29bf6fa9",
+        "inner_val_hash": "e19e8f2ac3dc077993ca61dfad4b8fa1476639e3393b3bc2b91b5243dd08be47"
+      },
+      "sample_counts": {
+        "outer_train": 3200,
+        "outer_test": 800,
+        "inner_train": 2400,
+        "inner_val": 800
+      },
+      "timing_sec": {
+        "stage_fit": 32.45833102695178,
+        "refit": 40.25702559994534,
+        "wall": 76.79378282499965
+      },
+      "reportable": true,
+      "replicate": 3,
+      "regime": "A"
+    }
+  ]
+}

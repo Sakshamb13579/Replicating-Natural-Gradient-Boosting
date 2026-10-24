@@ -1,0 +1,95 @@
+{
+  "handoff": "024-NG-P4",
+  "run_id": "024-ng-p4-airfoil-ordinary-s1-a01",
+  "dataset": "airfoil-self-noise-v1",
+  "variant": "ordinary",
+  "natural_gradient": false,
+  "n_folds": 5,
+  "n_predictions": 750,
+  "aggregate_test_nll_mean": 2.831864549518624,
+  "aggregate_test_rmse_mean": 5.00461551435748,
+  "paired_mean_delta_nll_ordinary_minus_natural": 0.6138264871138219,
+  "nll_win_counts": {
+    "natural_lower_nll": 5,
+    "ordinary_lower_nll": 0,
+    "ties": 0
+  },
+  "data_verification": {
+    "csv_sha256": "705a2a7f0e55fcc9a87700038487b12ce768f4a2e1692433a2d752309028546e",
+    "splits_sha256": "128c5375b2659dff369e153e1b35f2163fbd1c87b72cc5a183def469ce014c14",
+    "manifest_status": "frozen",
+    "split_hashes_match_022": true
+  },
+  "runner_edited": false,
+  "timing_sec": {
+    "wall": 232.90852859900042,
+    "sum_fold_totals": 209.80645503000414
+  },
+  "files": [
+    {
+      "path": "checksums.txt",
+      "bytes": 1513,
+      "sha256": "48792b9e68d1010ece4a9d73e76b688773b534eff1403c4d240c9ffabe2e31d8"
+    },
+    {
+      "path": "command.txt",
+      "bytes": 409,
+      "sha256": "dc96fcbf828f86ac276716e89c94e1b73fce0edabb05ef3d1e0172750db2d841"
+    },
+    {
+      "path": "config.json",
+      "bytes": 809,
+      "sha256": "000ff086c141ef5f2ff3689ea1a5f71bc7424d0bc4a051c68d1960970ceeb031"
+    },
+    {
+      "path": "environment.txt",
+      "bytes": 969,
+      "sha256": "6b9bc318437abfeb429082950c2de037b8f23c2350747c4abd69f94f5a99aaeb"
+    },
+    {
+      "path": "metrics.json",
+      "bytes": 14860,
+      "sha256": "1d2b67ef1d79b382fc872667ce93835abd2295576929f2ebd5e7571eb5cab272"
+    },
+    {
+      "path": "paired-comparison-to-023.json",
+      "bytes": 3430,
+      "sha256": "381cf9ebbbf4a7fa2ca640a37370b425acfeac9be536cb6db1efc6dfa53df331"
+    },
+    {
+      "path": "predictions.csv",
+      "bytes": 127765,
+      "sha256": "44c3e0d20c70cbb002d27f69f195729d3662ade661b82e62f39a20a4f0a18704"
+    },
+    {
+      "path": "predictions.jsonl",
+      "bytes": 273118,
+      "sha256": "cb30d0b937109b85cd5f95c248c8d88e839cde3f57fcb802d474ce5207671aa0"
+    },
+    {
+      "path": "source-status-after.txt",
+      "bytes": 793,
+      "sha256": "753e65f38726ed518fe0f47600281944ca16bdd26bd08a15ac1caadcba62abcd"
+    },
+    {
+      "path": "source-status-before.txt",
+      "bytes": 793,
+      "sha256": "753e65f38726ed518fe0f47600281944ca16bdd26bd08a15ac1caadcba62abcd"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "stdout.log",
+      "bytes": 3100,
+      "sha256": "0bd13d9f7d859461c5aae04dfe49e1e0684a6863a04b427a15bd172d47fa2e0d"
+    },
+    {
+      "path": "timing.json",
+      "bytes": 104,
+      "sha256": "d111adc1fedb3ad6cbe161419f316c01a52137ca2adcdf818e8ca28b416ae95c"
+    }
+  ]
+}

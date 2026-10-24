@@ -1,0 +1,18 @@
+# Python 3.10.0. Versions recorded in Appendix A of the report.
+# NGBoost itself comes from the upstream/ngboost submodule (commit 6720340):
+# apply upstream/patches/repair-imports.diff, then
+#   pip install --no-deps -e upstream/ngboost
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.6.1
+# NGBoost dependencies at the versions installed in the recorded environment
+lifelines==0.30.0
+autograd==1.9.1
+autograd-gamma==0.5.0
+formulaic==1.2.2
+tqdm==4.70.0
+sympy==1.14.0
+matplotlib==3.10.9
+# Reading the Real Estate Valuation .xlsx file
+openpyxl==3.1.5

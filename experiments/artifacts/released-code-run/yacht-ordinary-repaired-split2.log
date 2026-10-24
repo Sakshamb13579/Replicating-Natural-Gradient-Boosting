@@ -1,0 +1,8 @@
+/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree/examples/experiments/regression_exp.py:40: FutureWarning: The 'delim_whitespace' keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep='\s+'`` instead
+  "yacht": lambda: pd.read_csv(
+== Dataset=yacht X.shape=(308, 6) MLE/Normal
+[1/2] BestIter=2000 RMSE: Val=12.4460 Test=14.5827 NLL: Test=7.3588
+[2/2] BestIter=2000 RMSE: Val=14.6781 Test=13.3965 NLL: Test=3.2243
+== RMSE GBM=0.0000 +/- 0.0000, NGB=13.9896 +/- 0.5931, NLL NGB=5.2915 +/ 2.0672
+ELAPSED_SEC=81.99
+EXIT_CODE=0

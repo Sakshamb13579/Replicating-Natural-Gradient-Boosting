@@ -1,0 +1,113 @@
+{
+  "retrieval": {
+    "timestamp_utc": "2026-08-23T14:47:54Z",
+    "endpoints": {
+      "dataset_record": "https://archive.ics.uci.edu/api/trpc/donated_datasets.findById?batch=1&input=%7B%220%22%3A%7B%22json%22%3A291%7D%7D",
+      "citation": "https://archive.ics.uci.edu/api/trpc/citation.findByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A291%7D%7D",
+      "variables_table": "https://archive.ics.uci.edu/api/trpc/variables.findTableByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A291%7D%7D",
+      "descriptive_fields": "https://archive.ics.uci.edu/api/trpc/descriptive.findTupleByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A291%7D%7D"
+    },
+    "dataset_page": "https://archive.ics.uci.edu/dataset/291/airfoil+self+noise"
+  },
+  "dataset": {
+    "id": 291,
+    "name": "Airfoil Self-Noise",
+    "doi": "10.24432/C5VW2C",
+    "slug": "airfoil+self+noise",
+    "abstract": "NASA data set, obtained from a series of aerodynamic and acoustic tests of two and three-dimensional airfoil blade sections conducted in an anechoic wind tunnel.",
+    "area": "Physics and Chemistry",
+    "task": "Regression",
+    "types": "Multivariate",
+    "num_instances": 1503,
+    "num_features": 5,
+    "feature_types": "Real",
+    "year_created": 1989,
+    "date_donated": "2014-03-04T00:00:00.000Z",
+    "download_href": "/static/public/291/airfoil+self+noise.zip",
+    "has_missing_values": false
+  },
+  "licence": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx": "CC-BY-4.0",
+    "legalcode_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "source_note": "Stated on UCI dataset page for dataset 291 (CC BY 4.0)."
+  },
+  "citation": {
+    "APA": "Brooks, T., Pope, D., & Marcolini, M. (1989). Airfoil Self-Noise [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5VW2C.",
+    "MLA": "Brooks, Thomas, D. Pope, and Michael Marcolini. \"Airfoil Self-Noise.\" UCI Machine Learning Repository, 1989, https://doi.org/10.24432/C5VW2C.",
+    "Chicago": "Brooks, Thomas, D. Pope, and Michael Marcolini. 1989. Airfoil Self-Noise. UCI Machine Learning Repository. https://doi.org/10.24432/C5VW2C.",
+    "Vancouver": "Brooks T, Pope D, Marcolini M. Airfoil Self-Noise [dataset]. 1989. UCI Machine Learning Repository. Available from: https://doi.org/10.24432/C5VW2C.",
+    "IEEE": "T. Brooks, D. Pope, and M. Marcolini. \"Airfoil Self-Noise,\" UCI Machine Learning Repository, 1989. [Online]. Available: https://doi.org/10.24432/C5VW2C.",
+    "BibTeX": "@misc{airfoil_self-noise_291,\n  author       = {Brooks, Thomas, Pope, D., and Marcolini, Michael},\n  title        = {{Airfoil Self-Noise}},\n  year         = {1989},\n  howpublished = {UCI Machine Learning Repository},\n  note         = {{DOI}: https://doi.org/10.24432/C5VW2C}\n}"
+  },
+  "variables": {
+    "headers": [
+      "Variable Name",
+      "Role",
+      "Type",
+      "Description",
+      "Units",
+      "Missing Values"
+    ],
+    "rows": [
+      [
+        "frequency",
+        "Feature",
+        "Integer",
+        "",
+        "Hz",
+        "no"
+      ],
+      [
+        "attack-angle",
+        "Feature",
+        "Binary",
+        "",
+        "deg",
+        "no"
+      ],
+      [
+        "chord-length",
+        "Feature",
+        "Continuous",
+        "",
+        "m",
+        "no"
+      ],
+      [
+        "free-stream-velocity",
+        "Feature",
+        "Continuous",
+        "",
+        "m/s",
+        "no"
+      ],
+      [
+        "suction-side-displacement-thickness",
+        "Feature",
+        "Continuous",
+        "",
+        "m",
+        "no"
+      ],
+      [
+        "scaled-sound-pressure",
+        "Target",
+        "Continuous",
+        "",
+        "dB",
+        "no"
+      ]
+    ]
+  },
+  "descriptive_fields": [
+    [
+      "Additional Information",
+      "The NASA data set comprises different size NACA 0012 airfoils at various wind tunnel speeds and angles of attack. The span of the airfoil and the observer position were the same in all of the experiments. "
+    ],
+    [
+      "Has Missing Values?",
+      "No"
+    ]
+  ]
+}

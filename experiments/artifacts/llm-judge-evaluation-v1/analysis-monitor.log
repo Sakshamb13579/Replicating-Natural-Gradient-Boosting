@@ -1,0 +1,7 @@
+{
+  "inference_status": "complete",
+  "human_reference_status": "pending",
+  "n_requests": 60,
+  "order_consistent_cases": 4,
+  "order_sensitive_cases": 11
+}

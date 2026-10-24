@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "nonreportable_smoke_cap": 25,
+  "checks": [
+    {
+      "dataset": "superconductivity-full",
+      "variant": "natural",
+      "smoke_passed": true
+    },
+    {
+      "dataset": "superconductivity-full",
+      "variant": "ordinary",
+      "smoke_passed": true
+    },
+    {
+      "dataset": "superconductivity-full",
+      "variant": "homoscedastic",
+      "smoke_passed": true
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "variant": "natural",
+      "smoke_passed": true
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "variant": "ordinary",
+      "smoke_passed": true
+    },
+    {
+      "dataset": "airfoil-grouped",
+      "variant": "homoscedastic",
+      "smoke_passed": true
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "variant": "natural",
+      "smoke_passed": true
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "variant": "ordinary",
+      "smoke_passed": true
+    },
+    {
+      "dataset": "synthetic-r01-A",
+      "variant": "homoscedastic",
+      "smoke_passed": true
+    },
+    {
+      "variant": "natural",
+      "previous_engine_predictions_match": true
+    },
+    {
+      "variant": "ordinary",
+      "previous_engine_predictions_match": true
+    },
+    {
+      "variant": "homoscedastic",
+      "previous_engine_predictions_match": true
+    }
+  ],
+  "all_ten_replicates_paired": true
+}

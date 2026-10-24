@@ -1,0 +1,216 @@
+{
+  "purpose": "Implementation smoke test on authored miniature examples; exclude from final evaluation",
+  "reportable": false,
+  "status": "complete",
+  "requests": 13,
+  "valid_pointwise_explanations": 6,
+  "valid_pairwise_cases": 3,
+  "order_consistent_cases": 1,
+  "pointwise": [
+    {
+      "case_id": "smoke-interval-interpretation",
+      "candidate_id": "description",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the data."
+      },
+      "engineering_expectation": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true
+      }
+    },
+    {
+      "case_id": "smoke-interval-interpretation",
+      "candidate_id": "mean-certainty",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The candidate's claim about the interval covering an individual outcome is incorrect, as nominal prediction intervals do not guarantee this."
+      },
+      "engineering_expectation": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false
+      }
+    },
+    {
+      "case_id": "smoke-unsupported-cause",
+      "candidate_id": "bounded-description",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false,
+        "reason": "The candidate explanation is clear and consistent with the evidence, but it fails to provide a substantive reason for the interval width."
+      },
+      "engineering_expectation": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true
+      }
+    },
+    {
+      "case_id": "smoke-unsupported-cause",
+      "candidate_id": "invented-scarcity",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false,
+        "reason": "The candidate explanation is not supported by the evidence packet, which does not mention the number of training houses or their sale price variation."
+      },
+      "engineering_expectation": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false
+      }
+    },
+    {
+      "case_id": "smoke-clarity",
+      "candidate_id": "plain",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the data."
+      },
+      "engineering_expectation": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true
+      }
+    },
+    {
+      "case_id": "smoke-clarity",
+      "candidate_id": "jargon",
+      "verdict": {
+        "clarity": false,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The explanation is overly complex and uses non-standard terminology, making it unclear. It also incorrectly interprets the interval as a confidence interval for the conditional mean and introduces unsupported causal claims."
+      },
+      "engineering_expectation": {
+        "clarity": false,
+        "interval_consistency": true,
+        "evidence_support": true
+      }
+    }
+  ],
+  "pairwise": [
+    {
+      "case_id": "smoke-interval-interpretation",
+      "forward": {
+        "winner": "Tie",
+        "reason": "Both A and B are clear and supported, but neither correctly interprets the nominal prediction interval as not guaranteeing individual outcome coverage."
+      },
+      "reverse": {
+        "winner": "B",
+        "reason": "B accurately states that the interval does not guarantee an individual outcome will fall inside, aligning with the evidence. A incorrectly claims the interval proves the true mean lies inside and guarantees coverage."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": null,
+      "reverse_winner_id": "description",
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "smoke-unsupported-cause",
+      "forward": {
+        "winner": "B",
+        "reason": "B is supported by the available evidence, which states that only two comparable houses were in training and their sale prices varied greatly, explaining the wide interval."
+      },
+      "reverse": {
+        "winner": "B",
+        "reason": "B is more accurate as it correctly states that the interval width is not established, aligning with the absence of training data or other explanatory factors."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": "invented-scarcity",
+      "reverse_winner_id": "bounded-description",
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "smoke-clarity",
+      "forward": {
+        "winner": "A",
+        "reason": "A is more accurate and supported by the evidence, providing a clear and concise description of the mean and prediction interval without unnecessary complexity."
+      },
+      "reverse": {
+        "winner": "B",
+        "reason": "B is more accurate and supported by the evidence, providing a clear and concise description of the mean and prediction interval without unnecessary jargon."
+      },
+      "consistent_under_swap": true,
+      "forward_winner_id": "plain",
+      "reverse_winner_id": "plain",
+      "consensus_winner_id": "plain",
+      "consensus_status": "win"
+    }
+  ],
+  "repeatability": [
+    {
+      "case_id": "smoke-interval-interpretation",
+      "same_scores": true,
+      "same_complete_verdict": true,
+      "repeated_verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the data."
+      }
+    }
+  ],
+  "timing": {
+    "completed_transport_requests": 13,
+    "total_request_wall_seconds": 911.6712318172213,
+    "prompt_tokens": 6014,
+    "generated_tokens": 794,
+    "decode_tokens_per_second": 1.690094679328693,
+    "total_model_load_seconds": 0.327886083
+  },
+  "engineering_expectation_agreement": {
+    "clarity": {
+      "n": 6,
+      "accuracy": 1.0,
+      "cohen_kappa": 1.0,
+      "reference_majority_baseline_accuracy": 0.8333333333333334,
+      "confusion": {
+        "reference_0_predicted_0": 1,
+        "reference_0_predicted_1": 0,
+        "reference_1_predicted_0": 0,
+        "reference_1_predicted_1": 5
+      }
+    },
+    "interval_consistency": {
+      "n": 6,
+      "accuracy": 0.8333333333333334,
+      "cohen_kappa": 0.5714285714285715,
+      "reference_majority_baseline_accuracy": 0.8333333333333334,
+      "confusion": {
+        "reference_0_predicted_0": 1,
+        "reference_0_predicted_1": 0,
+        "reference_1_predicted_0": 1,
+        "reference_1_predicted_1": 4
+      }
+    },
+    "evidence_support": {
+      "n": 6,
+      "accuracy": 0.6666666666666666,
+      "cohen_kappa": 0.39999999999999986,
+      "reference_majority_baseline_accuracy": 0.6666666666666666,
+      "confusion": {
+        "reference_0_predicted_0": 2,
+        "reference_0_predicted_1": 0,
+        "reference_1_predicted_0": 2,
+        "reference_1_predicted_1": 2
+      }
+    }
+  },
+  "errors": [],
+  "interpretation": [
+    "Smoke labels are authored engineering expectations, not human reference ratings",
+    "No judge confidence probabilities or human agreement are inferred",
+    "Order-sensitive pairs remain order-sensitive, not substantive ties"
+  ]
+}

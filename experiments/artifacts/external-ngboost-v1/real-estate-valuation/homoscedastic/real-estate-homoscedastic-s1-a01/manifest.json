@@ -1,0 +1,13 @@
+{
+  "artifact_schema_version": 1,
+  "status": "complete",
+  "reportable": true,
+  "data_manifest_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/data/manifests/real-estate-valuation-v1.json",
+  "data_manifest_sha256": "1b00af6bf83c950a4d7e35138e00548f478d706ed08a484bb1ceea33e8af1e35",
+  "processed_csv_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/data/processed/real-estate-valuation-v1/real-estate-valuation-v1.csv",
+  "processed_csv_sha256": "a013833d25f66c18b05fe9eb1702eb75f6ac31759362637a7987686b1e680b4b",
+  "split_manifest_sha256": "38a5dc4b3e54bd99b7bd3861ed2c126eba18f37420afaf987d2917cbe4467454",
+  "runner_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/src/run_external_ngboost.py",
+  "runner_sha256": "63bcdd34f3b521d8896d54e3417f302086cbd7da5e5276fd00156b94dfcbe35d",
+  "metrics_sha256": "3e8380b00fb481084950bb17b75658418214581b8180b9063aafd0aa246339a1"
+}

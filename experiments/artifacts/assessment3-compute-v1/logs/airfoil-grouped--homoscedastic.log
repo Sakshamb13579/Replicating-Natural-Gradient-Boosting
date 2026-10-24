@@ -1,0 +1,15 @@
+2026-10-17T00:53:47.009908+00:00 airfoil-grouped homoscedastic fold=0 stage_fit start
+2026-10-17T00:54:09.655424+00:00 airfoil-grouped homoscedastic fold=0 refit start best=1969
+2026-10-17T00:54:33.236964+00:00 airfoil-grouped homoscedastic fold=0 complete NLL=2.429546
+2026-10-17T00:54:33.240376+00:00 airfoil-grouped homoscedastic fold=1 stage_fit start
+2026-10-17T00:54:59.610914+00:00 airfoil-grouped homoscedastic fold=1 refit start best=1995
+2026-10-17T00:55:21.289833+00:00 airfoil-grouped homoscedastic fold=1 complete NLL=2.551107
+2026-10-17T00:55:21.294595+00:00 airfoil-grouped homoscedastic fold=2 stage_fit start
+2026-10-17T00:55:48.823688+00:00 airfoil-grouped homoscedastic fold=2 refit start best=1829
+2026-10-17T00:56:11.584157+00:00 airfoil-grouped homoscedastic fold=2 complete NLL=2.689894
+2026-10-17T00:56:11.587518+00:00 airfoil-grouped homoscedastic fold=3 stage_fit start
+2026-10-17T00:56:35.018007+00:00 airfoil-grouped homoscedastic fold=3 refit start best=2000
+2026-10-17T00:56:58.477066+00:00 airfoil-grouped homoscedastic fold=3 complete NLL=2.378604
+2026-10-17T00:56:58.481642+00:00 airfoil-grouped homoscedastic fold=4 stage_fit start
+2026-10-17T00:57:21.827978+00:00 airfoil-grouped homoscedastic fold=4 refit start best=1991
+2026-10-17T00:57:50.199038+00:00 airfoil-grouped homoscedastic fold=4 complete NLL=2.230130

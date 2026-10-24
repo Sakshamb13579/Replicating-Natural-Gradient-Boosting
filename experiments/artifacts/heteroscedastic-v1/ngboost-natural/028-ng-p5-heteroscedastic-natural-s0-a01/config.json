@@ -1,0 +1,23 @@
+{
+  "handoff": "028-NG-P5",
+  "dataset": "heteroscedastic-v1",
+  "variant": "natural",
+  "model": "NGBRegressor",
+  "natural_gradient": true,
+  "distn": "Normal",
+  "score": "MLE",
+  "base": "default_tree_learner",
+  "n_estimators_cap": 2000,
+  "learning_rate": 0.01,
+  "minibatch_frac": 1.0,
+  "stage_selector": "validation_NLL",
+  "stage_selector_note": "Constructed uncertainty study; differs from official regression_exp.py RMSE selection",
+  "regimes": ["A", "B", "C"],
+  "split": "frozen 60/20/20 per regime (007-NG-CD1)",
+  "features": ["x1", "x2"],
+  "stage_model_seed_base": 20000,
+  "full_model_seed_base": 30000,
+  "venv": ".RnD/work/ngboost/.venv (existing; unchanged)",
+  "threads": 1,
+  "packages_modified": false
+}

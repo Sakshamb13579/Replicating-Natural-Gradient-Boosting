@@ -1,0 +1,68 @@
+Request 1: case-001 pointwise 159f6cb7923d
+Request 2: case-001 pointwise a71070ebdf98
+Request 3: case-001 pairwise 159f6cb7923d
+Request 4: case-001 pairwise a71070ebdf98
+Request 5: case-002 pointwise c0ca2599aa59
+Request 6: case-002 pointwise be7545faaad9
+Request 7: case-002 pairwise c0ca2599aa59
+Request 8: case-002 pairwise be7545faaad9
+Request 9: case-003 pointwise d0c19e54472d
+Request 10: case-003 pointwise be68cb846050
+Request 11: case-003 pairwise d0c19e54472d
+Request 12: case-003 pairwise be68cb846050
+Request 13: case-004 pointwise 1c6640c0ea0a
+Request 14: case-004 pointwise 7bf12556637c
+Request 15: case-004 pairwise 1c6640c0ea0a
+Request 16: case-004 pairwise 7bf12556637c
+Request 17: case-005 pointwise e93e7d6f2a61
+Request 18: case-005 pointwise 21ac71a6ca98
+Request 19: case-005 pairwise e93e7d6f2a61
+Request 20: case-005 pairwise 21ac71a6ca98
+Request 21: case-006 pointwise 85672ac90936
+Request 22: case-006 pointwise eb0d04b2e994
+Request 23: case-006 pairwise 85672ac90936
+Request 24: case-006 pairwise eb0d04b2e994
+Request 25: case-007 pointwise e17af9292063
+Request 26: case-007 pointwise 4efee07b8d3f
+Request 27: case-007 pairwise e17af9292063
+Request 28: case-007 pairwise 4efee07b8d3f
+Request 29: case-008 pointwise 1564969d04a2
+Request 30: case-008 pointwise cf6da03d667e
+Request 31: case-008 pairwise 1564969d04a2
+Request 32: case-008 pairwise cf6da03d667e
+Request 33: case-009 pointwise bbbe7b60792a
+Request 34: case-009 pointwise 859000b52b2b
+Request 35: case-009 pairwise bbbe7b60792a
+Request 36: case-009 pairwise 859000b52b2b
+Request 37: case-010 pointwise aa88e8260275
+Request 38: case-010 pointwise 0ae63dd7b219
+Request 39: case-010 pairwise aa88e8260275
+Request 40: case-010 pairwise 0ae63dd7b219
+Request 41: case-011 pointwise 44b7429d527d
+Request 42: case-011 pointwise ec23f3b73f2a
+Request 43: case-011 pairwise 44b7429d527d
+Request 44: case-011 pairwise ec23f3b73f2a
+Request 45: case-012 pointwise 0ce21d14701e
+Request 46: case-012 pointwise b1d5468a8547
+Request 47: case-012 pairwise 0ce21d14701e
+Request 48: case-012 pairwise b1d5468a8547
+Request 49: case-013 pointwise 3293691c4182
+Request 50: case-013 pointwise 608f4222c2e7
+Request 51: case-013 pairwise 3293691c4182
+Request 52: case-013 pairwise 608f4222c2e7
+Request 53: case-014 pointwise 75cd8eb88551
+Request 54: case-014 pointwise fcdc49267cf8
+Request 55: case-014 pairwise 75cd8eb88551
+Request 56: case-014 pairwise fcdc49267cf8
+Request 57: case-015 pointwise c9e45ed53ce7
+Request 58: case-015 pointwise 90319537a775
+Request 59: case-015 pairwise c9e45ed53ce7
+Request 60: case-015 pairwise 90319537a775
+{
+  "status": "complete",
+  "requests": 60,
+  "valid_pointwise_explanations": 30,
+  "valid_pairwise_cases": 15,
+  "order_consistent_cases": 4,
+  "errors": []
+}

@@ -1,0 +1,7 @@
+python=3.10.0
+numpy=2.2.6
+pandas=2.3.3
+scipy=1.15.3
+sklearn=1.6.1
+ngboost=0.5.11.dev0
+ngboost_file=/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree/ngboost/__init__.py

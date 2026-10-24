@@ -1,0 +1,26 @@
+/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree/examples/experiments/regression_exp.py:40: FutureWarning: The 'delim_whitespace' keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep='\s+'`` instead
+  "yacht": lambda: pd.read_csv(
+== Dataset=yacht X.shape=(308, 6) MLE/Normal
+[1/20] BestIter=1985 RMSE: Val=0.6012 Test=0.5265 NLL: Test=0.3801
+[2/20] BestIter=2000 RMSE: Val=1.0050 Test=0.4566 NLL: Test=1.0070
+[3/20] BestIter=2000 RMSE: Val=1.0525 Test=0.3318 NLL: Test=0.0973
+[4/20] BestIter=2000 RMSE: Val=0.8565 Test=0.4050 NLL: Test=2.2815
+[5/20] BestIter=2000 RMSE: Val=0.5738 Test=0.6073 NLL: Test=3.5413
+[6/20] BestIter=1786 RMSE: Val=0.4285 Test=0.5200 NLL: Test=0.5099
+[7/20] BestIter=2000 RMSE: Val=0.6311 Test=0.2338 NLL: Test=-0.2473
+[8/20] BestIter=2000 RMSE: Val=0.5885 Test=0.7739 NLL: Test=2.3001
+[9/20] BestIter=1722 RMSE: Val=0.8041 Test=0.4799 NLL: Test=0.8746
+[10/20] BestIter=436 RMSE: Val=0.5747 Test=0.4791 NLL: Test=0.0974
+[11/20] BestIter=2000 RMSE: Val=0.9313 Test=0.4523 NLL: Test=1.6838
+[12/20] BestIter=1977 RMSE: Val=0.4392 Test=0.8036 NLL: Test=3.2554
+[13/20] BestIter=1813 RMSE: Val=0.4185 Test=0.7035 NLL: Test=2.5615
+[14/20] BestIter=2000 RMSE: Val=1.0019 Test=0.5835 NLL: Test=3.0478
+[15/20] BestIter=1999 RMSE: Val=0.6093 Test=0.9425 NLL: Test=3.7344
+[16/20] BestIter=1249 RMSE: Val=0.4088 Test=0.6179 NLL: Test=1.1122
+[17/20] BestIter=2000 RMSE: Val=1.0632 Test=0.4025 NLL: Test=0.6090
+[18/20] BestIter=2000 RMSE: Val=0.6982 Test=0.5529 NLL: Test=2.4639
+[19/20] BestIter=2000 RMSE: Val=0.7790 Test=0.4750 NLL: Test=1.9010
+[20/20] BestIter=1975 RMSE: Val=0.6986 Test=0.8048 NLL: Test=10.9093
+== RMSE GBM=0.0000 +/- 0.0000, NGB=0.5576 +/- 0.1718, NLL NGB=2.1060 +/ 2.3466
+ELAPSED_SEC=864.31
+EXIT_CODE=0

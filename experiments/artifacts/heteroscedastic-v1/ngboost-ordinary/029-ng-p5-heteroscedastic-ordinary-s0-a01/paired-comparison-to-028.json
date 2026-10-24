@@ -1,0 +1,165 @@
+{
+  "label": "two_way_provisional_not_final_three_way",
+  "handoff": "029-NG-P5",
+  "ordinary_artifact": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/heteroscedastic-v1/ngboost-ordinary/029-ng-p5-heteroscedastic-ordinary-s0-a01/metrics.json",
+  "natural_artifact": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/heteroscedastic-v1/ngboost-natural/028-ng-p5-heteroscedastic-natural-s0-a01/metrics.json",
+  "protocol_match": {
+    "same_frozen_data": true,
+    "same_validation_nll_selector": true,
+    "same_seeds": true,
+    "only_difference": "natural_gradient False vs True"
+  },
+  "note": "Provisional paired comparison only. Final three-way verdict waits for homoscedastic.",
+  "per_regime": [
+    {
+      "regime": "A",
+      "ordinary_test_nll": 0.8349481585061659,
+      "natural_test_nll": 0.7891477909135705,
+      "delta_nll_ordinary_minus_natural": 0.045800367592595426,
+      "ordinary_test_rmse": 0.6955883549069568,
+      "natural_test_rmse": 0.6814598242895946,
+      "delta_rmse_ordinary_minus_natural": 0.01412853061736219,
+      "ordinary_scale_mae": 0.09110627942867813,
+      "natural_scale_mae": 0.06022652439375126,
+      "delta_scale_mae_ordinary_minus_natural": 0.030879755034926876,
+      "ordinary_pearson": 0.897688249037189,
+      "natural_pearson": 0.9691039670461623,
+      "delta_pearson_ordinary_minus_natural": -0.07141571800897328,
+      "ordinary_spearman": 0.9197452780642614,
+      "natural_spearman": 0.9702687278561933,
+      "ordinary_coverage": {
+        "50": 0.49375,
+        "80": 0.77625,
+        "95": 0.93
+      },
+      "natural_coverage": {
+        "50": 0.51,
+        "80": 0.8025,
+        "95": 0.9475
+      },
+      "delta_cov95_ordinary_minus_natural": -0.01749999999999996,
+      "ordinary_mean_width": {
+        "50": 0.8057897634597093,
+        "80": 1.531025686545122,
+        "95": 2.3415017278364187
+      },
+      "natural_mean_width": {
+        "50": 0.7853523878888656,
+        "80": 1.4921940354328203,
+        "95": 2.2821138423337444
+      },
+      "ordinary_best_iter": 577,
+      "natural_best_iter": 377,
+      "ordinary_runtime_sec": 55.852576664008666,
+      "natural_runtime_sec": 58.26363483899331,
+      "delta_runtime_ordinary_minus_natural": -2.411058174984646,
+      "ordinary_wins_nll": false,
+      "natural_wins_nll": true,
+      "tie_nll": false
+    },
+    {
+      "regime": "B",
+      "ordinary_test_nll": 0.9433453037601562,
+      "natural_test_nll": 0.9150193614960196,
+      "delta_nll_ordinary_minus_natural": 0.02832594226413665,
+      "ordinary_test_rmse": 0.6081849974302119,
+      "natural_test_rmse": 0.5973300776270232,
+      "delta_rmse_ordinary_minus_natural": 0.010854919803188756,
+      "ordinary_scale_mae": 0.09061995910786566,
+      "natural_scale_mae": 0.04634396729479629,
+      "delta_scale_mae_ordinary_minus_natural": 0.04427599181306937,
+      "ordinary_pearson": null,
+      "natural_pearson": null,
+      "delta_pearson_ordinary_minus_natural": null,
+      "ordinary_spearman": null,
+      "natural_spearman": null,
+      "ordinary_coverage": {
+        "50": 0.4825,
+        "80": 0.7825,
+        "95": 0.93375
+      },
+      "natural_coverage": {
+        "50": 0.5275,
+        "80": 0.81125,
+        "95": 0.96
+      },
+      "delta_cov95_ordinary_minus_natural": -0.026249999999999996,
+      "ordinary_mean_width": {
+        "50": 0.8085743200175046,
+        "80": 1.5363164308669632,
+        "95": 2.349593223021641
+      },
+      "natural_mean_width": {
+        "50": 0.8426216349187857,
+        "80": 1.6010073912583431,
+        "95": 2.4485295092400827
+      },
+      "ordinary_best_iter": 404,
+      "natural_best_iter": 300,
+      "ordinary_runtime_sec": 56.042842369002756,
+      "natural_runtime_sec": 57.88250170500396,
+      "delta_runtime_ordinary_minus_natural": -1.8396593360012048,
+      "ordinary_wins_nll": false,
+      "natural_wins_nll": true,
+      "tie_nll": false
+    },
+    {
+      "regime": "C",
+      "ordinary_test_nll": 1.5018898373178524,
+      "natural_test_nll": 1.4678628825218567,
+      "delta_nll_ordinary_minus_natural": 0.03402695479599571,
+      "ordinary_test_rmse": 1.4080290293048183,
+      "natural_test_rmse": 1.3539874489234491,
+      "delta_rmse_ordinary_minus_natural": 0.05404158038136919,
+      "ordinary_scale_mae": 0.14047191276889223,
+      "natural_scale_mae": 0.10855823526481456,
+      "delta_scale_mae_ordinary_minus_natural": 0.03191367750407767,
+      "ordinary_pearson": 0.9377200355849731,
+      "natural_pearson": 0.9749288675510988,
+      "delta_pearson_ordinary_minus_natural": -0.03720883196612568,
+      "ordinary_spearman": 0.9496533935729348,
+      "natural_spearman": 0.9791662177647116,
+      "ordinary_coverage": {
+        "50": 0.4725,
+        "80": 0.78375,
+        "95": 0.94875
+      },
+      "natural_coverage": {
+        "50": 0.515,
+        "80": 0.81125,
+        "95": 0.94625
+      },
+      "delta_cov95_ordinary_minus_natural": 0.0024999999999999467,
+      "ordinary_mean_width": {
+        "50": 1.6365232878872633,
+        "80": 3.1094452970299598,
+        "95": 4.755486207444437
+      },
+      "natural_mean_width": {
+        "50": 1.566836517275417,
+        "80": 2.977038259043992,
+        "95": 4.552987117490266
+      },
+      "ordinary_best_iter": 383,
+      "natural_best_iter": 300,
+      "ordinary_runtime_sec": 56.62402747000306,
+      "natural_runtime_sec": 58.17143214600219,
+      "delta_runtime_ordinary_minus_natural": -1.5474046759991325,
+      "ordinary_wins_nll": false,
+      "natural_wins_nll": true,
+      "tie_nll": false
+    }
+  ],
+  "aggregate": {
+    "ordinary_test_nll_mean": 1.0933944331947247,
+    "natural_test_nll_mean": 1.0573433449771488,
+    "delta_nll_mean_ordinary_minus_natural": 0.036051088217575966,
+    "ordinary_test_rmse_mean": 0.9039341272139957,
+    "natural_test_rmse_mean": 0.8775924502800224,
+    "delta_rmse_mean_ordinary_minus_natural": 0.026341676933973268,
+    "ordinary_wall_sec": 178.46709779500088,
+    "natural_wall_sec": 183.8409772590021,
+    "natural_wins_nll_regimes": 3,
+    "ordinary_wins_nll_regimes": 0
+  }
+}

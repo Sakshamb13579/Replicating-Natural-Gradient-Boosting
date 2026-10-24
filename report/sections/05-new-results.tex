@@ -1,0 +1,146 @@
+% Draft 2: interpretation-led prose, annotator terminology and cited judge method.
+% One anonymous human reference sheet; authored edit types are not reference labels.
+\section{Results on New Data}
+\label{sec:new-results}
+
+\subsection{Predictive Performance}
+
+The three variants were evaluated on the additional public datasets and synthetic regimes introduced in Section~\ref{sec:new-data}.
+The learner and training budget remain unchanged from the replication.
+Stage selection follows the controlled replication's validation-NLL rule rather than the released script's squared-error rule.
+Homoscedastic uses the revised scale calculation described in Section~\ref{sec:new-data}.
+Parkinsons and grouped Airfoil additionally test predictions for unseen subjects or conditions.
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+& \multicolumn{3}{c}{Natural} & \multicolumn{3}{c}{Ordinary} & \multicolumn{3}{c}{Homoscedastic} \\
+Setting & NLL & RMSE & $C_{95}$ & NLL & RMSE & $C_{95}$ & NLL & RMSE & $C_{95}$ \\
+\midrule
+Airfoil, rows & 2.2470 & 2.592 & 0.913 & 2.9465 & 5.414 & 0.956 & \textbf{2.1567} & 2.073 & 0.957 \\
+Airfoil, conditions & 2.5453 & 3.441 & 0.938 & 3.1586 & 5.928 & 0.917 & \textbf{2.4559} & 2.719 & 0.956 \\
+Forest Fires & \textbf{1.7785} & 1.410 & 0.935 & 1.7826 & 1.404 & 0.933 & 1.7787 & 1.415 & 0.935 \\
+Parkinsons, subjects & \textbf{3.6301} & 8.572 & 0.919 & 3.6486 & 8.358 & 0.924 & 3.6662 & 9.000 & 0.932 \\
+Real Estate & \textbf{3.6441} & 8.059 & 0.959 & 4.0367 & 13.506 & 0.971 & 3.7928 & 7.955 & 0.959 \\
+Superconductivity, full & \textbf{3.5158} & 11.558 & 0.945 & 4.7108 & 33.858 & 0.990 & 3.7974 & 10.762 & 0.942 \\
+\bottomrule
+\end{tabular}
+\caption{Additional public-data results: unweighted means of fold or repetition metrics under the partitions in Table~\ref{tab:new-data-overview}.
+Lower NLL and RMSE are better; $C_{95}$ is the fraction of test outcomes inside the nominal 95\% prediction interval, with 0.95 the nominal target rather than a score to maximise.
+Bold identifies the lowest mean NLL within each setting, not a significance claim.
+RMSE retains each dataset's target units; Forest Fires uses the transformed target.
+NLL magnitudes are not comparable across target scales.}
+\label{tab:new-public-results}
+\end{table*}
+
+\textbf{Public-data findings.}
+Natural has lower mean test NLL than Ordinary in all 6 settings, agreeing with Yacht's direction but reversing the Kin8nm ordering in both the published and local replication results (Tables~\ref{tab:new-public-results} and~\ref{tab:replication-results}).
+Natural achieves the lowest NLL on Parkinsons, Real Estate and full Superconductivity, while Homoscedastic performs best on both Airfoil evaluations.
+Forest Fires shows little numerical separation between the variants.
+NLL and RMSE give different rankings in four of the six settings, agreeing only on the Airfoil evaluations: accurate point predictions do not necessarily identify the best predictive distributions.
+
+\textbf{Interpreting coverage.}
+On Superconductivity, Ordinary's highest coverage comes with mean interval widths of 115.79 against 34.55 for Natural, and with worse NLL and point predictions, so coverage alone does not indicate better probabilistic performance (Table~\ref{tab:new-public-results}; Appendix~\ref{app:new-results-details}).
+
+\textbf{Generalisation and training budget.}
+All three variants have higher mean NLL when Airfoil conditions are held out together than under row holdouts (Table~\ref{tab:new-public-results}).
+This tests prediction for unseen condition combinations, although changed training proportions mean that the difference cannot be attributed to grouping alone.
+For Superconductivity, repeated predictor combinations can cross partitions, so the results concern new rows rather than necessarily new materials.
+Moreover, 12 of its 15 fits select the maximum stage count: these are fixed-budget results, not evidence that further training cannot help.
+Appendix~\ref{app:new-results-details} records aggregation details and cap counts.
+
+\textbf{Constructed-data findings.}
+Natural has the lowest NLL in the input-dependent-noise regimes A and C, while Homoscedastic leads in the constant-noise control B (Table~\ref{tab:synthetic-results}).
+The paired replicate comparisons support these orderings and extend Natural's Yacht advantage over Ordinary across all three regimes (Appendix~\ref{app:new-results-details}).
+Homoscedastic has the highest NLL in the local Yacht and Kin8nm replication runs, but the lowest in B.
+Its revised scale calculation means that this reversal cannot be attributed to the dataset alone.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Regime & Variant & NLL & Scale MAE & Oracle gap \\
+\midrule
+A & Natural & \textbf{0.8249} & 0.063 & 0.077 \\
+& Ordinary & 0.8563 & 0.089 & 0.109 \\
+& Homoscedastic & 1.0379 & 0.259 & 0.290 \\
+\midrule
+B & Natural & 0.9456 & 0.043 & 0.032 \\
+& Ordinary & 0.9916 & 0.089 & 0.078 \\
+& Homoscedastic & \textbf{0.9364} & 0.012 & 0.023 \\
+\midrule
+C & Natural & \textbf{1.4876} & 0.107 & 0.047 \\
+& Ordinary & 1.5164 & 0.136 & 0.076 \\
+& Homoscedastic & 1.7220 & 0.516 & 0.281 \\
+\bottomrule
+\end{tabular}
+\caption{Means over 10 fresh synthetic replicates per regime.
+Scale MAE compares predicted standard deviation with the true conditional noise scale.
+Oracle gap is fitted NLL minus NLL under the true generating distribution on the same test outcomes; it is a reference difference, not a guaranteed nonnegative bound.
+Bold marks the lowest mean NLL per regime.}
+\label{tab:synthetic-results}
+\end{table}
+
+The scale errors help explain this contrast: Natural recovers the varying noise more accurately in A and C, whereas a single scale is more accurate when the noise is constant in B (Table~\ref{tab:synthetic-results}).
+Natural and Homoscedastic nevertheless have nearly identical RMSE and overall 95\% coverage in A and C, for example 0.6820 against 0.6821 and 0.935 against 0.934 in A (Appendix~\ref{app:new-results-details}).
+Because the true noise scales are known, the synthetic data show that models with similar point predictions and coverage can spread uncertainty differently across inputs.
+This supports input-dependent scale estimation in the varying-noise settings tested here.
+These findings concern simulated outcomes that are Normal given the inputs.
+Regimes A and B differ in average noise variance as well as noise structure, so their comparison does not isolate noise structure alone.
+
+\subsection{LLM-as-Judge Evaluation}
+
+A separate LLM-as-judge experiment evaluates explanation clarity, interval interpretation and evidence support, complementing numerical assessment of predictive distributions.
+\citet{zheng2023judging} study language models as evaluators.
+The judge assesses written explanations, not regression variants.
+
+\textbf{Evaluation design.}
+MiniCPM4.1-8B \cite{openbmb2025minicpm41}, using Q8\_0 quantisation and served locally through Ollama~0.9.6 \cite{ollama2025}, evaluated 15 held-out Natural predictions, with 3 cases each from synthetic A, B and C, grouped Airfoil and Real Estate.
+Each case supplied a prediction packet, one intended-faithful description and one controlled edit.
+Across the 15 cases, five edits targeted interval misinterpretation, five unsupported causes and five obscuring jargon.
+Packets omitted observed outcomes; synthetic packets additionally supplied the known generating law.
+Implementation checks and a three-case smoke test preceded evaluation; the same prompt was then held fixed, with temperature 0 and seed 0, to measure the judge's behaviour.
+All 60 requests produced valid structured outputs: 30 pointwise assessments on three binary criteria and 30 pairwise comparisons covering both answer orders.
+Clarity assesses understandable wording, interval consistency assesses numbers, units and statistical interpretation, and evidence support assesses whether substantive claims follow from the packet.
+A human annotator assessed all 30 explanations using the supplied evidence and rubric (Appendix~\ref{app:new-results-details}).
+The presented items contained neither judge verdicts nor the authored edit categories.
+These annotations are the agreement reference; the edit categories are not reference labels.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Criterion & Agreement & $\kappa$ & Baseline \\
+\midrule
+Clarity & 90.0\% & 0.000 & 90.0\% \\
+Interval consistency & 86.7\% & 0.636 & 83.3\% \\
+Evidence support & 93.3\% & 0.867 & 50.0\% \\
+\bottomrule
+\end{tabular}
+\caption{Pointwise judge agreement with one human annotator over 30 explanations per criterion.
+Baseline always predicts that criterion's majority human label; $\kappa$ is Cohen's chance-adjusted agreement \cite{cohen1960agreement}.}
+\label{tab:judge-human-results}
+\end{table}
+
+\textbf{Agreement and failure modes.}
+Evidence support agrees most strongly with the human reference, while clarity's 90\% agreement equals its majority baseline because the judge passes every explanation (Table~\ref{tab:judge-human-results}).
+All disagreements on interval consistency and evidence support are explanations that the annotator accepted and the judge failed (Appendix~\ref{app:new-results-details}).
+On three jargon-heavy explanations, the annotator identifies a clarity problem while accepting the interval statements; the judge assigns the opposite labels.
+This suggests that the judge does not consistently separate readability from statistical correctness.
+Annotator clarity labels also vary across the five items sharing the same final jargon sentence.
+
+\textbf{Answer-order sensitivity.}
+Only 4 of 15 cases retain the same underlying pairwise verdict after the explanations are swapped, and the judge favours the second position overall (Appendix~\ref{app:new-results-details}), consistent with the type of position bias documented by \citet{zheng2023judging}.
+In all five interval-misinterpretation cases, it prefers the explanation that confuses a prediction interval with a confidence interval and claims a guarantee for the next outcome, whenever that explanation appears second.
+Yet the same judge rejects all five texts on interval consistency when assessing them individually.
+Pointwise agreement therefore does not establish reliable pairwise explanation selection.
+
+Agreement was measured against one human annotator and describes this evaluation set; variation between annotators was not assessed.
+Because the examples share five explanation templates, the results describe the tested examples rather than broad performance across explanation styles.

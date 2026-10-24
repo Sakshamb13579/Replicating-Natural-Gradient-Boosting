@@ -1,0 +1,52 @@
+% Draft 2. Section-specific decisions are recorded in ../SECTION-DECISIONS.md.
+% Abstract-level method detail; short original evaluation; final-report framing.
+% Adoption figures checked against GitHub API in October 2026; no citation count.
+% House-price example stays here; the eventual single-paragraph abstract will summarise findings.
+\section{Paper Description and Justification}
+\label{sec:paper}
+
+A house-price forecast of \$800{,}000 does not describe its uncertainty.
+Two 95\% intervals, from \$780{,}000 to \$820{,}000 and from \$500{,}000 to \$1.1~million, support different decisions despite sharing that point estimate.
+Probabilistic regression predicts a distribution over the outcome, conditional on the inputs, so uncertainty can vary between observations.
+Its fit is evaluated on held-out data.
+
+\citet{duan2020ngboost} introduce Natural Gradient Boosting, or NGBoost, for this purpose.\footnote{\url{https://proceedings.mlr.press/v119/duan20a.html}}
+The method extends gradient boosting, which combines a sequence of weak learners, to estimate several parameters of a predictive distribution together.
+With the Normal distribution used in this project, these parameters describe an input-dependent mean $\mu(x)$ and standard deviation $\sigma(x)$; the implementation represents the latter through $\log\sigma(x)$.
+Fitting the parameters together can produce poorly balanced updates under an ordinary gradient.
+For the logarithmic score, the natural gradient rescales the loss gradient using the inverse Fisher information, accounting for how parameter changes alter the distribution \cite{amari1998natural}.
+The paper's contribution is a boosting framework that combines this update with a chosen distribution, base learner and proper scoring rule.
+
+\textbf{Original evaluation.}
+The paper compares NGBoost with probabilistic prediction methods including neural-network approaches, Gaussian processes and distributional regression, and separately tests its components through ablations \cite{duan2020ngboost}.
+Its regression experiments use ten benchmark datasets, Normal predictions and depth-three decision trees.
+The main measure is mean test negative log-likelihood (NLL), which evaluates the predictive distribution rather than only its mean; lower values are better.
+For Yacht and Kin8nm, the published protocol repeats random 90/10 training/test holdouts twenty times.
+Within each training portion, validation log-likelihood selects the number of boosting stages before refitting on the full training portion.
+
+The original paper's ablation table provides the comparison investigated here.
+On Yacht, the reported mean NLL is $0.20 \pm 0.26$ for NGBoost, against $3.29 \pm 0.20$ for ordinary-gradient multiparameter boosting and $2.02 \pm 0.21$ for the homoscedastic model, whose spread is constant across inputs.
+The quoted spreads are standard errors over twenty repetitions.
+On Kin8nm, ordinary-gradient boosting reports $-0.52 \pm 0.03$, NGBoost $-0.49 \pm 0.02$, and the homoscedastic model $-0.37 \pm 0.05$.
+The ranges for the first two overlap, so the paper's own reporting criterion treats them as tied.
+These comparisons are the claims this project tests, and they already show that NGBoost does not lead on every dataset.
+This project examines those three variants on both datasets and extends the comparison to five further public datasets and constructed data with known conditional noise.
+It does not reproduce the second-order ablation or the full comparison against external model families.
+
+\textbf{Why this paper.}
+The choice rests on publication quality, reproducibility and a directly testable contribution.
+NGBoost appeared at the International Conference on Machine Learning in 2020 \cite{duan2020ngboost}.
+ICML has an A\textsuperscript{*} rating in ICORE2026, as recorded in the project's August 2026 venue check \cite{icore2026icml}.
+Venue standing is evidence about peer review, and reproducibility is a separate property that this project measures directly.
+
+The official implementation is public under the Apache~2.0 licence \cite{ngboostrepo}.
+This project runs that implementation at a recorded commit, with its own scripts for the repair and all experiments.\footnote{\label{fn:repo}Project repository: \url{https://github.com/Sakshamb13579/Replicating-Natural-Gradient-Boosting}}
+Public data and code make the comparison inspectable.
+A further criterion was that the released code ran to completion with only minor repairs: two missing import statements, which left the model, splits and stage selection unchanged (Section~\ref{sec:replication}).
+Running the published implementation, rather than reimplementing it, avoids introducing changes that could alter its results.
+The project uses scripted data acquisition and preparation with checksums, a synthetic data generator, repeated computational experiments, human annotation with an agreement measure, an LLM-as-judge evaluation and LaTeX reporting.
+The NGBoost repository's 1{,}893 stars and 257 forks in October 2026 provide supporting evidence of community interest.
+
+Finally, the ablations connect a specific algorithmic change to distributional performance.
+Comparing natural and ordinary gradients tests the update rule, while the fixed-spread comparator examines the value of allowing uncertainty to vary with the input.
+Constructed data makes the second comparison especially informative because the generating spread is known.

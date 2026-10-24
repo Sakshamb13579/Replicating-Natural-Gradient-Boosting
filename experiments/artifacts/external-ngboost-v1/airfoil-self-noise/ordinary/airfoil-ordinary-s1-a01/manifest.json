@@ -1,0 +1,13 @@
+{
+  "artifact_schema_version": 1,
+  "status": "complete",
+  "reportable": true,
+  "data_manifest_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/data/manifests/airfoil-self-noise-v1.json",
+  "data_manifest_sha256": "e3d2438377c17115fccb4233059add11b5b77d783d20257d4330e9af1d70aa61",
+  "processed_csv_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/data/processed/airfoil-self-noise-v1/airfoil-self-noise-v1.csv",
+  "processed_csv_sha256": "705a2a7f0e55fcc9a87700038487b12ce768f4a2e1692433a2d752309028546e",
+  "split_manifest_sha256": "128c5375b2659dff369e153e1b35f2163fbd1c87b72cc5a183def469ce014c14",
+  "runner_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/src/run_external_ngboost.py",
+  "runner_sha256": "63bcdd34f3b521d8896d54e3417f302086cbd7da5e5276fd00156b94dfcbe35d",
+  "metrics_sha256": "f8fbbe682429dfb1360e1050f7c037b840b3984cec1698ac34f2d1d3a76b5139"
+}

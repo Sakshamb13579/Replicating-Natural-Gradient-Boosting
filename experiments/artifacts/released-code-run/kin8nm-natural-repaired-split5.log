@@ -1,0 +1,9 @@
+== Dataset=kin8nm X.shape=(8192, 8) MLE/Normal
+[1/5] BestIter=1993 RMSE: Val=0.1666 Test=0.1728 NLL: Test=-0.3890
+[2/5] BestIter=2000 RMSE: Val=0.1710 Test=0.1656 NLL: Test=-0.4270
+[3/5] BestIter=2000 RMSE: Val=0.1693 Test=0.1678 NLL: Test=-0.4348
+[4/5] BestIter=1998 RMSE: Val=0.1682 Test=0.1698 NLL: Test=-0.4196
+[5/5] BestIter=2000 RMSE: Val=0.1718 Test=0.1698 NLL: Test=-0.4253
+== RMSE GBM=0.0000 +/- 0.0000, NGB=0.1692 +/- 0.0024, NLL NGB=-0.4191 +/ 0.0158
+ELAPSED_SEC=1016.11
+EXIT_CODE=0

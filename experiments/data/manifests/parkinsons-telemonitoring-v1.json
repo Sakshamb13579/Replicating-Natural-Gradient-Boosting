@@ -1,0 +1,133 @@
+{
+  "status": "frozen",
+  "manifest_kind": "external_processed_split_freeze",
+  "schema_version": 1,
+  "dataset_name": "Parkinsons Telemonitoring",
+  "dataset_slug": "parkinsons-telemonitoring-v1",
+  "created_at": "2026-08-23T20:31:00+05:30",
+  "source": {
+    "raw_path": "data/raw/parkinsons-telemonitoring/parkinsons_updrs.data",
+    "raw_sha256": "f2c7d5025dec4e92e7feae367a5f7ccf58789a10ac6b54bdf15976c599f9dd39",
+    "audit_manifest": "data/manifests/parkinsons-telemonitoring-audit-v1.json",
+    "audit_recorded_sha256_verified": true,
+    "uci_id": 189,
+    "doi": "10.24432/C5ZS3N",
+    "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+  },
+  "processed": {
+    "csv_path": "data/processed/parkinsons-telemonitoring-v1/parkinsons-telemonitoring-v1.csv",
+    "csv_sha256": "818bf87d55902dda2444b656c7db96d4caa5f30a18aa9df783004f5a99e28928",
+    "columns": [
+      "row_id",
+      "subject#",
+      "age",
+      "sex",
+      "test_time",
+      "Jitter(%)",
+      "Jitter(Abs)",
+      "Jitter:RAP",
+      "Jitter:PPQ5",
+      "Jitter:DDP",
+      "Shimmer",
+      "Shimmer(dB)",
+      "Shimmer:APQ3",
+      "Shimmer:APQ5",
+      "Shimmer:APQ11",
+      "Shimmer:DDA",
+      "NHR",
+      "HNR",
+      "RPDE",
+      "DFA",
+      "PPE",
+      "motor_UPDRS"
+    ],
+    "id_column": "row_id",
+    "evaluation_columns": [
+      "subject#"
+    ],
+    "feature_columns": [
+      "age",
+      "sex",
+      "test_time",
+      "Jitter(%)",
+      "Jitter(Abs)",
+      "Jitter:RAP",
+      "Jitter:PPQ5",
+      "Jitter:DDP",
+      "Shimmer",
+      "Shimmer(dB)",
+      "Shimmer:APQ3",
+      "Shimmer:APQ5",
+      "Shimmer:APQ11",
+      "Shimmer:DDA",
+      "NHR",
+      "HNR",
+      "RPDE",
+      "DFA",
+      "PPE"
+    ],
+    "target_column": "motor_UPDRS",
+    "n_rows": 5875,
+    "n_features": 19
+  },
+  "splits": {
+    "path": "data/processed/parkinsons-telemonitoring-v1/split-indices.json",
+    "sha256": "e80b95982638efe59afd9e5dba8a59e7ae58a53cdd7c2e5e43331d1acf9a5fa9",
+    "n_folds": 5,
+    "outer_seed": 1,
+    "inner_seed_base": 10000,
+    "paired_for_variants": [
+      "natural",
+      "ordinary",
+      "homoscedastic"
+    ]
+  },
+  "split_policy": "Shuffled 5-fold subject partition seed 1; subject-disjoint inner validation from outer-training subjects with seed 10000+fold",
+  "preprocessing": {
+    "allowed_predictors_exactly": [
+      "age",
+      "sex",
+      "test_time",
+      "Jitter(%)",
+      "Jitter(Abs)",
+      "Jitter:RAP",
+      "Jitter:PPQ5",
+      "Jitter:DDP",
+      "Shimmer",
+      "Shimmer(dB)",
+      "Shimmer:APQ3",
+      "Shimmer:APQ5",
+      "Shimmer:APQ11",
+      "Shimmer:DDA",
+      "NHR",
+      "HNR",
+      "RPDE",
+      "DFA",
+      "PPE"
+    ],
+    "excluded_from_features": [
+      "subject#",
+      "total_UPDRS"
+    ],
+    "evaluation_group_column": "subject#",
+    "scaling": false,
+    "imputation": false
+  },
+  "limitations": [
+    "Only 42 independent subjects",
+    "Recording-level metrics are not independent-patient evidence"
+  ],
+  "protocol": {
+    "stage_selector": "validation_NLL",
+    "n_estimators_cap": 2000,
+    "learning_rate": 0.01,
+    "score": "MLE",
+    "base_learner": "default_tree_learner"
+  },
+  "integrity": {
+    "raw_sha_match_audit": true,
+    "all_fold_checks_passed": true,
+    "processed_csv_sha256": "818bf87d55902dda2444b656c7db96d4caa5f30a18aa9df783004f5a99e28928",
+    "split_indices_sha256": "e80b95982638efe59afd9e5dba8a59e7ae58a53cdd7c2e5e43331d1acf9a5fa9"
+  }
+}

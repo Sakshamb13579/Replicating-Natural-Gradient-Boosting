@@ -1,0 +1,62 @@
+% Draft 2. Section-specific decisions: novel-project dataset requirements;
+% benchmark context followed by both scoped datasets; genuine raw snippets in one figure;
+% preserve numeric precision, wrap Kin8nm for display, and footnote dataset sources.
+% Word/page targets are guides. Detailed split and execution settings belong in Replication.
+\section{Original Datasets}
+\label{sec:original-data}
+
+The paper's regression benchmark covers Boston, Concrete, Energy, Kin8nm, Naval, Power, Protein, Wine, Yacht and Year MSD \cite{duan2020ngboost}.
+This replication tests the paper's ablation claim: that natural gradients improve on ordinary gradients and on a constant scale.
+It uses two datasets on which the published results point in opposite directions.
+On Yacht Hydrodynamics, a small set of measurements, NGBoost has lower mean NLL than both alternatives.
+On Kin8nm, a larger simulated set, ordinary-gradient boosting has the lowest published NLL, though within NGBoost's standard-error range.
+Kin8nm was chosen over Wine because its file comes with the released code and its 8{,}192 rows are clearly identified; the paper does not say exactly how its Wine data were built.
+Boston is also unsuitable for new work because of the ethical problem discussed in Section~\ref{sec:ethics}.
+
+\textbf{Yacht Hydrodynamics.}
+The UCI dataset contains 308 observations from experiments involving 22 hull forms at the Delft Ship Hydromechanics Laboratory \cite{uci-yacht}.\footnote{\url{https://archive.ics.uci.edu/dataset/243/yacht+hydrodynamics}}
+Each row combines hull geometry and a speed condition to predict residuary resistance per unit weight of displacement.
+Its six predictors are the longitudinal position of the centre of buoyancy, prismatic coefficient, length-displacement ratio, beam-draught ratio, length-beam ratio, and Froude number, a dimensionless measure of speed.
+The predictors and target are dimensionless.
+Each of the 22 hull forms appears at 14 speed conditions, accounting for all 308 rows.
+
+\textbf{Kin8nm.}
+This dataset contains 8{,}192 observations from a simulation of an eight-link robot arm with revolute joints \cite{delve-kin}.\footnote{\url{https://www.cs.toronto.edu/~delve/data/kin/desc.html}}
+The prediction target is the distance of the arm's end-effector from a target position.
+The eight input columns in the released file are named \texttt{theta1} through \texttt{theta8}, followed by the target column \texttt{y}.
+In the DELVE naming scheme, \texttt{8nm} identifies eight inputs, a nonlinear relationship and a medium level of output noise.
+The project uses the CSV distributed with the NGBoost repository, linking the simulation documentation to the actual input used by the released experiment.
+
+\textbf{Input format.}
+Figure~\ref{fig:original-snippets} shows extracts from the preserved source files.
+Yacht is whitespace-separated, has no header and contains seven numeric columns.
+Kin8nm is comma-separated, has a quoted header and contains nine numeric columns; its values are written in scientific notation.
+The released script parses these formats separately, then applies the same column rule: the last column is the target and all preceding columns are predictors.
+It retrieves Yacht at runtime over HTTP from UCI's legacy archive path, while Kin8nm is included in the repository.
+This project instead uses local copies with recorded checksums, which guard against later changes to those sources, and applies no scaling or imputation.
+Both datasets have finite values and no missing model inputs.
+A project-added row identifier tracks splits and saved predictions and is excluded from model features.
+
+\begin{figure}[t]
+\centering
+\begin{minipage}{\columnwidth}
+\footnotesize
+\textbf{Yacht: first two rows, no header}
+\begin{verbatim}
+-2.3 0.568 4.78 3.99 3.17 0.125 0.11
+-2.3 0.568 4.78 3.99 3.17 0.150 0.27
+\end{verbatim}
+\textbf{Kin8nm: header and first row}
+\begin{verbatim}
+"theta1","theta2","theta3","theta4",
+"theta5","theta6","theta7","theta8","y"
+-1.5119208e-02, 3.6074091e-01, 4.6939777e-01,
+1.3096745e+00, 9.8802387e-01, -2.5492554e-02,
+6.6407094e-01, 6.2762996e-02, 5.3652416e-01
+\end{verbatim}
+\end{minipage}
+\caption{Extracts from the original input files.
+The Kin8nm header and data row are wrapped at commas for display; each occupies one line in the source file.
+Numeric values are unchanged, and the final field in each data row is the prediction target.}
+\label{fig:original-snippets}
+\end{figure}

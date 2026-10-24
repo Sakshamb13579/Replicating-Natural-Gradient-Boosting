@@ -1,0 +1,1 @@
+/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/.venv/bin/python src/run_external_ngboost.py --dataset forest-fires --variant natural artifacts/external-ngboost-v1/forest-fires/natural/forest-fires-natural-s1-a01

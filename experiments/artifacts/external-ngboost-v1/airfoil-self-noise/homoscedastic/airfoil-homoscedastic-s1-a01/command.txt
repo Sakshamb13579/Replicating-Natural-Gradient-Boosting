@@ -1,0 +1,1 @@
+/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/.venv/bin/python src/run_external_ngboost.py --dataset airfoil-self-noise --variant homoscedastic artifacts/external-ngboost-v1/airfoil-self-noise/homoscedastic/airfoil-homoscedastic-s1-a01

@@ -1,0 +1,51 @@
+{
+  "test_nll": 2.4907556939318374,
+  "test_rmse": 3.1733034791291925,
+  "coverage": {
+    "50": 0.3904109589041096,
+    "80": 0.7123287671232876,
+    "95": 0.9417808219178082
+  },
+  "mean_width": {
+    "50": 3.691862962681725,
+    "80": 7.014654793828144,
+    "95": 10.727988736092671
+  },
+  "pred_scale_min": 1.337116666808532,
+  "pred_scale_max": 4.259223879296266,
+  "pred_scale_mean": 2.7367821094452953,
+  "dataset": "airfoil-grouped",
+  "variant": "natural",
+  "fold_index": 4,
+  "seeds": {
+    "stage_model": 20004,
+    "full_model": 30004
+  },
+  "best_iter": 435,
+  "cap_hit": false,
+  "actual_validation_stages": 2000,
+  "actual_refit_stages": 2000,
+  "val_nll_at_best": 2.514212818953394,
+  "fixed_sigma_from_stage_val": null,
+  "sigma_reestimated_after_refit": null,
+  "split_hashes": {
+    "outer_train_hash": "e91dd179cb38d70590d307ed7b3323f9129fae0f7323d5810c94b0bd8514efba",
+    "outer_test_hash": "ed2650590338244d471a6387e7b4b5d0d1e73b2d23dd8ae95b86e6c35353aaf6",
+    "inner_train_hash": "6bbfbb3166552153107a2922c5a9bf8fc0515fc0b2e8b4b84c5b8d395c07246e",
+    "inner_val_hash": "f26e1d61b730bac12d26cc86f0dbe3c6b4e475044c80c94949cabd7c8a96783a"
+  },
+  "sample_counts": {
+    "outer_train": 1211,
+    "outer_test": 292,
+    "inner_train": 962,
+    "inner_val": 249
+  },
+  "timing_sec": {
+    "stage_fit": 24.71668614295777,
+    "refit": 28.338546674931422,
+    "wall": 57.15423140092753
+  },
+  "reportable": true,
+  "replicate": null,
+  "regime": null
+}

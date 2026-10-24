@@ -1,0 +1,5 @@
+cd /mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost
+export PYTHONDONTWRITEBYTECODE=1
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
+/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/.venv/bin/python src/run_heteroscedastic_ngboost_variant.py \
+  artifacts/heteroscedastic-v1/ngboost-natural/028-ng-p5-heteroscedastic-natural-s0-a01

@@ -1,0 +1,118 @@
+% Draft 1: follows the updated Section 3's third-person prose and bold lead-ins.
+% Counts refer to rows, groups, folds or independent replicates as explicitly stated.
+% Separate historical pilots from full-data, grouped and fresh-replicate experiments.
+\section{Construction of New Data}
+\label{sec:new-data}
+
+Five existing public regression datasets outside the original benchmark test generalisation across domains.
+Constructed data provides known conditional means and noise scales for directly checking uncertainty estimates.
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{@{}lrrlX@{}}
+\toprule
+Dataset & Rows & Features & Prediction target & Outer partition \\
+\midrule
+Airfoil & 1{,}503 & 5 & Sound-pressure level (dB) & 5 row holdouts; separately, 5 condition folds \\
+Real Estate & 414 & 6 & Unit-area price & 20 repeated row holdouts \\
+Parkinsons & 5{,}875 & 19 & Motor UPDRS score & 5 folds over 42 subjects \\
+Forest Fires & 517 & 29 & $\log(1+\mathrm{area})$ & 20 repeated row holdouts \\
+Superconductivity & 21{,}263 & 81 & Critical temperature (K) & 5 repeated row holdouts \\
+\bottomrule
+\end{tabularx}
+\caption{Additional public datasets after input preparation.
+Feature counts exclude targets and evaluation identifiers.
+Row holdouts use 90/10 training/test partitions; grouped folds partition subjects or aerodynamic conditions.
+Real Estate prices retain the source unit of 10{,}000 New Taiwan dollars per ping (approximately $3.3\,\mathrm{m}^2$); Forest Fires area is measured in hectares before transformation.
+UPDRS denotes the Unified Parkinson's Disease Rating Scale.}
+\label{tab:new-data-overview}
+\end{table*}
+
+\textbf{Public sources and preparation.}
+Table~\ref{tab:new-data-overview} summarises the model inputs and outer partitions.
+Airfoil Self-Noise contains wind-tunnel measurements predicting scaled sound-pressure level from frequency and four aerodynamic variables \cite{uci-airfoil}.\footnote{\url{https://archive.ics.uci.edu/dataset/291/airfoil+self+noise}}
+Its headerless tab-separated file was assigned descriptive column names.
+Real Estate Valuation predicts unit-area house price from transaction date, house age, transport proximity, nearby stores and coordinates \cite{uci-real-estate}.\footnote{\url{https://archive.ics.uci.edu/dataset/477/real+estate+valuation+data+set}}
+The sole spreadsheet worksheet was loaded and its source index removed.
+Parkinsons Telemonitoring predicts motor severity from voice measurements, age, sex and test time \cite{uci-parkinsons}.\footnote{\url{https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring}}
+Subject identifiers define partitions only; the alternate total-severity outcome is excluded from predictors.
+
+Forest Fires combines weather, spatial coordinates and calendar categories to predict burned area \cite{uci-forest-fires}.\footnote{\url{https://archive.ics.uci.edu/dataset/162/forest+fires}}
+Its month and day fields were expanded using fixed calendar categories, giving 29 numeric predictors, and the target became $\log(1+\mathrm{area})$.
+The transform reduces skew but retains the mass at zero, so a Normal likelihood remains approximate; subsequent metrics are on the transformed scale.
+Superconductivity uses the 81 numeric predictors in \texttt{train.csv} to predict critical temperature \cite{uci-superconductivity}.\footnote{\url{https://archive.ics.uci.edu/dataset/464/superconductivty+data}}
+The chemical-formula strings in its companion file are not model inputs.
+All 21{,}263 rows are used here; an earlier 5{,}000-row subset remains separate pilot evidence.
+
+\textbf{Partition units.}
+Row-holdout studies reserve 20\% of outer-training rows for validation.
+Parkinsons instead partitions subjects at both levels, keeping every recording from a subject together; its recording count does not represent independent patients.
+The additional grouped Airfoil experiment defines 106 conditions by exact tuples of angle, chord, velocity and suction-side displacement thickness, leaving frequency to vary within a condition.
+The 5 shuffled folds test each condition once, with 20\% of outer-training conditions reserved for validation.
+This tests held-out condition combinations, not necessarily unseen individual feature values.
+Its partitions and training proportions differ from the row-holdout study, so their results are descriptive comparisons rather than a paired grouping effect.
+
+\textbf{Constructed regression data.}
+The generator draws independent $x_1,x_2\sim U(-2,2)$ and $z\sim N(0,1)$, then sets
+\begin{align*}
+\mu(x)&=\sin(x_1)+x_2^2,\\
+y&=\mu(x)+\sigma(x)z,\\
+\sigma_A(x)&=0.1+0.5|x_1|,\\
+\sigma_B(x)&=0.6,\qquad \sigma_C(x)=2\sigma_A(x).
+\end{align*}
+Regime A provides input-dependent noise, B a constant-noise control, and C greater noise with the same spatial pattern as A.
+A and B differ in both noise variation and overall variance.
+The Gaussian generating law tests the chosen likelihood within its assumed distribution family.
+Each of 10 fresh replicates contains 4{,}000 base observations, partitioned into 2{,}400 training, 800 validation and 800 test rows per regime.
+Inputs, standard-normal draws and partitions are shared across regimes within a replicate, and model seeds are shared across variants and regimes.
+Only $x_1,x_2$ enter the models; true means, scales and noise draws are evaluation-only.
+An earlier constructed-data study used one draw rather than independent replicates, so its results are not pooled with the ten-replicate summaries reported here.
+Figure~\ref{fig:new-data-snippets} shows genuine prepared values; Appendix~\ref{app:new-data-provenance} gives seed provenance and further examples.
+
+\begin{figure}[t]
+\centering
+\begin{minipage}{\columnwidth}
+\footnotesize
+\textbf{Forest Fires: selected fields, zero-based row 138}
+\begin{verbatim}
+Source: month=jul, day=tue, area=0.36
+Prepared: month_jul=1, day_tue=1
+log1p_area=0.3074846997479606
+\end{verbatim}
+\textbf{Synthetic: replicate 1, row 0, training}
+\begin{verbatim}
+x1=0.047286498801026866
+x2=0.7557451779003403
+true_mu=0.6184196524866178
+noise_z=-1.6109632612127667
+\end{verbatim}
+\centering
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Regime & True scale & Target $y$ \\
+\midrule
+A & 0.12364324940051344 & 0.4192349202054232 \\
+B & 0.6 & $-0.3481583042410422$ \\
+C & 0.24728649880102688 & 0.2200501879242286 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\caption{Selected fields from preserved data, with numeric precision retained.
+Forest Fires shows a source-to-input transformation; the synthetic rows share predictors, mean and noise draw while their scales and targets differ.
+True mean, true scale and noise draw are evaluation-only; model inputs are $x_1,x_2$.}
+\label{fig:new-data-snippets}
+\end{figure}
+
+\textbf{Quality and evaluation protocol.}
+Preparation checks finite model values, excludes identifiers from features, freezes split indices and records source and processed-file checksums.
+No scaling, imputation or outcome-based row filtering is applied, and source duplicates are retained.
+Full Superconductivity contains 66 exact duplicate extra rows and 6{,}093 repeated-feature extra rows.
+Among the distinct feature tuples, 2{,}374 carry more than one target value, spanning 8{,}423 rows.
+Such tuples can cross row partitions, so the results do not show generalisation to unseen materials.
+New-data runs retain the learner, score, learning rate and 2{,}000-stage budget from Section~\ref{sec:replication}, select stages by validation NLL, and refit on training plus validation rows.
+For Homoscedastic, each stage's scale is the RMS of the validation residuals and the selected scale is retained after refitting, unlike the released-code calculation in Section~\ref{sec:replication}.
+This comparator uses validation outcomes for both scale estimation and stage selection; the other variants use them only for stage selection.
+Regression targets come from the public sources or generator; only the authored explanations evaluated in Section~\ref{sec:new-results} receive human labels.

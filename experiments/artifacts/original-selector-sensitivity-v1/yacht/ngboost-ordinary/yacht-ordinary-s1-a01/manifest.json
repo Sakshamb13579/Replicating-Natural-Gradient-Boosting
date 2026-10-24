@@ -1,0 +1,33 @@
+{
+  "artifact_schema_version": 1,
+  "status": "complete",
+  "handoff_id": "original-selector-sensitivity-v1",
+  "run_id": "yacht-ordinary-s1-a01",
+  "dataset_slug": "yacht-original-selector-sensitivity-v1",
+  "model_slug": "ngboost-ordinary",
+  "seed": {
+    "stage_base": 20000,
+    "refit_base": 30000
+  },
+  "attempt": 1,
+  "created_at": "2026-09-26T08:54:14.509704+00:00",
+  "reportable": true,
+  "split_manifest": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/data/processed/yacht-original-selector-sensitivity-v1/split-indices.json",
+  "upstream_sources": [
+    {
+      "commit": "672034041fc05d9d4b7a80c1e6163ea102579752",
+      "ngboost_file": "/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree/ngboost/__init__.py"
+    }
+  ],
+  "data_checksums": {
+    "raw": "00dfecc0fc01ddd4c90b558a3ac11b246df8ebcfea130724223475a9a67f0ea1",
+    "processed_csv": "21f5959c0ab6f2060b3a52d8af3ba0deb6448d6405fdbee019acb2d81216a437",
+    "dataset_manifest": "e37225c4df1aac826b7f8b84fc33849660f2e30caec1e78b620f694d87c26e71",
+    "split_manifest": "522fa98a0a33ba5d27ecd3ad1633f87060a451dd260b2229d76084bb0f192015"
+  },
+  "runner_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/src/run_original_selector_sensitivity.py",
+  "runner_sha256": "c89db29bb29b850b2ef252cbc3dc72854933d9b8aa505eac055030707beba9e8",
+  "completed_at": "2026-09-26T09:16:50.595300+00:00",
+  "metrics_sha256": "fe33cc4e8b43f1f62675fa79db8b075358a93beb3d80f3011c833ce49af6248b",
+  "predictions_csv_sha256": "ced45409f4d289936d1d638ae7f186abe97e724802fe1a9a0dce56fdb9582e79"
+}

@@ -1,0 +1,18 @@
+commit: 672034041fc05d9d4b7a80c1e6163ea102579752
+=== git status --porcelain ===
+ M examples/experiments/regression_exp.py
+=== git diff ===
+diff --git a/examples/experiments/regression_exp.py b/examples/experiments/regression_exp.py
+index 4722d05..15ec356 100644
+--- a/examples/experiments/regression_exp.py
++++ b/examples/experiments/regression_exp.py
+@@ -7,7 +7,9 @@ from sklearn.metrics import mean_squared_error
+ from sklearn.model_selection import KFold, train_test_split
+ 
+ from ngboost import NGBRegressor
++from ngboost.distns import Normal, NormalFixedVar
+ from ngboost.learners import default_linear_learner, default_tree_learner
++from ngboost.scores import MLE
+ 
+ np.random.seed(1)
+ 

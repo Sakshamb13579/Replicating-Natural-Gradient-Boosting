@@ -1,0 +1,199 @@
+{
+  "status": "draft",
+  "manifest_kind": "desk_audit",
+  "dataset_name": "Superconductivity Data",
+  "dataset_slug": "superconductivity",
+  "uci_id": 464,
+  "doi": "10.24432/C53P47",
+  "authoritative_urls": [
+    "https://archive.ics.uci.edu/dataset/464/superconductivty+data",
+    "https://archive.ics.uci.edu/dataset/464/superconductivity+data",
+    "https://archive.ics.uci.edu/static/public/464/superconductivty+data.zip"
+  ],
+  "slug_note": "UCI canonical slug is misspelled superconductivty+data; superconductivity+data alias resolves to the same dataset page.",
+  "access_date": "2026-08-23",
+  "uci_metadata": {
+    "path": "ngboost/data/raw/superconductivity/uci-464-metadata.json",
+    "retrieval_url": "https://archive.ics.uci.edu/api/trpc/donated_datasets.findById?batch=1&input=%7B%220%22%3A%7B%22json%22%3A464%7D%7D",
+    "dataset_page": "https://archive.ics.uci.edu/dataset/464/superconductivty+data",
+    "timestamp_utc": "2026-08-23T14:54:44Z",
+    "sha256": "fa66e7acc67f2065a7a9d53ba19542b90e279f85d8e80a1abe3795957b9a427d",
+    "validated_dataset_id": 464
+  },
+  "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "source_citation": "Hamidieh, K. (2018). Superconductivty Data [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C53P47. Underlying source: NIMS Superconductor Database (http://supercon.nims.go.jp/index_en.html). Introductory work: Hamidieh (2018), Computational Materials Science / arXiv:1803.10260.",
+  "download": {
+    "url": "https://archive.ics.uci.edu/static/public/464/superconductivty+data.zip",
+    "timestamp_utc": "2026-08-23T14:54:12Z",
+    "files": [
+      {
+        "path": "ngboost/data/raw/superconductivity/superconductivty-data.zip",
+        "sha256": "87f4490d73390ff94ee01dbf0d7d32abc80b22f2c803d471765cfc46a9f6371e",
+        "size_bytes": 8300005
+      },
+      {
+        "path": "ngboost/data/raw/superconductivity/train.csv",
+        "sha256": "4dfb6e3a1f6ffd969e5a5e42f093c4800d1e2a6c8b1e309f8fcd9f23d86952f3",
+        "size_bytes": 23859780
+      },
+      {
+        "path": "ngboost/data/raw/superconductivity/unique_m.csv",
+        "sha256": "b68ae6b55ea8581eff8b1ffba073a899db7e2d2f7f3b781bb0802f643f51e5f7",
+        "size_bytes": 4291603
+      }
+    ]
+  },
+  "files_relationship": {
+    "train_csv": {
+      "role": "Primary modeling table for NGBoost pilot",
+      "rows": 21263,
+      "columns": 82,
+      "features": 81,
+      "target_column": "critical_temp",
+      "description": "Aggregated chemical/statistical features extracted from superconductor compositions."
+    },
+    "unique_m_csv": {
+      "role": "Parallel elemental-composition representation; not merged into pilot features by default",
+      "rows": 21263,
+      "columns": 88,
+      "feature_columns": 86,
+      "element_symbol_columns": "H through Rn (86 element fraction columns)",
+      "target_column": "critical_temp",
+      "identifier_column": "material",
+      "description": "Chemical formula decomposed into elemental fractions plus material string and critical temperature."
+    },
+    "row_alignment": {
+      "same_row_count": true,
+      "critical_temp_matches_by_row_index": 21263,
+      "critical_temp_mismatches": 0,
+      "note": "UCI states both files cover the same 21263 superconductors; row order aligns on critical_temp."
+    },
+    "leakage_controls": {
+      "pilot_default": "Use train.csv only; do not concatenate unique_m element columns with train aggregated features.",
+      "do_not_use_as_features": ["material"],
+      "avoid": "Joining both representations without deduplication would double-count chemical information and risk misalignment if sorted independently."
+    }
+  },
+  "shape": {
+    "primary_file": "train.csv",
+    "rows": 21263,
+    "features": 81,
+    "columns_total_in_primary": 82
+  },
+  "target": {
+    "name": "critical_temp",
+    "slug": "critical_temp_k",
+    "meaning": "Critical temperature Tc (Kelvin)",
+    "column_index": 81
+  },
+  "raw_format": {
+    "delimiter": "comma",
+    "header": true,
+    "dtypes_observed": "numeric float-parseable in all columns inspected"
+  },
+  "missing_values": {
+    "missing_cells": 0,
+    "non_finite_values": 0,
+    "duplicate_full_rows": 66,
+    "duplicate_feature_tuples_excluding_target": 6093,
+    "unique_feature_tuples": 15170,
+    "feature_tuples_with_multiple_targets": 2374,
+    "constant_columns": 0,
+    "uci_reports_missing": false
+  },
+  "target_summary": {
+    "min": 0.00021,
+    "max": 185.0,
+    "mean": 34.421,
+    "population_stdev": 34.254,
+    "population_skewness": 0.860
+  },
+  "feature_ranges_sample": {
+    "number_of_elements": { "min": 1.0, "max": 9.0 },
+    "mean_atomic_mass": { "min": 6.941, "max": 208.9804 },
+    "wtd_std_Valence": { "min": 0.0, "max": 3.0 }
+  },
+  "storage": {
+    "train_csv_bytes": 23859780,
+    "unique_m_csv_bytes": 4291603,
+    "zip_bytes": 8300005,
+    "approx_float64_matrix_mb_train_only": 13.14
+  },
+  "paper_overlap": {
+    "in_selected_ngboost_paper_tables_1_3": false,
+    "paper_ten_datasets": [
+      "Boston",
+      "Concrete",
+      "Energy",
+      "Kin8nm",
+      "Naval",
+      "Power",
+      "Protein",
+      "Wine",
+      "Yacht",
+      "Year MSD"
+    ],
+    "official_repo_loader_present": false,
+    "official_repo_checked": ".RnD/source/ngboost/examples/experiments/regression_exp.py",
+    "note": "Superconductivity absent from official regression loader map and paper Tables 1–3."
+  },
+  "prior_application_search": {
+    "search_date": "2026-08-23",
+    "scope": "bounded_non_exhaustive",
+    "queries_reused_from": "shared/repo/docs/ngboost-proposal-evidence.md section 4.2",
+    "queries": [
+      "\"Superconductivity\" NGBoost",
+      "superconductor \"Natural Gradient Boosting\"",
+      "Hamidieh NGBoost",
+      "repo grep under .RnD/source/ngboost for superconductivity paths"
+    ],
+    "finding": "No superconductivity loader or experiment path in pinned official NGBoost repo (grep: no matches). Prior targeted search (2026-08-23) found Tc prediction with other models (e.g. XGBoost) but no documented NGBoost application on this UCI table.",
+    "limitation": "Non-exhaustive. Paper-absence and bounded search do not prove global non-use."
+  },
+  "compute_feasibility": {
+    "ram_estimate_train_matrix_mb": 13.14,
+    "storage_assessment": "Low — ~28 MB extracted CSV total",
+    "cpu_assessment": "Moderate for full official protocol: 21263 rows × 81 features × 2000 estimators × 3 variants × 20 splits is substantially heavier than Yacht/Kin8nm pilots.",
+    "proposal_listing_policy": "Full dataset (21263 rows, 81 features) may be listed in proposal feasibility section with UCI licence and citation.",
+    "pilot_scope_recommendation": "Predeclare either (A) full train.csv with fewer splits (e.g. 5) for natural/ordinary/homoscedastic comparison, or (B) fixed random subset (e.g. n=5000, seed documented) with paper-aligned 90/10 protocol — authorize in separate pilot handoff; do not assume 20-split full-data timing without evidence.",
+    "timing_note": "No model was run in this audit; estimates are qualitative from dimensionality and prior Yacht/Kin8nm runtimes."
+  },
+  "proposed_split": {
+    "status": "draft_not_frozen",
+    "indices_generated": false,
+    "primary_file": "train.csv",
+    "group_column": null,
+    "options": {
+      "primary_row_level_paper_aligned": {
+        "approach": "Row-level random 90/10 holdouts with np.random.seed(1); 20 repetitions for paper alignment OR fewer repetitions (e.g. 5) if pilot scoped to manage compute; identical split draws across natural, ordinary, homoscedastic variants.",
+        "preprocessing": "Use train.csv header; target=critical_temp; drop exact duplicate rows if lead requires (66 full duplicates observed) or retain with disclosure.",
+        "scientific_question": "Probabilistic Tc regression from aggregated material descriptors; ablation ordering under bounded compute.",
+        "leakage_risk": "Low if train.csv used alone and material identifiers excluded. Do not merge unique_m columns into features."
+      },
+      "optional_subset_pilot": {
+        "approach": "Fixed random subset of rows (seed documented) before split generation if full-data pilot exceeds timebox.",
+        "status": "Contingency only; not frozen."
+      }
+    }
+  },
+  "preprocessing_recommendation": "Primary path: train.csv only. No mandatory feature scaling for tree NGBoost. Exclude material strings from unique_m.csv. Document handling of 66 exact duplicate rows and 2374 aggregated-feature collisions with differing Tc before pilot freeze.",
+  "feasibility": {
+    "ethics_privacy": "Public materials-science data from NIMS Superconductor Database via UCI; no personal identifiers.",
+    "licence_compatible_with_repo": true
+  },
+  "audit_verdict": "MODERATE",
+  "unresolved_concerns": [
+    "Compute for full 20-split × 3-variant protocol on 21k×81 may exceed practical pilot timebox without predeclared subset or fewer splits.",
+    "6093 duplicate aggregated-feature tuples; 2374 map to multiple Tc values — interpret carefully.",
+    "UCI slug/title misspelling (Superconductivty) preserved in authoritative metadata.",
+    "Prior-application search remains non-exhaustive."
+  ],
+  "handoff_id": "003-NG-FD2",
+  "evidence_paths": {
+    "report": "ngboost/reports/003-ng-fd2-superconductivity-data-audit.md",
+    "raw_data_dir": "ngboost/data/raw/superconductivity/",
+    "manifest": "ngboost/data/manifests/superconductivity-audit-v1.json",
+    "uci_metadata": "ngboost/data/raw/superconductivity/uci-464-metadata.json"
+  },
+  "created_at": "2026-08-23T20:25:00+05:30"
+}

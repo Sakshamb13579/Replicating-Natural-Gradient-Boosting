@@ -1,0 +1,73 @@
+{
+  "purpose": "Implementation smoke test on authored miniature examples; exclude from final evaluation",
+  "reportable": false,
+  "cases": [
+    {
+      "id": "smoke-interval-interpretation",
+      "evidence": {
+        "domain": "synthetic demonstration, not a fitted NGBoost result",
+        "mean": 1.0,
+        "standard_deviation": 0.5,
+        "nominal_prediction_interval": {"level": 0.95, "lower": 0.02, "upper": 1.98},
+        "note": "Rounded central Normal prediction interval for one future outcome; no empirical coverage evidence"
+      },
+      "candidates": [
+        {
+          "id": "description",
+          "text": "The predicted mean is 1.0. The nominal 95% prediction interval for one future outcome runs from 0.02 to 1.98; this does not guarantee that the outcome lies inside.",
+          "engineering_expectation": {"clarity": true, "interval_consistency": true, "evidence_support": true}
+        },
+        {
+          "id": "mean-certainty",
+          "text": "The predicted mean is 1.0. The interval from 0.02 to 1.98 proves with 95% certainty that the true conditional mean lies inside and that this individual outcome will be covered.",
+          "engineering_expectation": {"clarity": true, "interval_consistency": false, "evidence_support": false}
+        }
+      ]
+    },
+    {
+      "id": "smoke-unsupported-cause",
+      "evidence": {
+        "domain": "illustrative real-estate prediction, not a fitted project result",
+        "target_unit": "10000 New Taiwan dollars per ping",
+        "mean": 40.0,
+        "standard_deviation": 5.0,
+        "nominal_prediction_interval": {"level": 0.95, "lower": 30.2, "upper": 49.8},
+        "available_explanation_evidence": "No training-neighbour counts, local sale variation or causal attribution were provided"
+      },
+      "candidates": [
+        {
+          "id": "bounded-description",
+          "text": "The model gives a nominal 95% prediction interval of 30.2 to 49.8 in the stated price units. The packet does not establish why this interval has that width.",
+          "engineering_expectation": {"clarity": true, "interval_consistency": true, "evidence_support": true}
+        },
+        {
+          "id": "invented-scarcity",
+          "text": "The nominal 95% prediction interval is 30.2 to 49.8 in the stated price units. It is this wide because only two comparable houses were in training and their sale prices varied greatly.",
+          "engineering_expectation": {"clarity": true, "interval_consistency": true, "evidence_support": false}
+        }
+      ]
+    },
+    {
+      "id": "smoke-clarity",
+      "evidence": {
+        "domain": "synthetic demonstration, not a fitted NGBoost result",
+        "mean": 2.0,
+        "standard_deviation": 0.6,
+        "nominal_prediction_interval": {"level": 0.95, "lower": 0.824, "upper": 3.176},
+        "note": "Rounded central Normal prediction interval; no causal evidence supplied"
+      },
+      "candidates": [
+        {
+          "id": "plain",
+          "text": "The predicted mean is 2.0, with a nominal 95% prediction interval from 0.824 to 3.176 for one future outcome.",
+          "engineering_expectation": {"clarity": true, "interval_consistency": true, "evidence_support": true}
+        },
+        {
+          "id": "jargon",
+          "text": "The 2.0 mean-centred nominal 95% prediction interval, 0.824 to 3.176, instantiates prognostic spreadness via quantilic nominalation for a singular futurate outcome.",
+          "engineering_expectation": {"clarity": false, "interval_consistency": true, "evidence_support": true}
+        }
+      ]
+    }
+  ]
+}

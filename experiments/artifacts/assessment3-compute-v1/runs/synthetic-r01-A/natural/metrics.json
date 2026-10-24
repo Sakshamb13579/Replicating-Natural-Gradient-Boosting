@@ -1,0 +1,142 @@
+{
+  "dataset": "synthetic-r01-A",
+  "variant": "natural",
+  "reportable": true,
+  "per_fold": [
+    {
+      "test_nll": 0.8340278729267232,
+      "test_rmse": 0.6658731339949626,
+      "coverage": {
+        "50": 0.52125,
+        "80": 0.79125,
+        "95": 0.9425
+      },
+      "mean_width": {
+        "50": 0.7953565276755374,
+        "80": 1.5112022130986915,
+        "95": 2.311184341436926
+      },
+      "pred_scale_min": 0.2824919209968545,
+      "pred_scale_max": 1.319087117535776,
+      "pred_scale_mean": 0.589598676217332,
+      "oracle_nll": 0.7298978101462393,
+      "scale_mae": 0.07033032975578704,
+      "scale_correlation": {
+        "pearson": 0.9600697230469128,
+        "spearman": 0.9681726123581964
+      },
+      "abs_x1_bins": [
+        {
+          "bin": 1,
+          "lo": 0.0,
+          "hi": 0.5,
+          "n": 216,
+          "mean_abs_x1": 0.2492202002063065,
+          "mean_true_sigma": 0.22461010010315322,
+          "mean_pred_scale": 0.3066306995548654,
+          "coverage": {
+            "50": 0.5370370370370371,
+            "80": 0.8379629629629629,
+            "95": 0.9583333333333334
+          },
+          "mean_width": {
+            "50": 0.4136385278904218,
+            "80": 0.7859261061171474,
+            "95": 1.2019702553637162
+          }
+        },
+        {
+          "bin": 2,
+          "lo": 0.5,
+          "hi": 1.0,
+          "n": 187,
+          "mean_abs_x1": 0.7366846215853875,
+          "mean_true_sigma": 0.46834231079269373,
+          "mean_pred_scale": 0.47111296440273054,
+          "coverage": {
+            "50": 0.5401069518716578,
+            "80": 0.7486631016042781,
+            "95": 0.9572192513368984
+          },
+          "mean_width": {
+            "50": 0.6355217313482664,
+            "80": 1.2075111141573538,
+            "95": 1.8467288857585051
+          }
+        },
+        {
+          "bin": 3,
+          "lo": 1.0,
+          "hi": 1.5,
+          "n": 204,
+          "mean_abs_x1": 1.2374517420594917,
+          "mean_true_sigma": 0.7187258710297459,
+          "mean_pred_scale": 0.7152821993038166,
+          "coverage": {
+            "50": 0.5049019607843137,
+            "80": 0.7745098039215687,
+            "95": 0.9166666666666666
+          },
+          "mean_width": {
+            "50": 0.9649010238562704,
+            "80": 1.8333420446479824,
+            "95": 2.8038546988361635
+          }
+        },
+        {
+          "bin": 4,
+          "lo": 1.5,
+          "hi": 2.0,
+          "n": 193,
+          "mean_abs_x1": 1.757763273512335,
+          "mean_true_sigma": 0.9788816367561676,
+          "mean_pred_scale": 0.8882436107187847,
+          "coverage": {
+            "50": 0.5025906735751295,
+            "80": 0.7979274611398963,
+            "95": 0.9378238341968912
+          },
+          "mean_width": {
+            "50": 1.1982224222139573,
+            "80": 2.2766599798032945,
+            "95": 3.4818509730132683
+          }
+        }
+      ],
+      "dataset": "synthetic-r01-A",
+      "variant": "natural",
+      "fold_index": 0,
+      "seeds": {
+        "stage_model": 20100,
+        "full_model": 30100
+      },
+      "best_iter": 318,
+      "cap_hit": false,
+      "actual_validation_stages": 2000,
+      "actual_refit_stages": 2000,
+      "val_nll_at_best": 0.8695269732537275,
+      "fixed_sigma_from_stage_val": null,
+      "sigma_reestimated_after_refit": null,
+      "split_hashes": {
+        "outer_train_hash": "a674529410869ede8c3fab822b136d158dc2045d14d7756d86ed80cef7304875",
+        "outer_test_hash": "ff094063b8326b1e40e5d69f1c0810d73ff395dbedb684b941c23bc1c40ad0da",
+        "inner_train_hash": "5d3e5774807d034c150759a08f6fdf1db4c1f2fca14930feff3003e0adb1897a",
+        "inner_val_hash": "71211072ef76c602fee698d0e788fe34f8bc7ef5d2f9d360dd224149d1f70501"
+      },
+      "sample_counts": {
+        "outer_train": 3200,
+        "outer_test": 800,
+        "inner_train": 2400,
+        "inner_val": 800
+      },
+      "timing_sec": {
+        "stage_fit": 36.11221258004662,
+        "refit": 37.605635547079146,
+        "wall": 78.31925643899012
+      },
+      "reportable": true,
+      "replicate": 1,
+      "regime": "A"
+    }
+  ]
+}

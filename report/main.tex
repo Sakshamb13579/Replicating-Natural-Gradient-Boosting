@@ -1,0 +1,54 @@
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[11pt]{article}
+\usepackage[preprint]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{tabularx}
+
+% Number the PDF sidebar entries so the appendices read as A, B and C.
+\hypersetup{bookmarksnumbered=true}
+
+% Keep ACL bibliography indentation while avoiding stretched URL lines.
+\let\aclthebibliography\thebibliography
+\renewcommand{\thebibliography}[1]{\aclthebibliography{#1}\raggedright}
+
+\title{Replicating NGBoost: Probabilistic Regression on Existing and Constructed Data}
+\author{Saksham Bajpai \\
+  Student number: 60773723 \\
+  Unit: COMP8240 \\
+  \texttt{saksham.bajpai@students.mq.edu.au}}
+
+\begin{document}
+\maketitle
+
+\input{sections/00-abstract}
+\input{sections/01-paper-and-justification}
+\input{sections/02-original-datasets}
+\input{sections/03-replication}
+\input{sections/04-construction}
+\input{sections/05-new-results}
+\input{sections/06-ethics}
+\input{sections/07-conclusions}
+
+\clearpage
+% acl.sty already selects acl_natbib.
+% The bibliography heading is unnumbered, so add it to the PDF sidebar by hand.
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\bibliography{references}
+\clearpage
+\appendix
+% Appendix tables follow their section: A1, A2, C1, C2, ... .
+\counterwithin{table}{section}
+\renewcommand{\thetable}{\Alph{section}\arabic{table}}
+\input{sections/appendix-replication}
+\input{sections/appendix-new-data}
+\input{sections/appendix-results}
+\end{document}

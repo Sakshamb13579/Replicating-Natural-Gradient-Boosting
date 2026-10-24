@@ -1,0 +1,2 @@
+working_directory=/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost
+command=/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/.venv/bin/python src/run_original_selector_sensitivity.py --dataset kin8nm --variant natural artifacts/original-selector-sensitivity-v1/kin8nm/ngboost-natural/kin8nm-natural-s1-a01

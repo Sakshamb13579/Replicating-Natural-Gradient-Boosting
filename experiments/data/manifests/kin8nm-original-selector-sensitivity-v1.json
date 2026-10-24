@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "manifest_kind": "original_data_selector_sensitivity_v1",
+  "dataset": "kin8nm",
+  "dataset_name": "Kin8nm",
+  "dataset_slug": "kin8nm-original-selector-sensitivity-v1",
+  "source": {
+    "preserved_raw_path": "/mnt/hdd1/Projects/Research/Saksham/shared/proposed_work/03_ngboost/code/original/data/uci/kin8nm.csv",
+    "raw_sha256": "7b9bf0301ac936d88122557a151e1ba8f1ebc278fcf46d9f3c6d462debdbc8ad",
+    "official_loader": "pandas.read_csv(default comma-separated header handling)",
+    "official_loaded_shape": [
+      8192,
+      9
+    ],
+    "official_target_rule": "final column",
+    "official_feature_rule": "all columns preceding final column"
+  },
+  "processed": {
+    "csv_path": "data/processed/kin8nm-original-selector-sensitivity-v1/kin8nm-original-selector-sensitivity-v1.csv",
+    "csv_sha256": "5e11c31d68fba0dbf91e84067c94f89c4a146675a01c21af2405fcb8a095b544",
+    "columns": [
+      "row_id",
+      "theta1",
+      "theta2",
+      "theta3",
+      "theta4",
+      "theta5",
+      "theta6",
+      "theta7",
+      "theta8",
+      "y"
+    ],
+    "id_column": "row_id",
+    "feature_columns": [
+      "theta1",
+      "theta2",
+      "theta3",
+      "theta4",
+      "theta5",
+      "theta6",
+      "theta7",
+      "theta8"
+    ],
+    "target_column": "y",
+    "n_rows": 8192,
+    "n_features": 8,
+    "scaling": false,
+    "imputation": false,
+    "feature_transformation": false
+  },
+  "splits": {
+    "path": "data/processed/kin8nm-original-selector-sensitivity-v1/split-indices.json",
+    "sha256": "9516141d1c7e230b6b313875e6a0bcc5c0b314930b1d4cb7a9039957a8714c2f",
+    "n_folds": 5,
+    "outer_seed": 1,
+    "inner_seed_base": 10000,
+    "fold_hashes": [
+      {
+        "fold_index": 0,
+        "outer_train_hash": "6d0abd1a7d570dde904c399f50086ac0c4798de80857f3bbc08fc12ef9b1cf27",
+        "outer_test_hash": "b4408bd2f73479ecdf71b1ccfbe8173f46c48eaa0df3bfb9259abdb75ec471ca",
+        "inner_train_hash": "b269824b51fa906e2813eef598da1669a4667b489f0cb1e57419d42f20615f0c",
+        "inner_val_hash": "f75c37e8fd9e37bcc7a33b1c9f11f151ea5f4de4281e8c897121f1890f7cee8a"
+      },
+      {
+        "fold_index": 1,
+        "outer_train_hash": "7c1f9e423ef77efba3bc5706dc065d450c7b110f1a4d892f450d0e70bd618911",
+        "outer_test_hash": "3341bf5093d866460c865d676301807b695e5a771d48c66b96c06f0dce3607b0",
+        "inner_train_hash": "77fda30acacd7912839991fc20843f5dec9ee125ff8990f73bbb8c856920dada",
+        "inner_val_hash": "b87f29eb414c1fba93e03d73f4228bd375a211453f2eb44bfba9df0b57a3013a"
+      },
+      {
+        "fold_index": 2,
+        "outer_train_hash": "d299910b2d4d94d755169d8ca17f5aab841fc08dfe6d60420ca12f1240091384",
+        "outer_test_hash": "b213f8713330137dfc43f66a5f42c9fa1f1e810f197776ffb5afbb0dd2b279f8",
+        "inner_train_hash": "ada46ccff1692d27e26e8e035c254a2033faa9da17fe371df757e17d33292c40",
+        "inner_val_hash": "bb8dea5f1c3ecdbc416e88d0f2d472912a67bfcd68031aa1832e9e93de2fbd8f"
+      },
+      {
+        "fold_index": 3,
+        "outer_train_hash": "1f3d55962a302e724be885fa2cf3eb864e7d6de1b8d432558f00d2e3650cec34",
+        "outer_test_hash": "f5ab0b014e9892e00d86ae0cd6507bf5ca740e5a680721c0b4a03a3e7262d605",
+        "inner_train_hash": "08d72a9fb36812a72eba8c0198b94d67caf993b068b4afaded6856a808e0f680",
+        "inner_val_hash": "7f80d39a9adb0eea5e0f96f855c6a6488bcdc119118c0f7c69151209faa704fa"
+      },
+      {
+        "fold_index": 4,
+        "outer_train_hash": "f804ac2cb732d36ac3375d8632f702075242b99e3207601a0cd1b4f0adcbcbfc",
+        "outer_test_hash": "e6fe02578b314fcf63d09ca512af080819237fd512c8a4bb6ba2a9bd47738e71",
+        "inner_train_hash": "ba17cbcf0f052459fe2bbffaa4231a85e67a545c90407ad03dadf2fcfd81febe",
+        "inner_val_hash": "7171620f37b620f9196c1ebdcbcee037318012ec5a99113c804bc39bc3bda74e"
+      }
+    ]
+  },
+  "protocol": "reports/original-selector-sensitivity-protocol-v1.md",
+  "upstream_commit": "672034041fc05d9d4b7a80c1e6163ea102579752",
+  "immutability": "Preparation refuses to replace any non-identical existing CSV, split manifest, or dataset manifest."
+}

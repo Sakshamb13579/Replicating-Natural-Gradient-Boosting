@@ -1,0 +1,122 @@
+{
+  "inference_status": "complete",
+  "human_reference_status": "complete (1 rater(s))",
+  "n_evidence_cases": 15,
+  "n_explanations": 30,
+  "n_requests": 60,
+  "n_planned_pointwise_criterion_verdicts": 90,
+  "n_valid_pointwise_criterion_verdicts": 90,
+  "invalid_requests": [],
+  "n_valid_pairwise_orders": 30,
+  "n_valid_pairwise_cases": 15,
+  "n_incomplete_pairwise_cases": 0,
+  "pointwise_pass_counts_by_construction_intent": {
+    "faithful_description": {
+      "planned": 15,
+      "n": 15,
+      "clarity": 15,
+      "interval_consistency": 15,
+      "evidence_support": 13
+    },
+    "interval_interpretation": {
+      "planned": 5,
+      "n": 5,
+      "clarity": 5,
+      "interval_consistency": 0,
+      "evidence_support": 0
+    },
+    "unsupported_cause": {
+      "planned": 5,
+      "n": 5,
+      "clarity": 5,
+      "interval_consistency": 4,
+      "evidence_support": 0
+    },
+    "obscuring_jargon": {
+      "planned": 5,
+      "n": 5,
+      "clarity": 5,
+      "interval_consistency": 2,
+      "evidence_support": 0
+    }
+  },
+  "pairwise_label_counts": {
+    "B": 20,
+    "Tie": 6,
+    "A": 4
+  },
+  "ordered_winner_construction_intents": {
+    "interval_interpretation": 5,
+    "faithful_description": 19,
+    "Tie": 6
+  },
+  "consistent_winner_construction_intents": {
+    "faithful_description": 4
+  },
+  "pairwise_by_stratum": {
+    "synthetic-A": {
+      "cases": 3,
+      "consistent": 1,
+      "order_sensitive": 2,
+      "substantive_ties": 0
+    },
+    "synthetic-B": {
+      "cases": 3,
+      "consistent": 1,
+      "order_sensitive": 2,
+      "substantive_ties": 0
+    },
+    "synthetic-C": {
+      "cases": 3,
+      "consistent": 1,
+      "order_sensitive": 2,
+      "substantive_ties": 0
+    },
+    "airfoil": {
+      "cases": 3,
+      "consistent": 0,
+      "order_sensitive": 3,
+      "substantive_ties": 0
+    },
+    "real-estate": {
+      "cases": 3,
+      "consistent": 1,
+      "order_sensitive": 2,
+      "substantive_ties": 0
+    }
+  },
+  "order_consistent_cases": 4,
+  "order_sensitive_cases": 11,
+  "timing": {
+    "completed_transport_requests": 60,
+    "total_request_wall_seconds": 4702.912214657525,
+    "prompt_tokens": 37969,
+    "generated_tokens": 3923,
+    "decode_tokens_per_second": 1.9682113727835866,
+    "total_model_load_seconds": 35.144336628
+  },
+  "analysis_code_sha256": "8b9e523dfdc6d3e4f7507bf4e4296e870d5b381d955186c6509bd29e5992fe13",
+  "human_agreement": {
+    "n_raters": 1,
+    "n_items": 30,
+    "judge_versus_human": {
+      "anonymous-human-01": {
+        "clarity": 0.0,
+        "interval_consistency": 0.6363636363636364,
+        "evidence_support": 0.8666666666666667,
+        "pooled": 0.7479775980087119
+      }
+    },
+    "detail": "analysis/human-agreement.json"
+  },
+  "interpretation": [
+    "Construction intents are authored design categories, not independent reference ratings",
+    "30 explanations share 15 evidence cases; the 30 pairwise decisions share 15 pairs",
+    "No predictive calibration or model-ranking conclusion follows from these outputs",
+    "Human ratings are the reference; judge verdicts are the predictions compared against them",
+    "Construction intent is an authored design category and is never used as a reference label",
+    "The 30 items instantiate five explanation templates, so the items are not independent",
+    "A single rater cannot separate judge error from one rater's idiosyncrasy",
+    "No human-versus-human agreement is available with one sheet"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "retrieval": {
+    "timestamp_utc": "2026-08-23T14:57:36Z",
+    "endpoints": {
+      "dataset_record": "https://archive.ics.uci.edu/api/trpc/donated_datasets.findById?batch=1&input=%7B%220%22%3A%7B%22json%22%3A477%7D%7D",
+      "citation": "https://archive.ics.uci.edu/api/trpc/citation.findByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A477%7D%7D",
+      "variables_table": "https://archive.ics.uci.edu/api/trpc/variables.findTableByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A477%7D%7D",
+      "descriptive_fields": "https://archive.ics.uci.edu/api/trpc/descriptive.findTupleByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A477%7D%7D",
+      "files_table": "https://archive.ics.uci.edu/api/trpc/files.findTableByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A477%7D%7D"
+    },
+    "dataset_page": "https://archive.ics.uci.edu/dataset/477/real+estate+valuation+data+set"
+  },
+  "dataset": {
+    "id": 477,
+    "name": "Real Estate Valuation",
+    "doi": "10.24432/C5J30W",
+    "slug": "real+estate+valuation+data+set",
+    "abstract": "The real estate valuation is a regression problem. The market historical data set of real estate valuation are collected from Sindian Dist., New Taipei City, Taiwan. ",
+    "area": "Business",
+    "task": "Regression",
+    "types": "Multivariate",
+    "num_instances": 414,
+    "num_features": 6,
+    "feature_types": "Integer, Real",
+    "year_created": 2018,
+    "date_donated": "2018-08-18T00:00:00.000Z",
+    "download_href": "/static/public/477/real+estate+valuation+data+set.zip",
+    "has_missing_values": false
+  },
+  "licence": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx": "CC-BY-4.0",
+    "legalcode_url": "https://creativecommons.org/licenses/by/4.0/legalcode"
+  },
+  "citation": {
+    "APA": "Yeh, I. (2018). Real Estate Valuation [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5J30W.",
+    "MLA": "Yeh, I-Cheng. \"Real Estate Valuation.\" UCI Machine Learning Repository, 2018, https://doi.org/10.24432/C5J30W.",
+    "Chicago": "Yeh, I-Cheng. 2018. Real Estate Valuation. UCI Machine Learning Repository. https://doi.org/10.24432/C5J30W.",
+    "Vancouver": "Yeh I. Real Estate Valuation [dataset]. 2018. UCI Machine Learning Repository. Available from: https://doi.org/10.24432/C5J30W.",
+    "IEEE": "I. Yeh. \"Real Estate Valuation,\" UCI Machine Learning Repository, 2018. [Online]. Available: https://doi.org/10.24432/C5J30W.",
+    "BibTeX": "@misc{real_estate_valuation_477,\n  author       = {Yeh, I-Cheng},\n  title        = {{Real Estate Valuation}},\n  year         = {2018},\n  howpublished = {UCI Machine Learning Repository},\n  note         = {{DOI}: https://doi.org/10.24432/C5J30W}\n}"
+  },
+  "variables": {
+    "headers": [
+      "Variable Name",
+      "Role",
+      "Type",
+      "Description",
+      "Units",
+      "Missing Values"
+    ],
+    "rows": [
+      [
+        "No",
+        "ID",
+        "Integer",
+        "",
+        "",
+        "no"
+      ],
+      [
+        "X1 transaction date",
+        "Feature",
+        "Continuous",
+        "for example, 2013.250=2013 March, 2013.500=2013 June, etc.",
+        "",
+        "no"
+      ],
+      [
+        "X2 house age",
+        "Feature",
+        "Continuous",
+        "",
+        "year",
+        "no"
+      ],
+      [
+        "X3 distance to the nearest MRT station",
+        "Feature",
+        "Continuous",
+        "",
+        "meter",
+        "no"
+      ],
+      [
+        "X4 number of convenience stores",
+        "Feature",
+        "Integer",
+        "number of convenience stores in the living circle on foot",
+        "integer",
+        "no"
+      ],
+      [
+        "X5 latitude",
+        "Feature",
+        "Continuous",
+        "geographic coordinate, latitude",
+        "degree",
+        "no"
+      ],
+      [
+        "X6 longitude",
+        "Feature",
+        "Continuous",
+        "geographic coordinate, longitude",
+        "degree",
+        "no"
+      ],
+      [
+        "Y house price of unit area",
+        "Target",
+        "Continuous",
+        "10000 New Taiwan Dollar/Ping, where Ping is a local unit, 1 Ping = 3.3 meter squared",
+        "10000 New Taiwan Dollar/Ping",
+        "no"
+      ]
+    ],
+    "total_variables_listed": 8
+  },
+  "descriptive_fields": [
+    [
+      "Additional Information",
+      "The market historical data set of real estate valuation are collected from Sindian Dist., New Taipei City, Taiwan. The â€œreal estate valuationâ€ is a regression problem. The data set was randomly split into the training data set (2/3 samples) and the testing data set (1/3 samples)."
+    ],
+    [
+      "Has Missing Values?",
+      "No"
+    ]
+  ],
+  "files_table": {
+    "headers": [
+      "File",
+      "Size"
+    ],
+    "data": [
+      [
+        "Real estate valuation data set.xlsx",
+        "32 KB"
+      ]
+    ]
+  }
+}

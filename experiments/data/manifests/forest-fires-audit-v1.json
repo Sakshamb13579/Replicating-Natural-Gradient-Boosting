@@ -1,0 +1,193 @@
+{
+  "status": "draft",
+  "manifest_kind": "desk_audit",
+  "dataset_name": "Forest Fires",
+  "dataset_slug": "forest-fires",
+  "uci_id": 162,
+  "doi": "10.24432/C5D88D",
+  "authoritative_urls": [
+    "https://archive.ics.uci.edu/dataset/162/forest+fires",
+    "https://archive.ics.uci.edu/static/public/162/forest+fires.zip"
+  ],
+  "access_date": "2026-08-23",
+  "uci_metadata": {
+    "path": "ngboost/data/raw/forest-fires/uci-162-metadata.json",
+    "retrieval_url": "https://archive.ics.uci.edu/api/trpc/donated_datasets.findById?batch=1&input=%7B%220%22%3A%7B%22json%22%3A162%7D%7D",
+    "dataset_page": "https://archive.ics.uci.edu/dataset/162/forest+fires",
+    "timestamp_utc": "2026-08-23T15:05:12Z",
+    "sha256": "6d1ceaae537d9ae2f46a5084ec12704807a71d233bd5e9b928b181f82d56e5a1",
+    "validated_dataset_id": 162
+  },
+  "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "source_citation": "Cortez, P., & Morais, A. (2007). A Data Mining Approach to Predict Forest Fires using Meteorological Data. In New Trends in Artificial Intelligence, Proc. EPIA 2007, pp. 512–523. UCI repository: https://doi.org/10.24432/C5D88D. Montesinho park, Portugal.",
+  "download": {
+    "url": "https://archive.ics.uci.edu/static/public/162/forest+fires.zip",
+    "timestamp_utc": "2026-08-23T15:04:48Z",
+    "files": [
+      {
+        "path": "ngboost/data/raw/forest-fires/forest-fires.zip",
+        "sha256": "abd40d6142b5e30fea73ff7292f91dcdd8b64bf3b3f36e20f96c37f5d14f06fb",
+        "size_bytes": 8932
+      },
+      {
+        "path": "ngboost/data/raw/forest-fires/forestfires.csv",
+        "sha256": "0d6586a1fa52f55bef48578aef14eb97273f1e9330e1a53423df497a77065253",
+        "size_bytes": 25478
+      },
+      {
+        "path": "ngboost/data/raw/forest-fires/forestfires.names",
+        "sha256": "476117404b73befcdb300a0128d9542b792fac8547a95061dfa8389a73d303bc",
+        "size_bytes": 3420
+      }
+    ]
+  },
+  "shape": {
+    "rows": 517,
+    "features": 12,
+    "columns_in_file": 13,
+    "target_column": "area"
+  },
+  "target": {
+    "raw": {
+      "name": "area",
+      "units": "hectares (ha)",
+      "column": "area"
+    },
+    "recommended_modeling_transform": {
+      "name": "log1p_area",
+      "formula": "log(area + 1)",
+      "donor_documented": true,
+      "source": "forestfires.names Past Usage; Cortez & Morais (2007)"
+    },
+    "inverse_for_reporting": {
+      "raw_median_from_log_scale": "expm1(mu_z) where z = log1p(area)",
+      "raw_mean_lognormal_formula": "exp(mu_z + sigma_z^2/2) - 1 under literal Normal on z",
+      "interval_caution": "Intervals symmetric on log1p scale back-transform to asymmetric bounds on raw ha; do not claim symmetric raw-scale predictive intervals.",
+      "zero_inflation_caution": "47.8% exact zeros mean both median and mean back-transforms are model-based approximations, not population estimands."
+    }
+  },
+  "metric_protocol": {
+    "status": "draft",
+    "primary_scale": "log1p(area)",
+    "primary_metrics": ["NLL on log1p target", "empirical interval coverage on log1p scale", "RMSE on log1p if reported"],
+    "optional_raw_point_metrics": {
+      "allowed": ["RMSE/MAE on raw ha after back-transform"],
+      "requirement": "Predeclare whether predictions use expm1(mu_z) (raw median) or exp(mu_z + sigma_z^2/2)-1 (lognormal-style raw mean) before comparing to observed area."
+    },
+    "raw_area_normal_ngboost": "Computably defined but scientifically misspecified — 47.8% zeros and heavy tail; not recommended as primary protocol. NLL on raw ha is not the primary metric."
+  },
+  "features": {
+    "spatial": ["X", "Y"],
+    "temporal_categorical": ["month", "day"],
+    "meteorological_numeric": ["FFMC", "DMC", "DC", "ISI", "temp", "RH", "wind", "rain"],
+    "categorical_values": {
+      "month": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"],
+      "day": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+    }
+  },
+  "raw_format": {
+    "file": "forestfires.csv",
+    "delimiter": "comma",
+    "header": true
+  },
+  "missing_values": {
+    "missing_cells": 0,
+    "non_finite_values": 0,
+    "duplicate_full_rows": 4,
+    "uci_reports_missing": false
+  },
+  "target_distribution_raw": {
+    "zero_count": 247,
+    "zero_fraction": 0.478,
+    "positive_count": 270,
+    "min": 0.0,
+    "max": 1090.84,
+    "mean": 12.847,
+    "median": 0.52,
+    "q1": 0.0,
+    "q3": 6.575,
+    "population_skewness": 12.81,
+    "count_gt_100_ha": 11
+  },
+  "target_distribution_log1p": {
+    "formula": "log1p(area)",
+    "population_skewness": 1.214,
+    "note": "Transform reduces skew but zeros map to 0.0 on log1p scale."
+  },
+  "spatial_temporal_structure": {
+    "unique_xy_pairs": 36,
+    "max_rows_per_xy": 52,
+    "unique_month_day_xy": 322,
+    "spatial_dependence_note": "Montesinho park grid cells (X 1–9, Y 2–9) repeat across months/days; optional (X,Y) group holdout for robustness."
+  },
+  "distribution_assessment": {
+    "normal_ngboost_on_raw_area": "Scientifically misspecified as primary protocol — 47.8% exact zeros and extreme right skew make Normal on raw ha a poor generative model; NLL is computable but not recommended for primary comparison. Primary probabilistic metrics belong on log1p(area).",
+    "log1p_target_defensible": "Yes as donor-aligned stress-test protocol; Normal on log1p(z) is still approximate because zeros map to z=0 (zero inflation).",
+    "stress_test_value": "High for exposing homoscedastic vs natural-gradient behavior under misspecification and zero inflation; not suitable as primary calibration evidence."
+  },
+  "preprocessing_recommendation": {
+    "categoricals": "Encode month and day (one-hot or ordinal label encoding for tree models); document encoding in pilot manifest.",
+    "numeric": "Use FFMC–rain as numeric; no mandatory scaling for trees.",
+    "target": "Primary pilot target: log1p(area). Primary NLL and coverage on log1p scale. Optional raw RMSE/MAE only after predeclaring expm1(mu_z) vs exp(mu_z+sigma_z^2/2)-1 back-transform.",
+    "duplicates": "Four exact duplicate rows observed — lead decision to drop or retain with disclosure before freeze."
+  },
+  "proposed_split": {
+    "status": "draft_not_frozen",
+    "indices_generated": false,
+    "options": {
+      "primary_row_level_paper_aligned": {
+        "approach": "Row-level 90/10 holdouts, np.random.seed(1), fewer repetitions (e.g. 5–20) given n=517; identical splits across natural/ordinary/homoscedastic on log1p target.",
+        "leakage_risk": "Moderate — same (X,Y) cell may appear in train and test across different dates."
+      },
+      "optional_spatial_robustness": {
+        "group_key": ["X", "Y"],
+        "num_groups": 36,
+        "status": "Optional subject-disjoint-style spatial holdout; not frozen."
+      }
+    }
+  },
+  "paper_overlap": {
+    "in_selected_ngboost_paper_tables_1_3": false,
+    "official_repo_loader_present": false,
+    "official_repo_checked": ".RnD/source/ngboost/examples/experiments/regression_exp.py"
+  },
+  "prior_application_search": {
+    "search_date": "2026-08-23",
+    "scope": "bounded_non_exhaustive",
+    "queries_reused_from": "shared/repo/docs/ngboost-proposal-evidence.md section 4.5",
+    "queries": [
+      "\"Forest Fires\" NGBoost",
+      "forestfires NGBoost",
+      "\"Montesinho\" NGBoost",
+      "\"Cortez and Morais\" NGBoost"
+    ],
+    "finding": "NGBoost appears in other wildfire/remote-sensing work, but no documented NGBoost application on this UCI Montesinho table in bounded 2026-08-23 search; no official repo loader.",
+    "limitation": "Wildfire+NGBoost literature is large; dataset-specific claim only."
+  },
+  "compute_feasibility": {
+    "storage_bytes_csv": 25478,
+    "ram_estimate_mb": 0.05,
+    "cpu_assessment": "Trivial — n=517, p=12 (+ encoded categoricals)."
+  },
+  "ethics_environmental": {
+    "framing": "Environmental wildfire burned-area regression; Montesinho Natural Park historical incidents; no personal identifiers.",
+    "requirements": "Attribute Cortez/Morais and UCI; frame as stress test not operational fire prediction."
+  },
+  "audit_verdict": "MODERATE",
+  "unresolved_concerns": [
+    "Normal on raw ha is misspecified for primary use; log1p protocol must be frozen explicitly.",
+    "Back-transform mean vs median semantics and zero inflation must be disclosed in any raw-scale point metric.",
+    "Four duplicate rows and spatial repetition require pilot disclosure.",
+    "Prior-application search non-exhaustive."
+  ],
+  "handoff_id": "006-NG-FD5",
+  "fix_handoff_id": "006F1-NG-FD5",
+  "evidence_paths": {
+    "report": "ngboost/reports/006-ng-fd5-forest-fires-data-audit.md",
+    "raw_data_dir": "ngboost/data/raw/forest-fires/",
+    "manifest": "ngboost/data/manifests/forest-fires-audit-v1.json",
+    "uci_metadata": "ngboost/data/raw/forest-fires/uci-162-metadata.json"
+  },
+  "created_at": "2026-08-23T20:36:00+05:30",
+  "updated_at": "2026-08-23T20:38:00+05:30"
+}

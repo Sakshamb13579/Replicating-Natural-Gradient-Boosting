@@ -1,0 +1,14 @@
+{
+  "dataset": "synthetic-r04-A",
+  "variant": "homoscedastic",
+  "features": [
+    "x1",
+    "x2"
+  ],
+  "target": "y",
+  "n_estimators": 2000,
+  "stage_selector": "validation_NLL",
+  "learning_rate": 0.01,
+  "reportable": true,
+  "manifest_sha256": "ac1cd1ba7193e2368ba35d44893b22949aa3c66d0ee63ec76d1e0b9cd00bc8a3"
+}

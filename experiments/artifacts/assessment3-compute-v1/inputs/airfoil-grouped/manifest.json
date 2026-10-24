@@ -1,0 +1,43 @@
+{
+  "status": "frozen",
+  "dataset": "airfoil-grouped",
+  "rows": 1503,
+  "features": [
+    "frequency_hz",
+    "angle_deg",
+    "chord_m",
+    "velocity_ms",
+    "suction_side_displacement_thickness_m"
+  ],
+  "target": "scaled_sound_pressure_db",
+  "columns": [
+    "row_id",
+    "condition_id",
+    "frequency_hz",
+    "angle_deg",
+    "chord_m",
+    "velocity_ms",
+    "suction_side_displacement_thickness_m",
+    "scaled_sound_pressure_db"
+  ],
+  "csv_sha256": "17d5145904b47a5f3499c362e9b25681707fb5f4625b4c831bcb882f9b379950",
+  "splits_sha256": "555e2a8cce139fbf69492ef2990cbcad7d03193146f4549e1a3475efc2224d9e",
+  "source": {
+    "processed_manifest_sha256": "e3d2438377c17115fccb4233059add11b5b77d783d20257d4330e9af1d70aa61",
+    "raw_sha256": "74c75fd71783f1e6b71f8a622b993dc592897a97cd689c5090a07147a1b097b3",
+    "raw_path": "data/raw/airfoil-self-noise/airfoil_self_noise.dat"
+  },
+  "group_column": "condition_id",
+  "group_definition": [
+    "angle_deg",
+    "chord_m",
+    "velocity_ms",
+    "suction_side_displacement_thickness_m"
+  ],
+  "n_groups": 106,
+  "split_policy": "Five shuffled folds of unique conditions, seed 1; group-disjoint inner 80/20 seed 10000+fold",
+  "limitations": [
+    "Held-out condition combinations, not guaranteed unseen feature levels",
+    "Different estimand and fold sizes from repeated row splits; no paired row/group fold test"
+  ]
+}

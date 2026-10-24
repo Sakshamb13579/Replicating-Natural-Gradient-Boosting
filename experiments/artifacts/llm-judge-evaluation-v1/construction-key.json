@@ -1,0 +1,287 @@
+[
+  {
+    "case_id": "case-001",
+    "stratum": "synthetic-A",
+    "source_dataset": "synthetic-r02-A",
+    "replicate": 2,
+    "fold_index": 0,
+    "row_id": 1074,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/synthetic-r02-A/natural/fold-00/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "159f6cb7923d",
+        "construction_intent": "faithful_description"
+      },
+      {
+        "candidate_id": "a71070ebdf98",
+        "construction_intent": "interval_interpretation"
+      }
+    ]
+  },
+  {
+    "case_id": "case-002",
+    "stratum": "synthetic-A",
+    "source_dataset": "synthetic-r05-A",
+    "replicate": 5,
+    "fold_index": 0,
+    "row_id": 3995,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/synthetic-r05-A/natural/fold-00/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "c0ca2599aa59",
+        "construction_intent": "unsupported_cause"
+      },
+      {
+        "candidate_id": "be7545faaad9",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-003",
+    "stratum": "synthetic-A",
+    "source_dataset": "synthetic-r08-A",
+    "replicate": 8,
+    "fold_index": 0,
+    "row_id": 2326,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/synthetic-r08-A/natural/fold-00/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "d0c19e54472d",
+        "construction_intent": "obscuring_jargon"
+      },
+      {
+        "candidate_id": "be68cb846050",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-004",
+    "stratum": "synthetic-B",
+    "source_dataset": "synthetic-r02-B",
+    "replicate": 2,
+    "fold_index": 0,
+    "row_id": 1198,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/synthetic-r02-B/natural/fold-00/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "1c6640c0ea0a",
+        "construction_intent": "interval_interpretation"
+      },
+      {
+        "candidate_id": "7bf12556637c",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-005",
+    "stratum": "synthetic-B",
+    "source_dataset": "synthetic-r05-B",
+    "replicate": 5,
+    "fold_index": 0,
+    "row_id": 3179,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/synthetic-r05-B/natural/fold-00/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "e93e7d6f2a61",
+        "construction_intent": "faithful_description"
+      },
+      {
+        "candidate_id": "21ac71a6ca98",
+        "construction_intent": "unsupported_cause"
+      }
+    ]
+  },
+  {
+    "case_id": "case-006",
+    "stratum": "synthetic-B",
+    "source_dataset": "synthetic-r08-B",
+    "replicate": 8,
+    "fold_index": 0,
+    "row_id": 1245,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/synthetic-r08-B/natural/fold-00/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "85672ac90936",
+        "construction_intent": "obscuring_jargon"
+      },
+      {
+        "candidate_id": "eb0d04b2e994",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-007",
+    "stratum": "synthetic-C",
+    "source_dataset": "synthetic-r02-C",
+    "replicate": 2,
+    "fold_index": 0,
+    "row_id": 3800,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/synthetic-r02-C/natural/fold-00/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "e17af9292063",
+        "construction_intent": "interval_interpretation"
+      },
+      {
+        "candidate_id": "4efee07b8d3f",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-008",
+    "stratum": "synthetic-C",
+    "source_dataset": "synthetic-r05-C",
+    "replicate": 5,
+    "fold_index": 0,
+    "row_id": 1245,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/synthetic-r05-C/natural/fold-00/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "1564969d04a2",
+        "construction_intent": "unsupported_cause"
+      },
+      {
+        "candidate_id": "cf6da03d667e",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-009",
+    "stratum": "synthetic-C",
+    "source_dataset": "synthetic-r08-C",
+    "replicate": 8,
+    "fold_index": 0,
+    "row_id": 3286,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/synthetic-r08-C/natural/fold-00/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "bbbe7b60792a",
+        "construction_intent": "obscuring_jargon"
+      },
+      {
+        "candidate_id": "859000b52b2b",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-010",
+    "stratum": "airfoil",
+    "source_dataset": "airfoil-grouped",
+    "replicate": null,
+    "fold_index": 0,
+    "row_id": 223,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/airfoil-grouped/natural/fold-00/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "aa88e8260275",
+        "construction_intent": "interval_interpretation"
+      },
+      {
+        "candidate_id": "0ae63dd7b219",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-011",
+    "stratum": "airfoil",
+    "source_dataset": "airfoil-grouped",
+    "replicate": null,
+    "fold_index": 1,
+    "row_id": 655,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/airfoil-grouped/natural/fold-01/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "44b7429d527d",
+        "construction_intent": "unsupported_cause"
+      },
+      {
+        "candidate_id": "ec23f3b73f2a",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-012",
+    "stratum": "airfoil",
+    "source_dataset": "airfoil-grouped",
+    "replicate": null,
+    "fold_index": 2,
+    "row_id": 159,
+    "prediction_path": "artifacts/assessment3-compute-v1/runs/airfoil-grouped/natural/fold-02/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "0ce21d14701e",
+        "construction_intent": "faithful_description"
+      },
+      {
+        "candidate_id": "b1d5468a8547",
+        "construction_intent": "obscuring_jargon"
+      }
+    ]
+  },
+  {
+    "case_id": "case-013",
+    "stratum": "real-estate",
+    "source_dataset": "real-estate-valuation",
+    "replicate": null,
+    "fold_index": 0,
+    "row_id": 1,
+    "prediction_path": "artifacts/external-ngboost-v1/real-estate-valuation/natural/real-estate-natural-s1-a01/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "3293691c4182",
+        "construction_intent": "interval_interpretation"
+      },
+      {
+        "candidate_id": "608f4222c2e7",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-014",
+    "stratum": "real-estate",
+    "source_dataset": "real-estate-valuation",
+    "replicate": null,
+    "fold_index": 1,
+    "row_id": 377,
+    "prediction_path": "artifacts/external-ngboost-v1/real-estate-valuation/natural/real-estate-natural-s1-a01/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "75cd8eb88551",
+        "construction_intent": "unsupported_cause"
+      },
+      {
+        "candidate_id": "fcdc49267cf8",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  },
+  {
+    "case_id": "case-015",
+    "stratum": "real-estate",
+    "source_dataset": "real-estate-valuation",
+    "replicate": null,
+    "fold_index": 2,
+    "row_id": 73,
+    "prediction_path": "artifacts/external-ngboost-v1/real-estate-valuation/natural/real-estate-natural-s1-a01/predictions.csv",
+    "candidates": [
+      {
+        "candidate_id": "c9e45ed53ce7",
+        "construction_intent": "obscuring_jargon"
+      },
+      {
+        "candidate_id": "90319537a775",
+        "construction_intent": "faithful_description"
+      }
+    ]
+  }
+]

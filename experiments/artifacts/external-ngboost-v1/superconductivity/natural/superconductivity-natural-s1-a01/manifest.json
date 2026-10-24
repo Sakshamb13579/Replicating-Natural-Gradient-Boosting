@@ -1,0 +1,13 @@
+{
+  "artifact_schema_version": 1,
+  "status": "complete",
+  "reportable": true,
+  "data_manifest_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/data/manifests/superconductivity-v1.json",
+  "data_manifest_sha256": "35a034e5bbd7f9ca4fd3cd5fa43705375923bddb3f6d558ae578d79be1bb164e",
+  "processed_csv_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/data/processed/superconductivity-v1/superconductivity-v1.csv",
+  "processed_csv_sha256": "2924e32e5005d786f43d92f71b917f786d2a3afc027848f8d006c3bbfafa5ba6",
+  "split_manifest_sha256": "5186400507250a18322f9a13fa99d13b514c9263eb00ce7dcbe416fb09394be7",
+  "runner_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/src/run_external_ngboost.py",
+  "runner_sha256": "63bcdd34f3b521d8896d54e3417f302086cbd7da5e5276fd00156b94dfcbe35d",
+  "metrics_sha256": "20113db221e211380c3488e9c784f37193c5a4b7c43d91a7f5fde6e079447098"
+}

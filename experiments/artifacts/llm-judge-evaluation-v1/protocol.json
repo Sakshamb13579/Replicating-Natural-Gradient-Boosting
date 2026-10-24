@@ -1,0 +1,36 @@
+{
+  "frozen_at": "before any full-evaluation judge output",
+  "authorisation": "User requested full inference after reviewing the smoke findings",
+  "selection_seed": 20261018,
+  "evidence_cases": 15,
+  "explanations": 30,
+  "pointwise_requests": 30,
+  "pairwise_order_requests": 30,
+  "total_requests": 60,
+  "strata": {
+    "synthetic-A": 3,
+    "synthetic-B": 3,
+    "synthetic-C": 3,
+    "airfoil": 3,
+    "real-estate": 3
+  },
+  "prediction_variant": "natural only",
+  "development": "three authored smoke cases, six explanations; not evaluation observations",
+  "selection": "seeded uniform choice from sorted saved held-out rows; no observed-outcome or judge-score selection",
+  "synthetic_replicates": [
+    2,
+    5,
+    8
+  ],
+  "public_fold_indices": [
+    0,
+    1,
+    2
+  ],
+  "matching": "paired explanations within evidence case; no duplicate latent synthetic row across regimes",
+  "numeric_display": "six significant digits, shared exactly between packets and explanations",
+  "explanation_construction": "versioned faithful descriptions plus five examples of each of three controlled edits",
+  "prompt_policy": "unchanged smoke-tested rubric dev-v1; no retuning on evaluation output",
+  "human_ratings": "pending; no human agreement, accuracy or kappa can be inferred from construction intent",
+  "interpretation": "controlled benchmark-specific explanation audit, not predictive-model ranking or population calibration"
+}

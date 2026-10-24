@@ -1,0 +1,142 @@
+{
+  "dataset": "synthetic-r03-C",
+  "variant": "ordinary",
+  "reportable": true,
+  "per_fold": [
+    {
+      "test_nll": 1.4905406709486226,
+      "test_rmse": 1.3767091634094157,
+      "coverage": {
+        "50": 0.49,
+        "80": 0.77875,
+        "95": 0.93625
+      },
+      "mean_width": {
+        "50": 1.5814780537321398,
+        "80": 3.0048576350428653,
+        "95": 4.595533181570802
+      },
+      "pred_scale_min": 0.2849949523726577,
+      "pred_scale_max": 4.349049789636431,
+      "pred_scale_mean": 1.172351435490596,
+      "oracle_nll": 1.4338279518434967,
+      "scale_mae": 0.13896490002197961,
+      "scale_correlation": {
+        "pearson": 0.9394426004593912,
+        "spearman": 0.964178498870374
+      },
+      "abs_x1_bins": [
+        {
+          "bin": 1,
+          "lo": 0.0,
+          "hi": 0.5,
+          "n": 200,
+          "mean_abs_x1": 0.25971966075029534,
+          "mean_true_sigma": 0.4597196607502953,
+          "mean_pred_scale": 0.4623050207438454,
+          "coverage": {
+            "50": 0.525,
+            "80": 0.825,
+            "95": 0.955
+          },
+          "mean_width": {
+            "50": 0.6236399959118214,
+            "80": 1.1849354461868082,
+            "95": 1.8122023810599592
+          }
+        },
+        {
+          "bin": 2,
+          "lo": 0.5,
+          "hi": 1.0,
+          "n": 200,
+          "mean_abs_x1": 0.7540726753480087,
+          "mean_true_sigma": 0.9540726753480087,
+          "mean_pred_scale": 0.922352289434755,
+          "coverage": {
+            "50": 0.43,
+            "80": 0.775,
+            "95": 0.93
+          },
+          "mean_width": {
+            "50": 1.244234330587264,
+            "80": 2.3640840410175135,
+            "95": 3.615554536700368
+          }
+        },
+        {
+          "bin": 3,
+          "lo": 1.0,
+          "hi": 1.5,
+          "n": 192,
+          "mean_abs_x1": 1.262806199214674,
+          "mean_true_sigma": 1.462806199214674,
+          "mean_pred_scale": 1.4085948916799491,
+          "coverage": {
+            "50": 0.5208333333333334,
+            "80": 0.796875,
+            "95": 0.9479166666666666
+          },
+          "mean_width": {
+            "50": 1.900165633233371,
+            "80": 3.61037397730113,
+            "95": 5.521590512999597
+          }
+        },
+        {
+          "bin": 4,
+          "lo": 1.5,
+          "hi": 2.0,
+          "n": 208,
+          "mean_abs_x1": 1.745072882593625,
+          "mean_true_sigma": 1.945072882593625,
+          "mean_pred_scale": 1.8774012843952232,
+          "coverage": {
+            "50": 0.4855769230769231,
+            "80": 0.7211538461538461,
+            "95": 0.9134615384615384
+          },
+          "mean_width": {
+            "50": 2.532575846659074,
+            "80": 4.811973110344284,
+            "95": 7.359277803887755
+          }
+        }
+      ],
+      "dataset": "synthetic-r03-C",
+      "variant": "ordinary",
+      "fold_index": 0,
+      "seeds": {
+        "stage_model": 20300,
+        "full_model": 30300
+      },
+      "best_iter": 519,
+      "cap_hit": false,
+      "actual_validation_stages": 2000,
+      "actual_refit_stages": 2000,
+      "val_nll_at_best": 1.523234458340837,
+      "fixed_sigma_from_stage_val": null,
+      "sigma_reestimated_after_refit": null,
+      "split_hashes": {
+        "outer_train_hash": "6043f4deb0388d3d64ca606923d9330c0b88684b2a98daa9c65cc34c229cfb4f",
+        "outer_test_hash": "65c46e51e803e78481c487f61a5cc9cdc1bae256f1e49c98c4ea47152410eb9a",
+        "inner_train_hash": "a5202d9f9d19461250ee90210475bbd006b9b6a1c4b43400f79b5a3b29bf6fa9",
+        "inner_val_hash": "e19e8f2ac3dc077993ca61dfad4b8fa1476639e3393b3bc2b91b5243dd08be47"
+      },
+      "sample_counts": {
+        "outer_train": 3200,
+        "outer_test": 800,
+        "inner_train": 2400,
+        "inner_val": 800
+      },
+      "timing_sec": {
+        "stage_fit": 31.680480343056843,
+        "refit": 37.99397324502934,
+        "wall": 74.04162699007429
+      },
+      "reportable": true,
+      "replicate": 3,
+      "regime": "C"
+    }
+  ]
+}

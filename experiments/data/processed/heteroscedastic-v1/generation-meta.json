@@ -1,0 +1,21 @@
+{
+  "generator_script": "ngboost/src/generate_heteroscedastic_v1.py",
+  "generator_sha256": "2ac6fe06d86ce368eb9e27287fa601814fcd494ffc8a3398fa9efd5b2302c126",
+  "numpy_version": "2.0.2",
+  "python_version": "3.10.0",
+  "rng_algorithm": "PCG64",
+  "data_seed": 0,
+  "split_seed": 1,
+  "n_base": 4000,
+  "n_regime_rows": 12000,
+  "files": {
+    "base-rows-v1.csv": {
+      "sha256": "7ba29dc8d50d08f82a53d5f399cb67dab9839d0daa742010760a6c08e5337cd9",
+      "rows": 4000
+    },
+    "heteroscedastic-v1.csv": {
+      "sha256": "a39e58f617b5e595595fdd011af9284b40a5d2d452a427a3451047a50f6a181f",
+      "rows": 12000
+    }
+  }
+}

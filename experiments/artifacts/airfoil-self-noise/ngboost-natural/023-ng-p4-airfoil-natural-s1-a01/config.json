@@ -1,0 +1,21 @@
+{
+  "handoff": "023-NG-P4",
+  "dataset": "airfoil-self-noise-v1",
+  "variant": "natural",
+  "model": "NGBRegressor",
+  "natural_gradient": true,
+  "distn": "Normal",
+  "score": "MLE",
+  "base": "default_tree_learner",
+  "n_estimators_cap": 2000,
+  "learning_rate": 0.01,
+  "minibatch_frac": 1.0,
+  "stage_selector": "validation_RMSE",
+  "n_folds": 5,
+  "frozen_splits": "022-NG-P4",
+  "stage_model_seed_base": 20000,
+  "full_model_seed_base": 30000,
+  "venv": ".RnD/work/ngboost/.venv (existing; unchanged)",
+  "threads": 1,
+  "packages_modified": false
+}

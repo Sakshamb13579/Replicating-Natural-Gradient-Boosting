@@ -1,0 +1,29 @@
+{
+  "handoff": "017F1-NG-D1",
+  "parent": "017-NG-D1",
+  "run_id": "017-ng-d1-yacht-natural-s1-a02",
+  "dataset": "yacht",
+  "model": "ngboost-natural",
+  "design": "controlled shared 4000-stage trajectories with frozen splits",
+  "official_script_replication": false,
+  "a01_preserved": true,
+  "a01_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/artifacts/yacht/ngboost-natural/017-ng-d1-yacht-natural-s1-a01",
+  "a01_confound": "Official regression_exp.py uses train_test_split without random_state inside the fold loop; fitting to 4000 vs 2000 consumes different global RNG amounts, so later folds get different inner val partitions. a01 paired comparison is confounded and must not be treated as a pure cap effect.",
+  "commit": "672034041fc05d9d4b7a80c1e6163ea102579752",
+  "worktree": "/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree",
+  "timing": {
+    "start": "2026-08-23T22:16:16+05:30",
+    "end": "2026-08-23T22:56:41+05:30",
+    "elapsed_sec": 2425,
+    "exit_code": 0
+  },
+  "metrics_summary": {
+    "cap2000_test_nll_mean": 2.035107136171021,
+    "cap4000_test_nll_mean": 2.202897558755228,
+    "mean_delta_test_nll": 0.16779042258420712,
+    "nll_4000_wins": 2,
+    "nll_ties": 5,
+    "nll_4000_losses": 13,
+    "shared_trajectory_confirmed": true
+  }
+}

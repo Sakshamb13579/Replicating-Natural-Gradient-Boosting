@@ -1,0 +1,19 @@
+{
+  "dataset": "real-estate-valuation",
+  "dataset_manifest": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/data/manifests/real-estate-valuation-v1.json",
+  "variant": "homoscedastic",
+  "n_estimators_cap": 2000,
+  "learning_rate": 0.01,
+  "distribution": "NormalFixedVar",
+  "score": "MLE",
+  "base_learner": "default_tree_learner",
+  "natural_gradient": true,
+  "stage_selector": "validation_NLL",
+  "full_protocol_n_estimators": 2000,
+  "full_protocol_folds": 20,
+  "folds_run": 20,
+  "reportable": true,
+  "non_reportable_reasons": [],
+  "stage_seed_base": 20000,
+  "full_seed_base": 30000
+}

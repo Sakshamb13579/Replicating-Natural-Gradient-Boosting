@@ -1,0 +1,193 @@
+{
+  "status": "draft",
+  "manifest_kind": "desk_audit",
+  "dataset_name": "Real Estate Valuation",
+  "dataset_slug": "real-estate-valuation",
+  "uci_id": 477,
+  "doi": "10.24432/C5J30W",
+  "authoritative_urls": [
+    "https://archive.ics.uci.edu/dataset/477/real+estate+valuation+data+set",
+    "https://archive.ics.uci.edu/static/public/477/real+estate+valuation+data+set.zip"
+  ],
+  "access_date": "2026-08-23",
+  "uci_metadata": {
+    "path": "ngboost/data/raw/real-estate-valuation/uci-477-metadata.json",
+    "retrieval_url": "https://archive.ics.uci.edu/api/trpc/donated_datasets.findById?batch=1&input=%7B%220%22%3A%7B%22json%22%3A477%7D%7D",
+    "dataset_page": "https://archive.ics.uci.edu/dataset/477/real+estate+valuation+data+set",
+    "timestamp_utc": "2026-08-23T14:57:36Z",
+    "sha256": "a59f0b33b1b80933df518a4a69b140594ec57203abeb040cb2bf0b05fb81ea93",
+    "validated_dataset_id": 477
+  },
+  "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "source_citation": "Yeh, I-Cheng (2018). Real Estate Valuation [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5J30W. Introductory paper: Yeh & Hsu (2018), Applied Soft Computing. Geography: Sindian Dist., New Taipei City, Taiwan.",
+  "download": {
+    "url": "https://archive.ics.uci.edu/static/public/477/real+estate+valuation+data+set.zip",
+    "timestamp_utc": "2026-08-23T14:57:12Z",
+    "files": [
+      {
+        "path": "ngboost/data/raw/real-estate-valuation/real-estate-valuation.zip",
+        "sha256": "aa437bdac3ca23200258a0a58d251c0af90651aeaf7c7a07aaa714f0f9f25e2c",
+        "size_bytes": 32885
+      },
+      {
+        "path": "ngboost/data/raw/real-estate-valuation/Real estate valuation data set.xlsx",
+        "sha256": "597d72fcc6c0539e6035a033ddb387db48fff3fb1f3c98fee31fe081c64a9059",
+        "size_bytes": 32717
+      }
+    ]
+  },
+  "workbook_structure": {
+    "format": "xlsx",
+    "sheets": [
+      {
+        "name": "sheet1",
+        "path_in_zip": "xl/worksheets/sheet1.xml",
+        "rows_including_header": 415,
+        "columns": 8
+      }
+    ],
+    "primary_sheet": "sheet1",
+    "note": "Single worksheet; no additional hidden sheets in UCI archive."
+  },
+  "shape": {
+    "rows": 414,
+    "features_modeling_default": 6,
+    "identifier_columns_excluded": ["No"],
+    "columns_total_in_sheet": 8
+  },
+  "columns": [
+    { "name": "No", "role": "id", "use_as_feature": false, "unique_values": 414 },
+    { "name": "X1 transaction date", "role": "feature", "units": "decimal year (month fraction)", "unique_values": 12 },
+    { "name": "X2 house age", "role": "feature", "units": "year", "unique_values": 236 },
+    { "name": "X3 distance to the nearest MRT station", "role": "feature", "units": "meter", "unique_values": 259 },
+    { "name": "X4 number of convenience stores", "role": "feature", "units": "integer", "unique_values": 11 },
+    { "name": "X5 latitude", "role": "feature", "units": "degree", "unique_values": 234 },
+    { "name": "X6 longitude", "role": "feature", "units": "degree", "unique_values": 232 },
+    { "name": "Y house price of unit area", "role": "target", "units": "10000 New Taiwan Dollar/Ping (1 Ping = 3.3 m²)" }
+  ],
+  "target": {
+    "name": "Y house price of unit area",
+    "slug": "house_price_unit_area",
+    "meaning": "House price of unit area (10k NTD/Ping)",
+    "column_index": 7
+  },
+  "missing_values": {
+    "missing_cells": 0,
+    "non_finite_values": 0,
+    "duplicate_full_rows": 0,
+    "constant_feature_columns": 0,
+    "uci_reports_missing": false
+  },
+  "target_summary": {
+    "min": 7.6,
+    "max": 117.5,
+    "mean": 37.98,
+    "population_stdev": 13.59,
+    "population_skewness": 0.598,
+    "unique_target_values": 270
+  },
+  "feature_ranges": {
+    "X1_transaction_date": { "min": 2012.667, "max": 2013.583 },
+    "X2_house_age": { "min": 0.0, "max": 43.8 },
+    "X3_distance_mrt_m": { "min": 23.38, "max": 6488.02 },
+    "X4_convenience_stores": { "min": 0, "max": 10 },
+    "X5_latitude": { "min": 24.932, "max": 25.015 },
+    "X6_longitude": { "min": 121.474, "max": 121.566 }
+  },
+  "leakage_and_grouping": {
+    "transaction_no": {
+      "column": "No",
+      "risk": "Unique row index (414/414); must not enter model as feature.",
+      "action": "Exclude from feature matrix."
+    },
+    "transaction_date": {
+      "column": "X1 transaction date",
+      "unique_periods": 12,
+      "range": "2012.667–2013.583 (~12 monthly cohorts)",
+      "risk": "Random row split mixes adjacent months; mild temporal leakage for time-sensitive market effects.",
+      "optional_split": "Hold out whole month cohorts by X1 for temporal robustness."
+    },
+    "latitude_longitude": {
+      "columns": ["X5 latitude", "X6 longitude"],
+      "unique_location_pairs": 259,
+      "max_transactions_per_location": 13,
+      "risk": "Repeated sales/listings at same coordinates; random split can place same-location rows in train and test.",
+      "optional_split": "Group holdout by (latitude, longitude) for location robustness (259 groups)."
+    },
+    "group_column_default": null
+  },
+  "small_sample_reliability": {
+    "n_rows": 414,
+    "approx_test_rows_per_90_10_split": 41,
+    "assessment": "Test NLL and especially coverage/interval metrics will be high-variance at ~41 test points per split; 20 repetitions help aggregate stability but do not fix per-split sparsity.",
+    "recommendation": "Treat as secondary pilot; report aggregate NLL with estimated SE over repetitions; interpret coverage cautiously; do not require sharp interval conclusions."
+  },
+  "paper_overlap": {
+    "in_selected_ngboost_paper_tables_1_3": false,
+    "official_repo_loader_present": false,
+    "official_repo_checked": ".RnD/source/ngboost/examples/experiments/regression_exp.py"
+  },
+  "prior_application_search": {
+    "search_date": "2026-08-23",
+    "scope": "bounded_non_exhaustive",
+    "queries_reused_from": "shared/repo/docs/ngboost-proposal-evidence.md section 4.3",
+    "queries": [
+      "\"Real Estate Valuation\" NGBoost",
+      "\"house price of unit area\" NGBoost",
+      "Yeh Hsu NGBoost",
+      "Sindian NGBoost"
+    ],
+    "finding": "No NGBoost loader in pinned official repo; bounded 2026-08-23 search found no documented NGBoost application on this UCI table.",
+    "limitation": "Non-exhaustive; paper-absence does not prove global non-use."
+  },
+  "compute_feasibility": {
+    "storage_bytes_xlsx": 32717,
+    "storage_bytes_zip": 32885,
+    "ram_estimate_mb": 0.03,
+    "cpu_assessment": "Trivial — smallest NGBoost candidate by n and p; full 20-split × 3-variant protocol feasible on CPU.",
+    "proposal_listing_policy": "Full n=414 appropriate to cite with small-sample caveats for uncertainty metrics."
+  },
+  "proposed_split": {
+    "status": "draft_not_frozen",
+    "indices_generated": false,
+    "primary_file": "Real estate valuation data set.xlsx (sheet1)",
+    "feature_columns_default": ["X1 transaction date", "X2 house age", "X3 distance to the nearest MRT station", "X4 number of convenience stores", "X5 latitude", "X6 longitude"],
+    "exclude_columns": ["No"],
+    "options": {
+      "primary_row_level_paper_aligned": {
+        "approach": "Row-level 90/10 holdouts, np.random.seed(1), 20 repetitions; identical splits across natural, ordinary, homoscedastic variants.",
+        "scientific_question": "Ablation ordering under paper-aligned protocol despite small n.",
+        "leakage_risk": "Moderate — temporal and location repetition not controlled."
+      },
+      "optional_temporal_robustness": {
+        "group_key": "X1 transaction date",
+        "num_groups": 12,
+        "status": "Optional; not frozen."
+      },
+      "optional_location_robustness": {
+        "group_key": ["X5 latitude", "X6 longitude"],
+        "num_groups": 259,
+        "status": "Optional; not frozen."
+      }
+    }
+  },
+  "preprocessing_recommendation": "Load sheet1; drop No; use six UCI features X1–X6; target Y. No scaling required for tree NGBoost. Document whether X1 is retained or excluded if temporal split chosen.",
+  "feasibility": {
+    "ethics_privacy": "Aggregate property transaction attributes for one Taiwan district; coordinates are coarse but present — no named individuals; research use with attribution.",
+    "licence_compatible_with_repo": true
+  },
+  "audit_verdict": "WEAK",
+  "unresolved_concerns": [
+    "Small n limits reliable per-split NLL/coverage comparisons.",
+    "Random row split leaves temporal and location leakage paths open.",
+    "Prior-application search non-exhaustive."
+  ],
+  "handoff_id": "004-NG-FD3",
+  "evidence_paths": {
+    "report": "ngboost/reports/004-ng-fd3-real-estate-data-audit.md",
+    "raw_data_dir": "ngboost/data/raw/real-estate-valuation/",
+    "manifest": "ngboost/data/manifests/real-estate-valuation-audit-v1.json",
+    "uci_metadata": "ngboost/data/raw/real-estate-valuation/uci-477-metadata.json"
+  },
+  "created_at": "2026-08-23T20:28:00+05:30"
+}

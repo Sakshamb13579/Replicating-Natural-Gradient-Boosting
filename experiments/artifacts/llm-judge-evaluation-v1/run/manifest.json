@@ -1,0 +1,68 @@
+{
+  "config": {
+    "dataset_sha256": "9e645d53ae522c5c43fa19f8403cfb37f7e77d6a5f0f8cff8e5de452a1eaf88d",
+    "selected_cases": [
+      "case-001",
+      "case-002",
+      "case-003",
+      "case-004",
+      "case-005",
+      "case-006",
+      "case-007",
+      "case-008",
+      "case-009",
+      "case-010",
+      "case-011",
+      "case-012",
+      "case-013",
+      "case-014",
+      "case-015"
+    ],
+    "judge": {
+      "server_version": {
+        "version": "0.9.6"
+      },
+      "model": {
+        "name": "minicpm4.1-8b-q8_0-judge:latest",
+        "model": "minicpm4.1-8b-q8_0-judge:latest",
+        "modified_at": "2026-10-17T22:10:25.913764406+05:30",
+        "size": 8699310682,
+        "digest": "54b5e0330160cbe553d56b81abd019722f1b871a5573ec62d9a8c561f4b0ffcf",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "minicpm",
+          "families": [
+            "minicpm"
+          ],
+          "parameter_size": "8.2B",
+          "quantization_level": "Q8_0"
+        }
+      },
+      "options": {
+        "temperature": 0,
+        "seed": 0,
+        "num_ctx": 2048,
+        "num_thread": 4,
+        "num_batch": 128,
+        "num_predict": 160,
+        "repeat_penalty": 1
+      },
+      "base_url": "http://127.0.0.1:11434",
+      "prompt_version": "explanation-rubric-dev-v1",
+      "system_prompt_sha256": "d05a8180f4c1057544b4bd648d19a9426a399e92cef492108107c8a2db482b01",
+      "scoring_method": "schema-constrained deterministic JSON; no label probabilities",
+      "thinking": "published ChatML prefix with an empty closed think block"
+    },
+    "repeat_first": false,
+    "code_sha256": {
+      "run_llm_judge.py": "cdaeec7422cd6a2e5a504ef16c09434d7114ef831daae3aaf2ea88c23b525c4a",
+      "llm_judge.py": "485632867ac3aeab2f5179f466e084ff3108fc9c4fe3dfb69bff7257151f0d2b"
+    }
+  },
+  "purpose": "Authorised full controlled explanation-judge evaluation v1",
+  "reportable": true,
+  "python": "3.10.0 (default, Nov 25 2024, 05:43:36) [GCC 13.2.0]",
+  "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+  "created_at": "2026-10-17T18:37:02.780769+00:00"
+}

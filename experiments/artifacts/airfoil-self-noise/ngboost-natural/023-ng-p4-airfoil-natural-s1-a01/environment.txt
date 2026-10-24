@@ -1,0 +1,36 @@
+python: Python 3.10.0
+python_path: /mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/.venv/bin/python
+note: existing ngboost repair-worktree venv reused unchanged (no pip install)
+autograd==1.9.1
+autograd-gamma==0.5.0
+contourpy==1.3.2
+cycler==0.12.1
+et_xmlfile==2.0.0
+fonttools==4.63.0
+formulaic==1.2.2
+interface_meta==2.0.1
+joblib==1.5.3
+kiwisolver==1.5.0
+lifelines==0.30.0
+matplotlib==3.10.9
+mpmath==1.3.0
+narwhals==2.25.0
+-e git+https://github.com/stanfordmlgroup/ngboost.git@672034041fc05d9d4b7a80c1e6163ea102579752#egg=ngboost&subdirectory=../../../../work/ngboost/repair-worktree
+numpy==2.2.6
+openpyxl==3.1.5
+packaging==26.3
+pandas==2.3.3
+pillow==12.3.0
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+pytz==2026.3.post1
+scikit-learn==1.6.1
+scipy==1.15.3
+six==1.17.0
+sympy==1.14.0
+threadpoolctl==3.6.0
+tqdm==4.70.0
+typing_extensions==4.16.0
+tzdata==2026.3
+wrapt==2.3.0
+xlrd==2.0.2

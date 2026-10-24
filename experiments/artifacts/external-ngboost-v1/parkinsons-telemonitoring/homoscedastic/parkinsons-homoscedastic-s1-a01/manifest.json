@@ -1,0 +1,13 @@
+{
+  "artifact_schema_version": 1,
+  "status": "complete",
+  "reportable": true,
+  "data_manifest_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/data/manifests/parkinsons-telemonitoring-v1.json",
+  "data_manifest_sha256": "20cbf6e1e17c0645faafa98443876ad4aa7abfaea39795a1fc55cb170f1e7457",
+  "processed_csv_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/data/processed/parkinsons-telemonitoring-v1/parkinsons-telemonitoring-v1.csv",
+  "processed_csv_sha256": "818bf87d55902dda2444b656c7db96d4caa5f30a18aa9df783004f5a99e28928",
+  "split_manifest_sha256": "e80b95982638efe59afd9e5dba8a59e7ae58a53cdd7c2e5e43331d1acf9a5fa9",
+  "runner_path": "/mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost/src/run_external_ngboost.py",
+  "runner_sha256": "63bcdd34f3b521d8896d54e3417f302086cbd7da5e5276fd00156b94dfcbe35d",
+  "metrics_sha256": "02ad1f7aefe7bee13ecd025dd2312215826c5526624a5ef7fcb46f182a22fca2"
+}

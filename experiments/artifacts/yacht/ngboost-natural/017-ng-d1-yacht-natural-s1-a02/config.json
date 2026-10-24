@@ -1,0 +1,17 @@
+{
+  "handoff": "017F1-NG-D1",
+  "parent": "017-NG-D1",
+  "run_id": "017-ng-d1-yacht-natural-s1-a02",
+  "dataset": "yacht",
+  "model": "ngboost-natural",
+  "design": "controlled shared 4000-stage trajectories with frozen outer/inner splits",
+  "a01_status": "preserved; paired cap conclusion confounded by inner-split RNG coupling",
+  "n_estimators": 4000,
+  "cap_views": [2000, 4000],
+  "outer_seed": 1,
+  "inner_seed_base": 10000,
+  "stage_model_seed_base": 20000,
+  "full_model_seed_base": 30000,
+  "stage_selection": "argmin validation RMSE on shared staged trajectory",
+  "official_script_replication": false
+}

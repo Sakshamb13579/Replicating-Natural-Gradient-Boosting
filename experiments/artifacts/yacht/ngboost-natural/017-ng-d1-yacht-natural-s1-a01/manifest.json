@@ -1,0 +1,32 @@
+{
+  "handoff": "017-NG-D1",
+  "dataset": "yacht",
+  "model": "ngboost-natural",
+  "run_id": "017-ng-d1-yacht-natural-s1-a01",
+  "commit": "672034041fc05d9d4b7a80c1e6163ea102579752",
+  "worktree": ".RnD/work/ngboost/repair-worktree",
+  "prior_reference_log": "/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/raw/yacht-natural-repaired-split20.log",
+  "timing": {
+    "start": "2026-08-23T21:30:30+05:30",
+    "end": "2026-08-23T22:09:42+05:30",
+    "elapsed_sec": 2352,
+    "exit_code": 0
+  },
+  "metrics_summary": {
+    "current_test_nll_mean": 2.848485,
+    "prior_test_nll_mean": 2.10601,
+    "current_cap4000_hits": 9,
+    "prior_cap2000_hits": 11
+  },
+  "files": [
+    "checksums.txt",
+    "command.txt",
+    "config.json",
+    "environment.txt",
+    "metrics.json",
+    "source-status-before.txt",
+    "stderr.log",
+    "stdout.log",
+    "timing.json"
+  ]
+}

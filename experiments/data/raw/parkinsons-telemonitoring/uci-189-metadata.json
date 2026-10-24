@@ -1,0 +1,279 @@
+{
+  "retrieval": {
+    "timestamp_utc": "2026-08-23T15:00:32Z",
+    "endpoints": {
+      "dataset_record": "https://archive.ics.uci.edu/api/trpc/donated_datasets.findById?batch=1&input=%7B%220%22%3A%7B%22json%22%3A189%7D%7D",
+      "citation": "https://archive.ics.uci.edu/api/trpc/citation.findByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A189%7D%7D",
+      "variables_table": "https://archive.ics.uci.edu/api/trpc/variables.findTableByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A189%7D%7D",
+      "descriptive_fields": "https://archive.ics.uci.edu/api/trpc/descriptive.findTupleByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A189%7D%7D",
+      "files_table": "https://archive.ics.uci.edu/api/trpc/files.findTableByDatasetId?batch=1&input=%7B%220%22%3A%7B%22json%22%3A189%7D%7D"
+    },
+    "dataset_page": "https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring"
+  },
+  "dataset": {
+    "id": 189,
+    "name": "Parkinsons Telemonitoring",
+    "doi": "10.24432/C5ZS3N",
+    "slug": "parkinsons+telemonitoring",
+    "abstract": "Oxford Parkinson's Disease Telemonitoring Dataset",
+    "area": "Health and Medicine",
+    "task": "Regression",
+    "num_instances": 5875,
+    "num_features": 19,
+    "year_created": 2009,
+    "date_donated": "2009-10-29T00:00:00.000Z",
+    "download_href": "/static/public/189/parkinsons+telemonitoring.zip",
+    "has_missing_values": false
+  },
+  "licence": {
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx": "CC-BY-4.0",
+    "legalcode_url": "https://creativecommons.org/licenses/by/4.0/legalcode"
+  },
+  "citation": {
+    "APA": "Tsanas, A. & Little, M. (2009). Parkinsons Telemonitoring [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5ZS3N.",
+    "MLA": "Tsanas, Athanasios and Max Little. \"Parkinsons Telemonitoring.\" UCI Machine Learning Repository, 2009, https://doi.org/10.24432/C5ZS3N.",
+    "Chicago": "Tsanas, Athanasios and Max Little. 2009. Parkinsons Telemonitoring. UCI Machine Learning Repository. https://doi.org/10.24432/C5ZS3N.",
+    "Vancouver": "Tsanas A, Little M. Parkinsons Telemonitoring [dataset]. 2009. UCI Machine Learning Repository. Available from: https://doi.org/10.24432/C5ZS3N.",
+    "IEEE": "A. Tsanas and M. Little. \"Parkinsons Telemonitoring,\" UCI Machine Learning Repository, 2009. [Online]. Available: https://doi.org/10.24432/C5ZS3N.",
+    "BibTeX": "@misc{parkinsons_telemonitoring_189,\n  author       = {Tsanas, Athanasios and Little, Max},\n  title        = {{Parkinsons Telemonitoring}},\n  year         = {2009},\n  howpublished = {UCI Machine Learning Repository},\n  note         = {{DOI}: https://doi.org/10.24432/C5ZS3N}\n}"
+  },
+  "variables": {
+    "headers": [
+      "Variable Name",
+      "Role",
+      "Type",
+      "Demographic",
+      "Description",
+      "Units",
+      "Missing Values"
+    ],
+    "rows": [
+      [
+        "subject#",
+        "ID",
+        "Integer",
+        "",
+        "Integer that uniquely identifies each subject",
+        "",
+        "no"
+      ],
+      [
+        "age",
+        "Feature",
+        "Integer",
+        "Age",
+        "Subject age",
+        "",
+        "no"
+      ],
+      [
+        "test_time",
+        "Feature",
+        "Continuous",
+        "",
+        "Time since recruitment into the trial. The integer part is the number of days since recruitment. ",
+        "",
+        "no"
+      ],
+      [
+        "Jitter(%)",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in fundamental frequency",
+        "",
+        "no"
+      ],
+      [
+        "Jitter(Abs)",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in fundamental frequency",
+        "",
+        "no"
+      ],
+      [
+        "Jitter:RAP",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in fundamental frequency",
+        "",
+        "no"
+      ],
+      [
+        "Jitter:PPQ5",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in fundamental frequency",
+        "",
+        "no"
+      ],
+      [
+        "Jitter:DDP",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in fundamental frequency",
+        "",
+        "no"
+      ],
+      [
+        "Shimmer",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in amplitude",
+        "",
+        "no"
+      ],
+      [
+        "Shimmer(dB)",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in amplitude",
+        "",
+        "no"
+      ],
+      [
+        "Shimmer:APQ3",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in amplitude",
+        "",
+        "no"
+      ],
+      [
+        "Shimmer:APQ5",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in amplitude",
+        "",
+        "no"
+      ],
+      [
+        "Shimmer:APQ11",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in amplitude",
+        "",
+        "no"
+      ],
+      [
+        "Shimmer:DDA",
+        "Feature",
+        "Continuous",
+        "",
+        "Several measures of variation in amplitude",
+        "",
+        "no"
+      ],
+      [
+        "NHR",
+        "Feature",
+        "Continuous",
+        "",
+        "Two measures of ratio of noise to tonal components in the voice",
+        "",
+        "no"
+      ],
+      [
+        "HNR",
+        "Feature",
+        "Continuous",
+        "",
+        "Two measures of ratio of noise to tonal components in the voice",
+        "",
+        "no"
+      ],
+      [
+        "RPDE",
+        "Feature",
+        "Continuous",
+        "",
+        "A nonlinear dynamical complexity measure",
+        "",
+        "no"
+      ],
+      [
+        "DFA",
+        "Feature",
+        "Continuous",
+        "",
+        "Signal fractal scaling exponent",
+        "",
+        "no"
+      ],
+      [
+        "PPE",
+        "Feature",
+        "Continuous",
+        "",
+        "A nonlinear measure of fundamental frequency variation ",
+        "",
+        "no"
+      ],
+      [
+        "motor_UPDRS",
+        "Target",
+        "Continuous",
+        "",
+        "Clinician's motor UPDRS score, linearly interpolated",
+        "",
+        "no"
+      ],
+      [
+        "total_UPDRS",
+        "Target",
+        "Continuous",
+        "",
+        "Clinician's total UPDRS score, linearly interpolated",
+        "",
+        "no"
+      ],
+      [
+        "sex",
+        "Feature",
+        "Binary",
+        "Sex",
+        "Subject sex '0' - male, '1' - female",
+        "",
+        "no"
+      ]
+    ],
+    "total_variables_listed": 22
+  },
+  "descriptive_fields": [
+    [
+      "Additional Information",
+      "This dataset is composed of a range of biomedical voice measurements from 42 people with early-stage Parkinson's disease recruited to a six-month trial of a telemonitoring device for remote symptom progression monitoring. The recordings were automatically captured in the patient's homes.\r\n\r\nColumns in the table contain subject number, subject age, subject gender, time interval from baseline recruitment date, motor UPDRS, total UPDRS, and 16 biomedical voice measures. Each row corresponds to one of 5,875 voice recording from these individuals. The main aim of the data is to predict the motor and total UPDRS scores ('motor_UPDRS' and 'total_UPDRS') from the 16 voice measures.\r\n\r\nThe data is in ASCII CSV format. The rows of the CSV file contain an instance corresponding to one voice recording. There are around 200 recordings per patient, the subject number of the patient is identified in the first column. For further information or to pass on comments, please contact Athanasios Tsanas (tsanasthanasis@gmail.com) or Max Little (littlem@physics.ox.ac.uk).\r\n\r\nFurther details are contained in the following reference -- if you use this dataset, please cite:\r\nAthanasios Tsanas, Max A. Little, Patrick E. McSharry, Lorraine O. Ramig (2009),\r\n'Accurate telemonitoring of Parkinson’s disease progression by non-invasive speech tests',\r\nIEEE Transactions on Biomedical Engineering (to appear).\r\n\r\nFurther details about the biomedical voice measures can be found in:\r\nMax A. Little, Patrick E. McSharry, Eric J. Hunter, Lorraine O. Ramig (2009), \r\n'Suitability of dysphonia measurements for telemonitoring of Parkinson's disease', \r\nIEEE Transactions on Biomedical Engineering, 56(4):1015-1022\r\n"
+    ],
+    [
+      "Has Missing Values?",
+      "No"
+    ]
+  ],
+  "files_table": {
+    "headers": [
+      "File",
+      "Size"
+    ],
+    "data": [
+      [
+        "parkinsons_updrs.data",
+        "889.9 KB"
+      ],
+      [
+        "parkinsons_updrs.names",
+        "4.3 KB"
+      ]
+    ]
+  }
+}

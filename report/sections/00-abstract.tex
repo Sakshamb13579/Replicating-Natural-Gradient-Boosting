@@ -1,0 +1,9 @@
+\begin{abstract}
+This project replicates the probabilistic-regression results of natural gradient boosting (NGBoost) on Yacht and Kin8nm, comparing natural-gradient, ordinary-gradient and constant-scale variants.
+It then evaluates the same variants on five further public datasets, one of them under two partitions, and on synthetic data with known noise scales.
+Replication was partial: the released code reproduced the natural-gradient advantage on Yacht and the published ordering on Kin8nm, but its Yacht negative log-likelihood (NLL) values were substantially higher than published.
+A controlled experiment showed that choosing the number of boosting stages by validation NLL instead of squared error brought the two gradient variants' Yacht results close to the published values, while the constant-scale discrepancy remained unresolved.
+On the new public data, the natural-gradient variant had lower mean NLL than the ordinary-gradient variant in all six settings, and synthetic results favoured input-dependent scales when the noise varied and a constant scale when it did not.
+A language-model judge of written explanations largely matched one human annotator on individual explanations, but when comparing two explanations it kept the same verdict in only 4 of 15 cases after their order was swapped.
+The findings support NGBoost in the tested settings and show that implementation choices and automated evaluators need explicit checks.
+\end{abstract}

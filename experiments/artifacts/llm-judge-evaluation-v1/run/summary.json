@@ -1,0 +1,599 @@
+{
+  "purpose": "Authorised full controlled explanation-judge evaluation v1",
+  "reportable": true,
+  "status": "complete",
+  "requests": 60,
+  "valid_pointwise_explanations": 30,
+  "valid_pairwise_cases": 15,
+  "order_consistent_cases": 4,
+  "pointwise": [
+    {
+      "case_id": "case-001",
+      "candidate_id": "159f6cb7923d",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-001",
+      "candidate_id": "a71070ebdf98",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The candidate incorrectly states that the interval is a confidence interval for the true conditional mean and guarantees that the next individual outcome falls inside, which is not supported by the evidence."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-002",
+      "candidate_id": "c0ca2599aa59",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false,
+        "reason": "The candidate explanation is clear and consistent with the evidence, but it incorrectly claims that the wide prediction interval is caused by having only two training examples, which is not supported by the evidence."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-002",
+      "candidate_id": "be7545faaad9",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-003",
+      "candidate_id": "d0c19e54472d",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false,
+        "reason": "The candidate explanation is clear and consistent with the evidence, but it lacks support from the provided data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-003",
+      "candidate_id": "be68cb846050",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-004",
+      "candidate_id": "1c6640c0ea0a",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The candidate incorrectly states that the nominal prediction interval is a confidence interval for the true conditional mean and guarantees that the next individual outcome falls inside."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-004",
+      "candidate_id": "7bf12556637c",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-005",
+      "candidate_id": "e93e7d6f2a61",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-005",
+      "candidate_id": "21ac71a6ca98",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false,
+        "reason": "The candidate explanation is clear and consistent with the evidence, but it incorrectly claims that the width of the prediction interval is caused by having only two training examples, which is not supported by the evidence."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-006",
+      "candidate_id": "85672ac90936",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The candidate's claim about the nominal prediction interval's purpose is not supported by the evidence, and the interval's consistency with the mean is not addressed."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-006",
+      "candidate_id": "eb0d04b2e994",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-007",
+      "candidate_id": "e17af9292063",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The candidate incorrectly states that the interval is a confidence interval for the true conditional mean and guarantees that the next individual outcome falls inside, which is not supported by the evidence."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-007",
+      "candidate_id": "4efee07b8d3f",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-008",
+      "candidate_id": "1564969d04a2",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false,
+        "reason": "The candidate explanation is clear and consistent with the evidence, but it incorrectly claims that the width of the prediction interval is caused by having only two training examples. The evidence does not provide information about the the"
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-008",
+      "candidate_id": "cf6da03d667e",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-009",
+      "candidate_id": "bbbe7b60792a",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false,
+        "reason": "The candidate explanation is clear and consistent with the evidence, but it lacks substantive support from the provided data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-009",
+      "candidate_id": "859000b52b2b",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-010",
+      "candidate_id": "aa88e8260275",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The candidate incorrectly states that the interval is a confidence interval for the true conditional mean and guarantees the next individual outcome falls inside, which is not supported by the evidence."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-010",
+      "candidate_id": "0ae63dd7b219",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-011",
+      "candidate_id": "44b7429d527d",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false,
+        "reason": "The candidate explanation is clear and consistent with the evidence, but it incorrectly claims that the width of the prediction interval is caused by having only two training examples. The evidence does not provide information about the the"
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-011",
+      "candidate_id": "ec23f3b73f2a",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-012",
+      "candidate_id": "0ce21d14701e",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-012",
+      "candidate_id": "b1d5468a8547",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The candidate explanation is unclear and contains unsupported claims about the prediction interval and its interpretation."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-013",
+      "candidate_id": "3293691c4182",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The candidate incorrectly states that the interval is a confidence interval for the true conditional mean and guarantees that the next individual outcome falls inside, which is not supported by the evidence."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-013",
+      "candidate_id": "608f4222c2e7",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": true,
+        "reason": "The explanation is clear, consistent with the evidence, and supported by the available data."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-014",
+      "candidate_id": "75cd8eb88551",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The candidate's claim about the cause of the interval width is not supported by the evidence, which does not mention the number of training examples or their variability."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-014",
+      "candidate_id": "fcdc49267cf8",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false,
+        "reason": "The candidate explanation is clear and consistent with the evidence, but it lacks support because it does not reference any available evidence in the packet."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-015",
+      "candidate_id": "c9e45ed53ce7",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": false,
+        "evidence_support": false,
+        "reason": "The candidate explanation is unclear and contains unsupported claims about the interval and its interpretation."
+      },
+      "engineering_expectation": null
+    },
+    {
+      "case_id": "case-015",
+      "candidate_id": "90319537a775",
+      "verdict": {
+        "clarity": true,
+        "interval_consistency": true,
+        "evidence_support": false,
+        "reason": "The candidate explanation is clear and consistent with the evidence, but it lacks support because it does not reference any available evidence in the packet."
+      },
+      "engineering_expectation": null
+    }
+  ],
+  "pairwise": [
+    {
+      "case_id": "case-001",
+      "forward": {
+        "winner": "B",
+        "reason": "B correctly identifies the interval as a prediction interval and clarifies that it does not guarantee an individual outcome will fall inside, aligning with the evidence."
+      },
+      "reverse": {
+        "winner": "B",
+        "reason": "B correctly states that the interval is not a confidence interval for the conditional mean and does not guarantee an individual outcome falls inside, aligning with the evidence."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": "a71070ebdf98",
+      "reverse_winner_id": "159f6cb7923d",
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-002",
+      "forward": {
+        "winner": "B",
+        "reason": "B is supported by the simulation law's conditional noise scale, while A's claim about training examples lacks evidence."
+      },
+      "reverse": {
+        "winner": "Tie",
+        "reason": "Both A and B are supported by the evidence, but neither provides a clear causal explanation for the interval width."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": "be7545faaad9",
+      "reverse_winner_id": null,
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-003",
+      "forward": {
+        "winner": "B",
+        "reason": "B is more evidence-supported and avoids unsupported claims about calibration."
+      },
+      "reverse": {
+        "winner": "A",
+        "reason": "A is supported by the evidence, while B introduces unsupported terminology and causal claims."
+      },
+      "consistent_under_swap": true,
+      "forward_winner_id": "be68cb846050",
+      "reverse_winner_id": "be68cb846050",
+      "consensus_winner_id": "be68cb846050",
+      "consensus_status": "win"
+    },
+    {
+      "case_id": "case-004",
+      "forward": {
+        "winner": "B",
+        "reason": "B is supported by the evidence, while A incorrectly claims the interval is a confidence interval for the mean and guarantees individual outcomes fall inside."
+      },
+      "reverse": {
+        "winner": "B",
+        "reason": "B correctly identifies the interval as a prediction interval and clarifies that it does not guarantee an individual outcome will fall inside, aligning with the evidence."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": "7bf12556637c",
+      "reverse_winner_id": "1c6640c0ea0a",
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-005",
+      "forward": {
+        "winner": "Tie",
+        "reason": "Both A and B are clear and supported, but neither addresses the other's potential issues."
+      },
+      "reverse": {
+        "winner": "B",
+        "reason": "B is more accurate and supported, as it correctly references the simulation law and scale function, and clarifies that the interval does not establish calibration."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": null,
+      "reverse_winner_id": "e93e7d6f2a61",
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-006",
+      "forward": {
+        "winner": "B",
+        "reason": "B is more accurate and supported, as it correctly states that the simulation law does not establish calibration, while A incorrectly claims it does."
+      },
+      "reverse": {
+        "winner": "A",
+        "reason": "A is more evidence-supported and clearer. B introduces unsupported terminology and causal claims."
+      },
+      "consistent_under_swap": true,
+      "forward_winner_id": "eb0d04b2e994",
+      "reverse_winner_id": "eb0d04b2e994",
+      "consensus_winner_id": "eb0d04b2e994",
+      "consensus_status": "win"
+    },
+    {
+      "case_id": "case-007",
+      "forward": {
+        "winner": "B",
+        "reason": "B correctly states that the interval is a prediction interval, not a confidence interval for the mean, and acknowledges that the simulation law does not establish calibration."
+      },
+      "reverse": {
+        "winner": "B",
+        "reason": "B correctly identifies the interval as a prediction interval and clarifies that it does not guarantee an individual outcome will fall inside, aligning with the evidence."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": "4efee07b8d3f",
+      "reverse_winner_id": "e17af9292063",
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-008",
+      "forward": {
+        "winner": "B",
+        "reason": "B is more accurate and supported, as it correctly references the simulation law and scale, and clarifies that calibration is not established."
+      },
+      "reverse": {
+        "winner": "Tie",
+        "reason": "Both A and B are supported by the evidence, but neither provides a causal explanation or additional context that would make one superior to the other."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": "cf6da03d667e",
+      "reverse_winner_id": null,
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-009",
+      "forward": {
+        "winner": "B",
+        "reason": "B is more accurate and supported, as it correctly states that the simulation law does not establish calibration, while A incorrectly claims it does."
+      },
+      "reverse": {
+        "winner": "A",
+        "reason": "A is more accurate and supported by the evidence, providing clear information about the predicted mean, prediction interval, and the fact that the simulation law does not establish calibration. B introduces unnecessary and unclear jargon, '"
+      },
+      "consistent_under_swap": true,
+      "forward_winner_id": "859000b52b2b",
+      "reverse_winner_id": "859000b52b2b",
+      "consensus_winner_id": "859000b52b2b",
+      "consensus_status": "win"
+    },
+    {
+      "case_id": "case-010",
+      "forward": {
+        "winner": "B",
+        "reason": "B avoids the incorrect claim that the interval is a confidence interval for the conditional mean and does not make an unsupported causal claim about the interval's width."
+      },
+      "reverse": {
+        "winner": "B",
+        "reason": "B correctly identifies the interval as a confidence interval for the conditional mean and guarantees the next individual outcome falls inside, which aligns with the evidence packet's details."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": "0ae63dd7b219",
+      "reverse_winner_id": "aa88e8260275",
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-011",
+      "forward": {
+        "winner": "B",
+        "reason": "B avoids an unsupported causal claim about the interval's width, adhering to the evidence_support criterion."
+      },
+      "reverse": {
+        "winner": "Tie",
+        "reason": "Both A and B are clear and consistent with the evidence, but neither provides a supported reason for the interval width."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": "ec23f3b73f2a",
+      "reverse_winner_id": null,
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-012",
+      "forward": {
+        "winner": "Tie",
+        "reason": "Both explanations are equally clear and supported by the evidence, though A is more concise."
+      },
+      "reverse": {
+        "winner": "B",
+        "reason": "B is more supported by the evidence, as it correctly states that the packet does not establish a cause for the interval's width, whereas A introduces unsupported terminology and causal claims."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": null,
+      "reverse_winner_id": "0ce21d14701e",
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-013",
+      "forward": {
+        "winner": "B",
+        "reason": "B avoids the incorrect claim that the interval is a confidence interval for the conditional mean and does not make an unsupported causal claim about the interval's width."
+      },
+      "reverse": {
+        "winner": "B",
+        "reason": "B correctly identifies the interval as a confidence interval for the mean, while A inaccurately states it does not establish a cause for the interval's width."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": "608f4222c2e7",
+      "reverse_winner_id": "3293691c4182",
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-014",
+      "forward": {
+        "winner": "B",
+        "reason": "B avoids an unsupported causal claim about the interval's width, adhering to the evidence_support criterion."
+      },
+      "reverse": {
+        "winner": "Tie",
+        "reason": "Both A and B are clear and consistent with the evidence, but neither provides a supported reason for the interval width."
+      },
+      "consistent_under_swap": false,
+      "forward_winner_id": "fcdc49267cf8",
+      "reverse_winner_id": null,
+      "consensus_winner_id": null,
+      "consensus_status": "order_sensitive"
+    },
+    {
+      "case_id": "case-015",
+      "forward": {
+        "winner": "B",
+        "reason": "B is more supported by the evidence packet, as it correctly states that the packet does not establish a cause for the interval's width, whereas A introduces unsupported terminology and causal claims."
+      },
+      "reverse": {
+        "winner": "A",
+        "reason": "A is more accurate and supported by the evidence, providing a clear and unambiguous explanation without introducing unsupported or unclear terminology."
+      },
+      "consistent_under_swap": true,
+      "forward_winner_id": "90319537a775",
+      "reverse_winner_id": "90319537a775",
+      "consensus_winner_id": "90319537a775",
+      "consensus_status": "win"
+    }
+  ],
+  "repeatability": [],
+  "timing": {
+    "completed_transport_requests": 60,
+    "total_request_wall_seconds": 4702.912214657525,
+    "prompt_tokens": 37969,
+    "generated_tokens": 3923,
+    "decode_tokens_per_second": 1.9682113727835866,
+    "total_model_load_seconds": 35.144336628
+  },
+  "engineering_expectation_agreement": {},
+  "errors": [],
+  "interpretation": [
+    "Smoke labels are authored engineering expectations, not human reference ratings",
+    "No judge confidence probabilities or human agreement are inferred",
+    "Order-sensitive pairs remain order-sensitive, not substantive ties"
+  ]
+}

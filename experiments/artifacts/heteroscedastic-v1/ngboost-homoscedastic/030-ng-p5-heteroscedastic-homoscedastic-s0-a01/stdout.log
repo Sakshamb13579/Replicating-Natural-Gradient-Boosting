@@ -1,0 +1,15 @@
+[A] BestIter=285 ValNLL=1.074397 TestNLL=1.035733 OracleNLL=0.731003 TestRMSE=0.680599 FixedSigma=0.708545 ScaleMAE=0.260411 Cov95=0.949 CapHit=False Time=44.7s
+[B] BestIter=346 ValNLL=0.957090 TestNLL=0.903805 OracleNLL=0.885002 TestRMSE=0.595596 FixedSigma=0.630118 ScaleMAE=0.030118 Cov95=0.965 CapHit=False Time=43.8s
+[C] BestIter=189 ValNLL=1.762115 TestNLL=1.723828 OracleNLL=1.424151 TestRMSE=1.354380 FixedSigma=1.409418 ScaleMAE=0.519210 Cov95=0.948 CapHit=False Time=44.7s
+{
+  "aggregate": {
+    "test_nll_mean": 1.221122060262937,
+    "test_rmse_mean": 0.8768585544542562,
+    "oracle_nll_mean": 1.0133852348343637,
+    "cap_hits": 0
+  },
+  "timing_sec": {
+    "wall": 140.76186698999663,
+    "sum_regime_totals": 133.2336102160043
+  }
+}

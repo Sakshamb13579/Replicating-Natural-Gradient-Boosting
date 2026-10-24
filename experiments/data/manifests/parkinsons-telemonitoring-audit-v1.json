@@ -1,0 +1,202 @@
+{
+  "status": "draft",
+  "manifest_kind": "desk_audit",
+  "dataset_name": "Parkinsons Telemonitoring",
+  "dataset_slug": "parkinsons-telemonitoring",
+  "uci_id": 189,
+  "doi": "10.24432/C5ZS3N",
+  "authoritative_urls": [
+    "https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring",
+    "https://archive.ics.uci.edu/static/public/189/parkinsons+telemonitoring.zip"
+  ],
+  "access_date": "2026-08-23",
+  "uci_metadata": {
+    "path": "ngboost/data/raw/parkinsons-telemonitoring/uci-189-metadata.json",
+    "retrieval_url": "https://archive.ics.uci.edu/api/trpc/donated_datasets.findById?batch=1&input=%7B%220%22%3A%7B%22json%22%3A189%7D%7D",
+    "dataset_page": "https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring",
+    "timestamp_utc": "2026-08-23T15:00:48Z",
+    "sha256": "9e62ea97c20b358a33dc69740e25e0ba7161b7025fcc56a39adfacee2fa2b39d",
+    "validated_dataset_id": 189
+  },
+  "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "source_citation": "Tsanas, A., Little, M. A., McSharry, P. E., & Ramig, L. O. (2009). Accurate telemonitoring of Parkinson's disease progression by non-invasive speech tests. IEEE Transactions on Biomedical Engineering. UCI repository: https://doi.org/10.24432/C5ZS3N.",
+  "download": {
+    "url": "https://archive.ics.uci.edu/static/public/189/parkinsons+telemonitoring.zip",
+    "timestamp_utc": "2026-08-23T15:00:22Z",
+    "files": [
+      {
+        "path": "ngboost/data/raw/parkinsons-telemonitoring/parkinsons-telemonitoring.zip",
+        "sha256": "2f82bb0ef96fa7d8d7edf4d97b89173e07c2cca7723440a64bc38918a83345df",
+        "size_bytes": 292221
+      },
+      {
+        "path": "ngboost/data/raw/parkinsons-telemonitoring/parkinsons_updrs.data",
+        "sha256": "f2c7d5025dec4e92e7feae367a5f7ccf58789a10ac6b54bdf15976c599f9dd39",
+        "size_bytes": 911261
+      },
+      {
+        "path": "ngboost/data/raw/parkinsons-telemonitoring/parkinsons_updrs.names",
+        "sha256": "744dc2835eab5c0fc744c638e5e6b05e656788f60f8aa2aba9d48e21c629f7c2",
+        "size_bytes": 4423
+      }
+    ]
+  },
+  "shape": {
+    "rows": 5875,
+    "subjects": 42,
+    "columns_in_file": 22,
+    "header_row_present": true,
+    "features_for_primary_target": 19,
+    "note": "UCI counts 19 features (16 voice + age + sex + test_time); subject# and alternate target excluded from predictors."
+  },
+  "target": {
+    "primary": {
+      "name": "motor_UPDRS",
+      "meaning": "Clinician motor UPDRS score (linearly interpolated)",
+      "column_index": 4,
+      "justification": "Sixteen voice biomarkers target motor speech impairment; motor UPDRS is the direct clinical motor severity scale. Preferred over total_UPDRS for this feature set (evidence pack §4.4)."
+    },
+    "alternate_documented_not_primary": {
+      "name": "total_UPDRS",
+      "column_index": 5,
+      "status": "Must not be used as predictor when motor_UPDRS is target (r=0.947)."
+    }
+  },
+  "column_roles": {
+    "identifiers_exclude": ["subject#"],
+    "allowed_predictors": ["age", "sex", "test_time", "Jitter(%)", "Jitter(Abs)", "Jitter:RAP", "Jitter:PPQ5", "Jitter:DDP", "Shimmer", "Shimmer(dB)", "Shimmer:APQ3", "Shimmer:APQ5", "Shimmer:APQ11", "Shimmer:DDA", "NHR", "HNR", "RPDE", "DFA", "PPE"],
+    "forbidden_predictors_when_target_motor": ["motor_UPDRS", "total_UPDRS", "subject#"],
+    "alternate_outcome_only": ["total_UPDRS"]
+  },
+  "raw_format": {
+    "file": "parkinsons_updrs.data",
+    "delimiter": "comma",
+    "header": true,
+    "companion_names_file": "parkinsons_updrs.names"
+  },
+  "missing_values": {
+    "missing_cells": 0,
+    "non_finite_values": 0,
+    "duplicate_full_rows": 0,
+    "uci_reports_missing": false
+  },
+  "subject_structure": {
+    "group_column": "subject#",
+    "num_subjects": 42,
+    "recordings_per_subject_min": 101,
+    "recordings_per_subject_median": 141,
+    "recordings_per_subject_mean": 139.88,
+    "recordings_per_subject_max": 168,
+    "test_time_range_days": { "min": 0.0, "max": 209.54 },
+    "test_time_unique_values": 5875,
+    "note": "Repeated measures per subject; patient-disjoint splits mandatory. Recordings are clustered within subject — not independent evaluation units."
+  },
+  "target_summary": {
+    "motor_UPDRS": {
+      "min": 5.038,
+      "max": 39.511,
+      "mean": 21.296,
+      "population_stdev": 6.843,
+      "population_skewness": 0.075,
+      "unique_values": 1080
+    },
+    "total_UPDRS": {
+      "min": 7.0,
+      "max": 54.992,
+      "mean": 29.019,
+      "population_skewness": 0.271,
+      "unique_values": 1129
+    },
+    "motor_total_correlation": 0.947
+  },
+  "leakage_assessment": {
+    "subject_id": "Must be excluded from features; defines grouped split unit.",
+    "total_UPDRS": "Near-redundant with motor_UPDRS (r=0.947); exclude from predictors for motor target.",
+    "test_time": "Allowed as covariate when entire subject stays in one split; captures within-subject progression timing.",
+    "row_level_random_split": "Prohibited — would place same patient's recordings in train and test."
+  },
+  "proposed_split": {
+    "status": "draft_not_frozen",
+    "indices_generated": false,
+    "mandatory": "patient_disjoint_cluster_aware_evaluation",
+    "group_column": "subject#",
+    "num_groups": 42,
+    "approach": "Fixed 5-fold subject-group cross-validation: partition the 42 subjects into five disjoint outer folds (~8–9 held-out subjects per fold, ~1100–1200 held-out recordings per fold depending on assignment). No subject appears in both train and test within a fold. Reuse identical subject-fold assignments across natural, ordinary, and homoscedastic variants. Optional subject-disjoint inner validation on training subjects only when stage selection is needed.",
+    "outer_fold_subjects_approx": 8,
+    "outer_fold_recordings_approx": 1120,
+    "repetitions": "Five outer folds cover all subjects once as holdout; additional subject-level bootstrap resampling may summarize fold-to-fold variation — not row-level 90/10 repetitions.",
+    "paper_aligned_row_split": "Not applicable; row-level NGBoost script protocol would leak patients and treat clustered recordings as independent.",
+    "small_subject_limitation": "Only 42 independent patient clusters. ~8–9 held-out subjects per outer fold is the relevant test-unit count; ~1100 recordings in a fold are repeated measures, not independent patients."
+  },
+  "evaluation_protocol": {
+    "status": "draft",
+    "recording_level_metrics": {
+      "examples": ["test NLL summed or averaged over all held-out recordings in outer fold", "recording-level RMSE"],
+      "role": "Standard probabilistic regression scores on all held-out rows within patient-disjoint folds.",
+      "caution": "Recording counts inflate apparent sample size; do not interpret as independent patient evidence."
+    },
+    "subject_macro_metrics": {
+      "examples": ["mean per-subject NLL averaged across held-out subjects in fold", "subject-macro RMSE", "subject-macro empirical coverage"],
+      "role": "Primary summaries for generalization and uncertainty — each subject contributes one macro statistic before fold aggregation.",
+      "aggregation": "Report mean and dispersion (SD or bootstrap CI) of subject-macro metrics across outer folds."
+    },
+    "cluster_aware_uncertainty": {
+      "approach": "Summarize variation across outer subject-disjoint folds and optional subject-level bootstrap resampling of held-out subjects.",
+      "not_sufficient": "Recording-level coverage alone from ~8–9 patients cannot establish clinical calibration."
+    },
+    "calibration_claims": {
+      "allowed": "Exploratory recording- or subject-macro coverage patterns with explicit small-n caveat.",
+      "forbidden": "Clinical calibration or population interval honesty claims from a single fold with few patients."
+    }
+  },
+  "preprocessing_recommendation": "Load CSV with header; drop subject#; target=motor_UPDRS; predictors=19 allowed columns; exclude total_UPDRS. No mandatory scaling for tree NGBoost.",
+  "paper_overlap": {
+    "in_selected_ngboost_paper_tables_1_3": false,
+    "official_repo_loader_present": false,
+    "official_repo_checked": ".RnD/source/ngboost/examples/experiments/regression_exp.py"
+  },
+  "prior_application_search": {
+    "search_date": "2026-08-23",
+    "scope": "bounded_non_exhaustive",
+    "queries_reused_from": "shared/repo/docs/ngboost-proposal-evidence.md section 4.4",
+    "queries": [
+      "\"Parkinsons Telemonitoring\" NGBoost",
+      "\"motor UPDRS\" NGBoost",
+      "parkinsons_updrs NGBoost",
+      "\"Natural Gradient Boosting\" UPDRS"
+    ],
+    "finding": "Many XGBoost/LightGBM UPDRS studies; no documented NGBoost application on this UCI telemonitoring table in bounded 2026-08-23 search; no loader in official repo.",
+    "limitation": "Non-exhaustive."
+  },
+  "compute_feasibility": {
+    "storage_bytes_data": 911261,
+    "ram_estimate_mb": 0.72,
+    "cpu_assessment": "Trivial — 5875×19 feature matrix; patient-aware split does not materially increase cost.",
+    "proposal_listing_policy": "Full dataset appropriate with patient-split and clinical caveats."
+  },
+  "ethics_privacy": {
+    "data_type": "Clinical voice biomarkers and UPDRS severity scores from 42 early-stage PD patients",
+    "identifiers": "subject# is numeric pseudonym only; no names in public file",
+    "requirements": "Aggregate research use; cite Tsanas et al.; no re-identification attempts; disclose clinical context and small cohort in proposal",
+    "licence_compatible": true
+  },
+  "audit_verdict": "MODERATE",
+  "unresolved_concerns": [
+    "Only 42 patient clusters limits external validity; ~8–9 held-out subjects per outer fold is the operative test count.",
+    "Recording-level metrics must not be confused with independent-patient evidence.",
+    "Empirical coverage remains exploratory at this cohort size.",
+    "Patient-disjoint evaluation diverges from paper-aligned row-level Yacht protocol — must be disclosed.",
+    "Whether test_time should be included as predictor vs reserved for temporal generalization study.",
+    "Prior-application search non-exhaustive."
+  ],
+  "handoff_id": "005-NG-FD4",
+  "fix_handoff_id": "005F1-NG-FD4",
+  "evidence_paths": {
+    "report": "ngboost/reports/005-ng-fd4-parkinsons-data-audit.md",
+    "raw_data_dir": "ngboost/data/raw/parkinsons-telemonitoring/",
+    "manifest": "ngboost/data/manifests/parkinsons-telemonitoring-audit-v1.json",
+    "uci_metadata": "ngboost/data/raw/parkinsons-telemonitoring/uci-189-metadata.json"
+  },
+  "created_at": "2026-08-23T20:31:00+05:30",
+  "updated_at": "2026-08-23T20:33:00+05:30"
+}

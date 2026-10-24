@@ -1,0 +1,8 @@
+path: /mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree
+ngboost_import: /mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree/ngboost/__init__.py
+commit: 672034041fc05d9d4b7a80c1e6163ea102579752
+=== git status --porcelain ===
+ M examples/experiments/regression_exp.py
+=== HEAD ngboost package files sha (sample) ===
+1267b9c069000d40e14bd28602cbb20935449d76490e3415973a3f85c2350a15  /mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree/ngboost/__init__.py
+dcbe6c8d7f4daf95160b835a6e4f7fe63256ad358f523a870dd683cf4abb472a  /mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree/ngboost/ngboost.py

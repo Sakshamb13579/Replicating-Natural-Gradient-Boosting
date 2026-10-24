@@ -1,0 +1,6 @@
+cd /mnt/hdd1/Projects/Research/Saksham/people/ash/work/paper-selection/ngboost
+export PYTHONDONTWRITEBYTECODE=1
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
+export PYTHONPATH=/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/repair-worktree
+/mnt/hdd1/Projects/Research/Saksham/.RnD/work/ngboost/.venv/bin/python src/controlled_yacht_cap_diagnostic.py \
+  artifacts/yacht/ngboost-natural/017-ng-d1-yacht-natural-s1-a02
